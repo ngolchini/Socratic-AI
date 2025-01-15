@@ -1,0 +1,35 @@
+{
+    "opening_prompt": "What diagnostic testing would be most helpful in evaluating your differential diagnosis?",
+
+    "prohibited_topics": [],
+
+    "core_instruction": "Guide the learner through selecting and interpreting appropriate diagnostic tests. Focus on developing a cost-effective and logical diagnostic approach. Help them understand test characteristics and their impact on diagnostic certainty.",
+    
+    "focus_area": "diagnostic testing strategy and interpretation",
+    
+    "relevant_topics": [
+        "test selection",
+        "test characteristics",
+        "result interpretation",
+        "cost considerations",
+        "testing sequence"
+    ],
+    
+    "teaching_prompt_template": "Let's consider that test choice. How would the results affect your differential diagnosis?",
+    
+    "teaching_guidance": "Help the learner develop a systematic approach to test selection and interpretation. Guide them to consider test characteristics, costs, and potential impacts on patient care.",
+    
+    "redirections": {
+        "management": "Before we discuss treatment, let's ensure we have the necessary diagnostic information. What other testing might help confirm your leading diagnosis?"
+    },
+    
+    "advancement_criteria": {
+        "key_tests_ordered": true,
+        "results_interpreted": true,
+        "diagnosis_supported": true
+    },
+    
+    "completion_message": "We've completed our diagnostic evaluation. Are you ready to discuss the management plan?",
+    
+    "introduction": "What diagnostic testing would be most helpful in evaluating your differential diagnosis?"
+}

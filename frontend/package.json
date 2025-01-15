@@ -1,0 +1,21 @@
+{
+  "name": "clinical-tutor-frontend",
+  "version": "1.0.0",
+  "description": "Clinical Tutor Frontend Components",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "esbuild src/DifferentialDiagnosis.tsx --bundle --outfile=dist/differential.js --format=iife --global-name=DifferentialDiagnosis --target=es6 --sourcemap --external:react --external:react-dom",
+    "watch": "npm run build -- --watch"
+  },
+  "dependencies": {
+    "@hello-pangea/dnd": "^16.3.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "@types/react": "^18.2.21",
+    "@types/react-dom": "^18.2.7",
+    "esbuild": "^0.19.2",
+    "typescript": "^5.2.2"
+  }
+}

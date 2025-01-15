@@ -1,0 +1,12 @@
+{
+"core_instruction": "Focus on synthesizing key learning points and clinical pearls.",
+"opening_prompt": "Let's discuss some key learning points from this case. What stands out to you?",
+"prohibited_topics": [],
+"advancement_criteria": {
+    "required_elements": true
+},
+"completion_message": "Excellent work! We've completed this case discussion.",
+"focus_area": "clinical reasoning",
+"teaching_prompt_template": "Let's explore this learning point in more detail.",
+"teaching_guidance": "Help learner consolidate key learning points and clinical reasoning."
+}

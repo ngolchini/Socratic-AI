@@ -1,0 +1,7 @@
+{
+    "gentle": "That's an interesting point about {topic}. Before we explore that, let's focus on understanding {current_phase_focus}.",
+    
+    "educational": "Understanding {topic} will be important when we discuss {appropriate_phase}. For now, what aspects of {current_phase_focus} seem most relevant to explore?",
+    
+    "direct": "Let's hold our discussion about {topic} until we reach {appropriate_phase}. Can you tell me more about what you're thinking regarding {current_phase_focus}?"
+}

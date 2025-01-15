@@ -1,0 +1,133 @@
+{
+    "metadata": {
+        "id": "HS-2017-NEJM",
+        "title": "Young Man with Abdominal Pain and Jaundice",
+        "difficulty": "moderate",
+        "specialties": ["Hematology", "Gastroenterology"],
+        "keywords": ["hereditary spherocytosis", "hemolysis", "cholelithiasis", "jaundice", "splenomegaly"]
+    },
+    "clinical_elements": {
+        "history": {
+            "required": [
+                {
+                    "id": "HPI001",
+                    "content": "Character and timing of abdominal pain",
+                    "required": true,
+                    "response": "6-week history of intermittent pain in right upper and lower quadrants. Pain worsens with food, usually improves within 1-2 hours after antacids. Current episode is severe and has lasted 8 hours.",
+                    "teaching_points": [
+                        {
+                            "id": "TP001",
+                            "content": "Pattern of post-prandial RUQ pain suggests biliary colic",
+                            "required": true
+                        },
+                        {
+                            "id": "TP002",
+                            "content": "Duration and severity of current episode suggests possible progression to acute cholecystitis",
+                            "required": true
+                        }
+                    ]
+                },
+                {
+                    "id": "PMH001",
+                    "content": "Past medical history of liver disease",
+                    "required": true,
+                    "response": "Gilbert's syndrome diagnosed 2 years ago with isolated indirect hyperbilirubinemia. Also has nonalcoholic fatty liver disease.",
+                    "teaching_points": [
+                        {
+                            "id": "TP004",
+                            "content": "Gilbert's syndrome alone cannot explain splenomegaly",
+                            "required": true
+                        }
+                    ]
+                }
+            ],
+            "optional": []
+        },
+        "physical": {
+            "required": [
+                {
+                    "id": "PE001",
+                    "content": "Vital signs",
+                    "required": true,
+                    "response": "Temperature 37.1°C, heart rate 84, blood pressure 145/90, respiratory rate 18, oxygen saturation 100% on room air",
+                    "teaching_points": [
+                        {
+                            "id": "TP008",
+                            "content": "Absence of fever does not rule out cholecystitis",
+                            "required": true
+                        }
+                    ]
+                }
+            ],
+            "optional": []
+        },
+        "testing": {
+            "required": [
+                {
+                    "id": "LAB001",
+                    "content": "Complete blood count",
+                    "required": true,
+                    "response": "WBC 19,800/µL (86% neutrophils), hemoglobin 16.0 g/dL, platelets 196,000/µL",
+                    "teaching_points": [
+                        {
+                            "id": "TP012",
+                            "content": "Leukocytosis with neutrophilia suggests acute inflammatory process",
+                            "required": true
+                        }
+                    ]
+                }
+            ],
+            "optional": [
+                {
+                    "id": "LAB003",
+                    "content": "Historical labs",
+                    "required": false,
+                    "response": "From 2 years ago: indirect bilirubin 1.9 mg/dL, LDH 320 U/L, haptoglobin < 8 mg/dL, hemoglobin 15.0 g/dL, MCV 83.6 fL, MCHC 37 g/dL, RDW 15.7%",
+                    "teaching_points": [
+                        {
+                            "id": "TP016",
+                            "content": "Historical labs show evidence of compensated hemolysis",
+                            "required": true
+                        }
+                    ]
+                }
+            ]
+        },
+        "management": {
+            "required": [
+                {
+                    "id": "TX001",
+                    "content": "Immediate management",
+                    "required": true,
+                    "response": "Pain control and IV fluids if needed",
+                    "teaching_points": [
+                        {
+                            "id": "TP018",
+                            "content": "Supportive care important while arranging definitive treatment",
+                            "required": true
+                        }
+                    ]
+                }
+            ],
+            "optional": []
+        }
+    },
+    "differential_diagnosis": [
+        {
+            "name": "Hereditary Spherocytosis with Cholelithiasis",
+            "category": "likely",
+            "likelihood_score": 0.8,
+            "key_features": ["jaundice", "splenomegaly", "family history", "elevated MCHC"],
+            "supporting_evidence": [],
+            "refuting_evidence": []
+        }
+    ],
+    "final_diagnosis": {
+        "name": "Hereditary Spherocytosis with Cholelithiasis",
+        "category": "likely",
+        "likelihood_score": 1.0,
+        "key_features": ["jaundice", "splenomegaly", "family history", "elevated MCHC", "hemolysis labs"],
+        "supporting_evidence": [],
+        "refuting_evidence": []
+    }
+}
