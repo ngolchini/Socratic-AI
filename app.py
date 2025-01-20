@@ -52,19 +52,16 @@ def setup_logging(config: LogConfig) -> None:
 class ClinicalCaseTutor:
     """Main application class for the Clinical Case Tutor system."""
     
-    def __init__(self):
+    ef __init__(self):
         """Initialize the tutor system and its components."""
         # Set up logging
         setup_logging(LogConfig())
         self.logger = logging.getLogger(__name__)
 
-        # Load environment variables
-        load_dotenv()
-        
-        # Initialize OpenAI client and LLM manager
-        api_key = os.getenv("OPENAI_API_KEY")
+        # Retrieve the OpenAI API key from Streamlit secrets
+        api_key = st.secrets["api"]["OPENAI_API_KEY"]
         if not api_key:
-            st.error("OpenAI API key not found. Please set the OPENAI_API_KEY environment variable.")
+            st.error("OpenAI API key not found in secrets. Please set it in the Streamlit secrets configuration.")
             st.stop()
         
         self.client = OpenAI(api_key=api_key)
