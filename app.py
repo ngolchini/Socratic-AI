@@ -52,7 +52,7 @@ def setup_logging(config: LogConfig) -> None:
 class ClinicalCaseTutor:
     """Main application class for the Clinical Case Tutor system."""
     
-    ef __init__(self):
+    def __init__(self):
         """Initialize the tutor system and its components."""
         # Set up logging
         setup_logging(LogConfig())
