@@ -1,0 +1,54 @@
+{
+    "metadata": {
+        "id": "string",
+        "title": "string",
+        "difficulty": "string",
+        "specialties": ["string"],
+        "keywords": ["string"]
+    },
+    "differential_analysis": {
+        "diagnoses": [
+            {
+                "id": "string",
+                "name": "string",
+                "category": "string",
+                "supporting_evidence": [
+                    {
+                        "findings": "string",
+                        "strength": "string",
+                        "explanation": "string"
+                    }
+                ],
+                "opposing_evidence": [
+                    {
+                        "findings": "string",
+                        "strength": "string",
+                        "explanation": "string"
+                    }
+                ],
+                "Potential missing workup": [
+                    {
+                        "Tests and procedures": "string",
+                        "rationale": "string"
+                    }
+                ]
+            }
+        ],
+        "ranked_list": [
+            {
+                "rank": "number",
+                "diagnosis": "string",
+                "confidence": "string",
+                "key_factors": ["string"]
+            }
+        ],
+        "cant_miss_diagnoses": [
+            {
+                "diagnosis": "string",
+                "exclusion_status": "string",
+                "required_workup": ["string"],
+                "rationale": "string"
+            }
+        ]
+    }
+}

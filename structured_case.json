@@ -1,0 +1,359 @@
+{
+  "metadata": {
+    "type": "object",
+    "required": [
+      "id",
+      "title",
+      "difficulty",
+      "specialties",
+      "keywords",
+      "source"
+    ],
+    "properties": {
+      "id": {
+        "type": "string"
+      },
+      "title": {
+        "type": "string"
+      },
+      "difficulty": {
+        "type": "string"
+      },
+      "specialties": {
+        "type": "array",
+        "items": {
+          "type": "string"
+        }
+      },
+      "keywords": {
+        "type": "array",
+        "items": {
+          "type": "string"
+        }
+      },
+      "source": {
+        "type": "string"
+      }
+    }
+  },
+  "clinical_elements": {
+    "type": "object",
+    "required": [
+      "history",
+      "physical",
+      "testing",
+      "management"
+    ],
+    "properties": {
+      "history": {
+        "type": "object",
+        "required": [
+          "required"
+        ],
+        "properties": {
+          "required": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": [
+                "id",
+                "content",
+                "response"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "content": {
+                  "type": "string"
+                },
+                "response": {
+                  "type": "string"
+                },
+                "teaching_points": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "required": [
+                      "id",
+                      "content"
+                    ],
+                    "properties": {
+                      "id": {
+                        "type": "string"
+                      },
+                      "content": {
+                        "type": "string"
+                      },
+                      "covered": {
+                        "type": "boolean",
+                        "default": false
+                      }
+                    }
+                  }
+                },
+                "elicited": {
+                  "type": "boolean",
+                  "default": false
+                }
+              }
+            }
+          }
+        }
+      },
+      "physical": {
+        "type": "object",
+        "required": [
+          "required"
+        ],
+        "properties": {
+          "required": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": [
+                "id",
+                "content",
+                "response"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "content": {
+                  "type": "string"
+                },
+                "response": {
+                  "type": "string"
+                },
+                "teaching_points": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "required": [
+                      "id",
+                      "content"
+                    ],
+                    "properties": {
+                      "id": {
+                        "type": "string"
+                      },
+                      "content": {
+                        "type": "string"
+                      },
+                      "covered": {
+                        "type": "boolean",
+                        "default": false
+                      }
+                    }
+                  }
+                },
+                "elicited": {
+                  "type": "boolean",
+                  "default": false
+                }
+              }
+            }
+          }
+        }
+      },
+      "testing": {
+        "type": "object",
+        "required": [
+          "required"
+        ],
+        "properties": {
+          "required": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": [
+                "id",
+                "content",
+                "response"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "content": {
+                  "type": "string"
+                },
+                "response": {
+                  "type": "string"
+                },
+                "teaching_points": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "required": [
+                      "id",
+                      "content"
+                    ],
+                    "properties": {
+                      "id": {
+                        "type": "string"
+                      },
+                      "content": {
+                        "type": "string"
+                      },
+                      "covered": {
+                        "type": "boolean",
+                        "default": false
+                      }
+                    }
+                  }
+                },
+                "elicited": {
+                  "type": "boolean",
+                  "default": false
+                }
+              }
+            }
+          }
+        }
+      },
+      "management": {
+        "type": "object",
+        "required": [
+          "required"
+        ],
+        "properties": {
+          "required": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": [
+                "id",
+                "content",
+                "response"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "content": {
+                  "type": "string"
+                },
+                "response": {
+                  "type": "string"
+                },
+                "teaching_points": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "required": [
+                      "id",
+                      "content"
+                    ],
+                    "properties": {
+                      "id": {
+                        "type": "string"
+                      },
+                      "content": {
+                        "type": "string"
+                      },
+                      "covered": {
+                        "type": "boolean",
+                        "default": false
+                      }
+                    }
+                  }
+                },
+                "elicited": {
+                  "type": "boolean",
+                  "default": false
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "differential_diagnosis": {
+    "type": "array",
+    "items": {
+      "type": "object",
+      "required": [
+        "name",
+        "category",
+        "key_features"
+      ],
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "category": {
+          "type": "string",
+          "enum": [
+            "likely",
+            "possible",
+            "dont_miss"
+          ]
+        },
+        "key_features": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "supporting_evidence": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "default": []
+        },
+        "refuting_evidence": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "default": []
+        }
+      }
+    }
+  },
+  "final_diagnosis": {
+    "type": "object",
+    "required": [
+      "name",
+      "category",
+      "key_features"
+    ],
+    "properties": {
+      "name": {
+        "type": "string"
+      },
+      "category": {
+        "type": "string",
+        "enum": [
+          "likely",
+          "possible",
+          "dont_miss"
+        ]
+      },
+      "key_features": {
+        "type": "array",
+        "items": {
+          "type": "string"
+        }
+      },
+      "supporting_evidence": {
+        "type": "array",
+        "items": {
+          "type": "string"
+        },
+        "default": []
+      },
+      "refuting_evidence": {
+        "type": "array",
+        "items": {
+          "type": "string"
+        },
+        "default": []
+      }
+    }
+  }
+}

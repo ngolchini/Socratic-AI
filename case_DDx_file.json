@@ -1,0 +1,186 @@
+{
+  "metadata": {
+    "id": "case001",
+    "title": "Chronic Diarrhea and Abdominal Pain in a 54-year-old Man",
+    "difficulty": "high",
+    "specialties": [
+      "Gastroenterology",
+      "Endocrinology"
+    ],
+    "keywords": [
+      "chronic diarrhea",
+      "gastrinoma",
+      "Zollinger-Ellison syndrome",
+      "neuroendocrine tumor"
+    ]
+  },
+  "differential_analysis": {
+    "diagnoses": [
+      {
+        "id": "DD001",
+        "name": "Gastrinoma (Zollinger-Ellison syndrome)",
+        "category": "Endocrine tumor",
+        "supporting_evidence": [
+          {
+            "id": "EV001",
+            "finding": "Multiple peptic ulcers and chronic diarrhea",
+            "strength": "strong",
+            "explanation": "Gastrinoma causes hypersecretion of gastric acid leading to peptic ulcers and diarrhea."
+          },
+          {
+            "id": "EV002",
+            "finding": "Prominent gastric fold",
+            "strength": "moderate",
+            "explanation": "Prominent gastric folds are found in over 90% of patients with Zollinger-Ellison syndrome."
+          },
+          {
+            "id": "EV003",
+            "finding": "Pancreatic mass",
+            "strength": "strong",
+            "explanation": "A pancreatic mass is consistent with a gastrinoma."
+          }
+        ],
+        "opposing_evidence": [
+          {
+            "id": "EV004",
+            "finding": "Normal calcium levels",
+            "strength": "moderate",
+            "explanation": "Normal calcium levels make MEN-1 syndrome less likely, which is associated with gastrinoma."
+          }
+        ],
+        "workup": [
+          {
+            "id": "WU001",
+            "test": "Fasting serum gastrin level",
+            "rationale": "Elevated gastrin levels are indicative of gastrinoma.",
+            "priority": "high"
+          },
+          {
+            "id": "WU002",
+            "test": "Secretin stimulation test",
+            "rationale": "Confirms gastrinoma if gastrin levels increase significantly after secretin administration.",
+            "priority": "high"
+          }
+        ],
+        "teaching_points": [
+          {
+            "id": "TP001",
+            "content": "Gastrinoma is a rare tumor causing ectopic gastrin secretion, leading to severe peptic ulcer disease and diarrhea.",
+            "category": "Pathophysiology"
+          },
+          {
+            "id": "TP002",
+            "content": "Zollinger-Ellison syndrome is often accompanied by esophageal reflux disease and diarrhea.",
+            "category": "Clinical features"
+          }
+        ]
+      },
+      {
+        "id": "DD002",
+        "name": "Neuroendocrine tumor",
+        "category": "Tumor",
+        "supporting_evidence": [
+          {
+            "id": "EV005",
+            "finding": "Pancreatic mass with homogeneous enhancement",
+            "strength": "strong",
+            "explanation": "Neuroendocrine tumors often present as enhancing pancreatic masses."
+          }
+        ],
+        "opposing_evidence": [],
+        "workup": [
+          {
+            "id": "WU003",
+            "test": "Biopsy of pancreatic mass",
+            "rationale": "Histological confirmation of neuroendocrine tumor.",
+            "priority": "high"
+          }
+        ],
+        "teaching_points": [
+          {
+            "id": "TP003",
+            "content": "Neuroendocrine tumors can secrete various peptides leading to diverse clinical syndromes.",
+            "category": "Pathophysiology"
+          }
+        ]
+      },
+      {
+        "id": "DD003",
+        "name": "Inflammatory bowel disease (Crohn's disease)",
+        "category": "Autoimmune",
+        "supporting_evidence": [
+          {
+            "id": "EV006",
+            "finding": "Chronic diarrhea and abdominal pain",
+            "strength": "moderate",
+            "explanation": "These are common symptoms of Crohn's disease."
+          }
+        ],
+        "opposing_evidence": [
+          {
+            "id": "EV007",
+            "finding": "No evidence of colitis on endoscopy",
+            "strength": "strong",
+            "explanation": "Endoscopic findings did not support inflammatory bowel disease."
+          }
+        ],
+        "workup": [
+          {
+            "id": "WU004",
+            "test": "Colonoscopy",
+            "rationale": "To evaluate for inflammatory bowel disease.",
+            "priority": "moderate"
+          }
+        ],
+        "teaching_points": [
+          {
+            "id": "TP004",
+            "content": "Crohn's disease can involve any part of the gastrointestinal tract and often causes chronic diarrhea.",
+            "category": "Clinical features"
+          }
+        ]
+      }
+    ],
+    "ranked_list": [
+      {
+        "rank": 1,
+        "diagnosis": "Gastrinoma (Zollinger-Ellison syndrome)",
+        "confidence": "high",
+        "key_factors": [
+          "Multiple peptic ulcers",
+          "Pancreatic mass",
+          "Chronic diarrhea"
+        ]
+      },
+      {
+        "rank": 2,
+        "diagnosis": "Neuroendocrine tumor",
+        "confidence": "moderate",
+        "key_factors": [
+          "Pancreatic mass",
+          "Enhancing mass on imaging"
+        ]
+      },
+      {
+        "rank": 3,
+        "diagnosis": "Inflammatory bowel disease (Crohn's disease)",
+        "confidence": "low",
+        "key_factors": [
+          "Chronic diarrhea",
+          "Abdominal pain"
+        ]
+      }
+    ],
+    "cant_miss_diagnoses": [
+      {
+        "diagnosis": "Pancreatic adenocarcinoma",
+        "exclusion_status": "excluded",
+        "required_workup": [
+          "CT scan",
+          "Endoscopic evaluation"
+        ],
+        "rationale": "Absence of pancreatic ductal dilatation and jaundice makes pancreatic adenocarcinoma unlikely."
+      }
+    ]
+  }
+}

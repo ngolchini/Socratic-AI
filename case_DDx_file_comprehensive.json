@@ -1,0 +1,204 @@
+{
+  "metadata": {
+    "id": "case_001",
+    "title": "Chronic Diarrhea and Pancreatic Mass",
+    "difficulty": "high",
+    "specialties": [
+      "Gastroenterology",
+      "Endocrinology"
+    ],
+    "keywords": [
+      "chronic diarrhea",
+      "pancreatic mass",
+      "gastrinoma",
+      "Zollinger-Ellison syndrome"
+    ]
+  },
+  "differential_analysis": {
+    "diagnoses": [
+      {
+        "id": "DD001",
+        "name": "Gastrinoma (Zollinger-Ellison syndrome)",
+        "category": "Endocrine tumor",
+        "supporting_evidence": [
+          {
+            "findings": "Multiple peptic ulcers, chronic secretory diarrhea, pancreatic mass, prominent gastric fold",
+            "strength": "strong",
+            "explanation": "These findings are consistent with gastrinoma, which causes gastric acid hypersecretion leading to peptic ulcers and diarrhea."
+          }
+        ],
+        "opposing_evidence": [
+          {
+            "findings": "Normal calcium levels, absence of MEN-1 symptoms",
+            "strength": "moderate",
+            "explanation": "While MEN-1 is associated with gastrinoma, the absence of hyperparathyroidism and normal calcium levels make MEN-1 less likely."
+          }
+        ],
+        "Potential missing workup": [
+          {
+            "Tests and procedures": "Fasting serum gastrin level, secretin stimulation test",
+            "rationale": "To confirm gastrinoma, as elevated gastrin levels are diagnostic."
+          }
+        ]
+      },
+      {
+        "id": "DD002",
+        "name": "Pancreatic neuroendocrine tumor",
+        "category": "Neoplasm",
+        "supporting_evidence": [
+          {
+            "findings": "Pancreatic mass with homogeneous enhancement",
+            "strength": "strong",
+            "explanation": "The imaging findings are suggestive of a neuroendocrine tumor."
+          }
+        ],
+        "opposing_evidence": [
+          {
+            "findings": "Absence of flushing, hypokalemia, and hypochlorhydria",
+            "strength": "moderate",
+            "explanation": "These symptoms are typically associated with other types of neuroendocrine tumors like VIPoma."
+          }
+        ],
+        "Potential missing workup": [
+          {
+            "Tests and procedures": "Biopsy of pancreatic mass",
+            "rationale": "To confirm the nature of the pancreatic mass."
+          }
+        ]
+      },
+      {
+        "id": "DD003",
+        "name": "Infectious gastroenteritis",
+        "category": "Infectious disease",
+        "supporting_evidence": [
+          {
+            "findings": "History of recurrent diarrheal illness",
+            "strength": "weak",
+            "explanation": "Initial episodes were typical of acute gastroenteritis."
+          }
+        ],
+        "opposing_evidence": [
+          {
+            "findings": "Chronic nature of diarrhea, negative stool tests for common pathogens",
+            "strength": "strong",
+            "explanation": "The chronicity and negative tests make an infectious cause less likely."
+          }
+        ],
+        "Potential missing workup": [
+          {
+            "Tests and procedures": "Repeat stool cultures",
+            "rationale": "To rule out any missed infectious agents."
+          }
+        ]
+      },
+      {
+        "id": "DD004",
+        "name": "Inflammatory bowel disease (Crohn's disease)",
+        "category": "Autoimmune disease",
+        "supporting_evidence": [
+          {
+            "findings": "Small-bowel involvement, chronic diarrhea",
+            "strength": "moderate",
+            "explanation": "Crohn's disease can cause these symptoms."
+          }
+        ],
+        "opposing_evidence": [
+          {
+            "findings": "No evidence of colitis on endoscopy, no blood in stools",
+            "strength": "strong",
+            "explanation": "These findings argue against inflammatory bowel disease."
+          }
+        ],
+        "Potential missing workup": [
+          {
+            "Tests and procedures": "Colonoscopy, small-bowel enteroscopy",
+            "rationale": "To further evaluate for inflammatory bowel disease."
+          }
+        ]
+      },
+      {
+        "id": "DD005",
+        "name": "Celiac disease",
+        "category": "Autoimmune disease",
+        "supporting_evidence": [
+          {
+            "findings": "Weight loss and diarrhea",
+            "strength": "weak",
+            "explanation": "These are common symptoms of celiac disease."
+          }
+        ],
+        "opposing_evidence": [
+          {
+            "findings": "Negative serology for celiac disease, no villous atrophy on biopsy",
+            "strength": "strong",
+            "explanation": "These findings effectively rule out celiac disease."
+          }
+        ],
+        "Potential missing workup": [
+          {
+            "Tests and procedures": "Repeat serology if clinically indicated",
+            "rationale": "To confirm exclusion of celiac disease."
+          }
+        ]
+      }
+    ],
+    "ranked_list": [
+      {
+        "rank": 1,
+        "diagnosis": "Gastrinoma (Zollinger-Ellison syndrome)",
+        "confidence": "high",
+        "key_factors": [
+          "Pancreatic mass",
+          "Multiple peptic ulcers",
+          "Chronic secretory diarrhea"
+        ]
+      },
+      {
+        "rank": 2,
+        "diagnosis": "Pancreatic neuroendocrine tumor",
+        "confidence": "moderate",
+        "key_factors": [
+          "Pancreatic mass",
+          "Homogeneous enhancement on imaging"
+        ]
+      },
+      {
+        "rank": 3,
+        "diagnosis": "Inflammatory bowel disease (Crohn's disease)",
+        "confidence": "low",
+        "key_factors": [
+          "Chronic diarrhea",
+          "Small-bowel involvement"
+        ]
+      },
+      {
+        "rank": 4,
+        "diagnosis": "Infectious gastroenteritis",
+        "confidence": "low",
+        "key_factors": [
+          "Recurrent diarrheal illness"
+        ]
+      },
+      {
+        "rank": 5,
+        "diagnosis": "Celiac disease",
+        "confidence": "low",
+        "key_factors": [
+          "Weight loss",
+          "Diarrhea"
+        ]
+      }
+    ],
+    "cant_miss_diagnoses": [
+      {
+        "diagnosis": "Gastrinoma (Zollinger-Ellison syndrome)",
+        "exclusion_status": "Not excluded",
+        "required_workup": [
+          "Fasting serum gastrin level",
+          "Secretin stimulation test"
+        ],
+        "rationale": "Due to the potential for severe complications from untreated gastrinoma."
+      }
+    ]
+  }
+}

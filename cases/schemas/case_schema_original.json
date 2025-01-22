@@ -1,0 +1,108 @@
+{
+    "metadata": {
+        "id": "string",
+        "title": "string",
+        "difficulty": "string",
+        "specialties": ["string"],
+        "keywords": ["string"]
+    },
+    "phases": {
+        "initial_case_description": {
+            "elements": [
+                {
+                    "id": "string",
+                    "content": "string",
+                    "response": "string"
+                }
+            ]
+        },
+        "history": {
+            "elements": [
+                {
+                    "id": "string",
+                    "content": "string",
+                    "required": "boolean",
+                    "response": "string",
+                    "teaching_points": [
+                        {
+                            "id": "string",
+                            "content": "string",
+                            "required": "boolean"
+                        }
+                    ]
+                }
+            ],
+            "advancement_criteria": {
+                "required_elements_covered": "boolean",
+                "teaching_points_covered": "boolean",
+                "additional_criteria": "any"
+            }
+        },
+        "physical": {
+            "elements": [
+                {
+                    "id": "string",
+                    "content": "string",
+                    "required": "boolean",
+                    "response": "string",
+                    "teaching_points": [
+                        {
+                            "id": "string",
+                            "content": "string",
+                            "required": "boolean"
+                        }
+                    ]
+                }
+            ],
+            "advancement_criteria": {
+                "required_elements_covered": "boolean",
+                "teaching_points_covered": "boolean",
+                "additional_criteria": "any"
+            }
+        },
+        "testing": {
+            "elements": [
+                {
+                    "id": "string",
+                    "content": "string",
+                    "required": "boolean",
+                    "response": "string",
+                    "teaching_points": [
+                        {
+                            "id": "string",
+                            "content": "string",
+                            "required": "boolean"
+                        }
+                    ]
+                }
+            ],
+            "advancement_criteria": {
+                "required_elements_covered": "boolean",
+                "teaching_points_covered": "boolean",
+                "additional_criteria": "any"
+            }
+        },
+        "management": {
+            "elements": [
+                {
+                    "id": "string",
+                    "content": "string",
+                    "required": "boolean",
+                    "response": "string",
+                    "teaching_points": [
+                        {
+                            "id": "string",
+                            "content": "string",
+                            "required": "boolean"
+                        }
+                    ]
+                }
+            ],
+            "advancement_criteria": {
+                "required_elements_covered": "boolean",
+                "teaching_points_covered": "boolean",
+                "additional_criteria": "any"
+            }
+        }
+    }
+}

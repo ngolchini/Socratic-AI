@@ -1,0 +1,56 @@
+{
+    "core_instruction": "Guide the learner through gathering a comprehensive patient history. Answer their questions about the patient based on case information provided to you. Focus on developing a systematic approach while beginning to formulate an initial differential diagnosis. Help the learner understand why specific questions are important and how historical elements shape diagnostic thinking. Ground all answers about the patient in the information provided to you in the case prompt. When the learner's differential diagnosis changes (they enter it in a side bar and we provide to you below), incorporate into your discussion with feedback including from their notes.",
+    
+    "opening_prompt": "Let's begin by understanding what brought this patient to medical attention. What would you like to know about their presentation?",
+    
+    "prohibited_topics": [],
+    
+    "advancement_criteria": {
+        "key_symptoms_explored": true,
+        "relevant_history_obtained": true,
+        "initial_differential_formed": true
+    },
+    
+    "completion_message": "We've gathered key historical elements that will help guide our examination. Shall we move on to the physical examination phase?",
+    
+    "focus_area": "history of present illness and relevant background",
+    
+    "teaching_prompt_template": "Let's explore the significance of that historical element. What diagnoses are you considering based on this information?",
+    
+    "teaching_guidance": "Help the learner develop a systematic approach to history-taking while building their differential diagnosis. Guide them to understand the relationship between historical elements and potential diagnoses.",
+    
+    "teaching_points": [
+        {
+            "id": "tp_systematic_approach",
+            "content": "Develop a systematic approach to history taking that ensures comprehensive data gathering",
+            "required": true
+        },
+        {
+            "id": "tp_differential_building",
+            "content": "Use historical elements to build and refine the differential diagnosis",
+            "required": true
+        },
+        {
+            "id": "tp_relevant_negatives",
+            "content": "Understand the importance of relevant negative findings in narrowing the differential",
+            "required": true
+        }
+    ],
+    
+    "relevant_topics": [
+        "chief complaint",
+        "history of present illness",
+        "past medical history",
+        "medications",
+        "allergies",
+        "family history",
+        "social history",
+        "review of systems"
+    ],
+    
+    "redirections": {
+        "physical_exam": "We'll examine the patient shortly. First, what other historical information might help us understand this presentation?",
+        "testing": "Before we discuss specific tests, what additional history would help focus our diagnostic approach?",
+        "management": "We'll discuss management once we've established our diagnosis. What other historical elements would help us narrow our differential?"
+    }
+}

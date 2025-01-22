@@ -1,0 +1,31 @@
+{
+    "opening_prompt": "Now that we've established our diagnosis, let's develop an appropriate management plan. What are the immediate priorities for this patient?",
+
+    "prohibited_topics": [], 
+
+    "core_instruction": "Guide the learner through developing an appropriate management plan based on the established diagnosis. Focus on evidence-based decision-making while considering patient factors and resource utilization.",
+    
+    "focus_area": "treatment planning and patient care",
+    
+    "relevant_topics": [
+        "immediate interventions",
+        "therapeutic options",
+        "monitoring approach",
+        "patient education",
+        "follow-up planning"
+    ],
+    
+    "teaching_prompt_template": "Let's explore your treatment choice. What factors influenced your decision?",
+    
+    "teaching_guidance": "Help the learner develop a comprehensive management approach while considering evidence, patient factors, and resource utilization. Guide them to understand the rationale behind treatment decisions.",
+    
+    "advancement_criteria": {
+        "immediate_needs_addressed": true,
+        "treatment_plan_developed": true,
+        "monitoring_plan_established_if_needed": true
+    },
+    
+    "completion_message": "We've developed a complete management plan. Would you like to review the key teaching points from this case?",
+    
+    "introduction": "Now that we've established our diagnosis, let's develop an appropriate management plan. What are the immediate priorities for this patient?"
+}

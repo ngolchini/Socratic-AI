@@ -1,0 +1,303 @@
+{
+    "metadata": {
+        "id": "HS-2017-NEJM",
+        "title": "28-year-old man with abdominal pain and jaundice",
+        "original_pesentation":"28-year-old man with abdominal pain and jaundice",
+        "difficulty": "moderate",
+        "specialties": ["Hematology", "Gastroenterology"],
+        "keywords": ["hereditary spherocytosis", "hemolysis", "cholelithiasis", "jaundice", "splenomegaly"],
+        "source": "NEJM 2017;377:1778-84",
+        "version": "2.0"
+    },
+    "clinical_elements": {
+        "history": {
+            "required": [
+                {
+                    "id": "HPI001",
+                    "content": "Duration and character of abdominal pain",
+                    "response": "6-week history of intermittent pain in right upper and right lower quadrants. Pain worsens with food, usually improves within 1-2 hours after antacids. Current episode is severe and has lasted for 8 hours.",
+                    "teaching_points": [
+                        {
+                            "id": "TP001",
+                            "content": "Recurrent, limited bouts of pain on the right side of abdomen after meals are characteristic of biliary colic",
+                            "covered": false
+                        },
+                        {
+                            "id": "TP002",
+                            "content": "Increased severity and persistence of pain suggests evolution into acute cholecystitis",
+                            "covered": false
+                        }
+                    ],
+                    "elicited": false
+                },
+                {
+                    "id": "HPI002",
+                    "content": "Associated symptoms",
+                    "response": "Intake of food worsened pain followed by nonbloody, nonbilious emesis. No fever or chills.",
+                    "elicited": false
+                },
+                {
+                    "id": "PMH001",
+                    "content": "Past medical history",
+                    "response": "Gilbert's syndrome diagnosed 2 years earlier with isolated indirect hyperbilirubinemia. Obese (BMI 33) with nonalcoholic fatty liver disease.",
+                    "teaching_points": [
+                        {
+                            "id": "TP003",
+                            "content": "Most common causes of isolated indirect hyperbilirubinemia in adults are Gilbert's syndrome and hemolysis",
+                            "covered": false
+                        }
+                    ],
+                    "elicited": false
+                },
+                {
+                    "id": "SH001",
+                    "content": "Social history",
+                    "response": "Never used tobacco or recreational drugs, seldom drinks alcohol.",
+                    "elicited": false
+                },
+                {
+                    "id": "FHX001",
+                    "content": "Family history",
+                    "response": "Father had cholecystectomy for gallstones at age 27",
+                    "teaching_points": [
+                        {
+                            "id": "TP004",
+                            "content": "Early gallstone disease in family members should prompt consideration of hereditary hemolytic conditions",
+                            "covered": false
+                        }
+                    ],
+                    "elicited": false
+                }
+            ],
+            "optional": []
+        },
+        "physical": {
+            "required": [
+                {
+                    "id": "VS001",
+                    "content": "Temperature",
+                    "response": "37.1°C",
+                    "elicited": false
+                },
+                {
+                    "id": "VS002",
+                    "content": "Heart rate",
+                    "response": "84 beats/min",
+                    "elicited": false
+                },
+                {
+                    "id": "VS003",
+                    "content": "Blood pressure",
+                    "response": "145/90 mmHg",
+                    "elicited": false
+                },
+                {
+                    "id": "VS004",
+                    "content": "Respiratory rate and oxygen saturation",
+                    "response": "18 breaths/min, 100% on room air",
+                    "elicited": false
+                },
+                {
+                    "id": "PE001",
+                    "content": "General appearance",
+                    "response": "Appears uncomfortable due to pain",
+                    "elicited": false
+                },
+                {
+                    "id": "PE002",
+                    "content": "Sclera",
+                    "response": "Scleral icterus present",
+                    "teaching_points": [
+                        {
+                            "id": "TP005",
+                            "content": "Presence of jaundice suggests underlying hemolysis or hepatobiliary pathology",
+                            "covered": false
+                        }
+                    ],
+                    "elicited": false
+                },
+                {
+                    "id": "PE003",
+                    "content": "Abdomen",
+                    "response": "Mild tenderness in right upper and lower quadrants without rebound or guarding. No stigmata of chronic liver disease.",
+                    "elicited": false
+                }
+            ]
+        },
+        "testing": {
+            "required": [
+                {
+                    "id": "LAB001",
+                    "content": "Complete blood count",
+                    "response": "WBC 19,800/mm³ (86% neutrophils), hemoglobin 16.0 g/dL, platelets 196,000/mm³",
+                    "teaching_points": [
+                        {
+                            "id": "TP006",
+                            "content": "Normal hemoglobin does not rule out compensated hemolysis",
+                            "covered": false
+                        }
+                    ],
+                    "elicited": false
+                },
+                {
+                    "id": "LAB004",
+                    "content": "Osmotic fragility test",
+                    "response": "Increased erythrocyte fragility",
+                    "teaching_points": [
+                        {
+                            "id": "TP012",
+                            "content": "Osmotic fragility test may be normal in 10-20% of hereditary spherocytosis cases",
+                            "covered": false
+                        }
+                    ],
+                    "elicited": false
+                },
+                {
+                    "id": "LAB005",
+                    "content": "EMA binding test",
+                    "response": "Decreased fluorescence, confirming hereditary spherocytosis",
+                    "teaching_points": [
+                        {
+                            "id": "TP013",
+                            "content": "EMA binding test is the preferred diagnostic test with 90% sensitivity and 95% specificity",
+                            "covered": false
+                        }
+                    ],
+                    "elicited": false
+                },
+                {
+                    "id": "LAB002",
+                    "content": "Liver function tests",
+                    "response": "Total bilirubin 6.7 mg/dL (direct 2.6), ALT 185 U/L, AST 157 U/L, alkaline phosphatase 101 U/L",
+                    "elicited": false
+                },
+                {
+                    "id": "LAB003",
+                    "content": "Historical labs from 2 years ago",
+                    "response": "LDH 320 U/L, haptoglobin <8 mg/dL, hemoglobin 15.0 g/dL, MCV 83.6 fL, MCHC 37 g/dL, RDW 15.7%",
+                    "teaching_points": [
+                        {
+                            "id": "TP007",
+                            "content": "Elevated MCHC is particularly characteristic of hereditary spherocytosis",
+                            "covered": false
+                        }
+                    ],
+                    "elicited": false
+                },
+                {
+                    "id": "IMG001",
+                    "content": "CT abdomen findings",
+                    "response": "Normal-sized liver with mild steatosis and splenomegaly (16 cm). No gallstones or biliary dilation.",
+                    "elicited": false
+                },
+                {
+                    "id": "IMG002",
+                    "content": "Ultrasound findings",
+                    "response": "Sludge-filled gallbladder with wall thickening and pericholecystic fluid.",
+                    "teaching_points": [
+                        {
+                            "id": "TP008",
+                            "content": "Ultrasound is more sensitive than CT for detecting gallbladder pathology",
+                            "covered": false
+                        }
+                    ],
+                    "elicited": false
+                }
+            ],
+            "optional": []
+        },
+        "management": {
+            "required": [
+                {
+                    "id": "TX001",
+                    "content": "Initial management",
+                    "response": "Hospital admission with IV fluid hydration and pain control",
+                    "teaching_points": [
+                        {
+                            "id": "TP009",
+                            "content": "Supportive care is essential while arranging definitive treatment",
+                            "covered": false
+                        }
+                    ],
+                    "elicited": false
+                },
+                {
+                    "id": "TX002",
+                    "content": "Diagnostic workup",
+                    "response": "Obtain osmotic fragility test and EMA binding test to confirm hereditary spherocytosis",
+                    "teaching_points": [
+                        {
+                            "id": "TP010",
+                            "content": "EMA binding test is the preferred diagnostic test for hereditary spherocytosis with 90% sensitivity and 95% specificity",
+                            "covered": false
+                        }
+                    ],
+                    "elicited": false
+                },
+                {
+                    "id": "TX003",
+                    "content": "Definitive treatment",
+                    "response": "Schedule laparoscopic cholecystectomy after acute episode resolves",
+                    "teaching_points": [
+                        {
+                            "id": "TP011",
+                            "content": "In mild hereditary spherocytosis, cholecystectomy alone without splenectomy is appropriate for symptomatic gallstones",
+                            "covered": false
+                        }
+                    ],
+                    "elicited": false
+                }
+            ],
+            "optional": []
+        }
+    },
+    "differential_diagnosis": [
+        {
+            "name": "Hereditary Spherocytosis with Acute Cholecystitis",
+            "category": "likely",
+            "key_features": [
+                "compensated hemolysis",
+                "splenomegaly",
+                "elevated MCHC",
+                "family history of early gallstones",
+                "acute cholecystitis findings on imaging"
+            ],
+            "supporting_evidence": [],
+            "refuting_evidence": []
+        },
+        {
+            "name": "Acute Cholecystitis (without hereditary component)",
+            "category": "possible",
+            "key_features": [
+                "right upper quadrant pain",
+                "positive Murphy's sign",
+                "ultrasound findings"
+            ],
+            "supporting_evidence": [],
+            "refuting_evidence": []
+        },
+        {
+            "name": "Gilbert's Syndrome",
+            "category": "possible",
+            "key_features": [
+                "indirect hyperbilirubinemia",
+                "previous diagnosis"
+            ],
+            "supporting_evidence": [],
+            "refuting_evidence": []
+        }
+    ],
+    "final_diagnosis": {
+        "name": "Hereditary Spherocytosis with Acute Cholecystitis",
+        "category": "likely",
+        "key_features": [
+            "elevated MCHC",
+            "splenomegaly",
+            "early gallstone disease",
+            "family history",
+            "confirmed by EMA binding test"
+        ],
+        "supporting_evidence": [],
+        "refuting_evidence": []
+    }
+}

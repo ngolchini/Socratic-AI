@@ -1,0 +1,158 @@
+{
+    "metadata": {
+        "id": "string",
+        "title": "string",
+        "original_pesentation": "string",
+        "difficulty": "string",
+        "specialties": ["string"],
+        "keywords": ["string"],
+        "source": "string",
+        "version": "string"
+    },
+    "clinical_elements": {
+        "history": {
+            "required": [
+                {
+                    "id": "string",
+                    "content": "string",
+                    "response": "string",
+                    "teaching_points": [
+                        {
+                            "id": "string",
+                            "content": "string",
+                            "covered": "boolean"
+                        }
+                    ],
+                    "elicited": "boolean"
+                }
+            ],
+            "optional": [
+                {
+                    "id": "string",
+                    "content": "string",
+                    "response": "string",
+                    "teaching_points": [
+                        {
+                            "id": "string",
+                            "content": "string",
+                            "covered": "boolean"
+                        }
+                    ],
+                    "elicited": "boolean"
+                }
+            ]
+        },
+        "physical": {
+            "required": [
+                {
+                    "id": "string",
+                    "content": "string",
+                    "response": "string",
+                    "teaching_points": [
+                        {
+                            "id": "string",
+                            "content": "string",
+                            "covered": "boolean"
+                        }
+                    ],
+                    "elicited": "boolean"
+                }
+            ],
+            "optional": [
+                {
+                    "id": "string",
+                    "content": "string",
+                    "response": "string",
+                    "teaching_points": [
+                        {
+                            "id": "string",
+                            "content": "string",
+                            "covered": "boolean"
+                        }
+                    ],
+                    "elicited": "boolean"
+                }
+            ]
+        },
+        "testing": {
+            "required": [
+                {
+                    "id": "string",
+                    "content": "string",
+                    "response": "string",
+                    "teaching_points": [
+                        {
+                            "id": "string",
+                            "content": "string",
+                            "covered": "boolean"
+                        }
+                    ],
+                    "elicited": "boolean"
+                }
+            ],
+            "optional": [
+                {
+                    "id": "string",
+                    "content": "string",
+                    "response": "string",
+                    "teaching_points": [
+                        {
+                            "id": "string",
+                            "content": "string",
+                            "covered": "boolean"
+                        }
+                    ],
+                    "elicited": "boolean"
+                }
+            ]
+        },
+        "management": {
+            "required": [
+                {
+                    "id": "string",
+                    "content": "string",
+                    "response": "string",
+                    "teaching_points": [
+                        {
+                            "id": "string",
+                            "content": "string",
+                            "covered": "boolean"
+                        }
+                    ],
+                    "elicited": "boolean"
+                }
+            ],
+            "optional": [
+                {
+                    "id": "string",
+                    "content": "string",
+                    "response": "string",
+                    "teaching_points": [
+                        {
+                            "id": "string",
+                            "content": "string",
+                            "covered": "boolean"
+                        }
+                    ],
+                    "elicited": "boolean"
+                }
+            ]
+        }
+    },
+    "differential_diagnosis": [
+        {
+            "name": "string",
+            "category": "string",
+            "key_features": ["string"],
+            "supporting_evidence": ["string"],
+            "refuting_evidence": ["string"]
+        }
+    ],
+    "final_diagnosis": {
+        "name": "string",
+        "category": "string",
+        "key_features": ["string"],
+        "supporting_evidence": ["string"],
+        "refuting_evidence": ["string"]
+    }
+}

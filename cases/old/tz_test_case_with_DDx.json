@@ -1,0 +1,515 @@
+{
+  "metadata": {
+    "id": "case_001",
+    "title": "54-year-old man with diarrhea, vomiting, and weight loss",
+    "original_presentation": "A 54-year-old man was admitted to this hospital because of diarrhea, vomiting, and weight loss. The patient was well until approximately 2.5 years before admission, when abdominal cramping and nonbloody diarrhea developed 1 day after he flew from the Northeast to Colorado for a skiing trip; the symptoms persisted for the duration of his 4-day vacation.",
+    "difficulty": "advanced",
+    "specialties": [
+      "Gastroenterology",
+      "Infectious Disease"
+    ],
+    "keywords": [
+      "diarrhea",
+      "vomiting",
+      "weight loss",
+      "gastrinoma",
+      "Zollinger-Ellison syndrome"
+    ],
+    "source": "New England Journal of Medicine",
+    "version": "1.0"
+  },
+  "clinical_elements": {
+    "history": {
+      "required": [
+        {
+          "id": "H1",
+          "content": "What is the patient's travel history and its relation to symptoms?",
+          "response": "The patient experienced abdominal cramping and nonbloody diarrhea 1 day after flying to Colorado for a skiing trip, with symptoms persisting for the duration of his 4-day vacation. Similar symptoms occurred after another flight to Colorado and after traveling to the Middle East.",
+          "teaching_points": [
+            {
+              "id": "TP1",
+              "content": "Travel history can be crucial in diagnosing gastrointestinal conditions, especially those related to infections or environmental changes.",
+              "covered": true
+            }
+          ],
+          "elicited": true
+        },
+        {
+          "id": "H2",
+          "content": "What treatments were administered and their outcomes?",
+          "response": "Ciprofloxacin was administered without benefit. Metronidazole was given with near resolution of symptoms. Trimethoprim-sulfamethoxazole was prescribed with partial improvement.",
+          "teaching_points": [
+            {
+              "id": "TP2",
+              "content": "Response to antibiotics can help differentiate between bacterial and non-bacterial causes of diarrhea.",
+              "covered": true
+            }
+          ],
+          "elicited": true
+        }
+      ],
+      "optional": [
+        {
+          "id": "H3",
+          "content": "What is the patient's family medical history?",
+          "response": "Father had dementia, mother had Parkinson's disease and heart disease, and an uncle reportedly had stomach cancer.",
+          "teaching_points": [
+            {
+              "id": "TP3",
+              "content": "Family history can provide clues to genetic predispositions or hereditary conditions.",
+              "covered": true
+            }
+          ],
+          "elicited": false
+        }
+      ],
+      "current_ideal_differential_diagnosis": [
+        {
+          "name": "Giardiasis",
+          "category": "Infectious disease",
+          "likelihood": "medium",
+          "key_features": [
+            "diarrhea",
+            "abdominal cramping",
+            "weight loss",
+            "travel history"
+          ],
+          "supporting_evidence": [
+            "Symptoms improved with metronidazole, which is effective against Giardia",
+            "Travel history to areas where Giardia is more common"
+          ],
+          "refuting_evidence": [
+            "Symptoms did not resolve with ciprofloxacin, which is not typically used for Giardia"
+          ],
+          "additional_information_needed": [
+            "Stool antigen test for Giardia",
+            "Stool microscopy for ova and parasites"
+          ]
+        },
+        {
+          "name": "Irritable Bowel Syndrome (IBS)",
+          "category": "Functional gastrointestinal disorder",
+          "likelihood": "medium",
+          "key_features": [
+            "abdominal cramping",
+            "diarrhea",
+            "symptoms triggered by stress or travel"
+          ],
+          "supporting_evidence": [
+            "Chronic nature of symptoms",
+            "Symptoms triggered by travel"
+          ],
+          "refuting_evidence": [
+            "Weight loss is not typical for IBS",
+            "Partial improvement with antibiotics"
+          ],
+          "additional_information_needed": [
+            "Detailed dietary and stress history",
+            "Exclusion of other organic causes"
+          ]
+        },
+        {
+          "name": "Chronic infection (e.g., Cryptosporidiosis)",
+          "category": "Infectious disease",
+          "likelihood": "medium",
+          "key_features": [
+            "diarrhea",
+            "weight loss",
+            "travel history"
+          ],
+          "supporting_evidence": [
+            "Partial improvement with trimethoprim-sulfamethoxazole, which can be used for some chronic infections"
+          ],
+          "refuting_evidence": [
+            "No complete resolution with antibiotics"
+          ],
+          "additional_information_needed": [
+            "Stool tests for Cryptosporidium",
+            "HIV test if immunocompromised status is suspected"
+          ]
+        },
+        {
+          "name": "Inflammatory Bowel Disease (IBD)",
+          "category": "Gastrointestinal disease",
+          "likelihood": "low",
+          "key_features": [
+            "chronic diarrhea",
+            "abdominal pain",
+            "weight loss"
+          ],
+          "supporting_evidence": [
+            "Chronic nature of symptoms"
+          ],
+          "refuting_evidence": [
+            "Lack of bloody diarrhea",
+            "Improvement with antibiotics"
+          ],
+          "additional_information_needed": [
+            "Colonoscopy with biopsy",
+            "Fecal calprotectin test"
+          ]
+        }
+      ]
+    },
+    "physical": {
+      "required": [
+        {
+          "id": "P1",
+          "content": "What were the vital signs and physical examination findings upon admission?",
+          "response": "Blood pressure was 133/94 mm Hg, pulse 120 beats per minute; temperature, respirations, and oxygen saturation were normal, as was the remainder of the examination.",
+          "teaching_points": [
+            {
+              "id": "TP4",
+              "content": "Vital signs can indicate the severity of dehydration or systemic involvement in gastrointestinal illnesses.",
+              "covered": true
+            }
+          ],
+          "elicited": true
+        }
+      ],
+      "optional": [],
+      "current_ideal_differential_diagnosis": [
+        {
+          "name": "Giardiasis",
+          "category": "Infectious disease",
+          "likelihood": "medium",
+          "key_features": [
+            "diarrhea",
+            "abdominal cramping",
+            "weight loss",
+            "travel history"
+          ],
+          "supporting_evidence": [
+            "Symptoms improved with metronidazole",
+            "Travel to areas where Giardia is endemic"
+          ],
+          "refuting_evidence": [
+            "Symptoms not completely resolved with metronidazole"
+          ],
+          "additional_information_needed": [
+            "Stool antigen test for Giardia",
+            "Stool microscopy for ova and parasites"
+          ]
+        },
+        {
+          "name": "Irritable Bowel Syndrome (IBS)",
+          "category": "Gastrointestinal disorder",
+          "likelihood": "medium",
+          "key_features": [
+            "abdominal cramping",
+            "diarrhea",
+            "symptoms triggered by stress or travel"
+          ],
+          "supporting_evidence": [
+            "Chronic nature of symptoms",
+            "Symptoms triggered by travel"
+          ],
+          "refuting_evidence": [
+            "Weight loss is atypical for IBS",
+            "Partial improvement with antibiotics"
+          ],
+          "additional_information_needed": [
+            "Detailed dietary and stress history",
+            "Colonoscopy to rule out other conditions"
+          ]
+        },
+        {
+          "name": "Inflammatory Bowel Disease (IBD)",
+          "category": "Gastrointestinal disorder",
+          "likelihood": "low",
+          "key_features": [
+            "chronic diarrhea",
+            "abdominal pain",
+            "weight loss"
+          ],
+          "supporting_evidence": [
+            "Chronic diarrhea and weight loss"
+          ],
+          "refuting_evidence": [
+            "Lack of bloody diarrhea",
+            "Normal physical examination"
+          ],
+          "additional_information_needed": [
+            "Colonoscopy with biopsy",
+            "Fecal calprotectin test"
+          ]
+        },
+        {
+          "name": "Chronic Parasitic Infection",
+          "category": "Infectious disease",
+          "likelihood": "medium",
+          "key_features": [
+            "diarrhea",
+            "abdominal pain",
+            "travel history"
+          ],
+          "supporting_evidence": [
+            "Travel to the Middle East",
+            "Partial improvement with antibiotics"
+          ],
+          "refuting_evidence": [
+            "Lack of specific identification of parasite"
+          ],
+          "additional_information_needed": [
+            "Comprehensive stool analysis",
+            "Serological tests for specific parasites"
+          ]
+        },
+        {
+          "name": "Small Intestinal Bacterial Overgrowth (SIBO)",
+          "category": "Gastrointestinal disorder",
+          "likelihood": "low",
+          "key_features": [
+            "diarrhea",
+            "abdominal discomfort",
+            "weight loss"
+          ],
+          "supporting_evidence": [
+            "Partial improvement with antibiotics"
+          ],
+          "refuting_evidence": [
+            "Symptoms not fully resolved with antibiotics",
+            "Lack of bloating or gas"
+          ],
+          "additional_information_needed": [
+            "Hydrogen breath test",
+            "Jejunal aspirate culture"
+          ]
+        }
+      ]
+    },
+    "testing": {
+      "required": [
+        {
+          "id": "T1",
+          "content": "What were the key findings from imaging studies?",
+          "response": "CT of the abdomen and pelvis showed thickening and enhancement of the proximal small-bowel walls, mild dilatation in the small bowel, a large amount of fluid in the small bowel and colon with air-fluid levels, an enlarged retroperitoneal node, and a ground-glass nodule in the lung.",
+          "teaching_points": [
+            {
+              "id": "TP5",
+              "content": "Imaging can reveal structural abnormalities that suggest specific gastrointestinal pathologies.",
+              "covered": true
+            }
+          ],
+          "elicited": true
+        },
+        {
+          "id": "T2",
+          "content": "What were the results of the esophagogastroduodenoscopy?",
+          "response": "Revealed erosive or exudative circumferential lesions, excessive fluid in the gastric body, a partially obstructing duodenal ulcer, and multiple ulcers in the duodenum.",
+          "teaching_points": [
+            {
+              "id": "TP6",
+              "content": "Endoscopic findings can help differentiate between inflammatory and neoplastic causes of gastrointestinal symptoms.",
+              "covered": true
+            }
+          ],
+          "elicited": true
+        }
+      ],
+      "optional": [],
+      "current_ideal_differential_diagnosis": [
+        {
+          "name": "Giardiasis",
+          "category": "Infectious disease",
+          "likelihood": "medium",
+          "key_features": [
+            "diarrhea",
+            "abdominal cramping",
+            "weight loss",
+            "travel history"
+          ],
+          "supporting_evidence": [
+            "Symptoms improved with metronidazole",
+            "Travel history to areas where Giardia is endemic"
+          ],
+          "refuting_evidence": [
+            "Partial improvement with trimethoprim-sulfamethoxazole, which is not typically effective against Giardia"
+          ],
+          "additional_information_needed": [
+            "Stool antigen test for Giardia",
+            "PCR for Giardia in stool"
+          ]
+        },
+        {
+          "name": "Celiac Disease",
+          "category": "Autoimmune disease",
+          "likelihood": "medium",
+          "key_features": [
+            "chronic diarrhea",
+            "weight loss",
+            "abdominal pain",
+            "small bowel changes"
+          ],
+          "supporting_evidence": [
+            "Thickening and enhancement of the proximal small-bowel walls",
+            "Multiple ulcers in the duodenum"
+          ],
+          "refuting_evidence": [
+            "Symptoms triggered by travel",
+            "Improvement with metronidazole"
+          ],
+          "additional_information_needed": [
+            "Serologic tests for celiac disease (tTG-IgA)",
+            "Duodenal biopsy"
+          ]
+        },
+        {
+          "name": "Whipple's Disease",
+          "category": "Infectious disease",
+          "likelihood": "low",
+          "key_features": [
+            "chronic diarrhea",
+            "weight loss",
+            "abdominal pain",
+            "arthralgias"
+          ],
+          "supporting_evidence": [
+            "Thickening of the small bowel",
+            "Enlarged retroperitoneal node"
+          ],
+          "refuting_evidence": [
+            "Lack of arthralgias or neurological symptoms",
+            "Partial improvement with trimethoprim-sulfamethoxazole"
+          ],
+          "additional_information_needed": [
+            "Small bowel biopsy with PAS staining",
+            "PCR for Tropheryma whipplei"
+          ]
+        },
+        {
+          "name": "Inflammatory Bowel Disease (Crohn's Disease)",
+          "category": "Gastrointestinal disease",
+          "likelihood": "medium",
+          "key_features": [
+            "chronic diarrhea",
+            "abdominal pain",
+            "weight loss",
+            "small bowel involvement"
+          ],
+          "supporting_evidence": [
+            "Thickening and enhancement of the proximal small-bowel walls",
+            "Multiple ulcers in the duodenum"
+          ],
+          "refuting_evidence": [
+            "Symptoms triggered by travel",
+            "Improvement with metronidazole"
+          ],
+          "additional_information_needed": [
+            "Colonoscopy with biopsy",
+            "Fecal calprotectin"
+          ]
+        },
+        {
+          "name": "Small Intestinal Bacterial Overgrowth (SIBO)",
+          "category": "Gastrointestinal disease",
+          "likelihood": "medium",
+          "key_features": [
+            "chronic diarrhea",
+            "abdominal pain",
+            "bloating",
+            "weight loss"
+          ],
+          "supporting_evidence": [
+            "Improvement with metronidazole",
+            "Thickening of the small bowel"
+          ],
+          "refuting_evidence": [
+            "Symptoms triggered by travel",
+            "Presence of ulcers"
+          ],
+          "additional_information_needed": [
+            "Hydrogen breath test",
+            "Jejunal aspirate culture"
+          ]
+        }
+      ]
+    },
+    "management": {
+      "required": [
+        {
+          "id": "M1",
+          "content": "What was the initial management upon hospital admission?",
+          "response": "Omeprazole, prochlorperazine, and ondansetron hydrochloride were administered, and additional crystalloid solution was infused intravenously.",
+          "teaching_points": [
+            {
+              "id": "TP7",
+              "content": "Initial management of severe gastrointestinal symptoms often includes supportive care and symptomatic treatment.",
+              "covered": true
+            }
+          ],
+          "elicited": true
+        }
+      ],
+      "optional": []
+    }
+  },
+  "differential_diagnosis": [
+    {
+      "name": "Gastrinoma",
+      "category": "Neuroendocrine Tumor",
+      "key_features": [
+        "Chronic diarrhea",
+        "Multiple peptic ulcers",
+        "Barrett's esophagus"
+      ],
+      "supporting_evidence": [
+        "Large duodenal ulcer",
+        "Prominent gastric fold",
+        "Pancreatic mass"
+      ],
+      "refuting_evidence": [
+        "None"
+      ]
+    },
+    {
+      "name": "Infectious Gastroenteritis",
+      "category": "Infectious Disease",
+      "key_features": [
+        "Diarrhea after travel",
+        "Response to metronidazole"
+      ],
+      "supporting_evidence": [
+        "Travel history",
+        "Initial response to antibiotics"
+      ],
+      "refuting_evidence": [
+        "Negative stool studies",
+        "Chronic nature of symptoms"
+      ]
+    },
+    {
+      "name": "Inflammatory Bowel Disease",
+      "category": "Autoimmune Disease",
+      "key_features": [
+        "Recurrent diarrhea",
+        "Abdominal pain"
+      ],
+      "supporting_evidence": [
+        "Chronic symptoms",
+        "Weight loss"
+      ],
+      "refuting_evidence": [
+        "No evidence of colitis on endoscopy",
+        "Negative inflammatory markers"
+      ]
+    }
+  ],
+  "final_diagnosis": {
+    "name": "Gastrinoma",
+    "category": "Neuroendocrine Tumor",
+    "key_features": [
+      "Chronic diarrhea",
+      "Multiple peptic ulcers",
+      "Barrett's esophagus"
+    ],
+    "supporting_evidence": [
+      "Large duodenal ulcer",
+      "Prominent gastric fold",
+      "Pancreatic mass"
+    ],
+    "refuting_evidence": [
+      "None"
+    ]
+  }
+}

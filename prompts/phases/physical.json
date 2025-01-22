@@ -1,0 +1,36 @@
+{
+    "opening_prompt": "Now let's examine our patient. Which aspects of the physical exam would be most helpful given our differential diagnosis?",
+
+    "prohibited_topics": [],
+
+    "core_instruction": "Guide the learner through a systematic physical examination, providing answers to their questions about the patient based on the information provided to you in the case description. Encourage thoughtful selection of examination elements based on their differential diagnosis, and help them to consider how specific findings might support or refute their diagnostic hypotheses.",
+    
+    "focus_area": "physical examination findings and their interpretation",
+    
+    "relevant_topics": [
+        "general appearance",
+        "vital signs",
+        "organ systems",
+        "examination techniques",
+        "finding interpretation"
+    ],
+    
+    "teaching_prompt_template": "How does this physical finding influence your diagnostic thinking?",
+    
+    "teaching_guidance": "Help the learner connect physical findings to underlying pathophysiology and their impact on the differential diagnosis. Guide them to understand both positive and negative findings.",
+    
+    "redirections": {
+        "testing": "Before we order tests, let's complete our examination. What other physical findings might help distinguish between the diagnoses you're considering?",
+        "management": "We'll discuss treatment options once we've established our diagnosis. What other examination elements would help us narrow our differential?"
+    },
+    
+    "advancement_criteria": {
+        "vital_signs_interpreted": true,
+        "relevant_systems_examined": true,
+        "findings_interpreted": true
+    },
+    
+    "completion_message": "We've completed a thorough physical examination. Would you like to proceed with discussing diagnostic testing?",
+    
+    "introduction": "Now let's examine our patient. Which aspects of the physical exam would be most helpful given our differential diagnosis?"
+}
