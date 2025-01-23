@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 #!/Users/nilogolchini/Desktop/socratic_ai_sam_newest/venv/bin/python3
+=======
+#!/Users/nilogolchini/Desktop/socratic_ai_tz_updates/venv/bin/python3
+>>>>>>> tz-updates
 # -*- coding: utf-8 -*-
 import re
 import sys

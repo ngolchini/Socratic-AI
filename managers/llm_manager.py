@@ -42,7 +42,6 @@ class LLMManager:
                 temperature=temperature,
                 response_format={"type": "json_object"}
             )
-            
             self.logger.info("Single exchange - System prompt: %s", system_prompt)
             self.logger.info("Single exchange - User message: %s", user_message)
             

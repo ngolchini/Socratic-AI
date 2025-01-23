@@ -62,7 +62,7 @@ class ClinicalCaseTutor:
         api_key = st.secrets["api"]["OPENAI_API_KEY"]
         if not api_key:
             st.error("OpenAI API key not found in secrets. Please set it in the Streamlit secrets configuration.")
-            st.stop()
+=======
         
         self.client = OpenAI(api_key=api_key)
         self.llm_manager = LLMManager(self.client)
@@ -98,43 +98,48 @@ class ClinicalCaseTutor:
             st.session_state.phase_summaries = {}
             st.session_state.differential_diagnosis = []
             st.session_state.current_phase = PhaseType.HISTORY
-            st.session_state.differential_manager = None  # Add this line
+            st.session_state.differential_manager = None
+            st.session_state._session_id = 0  # Add this line
 
     def _initialize_managers(self):
         """Initialize all managers with current session state."""
-        if st.session_state.case_data:
-            self.phase_manager = PhaseManager(
-                case_data=st.session_state.case_data, 
-                llm_manager=self.llm_manager,
-                prompt_manager=self.prompt_manager  # Add this line
-            )
+        if not hasattr(st.session_state, 'case_data') or not st.session_state.case_data:
+            return
             
-            # Only create a new DifferentialManager if one doesn't exist
-            if st.session_state.differential_manager is None:
-                self.differential_manager = DifferentialManager(self.llm_manager)
-                st.session_state.differential_manager = self.differential_manager
-            else:
-                self.differential_manager = st.session_state.differential_manager
+        self.phase_manager = PhaseManager(
+            case_data=st.session_state.case_data,
+            llm_manager=self.llm_manager,
+            prompt_manager=self.prompt_manager
+        )
+        
+        # Only create a new DifferentialManager if one doesn't exist
+        if st.session_state.differential_manager is None:
+            self.differential_manager = DifferentialManager(self.llm_manager)
+            st.session_state.differential_manager = self.differential_manager
         else:
-            self.phase_manager = None
-            self.differential_manager = None
-            st.session_state.differential_manager = None
+            self.differential_manager = st.session_state.differential_manager
     
     def _setup_case(self):
         """Set up or continue the current clinical case."""
         available_cases = self._get_available_cases()
         
         with st.sidebar:
+            # Use a timestamp-based key to ensure fresh state
+            selectbox_key = f"case_selector_{st.session_state.get('_session_id', 0)}"
+            
+            current_index = 0
+            if st.session_state.current_case_id in available_cases:
+                current_index = available_cases.index(st.session_state.current_case_id)
+                
             selected_case = st.selectbox(
                 "Select Clinical Case",
                 options=available_cases,
-                index=0 if not st.session_state.current_case_id else 
-                available_cases.index(st.session_state.current_case_id),
-                key="case_selector"  # Add unique key here
+                index=current_index,
+                key=selectbox_key
             )
             
+            # Only trigger case load if selection actually changed
             if selected_case != st.session_state.current_case_id:
-                st.session_state.case_loaded = False
                 self._load_new_case(selected_case)
     
     def _get_available_cases(self) -> list:
@@ -146,35 +151,45 @@ class ClinicalCaseTutor:
         """Load a new clinical case and initialize its managers."""
         try:
             self.logger.info(f"Loading case: {case_id}")
+            
+            # Only proceed if this is actually a new case
+            if st.session_state.current_case_id == case_id:
+                return
+                
+            # Load case data first
             case_data = self.case_manager.load_case(case_id)
             self.logger.info(f"Case loaded successfully: {case_id}")
             
-            # Only reset everything if it's a new case
-            if st.session_state.current_case_id != case_id:
-                st.session_state.chat_messages = []
-                st.session_state.assessment_cache = {}
-                st.session_state.phase_summaries = {}
-                st.session_state.differential_manager = None  # Reset differential manager for new case
-            
-            # Update session state
+            # Reset all state in a single block
+            st.session_state.chat_messages = []
+            st.session_state.assessment_cache = {}
+            st.session_state.phase_summaries = {}
+            st.session_state.differential_manager = None
             st.session_state.case_data = case_data
             st.session_state.current_case_id = case_id
-            st.session_state.case_loaded = True
             st.session_state.current_phase = PhaseType.HISTORY
+            st.session_state.case_loaded = True
+            st.session_state.case_presented = False
             
-            # Reinitialize managers
+            # Clear any existing phase-related flags
+            if 'phase_completion_status' in st.session_state:
+                del st.session_state.phase_completion_status
+            if 'summary_generated' in st.session_state:
+                del st.session_state.summary_generated
+            if 'pending_next_phase' in st.session_state:
+                del st.session_state.pending_next_phase
+                
+            # Reinitialize managers with new case data
             self._initialize_managers()
-            
-            # Update the initial display before rerunning
-            self._update_initial_display()
-            
-            # Use st.rerun() instead of experimental_rerun
+                
+            # Force a complete rerun with new session ID to ensure fresh state
+            st.session_state['_session_id'] = st.session_state.get('_session_id', 0) + 1
             st.rerun()
-            
+                
         except Exception as e:
             self.logger.error(f"Error loading case: {str(e)}")
             st.error(f"Error loading case: {str(e)}")
-    
+
     def _update_initial_display(self):
         """Initialize all display components with current case state."""
         if st.session_state.case_data:
@@ -337,13 +352,26 @@ class ClinicalCaseTutor:
     
     def _handle_user_input(self, user_input: str):
         """Process and respond to user input using conversational context."""
+        self.logger.info(f"Handling user input: {user_input}")
+        
         if not st.session_state.case_loaded or not self.phase_manager:
             st.error("Please select a case before continuing.")
+            return
+        
+        # Debug shortcut for phase transition
+        if user_input.lower() in ["move forward", "next phase", "skip"]:
+            self.logger.info("Debug command detected - forcing phase transition")
+            self.display_manager.update_chat_display(
+                "⚡ Debug command detected - moving to phase transition...",
+                role="assistant"
+            )
+            self._handle_phase_transition()
             return
                 
         try:
             # First assess if the topic is appropriate
             topic_assessment = self.phase_manager.assess_topic(user_input)
+            self.logger.info(f"Topic assessment result: {topic_assessment}")
             
             if topic_assessment.relevance != TopicRelevance.ON_TOPIC:
                 if topic_assessment.redirect_message:
@@ -352,6 +380,12 @@ class ClinicalCaseTutor:
                         role="assistant"
                     )
                 return
+            
+            # Add user message to chat history first
+            self.display_manager.update_chat_display(
+                message=user_input,
+                role="user"
+            )
             
             # Get current differential diagnoses
             current_differential = []
@@ -372,7 +406,11 @@ class ClinicalCaseTutor:
                     {
                         "name": dx.name,
                         "order": idx + 1,
+<<<<<<< HEAD
                         "notes": self.differential_manager.hypotheses[dx.name].notes
+=======
+                        "notes": self.differential_manager.hypotheses[dx.name].notes if dx.name in self.differential_manager.hypotheses else ""
+>>>>>>> tz-updates
                     }
                     for idx, dx in enumerate(current_differential)
                 ],
@@ -397,6 +435,7 @@ class ClinicalCaseTutor:
                 st.session_state.current_phase_prompt = system_prompt
             
             # Get conversational response with full context
+            self.logger.info("Getting LLM response...")
             response = self.llm_manager.get_conversational_response(
                 system_prompt=system_prompt,
                 user_message=json.dumps(context) + "\n\nUser message: " + user_input,
@@ -404,39 +443,37 @@ class ClinicalCaseTutor:
                 temperature=0.7
             )
             
+            self.logger.info(f"LLM response received: {response is not None}")
+            
             if response:
+                # Add bot response to chat history
+                self.display_manager.update_chat_display(
+                    message=response,
+                    role="assistant"
+                )
+                
+                # Assess coverage and check completion
                 coverage_assessment = self.phase_manager.assess_coverage(user_input, response)
-                self.display_manager.display_tutor_response(user_input, response)
                 
-                current_history = st.session_state.chat_messages + [
-                    {"role": "user", "content": user_input},
-                    {"role": "assistant", "content": response}
-                ]
-                
-                # Check and log phase completion status
+                # Update phase completion status if needed
                 phase_status = getattr(st.session_state, 'phase_completion_status', {})
                 current_phase = self.phase_manager.current_phase_type.value
                 
-                self.logger.info(f"Current phase: {current_phase}")
-                self.logger.info(f"Phase completion status: {phase_status}")
-                
                 if not phase_status.get(current_phase, False):
-                    self.logger.info("Checking phase completion...")
-                    is_complete = self.phase_manager.check_phase_completion(current_history)
-                    self.logger.info(f"Phase completion check result: {is_complete}")
-                    
+                    is_complete = self.phase_manager.check_phase_completion(st.session_state.chat_messages)
                     if is_complete:
                         self.logger.info("Phase complete! Displaying completion message...")
                         self._display_phase_completion_message()
                         return
-                else:
-                    self.logger.info("Phase already marked as complete")
+            else:
+                self.logger.error("No response received from LLM")
+                st.error("I apologize, but I wasn't able to generate a response. Please try again.")
+                return
                 
-                self._update_displays()
-                st.rerun()
-                
+            self._update_displays()
+        
         except Exception as e:
-            self.logger.error(f"Error handling user input: {str(e)}")
+            self.logger.error(f"Error handling user input: {str(e)}", exc_info=True)
             st.error("An error occurred while processing your input. Please try again.")
             
     def _generate_next_response(self, coverage_assessment) -> str:
@@ -462,11 +499,11 @@ class ClinicalCaseTutor:
         return self.prompt_manager.construct_follow_up_question(phase_context)
 
     def _handle_phase_transition(self):
-        """Handle transition to the next phase with enhanced summaries."""
+        """Handle transition to the next phase with enhanced summaries and differential check."""
         if not hasattr(self, 'phase_manager') or not self.phase_manager:
             self.logger.warning("Phase transition called before phase manager initialization")
             return
-            
+                
         if not hasattr(st.session_state, 'chat_messages'):
             self.logger.warning("Phase transition called before chat history initialization")
             return
@@ -483,6 +520,33 @@ class ClinicalCaseTutor:
         if 'phase_summaries' not in st.session_state:
             st.session_state.phase_summaries = {}
         st.session_state.phase_summaries[current_phase] = summaries["phase_summary"]
+        
+       # Check differential diagnosis if we're transitioning from certain phases
+        if current_phase in [PhaseType.HISTORY, PhaseType.PHYSICAL, PhaseType.TESTING]:
+            try:
+                # Get the current phase object
+                phase = self.phase_manager.current_phase
+                ideal_differential = phase.current_ideal_differential_diagnosis
+                
+                if ideal_differential and self.differential_manager:
+                    matches_sufficiently, feedback = self.differential_manager.compare_differentials(ideal_differential)
+                    
+                    # Display feedback about differential
+                    self.display_manager.update_chat_display(
+                        feedback,
+                        role="assistant"
+                    )
+                    
+                    # If differential doesn't match well enough, pause transition
+                    if not matches_sufficiently:
+                        self.display_manager.update_chat_display(
+                            "Please review and update your differential diagnosis based on the feedback above before proceeding.",
+                            role="assistant"
+                        )
+                        return
+            except Exception as e:
+                self.logger.error(f"Error comparing differentials: {str(e)}")
+                # Continue with phase transition even if differential comparison fails
         
         # Get next phase using phase sequence
         phase_sequence = [
@@ -594,23 +658,24 @@ class ClinicalCaseTutor:
         )
         
     def run(self):
-        """Main application loop."""
         if hasattr(st.session_state, '_differential_updated'):
             del st.session_state._differential_updated
         
-        self._case_progress_bar(st.session_state.current_phase.value.capitalize())
-        st.text("")
-
-        if st.session_state.case_loaded:
-            # Ensure layout is set up
+        # Only proceed with setup if we have valid state
+        if st.session_state.case_loaded and st.session_state.case_data:
+            self._case_progress_bar(st.session_state.current_phase.value.capitalize())
+            st.text("")
+            
+            # Ensure managers are initialized
+            self._initialize_managers()
+            
+            # Setup layout and continue with normal flow
             if not self.display_manager.chat_col:
                 self.display_manager._setup_layout()
                 
-            # Initialize initial display if needed
             if not st.session_state.chat_messages:
                 self._update_initial_display()
                 
-            # Update all displays
             self._update_displays()
             
             # Handle chat interface

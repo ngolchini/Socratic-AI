@@ -89,6 +89,95 @@ class DifferentialManager:
             self.hypotheses[diagnosis_name].notes = notes
             self.logger.info(f"Updated notes for {diagnosis_name}")
 
+    def compare_differentials(
+        self,
+        ideal_differential: List[Dict]
+    ) -> Tuple[bool, str]:
+        """
+        Compare user's differential with the ideal differential for the current phase
+        
+        Args:
+            ideal_differential: List of ideal diagnoses from LLM
+        
+        Returns:
+            Tuple of (matches_sufficiently: bool, feedback_message: str)
+        """
+        system_prompt = """You are a medical educator assessing a learner's differential diagnosis against an expert-generated differential.
+        The goal is to take the differential they have created and use it to provide constructive feedback WITHOUT telling them the answer, as 
+        they will be moving to the next step of the case. 
+        Consider:
+        1. What percentage of the key diagnoses are present (recall)? 
+        2. Is the ranking/prioritization reasonable?
+        3. Of the missed diagnosis, what are clues that you can give to help them think about them for next steps?
+        4. Are there any inappropriate inclusions?
+        
+        Return a JSON object with:
+        {
+            "1. recall rate: float,
+            "2. ranking order": [string],
+            "3. Clues for missed diagnoses": [string],
+            "4. Inappropriate inclusions and why": [string]
+        }
+        """
+        
+        # Get current user differential
+        user_differential = self.get_ranked_differential()
+        
+        # Format the differentials for comparison
+        comparison_data = {
+            "user_differential": [
+                {
+                    "name": dx.name,
+                    "category": dx.category.value,
+                    "key_features": dx.key_features,
+                    "order": idx + 1
+                }
+                for idx, dx in enumerate(user_differential)
+            ],
+            "ideal_differential": ideal_differential
+        }
+        
+        response = self.llm_manager.get_json_response(
+            system_prompt,
+            json.dumps(comparison_data)
+        )
+        
+        # Create a structured summary of both differentials
+        comparison_summary = """
+    ## 🎯 Differential Diagnosis Comparison
+
+    ### Your Current Differential:
+    {}
+
+    ### Expert Differential for this Stage:
+    {}
+
+    ### Analysis:
+    {}
+
+    {}
+
+    {}
+
+    ### Overall Assessment:
+    ✨ Sufficient Match: {}
+        """.format(
+            "\n".join(f"- {idx+1}. {dx.name}" for idx, dx in enumerate(user_differential)),
+            "\n".join(f"- {dx['name']} ({dx['likelihood']})" for dx in ideal_differential),
+            response.get('feedback', 'No specific feedback available.'),
+            f"🚩 **Missing Key Diagnoses**: {', '.join(response.get('missing_key_diagnoses', []))}" if response.get('missing_key_diagnoses') else "",
+            f"⚠️ **Ranking Feedback**: {response.get('ranking_feedback', '')}" if response.get('ranking_feedback') else "",
+            "✅ Yes" if response.get("sufficient_match", False) else "❌ No"
+        )
+        
+        self.logger.info(f"Differential comparison completed. Match sufficient: {response.get('sufficient_match', False)}")
+        
+        return (
+            response.get("sufficient_match", False),
+            comparison_summary
+        )
+
+
     def update_diagnosis_order(self, diagnosis_name: str, new_index: int):
         """Update the order index for a specific diagnosis."""
         if diagnosis_name not in self.hypotheses:

@@ -1,0 +1,203 @@
+{
+  "metadata": {
+    "id": "case_001",
+    "title": "54-year-old man with diarrhea, vomiting, and weight loss",
+    "original_presentation": "A 54-year-old man was admitted to this hospital because of diarrhea, vomiting, and weight loss. The patient was well until approximately 2.5 years before admission, when abdominal cramping and nonbloody diarrhea developed 1 day after he flew from the Northeast to Colorado for a skiing trip; the symptoms persisted for the duration of his 4-day vacation.",
+    "difficulty": "advanced",
+    "specialties": [
+      "Gastroenterology",
+      "Infectious Disease"
+    ],
+    "keywords": [
+      "diarrhea",
+      "vomiting",
+      "weight loss",
+      "gastrinoma",
+      "Zollinger-Ellison syndrome"
+    ],
+    "source": "New England Journal of Medicine",
+    "version": "1.0"
+  },
+  "clinical_elements": {
+    "history": {
+      "required": [
+        {
+          "id": "H1",
+          "content": "What is the patient's travel history and its relation to symptoms?",
+          "response": "The patient experienced abdominal cramping and nonbloody diarrhea 1 day after flying to Colorado for a skiing trip, with symptoms persisting for the duration of his 4-day vacation. Similar symptoms occurred after another flight to Colorado and after traveling to the Middle East.",
+          "teaching_points": [
+            {
+              "id": "TP1",
+              "content": "Travel history can be crucial in diagnosing gastrointestinal conditions, especially those related to infections or environmental changes.",
+              "covered": true
+            }
+          ],
+          "elicited": true
+        },
+        {
+          "id": "H2",
+          "content": "What treatments were administered and their outcomes?",
+          "response": "Ciprofloxacin was administered without benefit. Metronidazole was given with near resolution of symptoms. Trimethoprim-sulfamethoxazole was prescribed with partial improvement.",
+          "teaching_points": [
+            {
+              "id": "TP2",
+              "content": "Response to antibiotics can help differentiate between bacterial and non-bacterial causes of diarrhea.",
+              "covered": true
+            }
+          ],
+          "elicited": true
+        }
+      ],
+      "optional": [
+        {
+          "id": "H3",
+          "content": "What is the patient's family medical history?",
+          "response": "Father had dementia, mother had Parkinson's disease and heart disease, and an uncle reportedly had stomach cancer.",
+          "teaching_points": [
+            {
+              "id": "TP3",
+              "content": "Family history can provide clues to genetic predispositions or hereditary conditions.",
+              "covered": true
+            }
+          ],
+          "elicited": false
+        }
+      ]
+    },
+    "physical": {
+      "required": [
+        {
+          "id": "P1",
+          "content": "What were the vital signs and physical examination findings upon admission?",
+          "response": "Blood pressure was 133/94 mm Hg, pulse 120 beats per minute; temperature, respirations, and oxygen saturation were normal, as was the remainder of the examination.",
+          "teaching_points": [
+            {
+              "id": "TP4",
+              "content": "Vital signs can indicate the severity of dehydration or systemic involvement in gastrointestinal illnesses.",
+              "covered": true
+            }
+          ],
+          "elicited": true
+        }
+      ],
+      "optional": []
+    },
+    "testing": {
+      "required": [
+        {
+          "id": "T1",
+          "content": "What were the key findings from imaging studies?",
+          "response": "CT of the abdomen and pelvis showed thickening and enhancement of the proximal small-bowel walls, mild dilatation in the small bowel, a large amount of fluid in the small bowel and colon with air-fluid levels, an enlarged retroperitoneal node, and a ground-glass nodule in the lung.",
+          "teaching_points": [
+            {
+              "id": "TP5",
+              "content": "Imaging can reveal structural abnormalities that suggest specific gastrointestinal pathologies.",
+              "covered": true
+            }
+          ],
+          "elicited": true
+        },
+        {
+          "id": "T2",
+          "content": "What were the results of the esophagogastroduodenoscopy?",
+          "response": "Revealed erosive or exudative circumferential lesions, excessive fluid in the gastric body, a partially obstructing duodenal ulcer, and multiple ulcers in the duodenum.",
+          "teaching_points": [
+            {
+              "id": "TP6",
+              "content": "Endoscopic findings can help differentiate between inflammatory and neoplastic causes of gastrointestinal symptoms.",
+              "covered": true
+            }
+          ],
+          "elicited": true
+        }
+      ],
+      "optional": []
+    },
+    "management": {
+      "required": [
+        {
+          "id": "M1",
+          "content": "What was the initial management upon hospital admission?",
+          "response": "Omeprazole, prochlorperazine, and ondansetron hydrochloride were administered, and additional crystalloid solution was infused intravenously.",
+          "teaching_points": [
+            {
+              "id": "TP7",
+              "content": "Initial management of severe gastrointestinal symptoms often includes supportive care and symptomatic treatment.",
+              "covered": true
+            }
+          ],
+          "elicited": true
+        }
+      ],
+      "optional": []
+    }
+  },
+  "differential_diagnosis": [
+    {
+      "name": "Gastrinoma",
+      "category": "Neuroendocrine Tumor",
+      "key_features": [
+        "Chronic diarrhea",
+        "Multiple peptic ulcers",
+        "Barrett's esophagus"
+      ],
+      "supporting_evidence": [
+        "Large duodenal ulcer",
+        "Prominent gastric fold",
+        "Pancreatic mass"
+      ],
+      "refuting_evidence": [
+        "None"
+      ]
+    },
+    {
+      "name": "Infectious Gastroenteritis",
+      "category": "Infectious Disease",
+      "key_features": [
+        "Diarrhea after travel",
+        "Response to metronidazole"
+      ],
+      "supporting_evidence": [
+        "Travel history",
+        "Initial response to antibiotics"
+      ],
+      "refuting_evidence": [
+        "Negative stool studies",
+        "Chronic nature of symptoms"
+      ]
+    },
+    {
+      "name": "Inflammatory Bowel Disease",
+      "category": "Autoimmune Disease",
+      "key_features": [
+        "Recurrent diarrhea",
+        "Abdominal pain"
+      ],
+      "supporting_evidence": [
+        "Chronic symptoms",
+        "Weight loss"
+      ],
+      "refuting_evidence": [
+        "No evidence of colitis on endoscopy",
+        "Negative inflammatory markers"
+      ]
+    }
+  ],
+  "final_diagnosis": {
+    "name": "Gastrinoma",
+    "category": "Neuroendocrine Tumor",
+    "key_features": [
+      "Chronic diarrhea",
+      "Multiple peptic ulcers",
+      "Barrett's esophagus"
+    ],
+    "supporting_evidence": [
+      "Large duodenal ulcer",
+      "Prominent gastric fold",
+      "Pancreatic mass"
+    ],
+    "refuting_evidence": [
+      "None"
+    ]
+  }
+}

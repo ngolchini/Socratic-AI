@@ -42,7 +42,13 @@ class CaseData:
 
     def get_current_phase(self, phase_type: PhaseType) -> Phase:
         """Get the phase data for a specific phase"""
-        return self.phases[phase_type]
+        phase = self.phases[phase_type]
+        
+        # Add the ideal differential from raw data if it exists
+        if hasattr(self, '_raw_data'):
+            phase_data = self._raw_data['clinical_elements'].get(phase_type.value.lower(), {})
+            phase.current_ideal_differential_diagnosis = phase_data.get('current_ideal_differential_diagnosis', [])
+        return phase
     
     def update_differential(self, diagnosis: Diagnosis):
         """Update or add a diagnosis to the differential"""

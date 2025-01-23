@@ -33,7 +33,11 @@ end
 # Unset irrelevant variables.
 deactivate nondestructive
 
+<<<<<<< HEAD
 set -gx VIRTUAL_ENV "/Users/nilogolchini/Desktop/socratic_ai_sam_newest/venv"
+=======
+set -gx VIRTUAL_ENV "/Users/nilogolchini/Desktop/socratic_ai_tz_updates/venv"
+>>>>>>> tz-updates
 
 set -gx _OLD_VIRTUAL_PATH $PATH
 set -gx PATH "$VIRTUAL_ENV/bin" $PATH

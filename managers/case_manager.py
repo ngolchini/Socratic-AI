@@ -55,7 +55,7 @@ class CaseManager:
             # Load metadata
             metadata = CaseMetadata(
                 id=case_json['metadata']['id'],
-                title=case_json['metadata']['title'],
+                title=case_json['metadata']['original_presentation'],
                 difficulty=case_json['metadata']['difficulty'],
                 specialties=case_json['metadata']['specialties'],
                 keywords=case_json['metadata']['keywords']
