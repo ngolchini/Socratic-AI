@@ -405,11 +405,8 @@ class ClinicalCaseTutor:
                     {
                         "name": dx.name,
                         "order": idx + 1,
-<<<<<<< HEAD
                         "notes": self.differential_manager.hypotheses[dx.name].notes
-=======
                         "notes": self.differential_manager.hypotheses[dx.name].notes if dx.name in self.differential_manager.hypotheses else ""
->>>>>>> tz-updates
                     }
                     for idx, dx in enumerate(current_differential)
                 ],
