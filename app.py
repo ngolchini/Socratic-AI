@@ -62,8 +62,7 @@ class ClinicalCaseTutor:
         api_key = st.secrets["api"]["OPENAI_API_KEY"]
         if not api_key:
             st.error("OpenAI API key not found in secrets. Please set it in the Streamlit secrets configuration.")
-=======
-        
+
         self.client = OpenAI(api_key=api_key)
         self.llm_manager = LLMManager(self.client)
     
