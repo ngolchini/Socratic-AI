@@ -1,0 +1,567 @@
+{
+  "metadata": {
+    "id": "case_035",
+    "title": "2017 Case 34",
+    "original_presentation": "A 76-year-old man was admitted to this hospital in the late summer because of weight loss, generalized weakness, and fever.",
+    "difficulty": "intermediate",
+    "specialties": [
+      "Psychiatry",
+      "Neurology",
+      "Internal Medicine"
+    ],
+    "keywords": [
+      "weight loss",
+      "weakness",
+      "fever",
+      "altered mental status",
+      "flaccid paralysis"
+    ],
+    "source": "Dr. Benjamin R. Robbins",
+    "version": "1.0"
+  },
+  "clinical_elements": {
+    "history": {
+      "required": [
+        {
+          "id": "H1",
+          "content": "What symptoms did the patient experience before admission?",
+          "response": "The patient experienced decreased energy, poor appetite, weight loss of 4.5 kg, dyspnea on exertion, diffuse myalgias, and severe fatigue.",
+          "teaching_points": [
+            {
+              "id": "TP1",
+              "content": "Weight loss and fatigue in elderly patients can be indicative of a wide range of conditions, including malignancy, infection, and metabolic disorders.",
+              "covered": false
+            }
+          ],
+          "elicited": false
+        },
+        {
+          "id": "H2",
+          "content": "What is the patient's past medical history?",
+          "response": "The patient has a history of hypertension, non–insulin-dependent diabetes mellitus, and vitamin D deficiency.",
+          "teaching_points": [
+            {
+              "id": "TP2",
+              "content": "Chronic conditions such as hypertension and diabetes can complicate the clinical picture and management of acute illnesses.",
+              "covered": false
+            }
+          ],
+          "elicited": false
+        },
+        {
+          "id": "H3",
+          "content": "What medications is the patient taking?",
+          "response": "The patient is taking lisinopril and aspirin; the diabetes is controlled by diet.",
+          "teaching_points": [
+            {
+              "id": "TP3",
+              "content": "Medication history is crucial in understanding potential drug interactions and side effects.",
+              "covered": false
+            }
+          ],
+          "elicited": false
+        },
+        {
+          "id": "H4",
+          "content": "What is the patient's social history?",
+          "response": "The patient is retired, resides in New England, has not traveled outside the region in several years, does not have pets, and occasionally drinks alcohol.",
+          "teaching_points": [
+            {
+              "id": "TP4",
+              "content": "Social history, including travel and exposure history, can provide clues to infectious or environmental causes of illness.",
+              "covered": false
+            }
+          ],
+          "elicited": false
+        }
+      ],
+      "optional": [],
+      "current_ideal_differential_diagnosis": [
+        {
+          "name": "Infection (e.g., endocarditis, tuberculosis)",
+          "category": "Infectious disease",
+          "likelihood": "medium",
+          "key_features": [
+            "fever",
+            "weight loss",
+            "generalized weakness",
+            "dyspnea on exertion"
+          ],
+          "supporting_evidence": [
+            "fever",
+            "weight loss",
+            "generalized weakness",
+            "dyspnea on exertion"
+          ],
+          "refuting_evidence": [
+            "no travel history",
+            "no pet exposure"
+          ],
+          "additional_information_needed": [
+            "blood cultures",
+            "chest X-ray",
+            "tuberculin skin test or IGRA"
+          ]
+        },
+        {
+          "name": "Malignancy (e.g., lymphoma, lung cancer)",
+          "category": "Oncological disease",
+          "likelihood": "medium",
+          "key_features": [
+            "weight loss",
+            "fever",
+            "fatigue",
+            "dyspnea"
+          ],
+          "supporting_evidence": [
+            "weight loss",
+            "fever",
+            "severe fatigue"
+          ],
+          "refuting_evidence": [
+            "no specific localizing symptoms"
+          ],
+          "additional_information_needed": [
+            "CT scan of chest/abdomen",
+            "CBC with differential",
+            "LDH levels"
+          ]
+        },
+        {
+          "name": "Autoimmune disease (e.g., polymyalgia rheumatica, giant cell arteritis)",
+          "category": "Rheumatological disease",
+          "likelihood": "medium",
+          "key_features": [
+            "diffuse myalgias",
+            "fever",
+            "weight loss",
+            "fatigue"
+          ],
+          "supporting_evidence": [
+            "diffuse myalgias",
+            "fever",
+            "weight loss",
+            "severe fatigue"
+          ],
+          "refuting_evidence": [
+            "no specific joint symptoms",
+            "no headache or visual symptoms"
+          ],
+          "additional_information_needed": [
+            "ESR and CRP levels",
+            "temporal artery biopsy if indicated"
+          ]
+        },
+        {
+          "name": "Chronic heart failure",
+          "category": "Cardiovascular disease",
+          "likelihood": "low",
+          "key_features": [
+            "dyspnea on exertion",
+            "fatigue",
+            "weight loss"
+          ],
+          "supporting_evidence": [
+            "dyspnea on exertion",
+            "severe fatigue"
+          ],
+          "refuting_evidence": [
+            "no history of heart disease",
+            "no peripheral edema"
+          ],
+          "additional_information_needed": [
+            "echocardiogram",
+            "BNP levels"
+          ]
+        },
+        {
+          "name": "Chronic kidney disease",
+          "category": "Renal disease",
+          "likelihood": "low",
+          "key_features": [
+            "fatigue",
+            "weight loss",
+            "poor appetite"
+          ],
+          "supporting_evidence": [
+            "poor appetite",
+            "severe fatigue"
+          ],
+          "refuting_evidence": [
+            "no known kidney disease",
+            "no edema or uremic symptoms"
+          ],
+          "additional_information_needed": [
+            "serum creatinine and BUN",
+            "urinalysis"
+          ]
+        }
+      ]
+    },
+    "physical": {
+      "required": [
+        {
+          "id": "P1",
+          "content": "What were the initial physical examination findings?",
+          "response": "The temperature was 36.6°C, blood pressure 124/73 mm Hg, pulse 59 beats per minute, respiratory rate 18 breaths per minute, and oxygen saturation 97%. The rest of the physical examination was unremarkable.",
+          "teaching_points": [
+            {
+              "id": "TP5",
+              "content": "Vital signs provide essential information about the patient's hemodynamic status and can indicate the presence of fever or other systemic issues.",
+              "covered": false
+            }
+          ],
+          "elicited": false
+        },
+        {
+          "id": "P2",
+          "content": "What were the physical examination findings upon admission?",
+          "response": "The temperature was 38.9°C, blood pressure 140/64 mm Hg, pulse 83 beats per minute, respiratory rate 18 breaths per minute, and oxygen saturation 94%. The patient was diaphoretic but did not appear ill.",
+          "teaching_points": [
+            {
+              "id": "TP6",
+              "content": "Changes in vital signs, such as fever and altered blood pressure, can indicate progression of the disease or response to treatment.",
+              "covered": false
+            }
+          ],
+          "elicited": false
+        },
+        {
+          "id": "P3",
+          "content": "What were the neurological examination findings during hospitalization?",
+          "response": "Decreased tone, no spontaneous movements of the arms or legs, flaccid paralysis, absent deep-tendon reflexes, and no response to nail-bed pressure.",
+          "teaching_points": [
+            {
+              "id": "TP7",
+              "content": "Flaccid paralysis and absent reflexes can indicate severe neurological impairment, possibly due to central or peripheral nervous system involvement.",
+              "covered": false
+            }
+          ],
+          "elicited": false
+        }
+      ],
+      "optional": [],
+      "current_ideal_differential_diagnosis": [
+        {
+          "name": "Guillain-Barré Syndrome",
+          "category": "Neurological disorder",
+          "likelihood": "medium",
+          "key_features": [
+            "flaccid paralysis",
+            "absent deep-tendon reflexes",
+            "recent infection or immune trigger"
+          ],
+          "supporting_evidence": [
+            "flaccid paralysis",
+            "absent deep-tendon reflexes",
+            "generalized weakness"
+          ],
+          "refuting_evidence": [
+            "no recent infection or immune trigger mentioned"
+          ],
+          "additional_information_needed": [
+            "CSF analysis for albuminocytologic dissociation",
+            "nerve conduction studies"
+          ]
+        },
+        {
+          "name": "Chronic Inflammatory Demyelinating Polyneuropathy (CIDP)",
+          "category": "Neurological disorder",
+          "likelihood": "low",
+          "key_features": [
+            "progressive weakness",
+            "areflexia",
+            "sensory loss"
+          ],
+          "supporting_evidence": [
+            "generalized weakness",
+            "absent deep-tendon reflexes"
+          ],
+          "refuting_evidence": [
+            "acute presentation rather than chronic"
+          ],
+          "additional_information_needed": [
+            "nerve conduction studies",
+            "CSF analysis"
+          ]
+        },
+        {
+          "name": "Myasthenia Gravis",
+          "category": "Neuromuscular disorder",
+          "likelihood": "low",
+          "key_features": [
+            "muscle weakness",
+            "fatigue",
+            "ocular symptoms"
+          ],
+          "supporting_evidence": [
+            "severe fatigue",
+            "generalized weakness"
+          ],
+          "refuting_evidence": [
+            "absent deep-tendon reflexes not typical",
+            "no ocular symptoms reported"
+          ],
+          "additional_information_needed": [
+            "acetylcholine receptor antibody test",
+            "repetitive nerve stimulation test"
+          ]
+        },
+        {
+          "name": "Amyotrophic Lateral Sclerosis (ALS)",
+          "category": "Neurological disorder",
+          "likelihood": "low",
+          "key_features": [
+            "progressive muscle weakness",
+            "spasticity",
+            "hyperreflexia"
+          ],
+          "supporting_evidence": [
+            "generalized weakness"
+          ],
+          "refuting_evidence": [
+            "absent deep-tendon reflexes",
+            "flaccid paralysis"
+          ],
+          "additional_information_needed": [
+            "electromyography (EMG)",
+            "nerve conduction studies"
+          ]
+        },
+        {
+          "name": "Infectious cause (e.g., West Nile Virus)",
+          "category": "Infectious disease",
+          "likelihood": "medium",
+          "key_features": [
+            "fever",
+            "flaccid paralysis",
+            "recent travel or exposure"
+          ],
+          "supporting_evidence": [
+            "fever",
+            "flaccid paralysis",
+            "generalized weakness"
+          ],
+          "refuting_evidence": [
+            "no recent travel or exposure mentioned"
+          ],
+          "additional_information_needed": [
+            "serology for West Nile Virus",
+            "CSF analysis for viral pathogens"
+          ]
+        }
+      ]
+    },
+    "testing": {
+      "required": [
+        {
+          "id": "T1",
+          "content": "What were the initial laboratory test results?",
+          "response": "Normal blood levels of electrolytes, glucose, 25-hydroxyvitamin D, vitamin B12, and thyrotropin. Normal renal- and liver-function tests and erythrocyte sedimentation rate. Negative tests for hepatitis C antibodies, antitreponemal antibodies, HIV p24 antigen, and HIV type 1 and type 2 antibodies.",
+          "teaching_points": [
+            {
+              "id": "TP8",
+              "content": "Comprehensive laboratory testing can help rule out common metabolic and infectious causes of symptoms.",
+              "covered": false
+            }
+          ],
+          "elicited": false
+        },
+        {
+          "id": "T2",
+          "content": "What imaging studies were performed and what were the findings?",
+          "response": "CT of the head, chest, abdomen, and pelvis showed no intracranial hemorrhage or infarction, normal lungs, and mild esophageal thickening. MRI showed scattered foci of signal abnormalities in the supratentorial white matter.",
+          "teaching_points": [
+            {
+              "id": "TP9",
+              "content": "Imaging studies are crucial in identifying structural abnormalities that may explain neurological symptoms.",
+              "covered": false
+            }
+          ],
+          "elicited": false
+        },
+        {
+          "id": "T3",
+          "content": "What were the findings of the electroencephalography?",
+          "response": "Intermittent irregular delta slowing in the left frontocentral area and intermittent diffuse theta slowing, with no epileptiform abnormalities.",
+          "teaching_points": [
+            {
+              "id": "TP10",
+              "content": "EEG can help identify electrical activity abnormalities in the brain, which may correlate with clinical symptoms.",
+              "covered": false
+            }
+          ],
+          "elicited": false
+        },
+        {
+          "id": "T4",
+          "content": "What were the results of the nerve-conduction studies?",
+          "response": "Prolonged sensory responses with reduced amplitude, severely reduced motor response amplitude, and abundant fibrillation potentials on electromyography.",
+          "teaching_points": [
+            {
+              "id": "TP11",
+              "content": "Nerve-conduction studies and electromyography can help differentiate between central and peripheral causes of neurological symptoms.",
+              "covered": false
+            }
+          ],
+          "elicited": false
+        }
+      ],
+      "optional": [],
+      "current_ideal_differential_diagnosis": [
+        {
+          "name": "Guillain-Barré Syndrome (GBS)",
+          "category": "Neurological disorder",
+          "likelihood": "medium",
+          "key_features": [
+            "acute flaccid paralysis",
+            "absent deep-tendon reflexes",
+            "recent infection or immune trigger"
+          ],
+          "supporting_evidence": [
+            "flaccid paralysis",
+            "absent deep-tendon reflexes",
+            "nerve-conduction studies showing prolonged sensory responses and reduced motor response amplitude"
+          ],
+          "refuting_evidence": [
+            "no recent infection or immune trigger mentioned",
+            "age is atypical for GBS onset"
+          ],
+          "additional_information_needed": [
+            "cerebrospinal fluid analysis for albuminocytologic dissociation",
+            "history of recent infections or vaccinations"
+          ]
+        },
+        {
+          "name": "Chronic Inflammatory Demyelinating Polyneuropathy (CIDP)",
+          "category": "Neurological disorder",
+          "likelihood": "medium",
+          "key_features": [
+            "progressive weakness",
+            "sensory loss",
+            "areflexia"
+          ],
+          "supporting_evidence": [
+            "flaccid paralysis",
+            "absent deep-tendon reflexes",
+            "nerve-conduction studies showing demyelination"
+          ],
+          "refuting_evidence": [
+            "acute presentation is more typical of GBS than CIDP"
+          ],
+          "additional_information_needed": [
+            "cerebrospinal fluid analysis",
+            "longitudinal follow-up to assess progression"
+          ]
+        },
+        {
+          "name": "Amyotrophic Lateral Sclerosis (ALS)",
+          "category": "Neurological disorder",
+          "likelihood": "low",
+          "key_features": [
+            "progressive muscle weakness",
+            "muscle atrophy",
+            "fasciculations"
+          ],
+          "supporting_evidence": [
+            "flaccid paralysis",
+            "decreased tone"
+          ],
+          "refuting_evidence": [
+            "absent deep-tendon reflexes are atypical for ALS",
+            "no mention of upper motor neuron signs"
+          ],
+          "additional_information_needed": [
+            "further neurological examination for upper motor neuron signs",
+            "genetic testing if familial history is suspected"
+          ]
+        },
+        {
+          "name": "Paraneoplastic Neuropathy",
+          "category": "Paraneoplastic syndrome",
+          "likelihood": "low",
+          "key_features": [
+            "subacute onset of neuropathy",
+            "association with malignancy"
+          ],
+          "supporting_evidence": [
+            "age of patient",
+            "unexplained weight loss"
+          ],
+          "refuting_evidence": [
+            "no evidence of malignancy on imaging studies"
+          ],
+          "additional_information_needed": [
+            "cancer screening tests",
+            "paraneoplastic antibody panel"
+          ]
+        },
+        {
+          "name": "Vasculitic Neuropathy",
+          "category": "Vascular disorder",
+          "likelihood": "low",
+          "key_features": [
+            "multifocal neuropathy",
+            "systemic symptoms like fever and weight loss"
+          ],
+          "supporting_evidence": [
+            "fever",
+            "weight loss",
+            "nerve-conduction studies showing neuropathy"
+          ],
+          "refuting_evidence": [
+            "normal erythrocyte sedimentation rate",
+            "no skin or other systemic signs of vasculitis"
+          ],
+          "additional_information_needed": [
+            "autoimmune panel",
+            "nerve biopsy"
+          ]
+        }
+      ]
+    },
+    "management": {
+      "required": [
+        {
+          "id": "M1",
+          "content": "What empirical treatments were initiated?",
+          "response": "Empirical treatment with intravenous vancomycin, ceftriaxone, ampicillin, and acyclovir was initiated.",
+          "teaching_points": [
+            {
+              "id": "TP12",
+              "content": "Empirical treatment is often started in severe cases to cover a broad range of potential infectious agents while awaiting specific test results.",
+              "covered": false
+            }
+          ],
+          "elicited": false
+        },
+        {
+          "id": "M2",
+          "content": "What additional management steps were taken?",
+          "response": "Elective intubation and mechanical ventilation were initiated due to progressive tachypnea.",
+          "teaching_points": [
+            {
+              "id": "TP13",
+              "content": "Mechanical ventilation may be necessary in cases of respiratory failure or severe neurological impairment.",
+              "covered": false
+            }
+          ],
+          "elicited": false
+        }
+      ],
+      "optional": []
+    },
+    "discussion": {
+      "required": [],
+      "optional": []
+    }
+  },
+  "differential_diagnosis": [],
+  "final_diagnosis": {
+    "name": "Unknown",
+    "category": "Neurological/Infectious",
+    "key_features": [],
+    "supporting_evidence": [],
+    "refuting_evidence": []
+  }
+}

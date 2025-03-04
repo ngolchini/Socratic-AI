@@ -1,0 +1,496 @@
+{
+  "metadata": {
+    "id": "case_039",
+    "title": "1980 Case 49",
+    "original_presentation": "A 50-year-old woman was admitted to the hospital because of fever and abdominal pain.",
+    "difficulty": "intermediate",
+    "specialties": [
+      "Internal Medicine",
+      "Gastroenterology",
+      "Infectious Disease"
+    ],
+    "keywords": [
+      "fever",
+      "abdominal pain",
+      "diabetes mellitus",
+      "hypothyroidism",
+      "salmonella",
+      "cholecystectomy"
+    ],
+    "source": "Clinical case study",
+    "version": "1.0"
+  },
+  "clinical_elements": {
+    "history": {
+      "required": [
+        {
+          "id": "H1",
+          "content": "What is the patient's past medical history?",
+          "response": "Diabetes mellitus diagnosed 15 years ago, regulated with diet and isophane insulin. Primary hypothyroidism diagnosed 2 years ago, treated with levothyroxine.",
+          "teaching_points": [
+            {
+              "id": "TP1",
+              "content": "Diabetes mellitus and hypothyroidism are common comorbidities that can complicate the clinical picture.",
+              "covered": false
+            }
+          ],
+          "elicited": false
+        },
+        {
+          "id": "H2",
+          "content": "What previous surgical history does the patient have?",
+          "response": "Cholecystectomy performed 13 months before admission due to salmonella infection of the gallbladder.",
+          "teaching_points": [
+            {
+              "id": "TP2",
+              "content": "Cholecystectomy is a common procedure for gallbladder infections and stones.",
+              "covered": false
+            }
+          ],
+          "elicited": false
+        },
+        {
+          "id": "H3",
+          "content": "What symptoms did the patient experience before admission?",
+          "response": "Nausea, vomiting, increased drainage from incision, epigastric pain, fever, dark urine.",
+          "teaching_points": [
+            {
+              "id": "TP3",
+              "content": "Symptoms like nausea, vomiting, and fever can indicate an infectious process or complication post-surgery.",
+              "covered": false
+            }
+          ],
+          "elicited": false
+        }
+      ],
+      "optional": [],
+      "current_ideal_differential_diagnosis": [
+        {
+          "name": "Biliary Tract Infection",
+          "category": "Infectious Disease",
+          "likelihood": "medium",
+          "key_features": [
+            "fever",
+            "abdominal pain",
+            "dark urine",
+            "history of cholecystectomy"
+          ],
+          "supporting_evidence": [
+            "fever",
+            "abdominal pain",
+            "dark urine",
+            "history of cholecystectomy due to salmonella infection"
+          ],
+          "refuting_evidence": [
+            "no specific mention of jaundice or right upper quadrant pain"
+          ],
+          "additional_information_needed": [
+            "liver function tests",
+            "abdominal ultrasound or CT scan",
+            "blood cultures"
+          ]
+        },
+        {
+          "name": "Pancreatitis",
+          "category": "Gastroenterology",
+          "likelihood": "medium",
+          "key_features": [
+            "epigastric pain",
+            "nausea",
+            "vomiting",
+            "fever"
+          ],
+          "supporting_evidence": [
+            "epigastric pain",
+            "nausea",
+            "vomiting",
+            "fever"
+          ],
+          "refuting_evidence": [
+            "no mention of elevated lipase or amylase",
+            "no history of alcohol use or gallstones"
+          ],
+          "additional_information_needed": [
+            "serum lipase and amylase levels",
+            "abdominal imaging"
+          ]
+        },
+        {
+          "name": "Surgical Site Infection",
+          "category": "Infectious Disease",
+          "likelihood": "high",
+          "key_features": [
+            "fever",
+            "increased drainage from incision",
+            "abdominal pain"
+          ],
+          "supporting_evidence": [
+            "fever",
+            "increased drainage from incision",
+            "abdominal pain"
+          ],
+          "refuting_evidence": [
+            "no specific mention of erythema or tenderness at the incision site"
+          ],
+          "additional_information_needed": [
+            "physical examination of the incision site",
+            "wound culture"
+          ]
+        },
+        {
+          "name": "Urinary Tract Infection",
+          "category": "Infectious Disease",
+          "likelihood": "low",
+          "key_features": [
+            "fever",
+            "abdominal pain",
+            "dark urine"
+          ],
+          "supporting_evidence": [
+            "fever",
+            "dark urine"
+          ],
+          "refuting_evidence": [
+            "abdominal pain is epigastric rather than suprapubic",
+            "no mention of dysuria or frequency"
+          ],
+          "additional_information_needed": [
+            "urinalysis",
+            "urine culture"
+          ]
+        },
+        {
+          "name": "Diabetic Ketoacidosis",
+          "category": "Endocrinology",
+          "likelihood": "low",
+          "key_features": [
+            "nausea",
+            "vomiting",
+            "abdominal pain",
+            "fever"
+          ],
+          "supporting_evidence": [
+            "nausea",
+            "vomiting",
+            "abdominal pain"
+          ],
+          "refuting_evidence": [
+            "no mention of hyperglycemia or ketonuria",
+            "patient's diabetes is regulated"
+          ],
+          "additional_information_needed": [
+            "blood glucose levels",
+            "serum ketones",
+            "arterial blood gas"
+          ]
+        }
+      ]
+    },
+    "physical": {
+      "required": [
+        {
+          "id": "P1",
+          "content": "What were the findings on physical examination?",
+          "response": "Jaundice, appeared acutely ill, few rales at lung bases, normal heart, scaphoid abdomen with normal bowel sounds, tenderness and fullness at right upper quadrant scar, purulent fluid from sinus.",
+          "teaching_points": [
+            {
+              "id": "TP4",
+              "content": "Jaundice and purulent drainage can indicate liver dysfunction and infection.",
+              "covered": false
+            }
+          ],
+          "elicited": false
+        }
+      ],
+      "optional": [],
+      "current_ideal_differential_diagnosis": [
+        {
+          "name": "Biliary Tract Infection (e.g., Cholangitis)",
+          "category": "Infectious disease",
+          "likelihood": "high",
+          "key_features": [
+            "fever",
+            "abdominal pain",
+            "jaundice",
+            "history of cholecystectomy"
+          ],
+          "supporting_evidence": [
+            "fever",
+            "abdominal pain",
+            "jaundice",
+            "tenderness and fullness at right upper quadrant",
+            "history of cholecystectomy"
+          ],
+          "refuting_evidence": [
+            "normal bowel sounds"
+          ],
+          "additional_information_needed": [
+            "Liver function tests",
+            "Abdominal ultrasound or CT scan",
+            "Blood cultures"
+          ]
+        },
+        {
+          "name": "Abdominal Abscess",
+          "category": "Infectious disease",
+          "likelihood": "medium",
+          "key_features": [
+            "fever",
+            "abdominal pain",
+            "purulent drainage",
+            "history of recent surgery"
+          ],
+          "supporting_evidence": [
+            "fever",
+            "abdominal pain",
+            "purulent fluid from sinus",
+            "tenderness and fullness at right upper quadrant scar"
+          ],
+          "refuting_evidence": [
+            "normal bowel sounds"
+          ],
+          "additional_information_needed": [
+            "Abdominal CT scan",
+            "Complete blood count",
+            "C-reactive protein"
+          ]
+        },
+        {
+          "name": "Pancreatitis",
+          "category": "Gastrointestinal disease",
+          "likelihood": "medium",
+          "key_features": [
+            "epigastric pain",
+            "nausea",
+            "vomiting",
+            "jaundice"
+          ],
+          "supporting_evidence": [
+            "epigastric pain",
+            "nausea",
+            "vomiting",
+            "jaundice"
+          ],
+          "refuting_evidence": [
+            "normal bowel sounds",
+            "no mention of elevated lipase/amylase"
+          ],
+          "additional_information_needed": [
+            "Serum lipase and amylase levels",
+            "Abdominal imaging"
+          ]
+        },
+        {
+          "name": "Hepatitis",
+          "category": "Liver disease",
+          "likelihood": "low",
+          "key_features": [
+            "jaundice",
+            "dark urine",
+            "fever"
+          ],
+          "supporting_evidence": [
+            "jaundice",
+            "dark urine",
+            "fever"
+          ],
+          "refuting_evidence": [
+            "tenderness and fullness at right upper quadrant scar",
+            "purulent fluid from sinus"
+          ],
+          "additional_information_needed": [
+            "Liver function tests",
+            "Viral hepatitis serologies"
+          ]
+        },
+        {
+          "name": "Diabetic Ketoacidosis (DKA)",
+          "category": "Endocrine disorder",
+          "likelihood": "low",
+          "key_features": [
+            "nausea",
+            "vomiting",
+            "abdominal pain",
+            "history of diabetes"
+          ],
+          "supporting_evidence": [
+            "nausea",
+            "vomiting",
+            "abdominal pain",
+            "history of diabetes"
+          ],
+          "refuting_evidence": [
+            "no mention of hyperglycemia or ketonuria",
+            "normal bowel sounds"
+          ],
+          "additional_information_needed": [
+            "Blood glucose levels",
+            "Arterial blood gas",
+            "Urine ketones"
+          ]
+        }
+      ]
+    },
+    "testing": {
+      "required": [
+        {
+          "id": "T1",
+          "content": "What were the laboratory test results?",
+          "response": "Urine positive for protein, glucose, bile; hematocrit 38.6%, WBC 9800; glucose 245 mg/dL; conjugated bilirubin 4 mg/dL; SGOT 865 U/mL; alkaline phosphatase 348 IU/L.",
+          "teaching_points": [
+            {
+              "id": "TP5",
+              "content": "Elevated liver enzymes and bilirubin suggest liver dysfunction or biliary obstruction.",
+              "covered": false
+            }
+          ],
+          "elicited": false
+        },
+        {
+          "id": "T2",
+          "content": "What imaging studies were performed?",
+          "response": "Ultrasound showed irregular sonolucent structure beneath skin, consistent with fluid collection or abscess; normal common hepatic duct.",
+          "teaching_points": [
+            {
+              "id": "TP6",
+              "content": "Ultrasound is useful for identifying fluid collections and abscesses.",
+              "covered": false
+            }
+          ],
+          "elicited": false
+        }
+      ],
+      "optional": [],
+      "current_ideal_differential_diagnosis": [
+        {
+          "name": "Abdominal abscess",
+          "category": "Infectious disease",
+          "likelihood": "high",
+          "key_features": [
+            "fever",
+            "abdominal pain",
+            "purulent drainage",
+            "fluid collection on ultrasound"
+          ],
+          "supporting_evidence": [
+            "fever",
+            "abdominal pain",
+            "purulent fluid from sinus",
+            "ultrasound showing fluid collection"
+          ],
+          "refuting_evidence": [
+            "none noted"
+          ],
+          "additional_information_needed": [
+            "culture of purulent fluid",
+            "CT scan of the abdomen for further evaluation"
+          ]
+        },
+        {
+          "name": "Biliary obstruction",
+          "category": "Gastrointestinal disease",
+          "likelihood": "medium",
+          "key_features": [
+            "jaundice",
+            "elevated conjugated bilirubin",
+            "elevated alkaline phosphatase"
+          ],
+          "supporting_evidence": [
+            "jaundice",
+            "conjugated bilirubin 4 mg/dL",
+            "alkaline phosphatase 348 IU/L"
+          ],
+          "refuting_evidence": [
+            "normal common hepatic duct on ultrasound"
+          ],
+          "additional_information_needed": [
+            "MRCP or ERCP to evaluate bile ducts"
+          ]
+        },
+        {
+          "name": "Hepatitis",
+          "category": "Liver disease",
+          "likelihood": "medium",
+          "key_features": [
+            "elevated liver enzymes",
+            "jaundice",
+            "fever"
+          ],
+          "supporting_evidence": [
+            "SGOT 865 U/mL",
+            "jaundice",
+            "fever"
+          ],
+          "refuting_evidence": [
+            "no specific viral hepatitis markers provided"
+          ],
+          "additional_information_needed": [
+            "viral hepatitis panel",
+            "liver function tests"
+          ]
+        },
+        {
+          "name": "Diabetic ketoacidosis (DKA)",
+          "category": "Endocrine disorder",
+          "likelihood": "low",
+          "key_features": [
+            "elevated blood glucose",
+            "nausea",
+            "vomiting"
+          ],
+          "supporting_evidence": [
+            "glucose 245 mg/dL",
+            "nausea",
+            "vomiting"
+          ],
+          "refuting_evidence": [
+            "absence of ketones in urine",
+            "no mention of acidosis"
+          ],
+          "additional_information_needed": [
+            "arterial blood gas analysis",
+            "serum ketone levels"
+          ]
+        }
+      ]
+    },
+    "management": {
+      "required": [
+        {
+          "id": "M1",
+          "content": "What treatments were administered?",
+          "response": "Penicillin, chloramphenicol, insulin, IV fluids.",
+          "teaching_points": [
+            {
+              "id": "TP7",
+              "content": "Antibiotics are crucial in managing bacterial infections, especially in post-surgical patients.",
+              "covered": false
+            }
+          ],
+          "elicited": false
+        }
+      ],
+      "optional": []
+    },
+    "discussion": {
+      "required": [],
+      "optional": []
+    }
+  },
+  "differential_diagnosis": [],
+  "final_diagnosis": {
+    "name": "Subhepatic abscess with Salmonella infection",
+    "category": "Infectious Disease",
+    "key_features": [
+      "Fever",
+      "Abdominal pain",
+      "Jaundice",
+      "Purulent drainage"
+    ],
+    "supporting_evidence": [
+      "Positive culture for Salmonella from sinus tract",
+      "Ultrasound findings of fluid collection"
+    ],
+    "refuting_evidence": []
+  }
+}

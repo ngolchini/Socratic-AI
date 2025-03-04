@@ -1,0 +1,464 @@
+{
+  "metadata": {
+    "id": "case_027",
+    "title": "2009 Case 23",
+    "original_presentation": "A 13-year-old boy was admitted to the hospital because of headache, nausea, seizures, renal failure, and hypertension.",
+    "difficulty": "intermediate",
+    "specialties": [
+      "Pediatrics",
+      "Nephrology",
+      "Neurology"
+    ],
+    "keywords": [
+      "headache",
+      "nausea",
+      "seizures",
+      "renal failure",
+      "hypertension"
+    ],
+    "source": "Clinical case study",
+    "version": "1.0"
+  },
+  "clinical_elements": {
+    "history": {
+      "required": [
+        {
+          "id": "H1",
+          "content": "What is the patient's recent medical history?",
+          "response": "The patient had been well until approximately 3 weeks earlier, when intermittent left-sided headaches and fatigue developed, followed by nasal congestion and anorexia. He began to nap daily after school. During the week before admission, nausea and vomiting occurred approximately every other day. Five days before admission, facial and periorbital swelling developed.",
+          "teaching_points": [
+            {
+              "id": "TP1",
+              "content": "Headaches, fatigue, and facial swelling can be indicative of underlying systemic issues such as renal or cardiovascular problems.",
+              "covered": false
+            }
+          ],
+          "elicited": false
+        },
+        {
+          "id": "H2",
+          "content": "What were the patient's symptoms on the day of admission?",
+          "response": "On the morning of admission, nausea, vomiting, and abdominal pain developed while the patient was at school. He reported numbness of the right leg and dizziness, and he became disoriented, with difficulty walking and coordinating his legs.",
+          "teaching_points": [
+            {
+              "id": "TP2",
+              "content": "Acute neurological symptoms such as numbness and disorientation can suggest a vascular or metabolic cause.",
+              "covered": false
+            }
+          ],
+          "elicited": false
+        },
+        {
+          "id": "H3",
+          "content": "What is the patient's past medical history?",
+          "response": "He had been born via vaginal delivery after a full-term gestation. At 3 weeks of age, he required surgery for pyloric stenosis. One year before admission, on routine examination, the blood pressure was 100/70 mm Hg and pubertal development had begun.",
+          "teaching_points": [
+            {
+              "id": "TP3",
+              "content": "Past surgical history and developmental milestones can provide context for current health status.",
+              "covered": false
+            }
+          ],
+          "elicited": false
+        },
+        {
+          "id": "H4",
+          "content": "What is the family medical history?",
+          "response": "Both grandfathers had had prostate cancer, and there was a family history of migraine headaches. There was no family history of an autoimmune disorder.",
+          "teaching_points": [
+            {
+              "id": "TP4",
+              "content": "Family history can help identify genetic predispositions to certain conditions.",
+              "covered": false
+            }
+          ],
+          "elicited": false
+        }
+      ],
+      "optional": [],
+      "current_ideal_differential_diagnosis": [
+        {
+          "name": "Acute Post-Streptococcal Glomerulonephritis",
+          "category": "Renal disease",
+          "likelihood": "high",
+          "key_features": [
+            "recent upper respiratory infection",
+            "hypertension",
+            "renal failure",
+            "facial and periorbital swelling"
+          ],
+          "supporting_evidence": [
+            "recent nasal congestion",
+            "facial and periorbital swelling",
+            "hypertension",
+            "renal failure"
+          ],
+          "refuting_evidence": [
+            "no specific evidence refuting this diagnosis"
+          ],
+          "additional_information_needed": [
+            "urinalysis for hematuria and proteinuria",
+            "ASO titer",
+            "complement levels"
+          ]
+        },
+        {
+          "name": "Hypertensive Encephalopathy",
+          "category": "Neurological condition",
+          "likelihood": "medium",
+          "key_features": [
+            "headache",
+            "seizures",
+            "disorientation",
+            "hypertension"
+          ],
+          "supporting_evidence": [
+            "headache",
+            "seizures",
+            "disorientation",
+            "hypertension"
+          ],
+          "refuting_evidence": [
+            "no specific evidence refuting this diagnosis"
+          ],
+          "additional_information_needed": [
+            "brain imaging",
+            "blood pressure monitoring"
+          ]
+        },
+        {
+          "name": "Systemic Lupus Erythematosus (SLE)",
+          "category": "Autoimmune disease",
+          "likelihood": "low",
+          "key_features": [
+            "renal involvement",
+            "neurological symptoms",
+            "facial swelling"
+          ],
+          "supporting_evidence": [
+            "renal failure",
+            "neurological symptoms",
+            "facial swelling"
+          ],
+          "refuting_evidence": [
+            "no family history of autoimmune disorder"
+          ],
+          "additional_information_needed": [
+            "ANA test",
+            "anti-dsDNA antibodies",
+            "complement levels"
+          ]
+        },
+        {
+          "name": "Migraine with Aura",
+          "category": "Neurological condition",
+          "likelihood": "low",
+          "key_features": [
+            "headache",
+            "neurological symptoms",
+            "family history of migraines"
+          ],
+          "supporting_evidence": [
+            "headache",
+            "family history of migraine"
+          ],
+          "refuting_evidence": [
+            "renal failure",
+            "hypertension",
+            "seizures"
+          ],
+          "additional_information_needed": [
+            "detailed headache history",
+            "neurological examination"
+          ]
+        }
+      ]
+    },
+    "physical": {
+      "required": [
+        {
+          "id": "P1",
+          "content": "What were the findings on physical examination in the emergency department?",
+          "response": "The patient was awake, oriented, and vomiting intermittently. The blood pressure was 170/120 mm Hg, the pulse 63 beats per minute, the temperature 37°C, the respiratory rate 16 breaths per minute, the oxygen saturation 98% while he was breathing ambient air, and the weight 45.5 kg. The skin was pale and facial edema was present; the remainder of the examination was normal.",
+          "teaching_points": [
+            {
+              "id": "TP5",
+              "content": "Hypertension in children can be a sign of renal or endocrine disorders.",
+              "covered": false
+            }
+          ],
+          "elicited": false
+        }
+      ],
+      "optional": [],
+      "current_ideal_differential_diagnosis": [
+        {
+          "name": "Acute Glomerulonephritis",
+          "category": "Renal disease",
+          "likelihood": "high",
+          "key_features": [
+            "hypertension",
+            "renal failure",
+            "facial and periorbital edema",
+            "headache",
+            "nausea"
+          ],
+          "supporting_evidence": [
+            "hypertension (170/120 mm Hg)",
+            "renal failure",
+            "facial and periorbital swelling",
+            "pale skin",
+            "headache and nausea"
+          ],
+          "refuting_evidence": [],
+          "additional_information_needed": [
+            "urinalysis for hematuria and proteinuria",
+            "serum complement levels",
+            "antistreptolysin O titer",
+            "renal ultrasound"
+          ]
+        },
+        {
+          "name": "Hypertensive Encephalopathy",
+          "category": "Neurological disorder",
+          "likelihood": "medium",
+          "key_features": [
+            "seizures",
+            "headache",
+            "nausea",
+            "disorientation",
+            "hypertension"
+          ],
+          "supporting_evidence": [
+            "seizures",
+            "headache",
+            "disorientation",
+            "hypertension (170/120 mm Hg)"
+          ],
+          "refuting_evidence": [
+            "no focal neurological deficits noted on examination"
+          ],
+          "additional_information_needed": [
+            "brain imaging (CT or MRI)",
+            "fundoscopic examination for papilledema"
+          ]
+        },
+        {
+          "name": "Pheochromocytoma",
+          "category": "Endocrine disorder",
+          "likelihood": "low",
+          "key_features": [
+            "paroxysmal hypertension",
+            "headache",
+            "sweating",
+            "palpitations"
+          ],
+          "supporting_evidence": [
+            "hypertension",
+            "headache"
+          ],
+          "refuting_evidence": [
+            "absence of sweating and palpitations",
+            "no family history of endocrine disorders"
+          ],
+          "additional_information_needed": [
+            "plasma metanephrines",
+            "24-hour urine catecholamines"
+          ]
+        },
+        {
+          "name": "Migraine with Aura",
+          "category": "Neurological disorder",
+          "likelihood": "low",
+          "key_features": [
+            "headache",
+            "nausea",
+            "aura symptoms"
+          ],
+          "supporting_evidence": [
+            "headache",
+            "nausea",
+            "family history of migraine headaches"
+          ],
+          "refuting_evidence": [
+            "presence of renal failure",
+            "hypertension",
+            "seizures"
+          ],
+          "additional_information_needed": [
+            "detailed headache history",
+            "neurological examination"
+          ]
+        }
+      ]
+    },
+    "testing": {
+      "required": [
+        {
+          "id": "T1",
+          "content": "What were the results of the initial laboratory tests?",
+          "response": "Laboratory-test results revealed azotemia. Screening tests for mononucleosis and hepatitis A, B, and C were negative.",
+          "teaching_points": [
+            {
+              "id": "TP6",
+              "content": "Azotemia indicates impaired kidney function and requires further investigation.",
+              "covered": false
+            }
+          ],
+          "elicited": false
+        },
+        {
+          "id": "T2",
+          "content": "What did the CT scan of the head show?",
+          "response": "CT of the head showed a small, ill-defined focus of decreased density in the right parietal region and no other evidence of focal or diffuse lesions, hemorrhage, hydrocephalus, or focal bone lesions.",
+          "teaching_points": [
+            {
+              "id": "TP7",
+              "content": "CT findings can help rule out acute intracranial events such as hemorrhage or stroke.",
+              "covered": false
+            }
+          ],
+          "elicited": false
+        },
+        {
+          "id": "T3",
+          "content": "What were the findings from the MRI of the brain?",
+          "response": "MRI of the brain showed areas of increased T2-weighted signal intensity in the subcortical white matter in the frontal, parietal, and occipital regions, with a predominantly normal signal on diffusion-weighted imaging.",
+          "teaching_points": [
+            {
+              "id": "TP8",
+              "content": "MRI can provide detailed information about brain tissue changes that are not visible on CT.",
+              "covered": false
+            }
+          ],
+          "elicited": false
+        }
+      ],
+      "optional": [],
+      "current_ideal_differential_diagnosis": [
+        {
+          "name": "Hypertensive Encephalopathy",
+          "category": "Neurological/Hypertensive Emergency",
+          "likelihood": "high",
+          "key_features": [
+            "severe hypertension",
+            "headache",
+            "nausea",
+            "vomiting",
+            "seizures",
+            "neurological symptoms"
+          ],
+          "supporting_evidence": [
+            "Severe hypertension (170/120 mm Hg)",
+            "Headache, nausea, vomiting, seizures",
+            "Neurological symptoms (numbness, disorientation, difficulty walking)",
+            "MRI findings of increased T2-weighted signal intensity in subcortical white matter"
+          ],
+          "refuting_evidence": [],
+          "additional_information_needed": [
+            "Response to antihypertensive treatment",
+            "Further renal function tests"
+          ]
+        },
+        {
+          "name": "Acute Glomerulonephritis",
+          "category": "Renal",
+          "likelihood": "medium",
+          "key_features": [
+            "renal failure",
+            "hypertension",
+            "edema",
+            "azotemia"
+          ],
+          "supporting_evidence": [
+            "Renal failure and azotemia",
+            "Hypertension",
+            "Facial and periorbital swelling"
+          ],
+          "refuting_evidence": [
+            "No mention of hematuria or proteinuria"
+          ],
+          "additional_information_needed": [
+            "Urinalysis for hematuria and proteinuria",
+            "Complement levels",
+            "ASO titer"
+          ]
+        },
+        {
+          "name": "Posterior Reversible Encephalopathy Syndrome (PRES)",
+          "category": "Neurological",
+          "likelihood": "medium",
+          "key_features": [
+            "headache",
+            "seizures",
+            "visual disturbances",
+            "hypertension"
+          ],
+          "supporting_evidence": [
+            "Headache, seizures, and hypertension",
+            "MRI findings of increased T2-weighted signal intensity in subcortical white matter"
+          ],
+          "refuting_evidence": [
+            "No specific mention of visual disturbances"
+          ],
+          "additional_information_needed": [
+            "Follow-up MRI after blood pressure control",
+            "Ophthalmologic examination"
+          ]
+        },
+        {
+          "name": "Vasculitis (e.g., Polyarteritis Nodosa)",
+          "category": "Vascular/Autoimmune",
+          "likelihood": "low",
+          "key_features": [
+            "systemic symptoms",
+            "renal involvement",
+            "neurological symptoms"
+          ],
+          "supporting_evidence": [
+            "Renal failure",
+            "Neurological symptoms"
+          ],
+          "refuting_evidence": [
+            "No family history of autoimmune disorder",
+            "Negative hepatitis serologies"
+          ],
+          "additional_information_needed": [
+            "ANCA, ANA, and other autoimmune panels",
+            "Biopsy of affected tissue if indicated"
+          ]
+        }
+      ]
+    },
+    "management": {
+      "required": [
+        {
+          "id": "M1",
+          "content": "What treatments were administered to the patient?",
+          "response": "Labetalol and ondansetron were administered, and the blood pressure decreased to 132/83 mm Hg. A continuous intravenous infusion of nitroprusside was begun, with a goal of systolic pressures below 140 mm Hg. Labetalol and ondansetron were continued, and hydralazine, calcium gluconate, insulin, and dextrose were given intravenously. Emergency hemodialysis was performed. Fluid was restricted to 1 liter per day, and methylprednisolone and ranitidine were begun. Mannitol, midazolam, and fentanyl citrate were added. Magnesium was administered as needed.",
+          "teaching_points": [
+            {
+              "id": "TP9",
+              "content": "Management of hypertensive emergencies in children involves careful blood pressure control and addressing underlying causes.",
+              "covered": false
+            }
+          ],
+          "elicited": false
+        }
+      ],
+      "optional": []
+    },
+    "discussion": {
+      "required": [],
+      "optional": []
+    }
+  },
+  "differential_diagnosis": [],
+  "final_diagnosis": {
+    "name": "Unknown",
+    "category": "Renal/Neurological",
+    "key_features": [],
+    "supporting_evidence": [],
+    "refuting_evidence": []
+  }
+}

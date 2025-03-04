@@ -1,0 +1,516 @@
+{
+  "metadata": {
+    "id": "case_016",
+    "title": "1993 Case 26",
+    "original_presentation": "A 73-year-old man was admitted to the hospital with a diagnosis of a contained, ruptured aneurysm of the left femoral artery.",
+    "difficulty": "intermediate",
+    "specialties": [
+      "vascular surgery",
+      "cardiology",
+      "oncology"
+    ],
+    "keywords": [
+      "aneurysm",
+      "femoral artery",
+      "prostate cancer",
+      "asbestos exposure"
+    ],
+    "source": "Clinical case study",
+    "version": "1.0"
+  },
+  "clinical_elements": {
+    "history": {
+      "required": [
+        {
+          "id": "H1",
+          "content": "What is the patient's occupational history and exposure risks?",
+          "response": "The patient was a retired shipyard pipe fitter, with known exposure to asbestos.",
+          "teaching_points": [
+            {
+              "id": "TP1",
+              "content": "Occupational exposure to asbestos is a risk factor for various respiratory diseases and cancers.",
+              "covered": false
+            }
+          ],
+          "elicited": false
+        },
+        {
+          "id": "H2",
+          "content": "What is the patient's smoking history?",
+          "response": "He had smoked one pack of cigarettes daily for 30 years and then switched to pipe-smoking 32 years before admission.",
+          "teaching_points": [
+            {
+              "id": "TP2",
+              "content": "Long-term smoking is a significant risk factor for cardiovascular diseases and cancers.",
+              "covered": false
+            }
+          ],
+          "elicited": false
+        },
+        {
+          "id": "H3",
+          "content": "What are the patient's past medical conditions and treatments?",
+          "response": "The patient had chronic bronchitis managed with theophylline, hypertension treated with enalapril, and a history of stage B1 carcinoma of the prostate treated with radiation therapy. He also had a left hemicolectomy for carcinoma of the colon.",
+          "teaching_points": [
+            {
+              "id": "TP3",
+              "content": "Chronic bronchitis and hypertension are common comorbidities in elderly patients with a history of smoking.",
+              "covered": false
+            },
+            {
+              "id": "TP4",
+              "content": "Radiation therapy for prostate cancer can have long-term effects on surrounding tissues.",
+              "covered": false
+            }
+          ],
+          "elicited": false
+        },
+        {
+          "id": "H4",
+          "content": "What were the findings from the patient's recent follow-up examinations?",
+          "response": "A CT scan showed a cyst in the right kidney, no lymphadenopathy, and minimal periprostatic and perirectal stranding. A radionuclide bone scan showed an isolated focus of increased activity in the right femur.",
+          "teaching_points": [
+            {
+              "id": "TP5",
+              "content": "Cysts in the kidney are often benign but require monitoring for changes.",
+              "covered": false
+            },
+            {
+              "id": "TP6",
+              "content": "Bone scans can help differentiate between metastatic disease and other causes of bone lesions.",
+              "covered": false
+            }
+          ],
+          "elicited": false
+        },
+        {
+          "id": "H5",
+          "content": "What symptoms did the patient experience before admission?",
+          "response": "Two months before admission, the patient began to have swelling of the left leg and pain in the left groin that radiated down the entire leg.",
+          "teaching_points": [
+            {
+              "id": "TP7",
+              "content": "Swelling and pain in the leg can indicate vascular issues such as aneurysms or deep vein thrombosis.",
+              "covered": false
+            }
+          ],
+          "elicited": false
+        }
+      ],
+      "optional": [],
+      "current_ideal_differential_diagnosis": [
+        {
+          "name": "Contained Ruptured Femoral Artery Aneurysm",
+          "category": "Vascular",
+          "likelihood": "high",
+          "key_features": [
+            "swelling of the left leg",
+            "pain in the left groin radiating down the leg",
+            "history of aneurysm"
+          ],
+          "supporting_evidence": [
+            "diagnosis of contained ruptured aneurysm of the left femoral artery",
+            "swelling and pain in the left leg"
+          ],
+          "refuting_evidence": [],
+          "additional_information_needed": [
+            "Details of imaging studies confirming the aneurysm",
+            "Vascular surgery consultation"
+          ]
+        },
+        {
+          "name": "Deep Vein Thrombosis (DVT)",
+          "category": "Vascular",
+          "likelihood": "medium",
+          "key_features": [
+            "swelling of the leg",
+            "pain in the leg",
+            "history of smoking"
+          ],
+          "supporting_evidence": [
+            "swelling of the left leg",
+            "pain in the left leg"
+          ],
+          "refuting_evidence": [
+            "diagnosis of contained ruptured aneurysm"
+          ],
+          "additional_information_needed": [
+            "Doppler ultrasound of the left leg",
+            "D-dimer test"
+          ]
+        },
+        {
+          "name": "Peripheral Artery Disease (PAD)",
+          "category": "Vascular",
+          "likelihood": "medium",
+          "key_features": [
+            "leg pain",
+            "history of smoking",
+            "history of hypertension"
+          ],
+          "supporting_evidence": [
+            "pain in the left leg",
+            "history of smoking and hypertension"
+          ],
+          "refuting_evidence": [
+            "diagnosis of contained ruptured aneurysm"
+          ],
+          "additional_information_needed": [
+            "Ankle-brachial index",
+            "Arterial Doppler studies"
+          ]
+        },
+        {
+          "name": "Metastatic Bone Disease",
+          "category": "Oncological",
+          "likelihood": "low",
+          "key_features": [
+            "history of prostate and colon cancer",
+            "bone pain",
+            "abnormal bone scan"
+          ],
+          "supporting_evidence": [
+            "history of prostate and colon cancer",
+            "isolated focus of increased activity in the right femur"
+          ],
+          "refuting_evidence": [
+            "no direct evidence of metastasis causing current symptoms"
+          ],
+          "additional_information_needed": [
+            "Further imaging of the femur",
+            "Biopsy of the femoral lesion if indicated"
+          ]
+        },
+        {
+          "name": "Mesothelioma",
+          "category": "Oncological",
+          "likelihood": "low",
+          "key_features": [
+            "history of asbestos exposure",
+            "respiratory symptoms"
+          ],
+          "supporting_evidence": [
+            "history of asbestos exposure"
+          ],
+          "refuting_evidence": [
+            "no respiratory symptoms reported",
+            "no imaging evidence of pleural disease"
+          ],
+          "additional_information_needed": [
+            "Chest CT scan",
+            "Pulmonary function tests"
+          ]
+        }
+      ]
+    },
+    "physical": {
+      "required": [
+        {
+          "id": "P1",
+          "content": "What were the findings on physical examination upon admission?",
+          "response": "The patient appeared well, with normal head, neck, lungs, and heart. There was +++ pitting edema of the left lower extremity, a prominent left femoral pulse, and absent dorsalis pedis pulse on the left.",
+          "teaching_points": [
+            {
+              "id": "TP8",
+              "content": "Pitting edema and changes in pulse can indicate vascular compromise.",
+              "covered": false
+            }
+          ],
+          "elicited": false
+        }
+      ],
+      "optional": [],
+      "current_ideal_differential_diagnosis": [
+        {
+          "name": "Peripheral Arterial Disease (PAD) with possible acute limb ischemia",
+          "category": "Vascular disease",
+          "likelihood": "high",
+          "key_features": [
+            "leg pain",
+            "absent dorsalis pedis pulse",
+            "pitting edema",
+            "history of smoking"
+          ],
+          "supporting_evidence": [
+            "absent dorsalis pedis pulse on the left",
+            "swelling of the left leg",
+            "pain in the left groin radiating down the leg",
+            "history of smoking"
+          ],
+          "refuting_evidence": [
+            "prominent left femoral pulse"
+          ],
+          "additional_information_needed": [
+            "Doppler ultrasound of the lower extremities",
+            "Ankle-brachial index"
+          ]
+        },
+        {
+          "name": "Deep Vein Thrombosis (DVT)",
+          "category": "Vascular disease",
+          "likelihood": "medium",
+          "key_features": [
+            "leg swelling",
+            "pain",
+            "history of cancer"
+          ],
+          "supporting_evidence": [
+            "swelling of the left leg",
+            "pain in the left groin radiating down the leg",
+            "history of carcinoma"
+          ],
+          "refuting_evidence": [
+            "prominent left femoral pulse",
+            "absent dorsalis pedis pulse suggests arterial rather than venous issue"
+          ],
+          "additional_information_needed": [
+            "D-dimer test",
+            "Venous Doppler ultrasound of the left leg"
+          ]
+        },
+        {
+          "name": "Aneurysm of the left femoral artery",
+          "category": "Vascular disease",
+          "likelihood": "high",
+          "key_features": [
+            "pulsatile mass",
+            "leg pain",
+            "history of smoking"
+          ],
+          "supporting_evidence": [
+            "diagnosis of a contained, ruptured aneurysm of the left femoral artery",
+            "prominent left femoral pulse"
+          ],
+          "refuting_evidence": [
+            "absent dorsalis pedis pulse suggests possible embolization or thrombosis"
+          ],
+          "additional_information_needed": [
+            "CT angiography of the lower extremities"
+          ]
+        },
+        {
+          "name": "Metastatic bone disease",
+          "category": "Oncological disease",
+          "likelihood": "medium",
+          "key_features": [
+            "bone pain",
+            "history of prostate and colon cancer",
+            "abnormal bone scan"
+          ],
+          "supporting_evidence": [
+            "history of stage B1 carcinoma of the prostate",
+            "history of carcinoma of the colon",
+            "isolated focus of increased activity in the right femur on bone scan"
+          ],
+          "refuting_evidence": [
+            "no direct evidence of bone pain or fracture in the left leg"
+          ],
+          "additional_information_needed": [
+            "Biopsy of the right femur lesion",
+            "Further imaging studies to assess for metastasis"
+          ]
+        },
+        {
+          "name": "Chronic venous insufficiency",
+          "category": "Vascular disease",
+          "likelihood": "low",
+          "key_features": [
+            "leg swelling",
+            "pitting edema"
+          ],
+          "supporting_evidence": [
+            "+++ pitting edema of the left lower extremity"
+          ],
+          "refuting_evidence": [
+            "absent dorsalis pedis pulse suggests arterial issue",
+            "acute presentation of symptoms"
+          ],
+          "additional_information_needed": [
+            "Venous Doppler ultrasound",
+            "Assessment of venous reflux"
+          ]
+        }
+      ]
+    },
+    "testing": {
+      "required": [
+        {
+          "id": "T1",
+          "content": "What were the results of the CT scan and other imaging studies?",
+          "response": "CT scan showed a poorly defined soft-tissue density surrounding the left external iliac artery, with scattered calcifications and a maximal diameter of 2 cm. Aortographic and angiographic studies showed a diffuse, irregular aneurysm involving multiple arteries.",
+          "teaching_points": [
+            {
+              "id": "TP9",
+              "content": "Imaging studies are crucial for diagnosing and assessing the extent of vascular aneurysms.",
+              "covered": false
+            }
+          ],
+          "elicited": false
+        },
+        {
+          "id": "T2",
+          "content": "What were the laboratory test results?",
+          "response": "The urine, complete blood count, prothrombin time, partial-thromboplastin time, urea nitrogen, creatinine, glucose, electrolytes, calcium, phosphorus, serum aspartate aminotransferase, amylase, and alkaline phosphatase were normal.",
+          "teaching_points": [
+            {
+              "id": "TP10",
+              "content": "Normal laboratory results can help rule out systemic causes of symptoms.",
+              "covered": false
+            }
+          ],
+          "elicited": false
+        }
+      ],
+      "optional": [],
+      "current_ideal_differential_diagnosis": [
+        {
+          "name": "Peripheral Artery Disease (PAD) with Aneurysm",
+          "category": "Vascular disease",
+          "likelihood": "high",
+          "key_features": [
+            "leg pain",
+            "swelling",
+            "absent dorsalis pedis pulse",
+            "history of smoking"
+          ],
+          "supporting_evidence": [
+            "swelling of the left leg",
+            "pain in the left groin radiating down the leg",
+            "absent dorsalis pedis pulse on the left",
+            "prominent left femoral pulse",
+            "irregular aneurysm involving multiple arteries"
+          ],
+          "refuting_evidence": [
+            "none noted"
+          ],
+          "additional_information_needed": [
+            "Doppler ultrasound of the lower extremities",
+            "Ankle-brachial index"
+          ]
+        },
+        {
+          "name": "Deep Vein Thrombosis (DVT)",
+          "category": "Vascular disease",
+          "likelihood": "medium",
+          "key_features": [
+            "leg swelling",
+            "pain",
+            "history of cancer"
+          ],
+          "supporting_evidence": [
+            "swelling of the left leg",
+            "pain in the left groin radiating down the leg",
+            "history of carcinoma"
+          ],
+          "refuting_evidence": [
+            "prominent left femoral pulse",
+            "absent dorsalis pedis pulse suggests arterial rather than venous issue"
+          ],
+          "additional_information_needed": [
+            "D-dimer test",
+            "Venous Doppler ultrasound of the left leg"
+          ]
+        },
+        {
+          "name": "Chronic Obstructive Pulmonary Disease (COPD) exacerbation",
+          "category": "Respiratory disease",
+          "likelihood": "low",
+          "key_features": [
+            "history of smoking",
+            "chronic bronchitis"
+          ],
+          "supporting_evidence": [
+            "history of chronic bronchitis",
+            "long smoking history"
+          ],
+          "refuting_evidence": [
+            "normal lung examination",
+            "no respiratory symptoms reported"
+          ],
+          "additional_information_needed": [
+            "Pulmonary function tests",
+            "Chest X-ray"
+          ]
+        },
+        {
+          "name": "Metastatic Prostate Cancer",
+          "category": "Oncological disease",
+          "likelihood": "low",
+          "key_features": [
+            "history of prostate cancer",
+            "bone metastasis"
+          ],
+          "supporting_evidence": [
+            "history of stage B1 carcinoma of the prostate",
+            "isolated focus of increased activity in the right femur on bone scan"
+          ],
+          "refuting_evidence": [
+            "no lymphadenopathy",
+            "minimal periprostatic and perirectal stranding"
+          ],
+          "additional_information_needed": [
+            "PSA levels",
+            "Biopsy of the right femur lesion if clinically indicated"
+          ]
+        },
+        {
+          "name": "Mesothelioma",
+          "category": "Oncological disease",
+          "likelihood": "low",
+          "key_features": [
+            "asbestos exposure",
+            "pleural disease"
+          ],
+          "supporting_evidence": [
+            "known exposure to asbestos"
+          ],
+          "refuting_evidence": [
+            "no respiratory symptoms",
+            "normal lung examination"
+          ],
+          "additional_information_needed": [
+            "Chest CT scan",
+            "Pleural biopsy if pleural abnormalities are found"
+          ]
+        }
+      ]
+    },
+    "management": {
+      "required": [
+        {
+          "id": "M1",
+          "content": "What management decisions were made for the patient's condition?",
+          "response": "A diagnostic procedure was performed, but specific management decisions are not detailed in the case.",
+          "teaching_points": [
+            {
+              "id": "TP11",
+              "content": "Management of vascular aneurysms often involves surgical intervention or endovascular repair.",
+              "covered": false
+            }
+          ],
+          "elicited": false
+        }
+      ],
+      "optional": []
+    },
+    "discussion": {
+      "required": [],
+      "optional": []
+    }
+  },
+  "differential_diagnosis": [],
+  "final_diagnosis": {
+    "name": "Contained Ruptured Aneurysm of the Left Femoral Artery",
+    "category": "Vascular",
+    "key_features": [
+      "Contained rupture",
+      "Left femoral artery involvement",
+      "Swelling and pain in the left leg"
+    ],
+    "supporting_evidence": [
+      "Imaging studies showing aneurysm",
+      "Physical examination findings"
+    ],
+    "refuting_evidence": []
+  }
+}

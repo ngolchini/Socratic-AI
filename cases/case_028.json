@@ -1,0 +1,416 @@
+{
+  "metadata": {
+    "id": "case_028",
+    "title": "1998 Case 31",
+    "original_presentation": "An eight-year-old boy was admitted to the hospital because of a history of respiratory problems and evidence of bronchiectasis.",
+    "difficulty": "intermediate",
+    "specialties": [
+      "Pediatrics",
+      "Pulmonology",
+      "Radiology"
+    ],
+    "keywords": [
+      "respiratory problems",
+      "bronchiectasis",
+      "endobronchial lesion",
+      "atelectasis",
+      "pneumonia"
+    ],
+    "source": "Clinical case study",
+    "version": "1.0"
+  },
+  "clinical_elements": {
+    "history": {
+      "required": [
+        {
+          "id": "H1",
+          "content": "What is the patient's history of respiratory problems?",
+          "response": "The boy had been well until three months before admission, when he was seen by a physician because of a cough and low-grade fever. He had a history of pneumonia with night sweats and spikes of fever two years before admission.",
+          "teaching_points": [
+            {
+              "id": "TP1",
+              "content": "A history of respiratory symptoms such as cough and fever can indicate underlying pulmonary conditions.",
+              "covered": false
+            }
+          ],
+          "elicited": false
+        },
+        {
+          "id": "H2",
+          "content": "What is the patient's past medical history?",
+          "response": "The boy was treated for tuberculosis two years before admission, although no tubercle bacilli were detected.",
+          "teaching_points": [
+            {
+              "id": "TP2",
+              "content": "A history of tuberculosis treatment can complicate the diagnosis of current respiratory issues.",
+              "covered": false
+            }
+          ],
+          "elicited": false
+        },
+        {
+          "id": "H3",
+          "content": "What is the patient's travel and immigration history?",
+          "response": "The boy is a native of El Salvador and immigrated to this country nine months before admission.",
+          "teaching_points": [
+            {
+              "id": "TP3",
+              "content": "Travel and immigration history can provide clues to infectious diseases endemic to certain regions.",
+              "covered": false
+            }
+          ],
+          "elicited": false
+        }
+      ],
+      "optional": [],
+      "current_ideal_differential_diagnosis": [
+        {
+          "name": "Post-tuberculosis bronchiectasis",
+          "category": "Pulmonary disease",
+          "likelihood": "high",
+          "key_features": [
+            "history of tuberculosis",
+            "bronchiectasis",
+            "chronic cough"
+          ],
+          "supporting_evidence": [
+            "history of tuberculosis treatment",
+            "evidence of bronchiectasis",
+            "chronic respiratory symptoms"
+          ],
+          "refuting_evidence": [
+            "no tubercle bacilli detected during previous treatment"
+          ],
+          "additional_information_needed": [
+            "chest CT scan to assess extent of bronchiectasis",
+            "sputum culture to rule out active TB"
+          ]
+        },
+        {
+          "name": "Cystic Fibrosis",
+          "category": "Genetic disorder",
+          "likelihood": "medium",
+          "key_features": [
+            "chronic respiratory infections",
+            "bronchiectasis",
+            "failure to thrive"
+          ],
+          "supporting_evidence": [
+            "bronchiectasis",
+            "chronic respiratory symptoms"
+          ],
+          "refuting_evidence": [
+            "no mention of gastrointestinal symptoms or failure to thrive",
+            "ethnic background less common for CF"
+          ],
+          "additional_information_needed": [
+            "sweat chloride test",
+            "genetic testing for CFTR mutations"
+          ]
+        },
+        {
+          "name": "Non-tuberculous mycobacterial infection",
+          "category": "Infectious disease",
+          "likelihood": "medium",
+          "key_features": [
+            "chronic cough",
+            "bronchiectasis",
+            "history of respiratory infections"
+          ],
+          "supporting_evidence": [
+            "bronchiectasis",
+            "chronic respiratory symptoms"
+          ],
+          "refuting_evidence": [
+            "no specific mention of non-tuberculous mycobacterial exposure"
+          ],
+          "additional_information_needed": [
+            "sputum culture for non-tuberculous mycobacteria",
+            "chest imaging"
+          ]
+        },
+        {
+          "name": "Primary Ciliary Dyskinesia",
+          "category": "Genetic disorder",
+          "likelihood": "low",
+          "key_features": [
+            "chronic respiratory infections",
+            "bronchiectasis",
+            "situs inversus"
+          ],
+          "supporting_evidence": [
+            "bronchiectasis",
+            "chronic respiratory symptoms"
+          ],
+          "refuting_evidence": [
+            "no mention of situs inversus or other characteristic features"
+          ],
+          "additional_information_needed": [
+            "nasal nitric oxide test",
+            "genetic testing for ciliary dysfunction"
+          ]
+        }
+      ]
+    },
+    "physical": {
+      "required": [
+        {
+          "id": "P1",
+          "content": "What were the findings on physical examination?",
+          "response": "The results of a physical examination were normal except for dullness and bronchial breathing over the right lung base and right axilla.",
+          "teaching_points": [
+            {
+              "id": "TP4",
+              "content": "Dullness and bronchial breathing can indicate consolidation or atelectasis in the lung.",
+              "covered": false
+            }
+          ],
+          "elicited": false
+        }
+      ],
+      "optional": [],
+      "current_ideal_differential_diagnosis": [
+        {
+          "name": "Post-tuberculosis bronchiectasis",
+          "category": "Pulmonary disease",
+          "likelihood": "high",
+          "key_features": [
+            "history of tuberculosis",
+            "bronchiectasis",
+            "respiratory problems"
+          ],
+          "supporting_evidence": [
+            "history of tuberculosis treatment",
+            "evidence of bronchiectasis",
+            "dullness and bronchial breathing over the right lung base"
+          ],
+          "refuting_evidence": [
+            "no tubercle bacilli detected during previous treatment"
+          ],
+          "additional_information_needed": [
+            "chest CT scan to assess extent and location of bronchiectasis",
+            "sputum culture to rule out active infection"
+          ]
+        },
+        {
+          "name": "Recurrent pneumonia",
+          "category": "Infectious disease",
+          "likelihood": "medium",
+          "key_features": [
+            "history of pneumonia",
+            "cough",
+            "fever"
+          ],
+          "supporting_evidence": [
+            "history of pneumonia with night sweats and fever",
+            "current respiratory problems"
+          ],
+          "refuting_evidence": [
+            "normal physical examination except for localized findings"
+          ],
+          "additional_information_needed": [
+            "chest X-ray to check for current pneumonia",
+            "complete blood count to assess for infection"
+          ]
+        },
+        {
+          "name": "Cystic fibrosis",
+          "category": "Genetic disorder",
+          "likelihood": "low",
+          "key_features": [
+            "chronic respiratory problems",
+            "bronchiectasis",
+            "recurrent infections"
+          ],
+          "supporting_evidence": [
+            "bronchiectasis",
+            "recurrent respiratory issues"
+          ],
+          "refuting_evidence": [
+            "no mention of gastrointestinal symptoms",
+            "no family history provided"
+          ],
+          "additional_information_needed": [
+            "sweat chloride test",
+            "genetic testing for CFTR mutations"
+          ]
+        },
+        {
+          "name": "Non-tuberculous mycobacterial infection",
+          "category": "Infectious disease",
+          "likelihood": "low",
+          "key_features": [
+            "chronic cough",
+            "bronchiectasis",
+            "history of tuberculosis-like symptoms"
+          ],
+          "supporting_evidence": [
+            "history of tuberculosis treatment",
+            "bronchiectasis"
+          ],
+          "refuting_evidence": [
+            "no current evidence of mycobacterial infection"
+          ],
+          "additional_information_needed": [
+            "sputum culture for non-tuberculous mycobacteria",
+            "chest CT scan"
+          ]
+        }
+      ]
+    },
+    "testing": {
+      "required": [
+        {
+          "id": "T1",
+          "content": "What were the findings on imaging studies?",
+          "response": "Chest radiographs showed densely opacified right lower and middle lobes, sharply marginated, with volume loss and areas of bronchiectasis. CT scan revealed atelectasis and bronchiectasis of the right middle and lower lobes, and a noncalcified endobronchial lesion in the bronchus intermedius.",
+          "teaching_points": [
+            {
+              "id": "TP5",
+              "content": "Imaging studies are crucial for diagnosing structural lung diseases such as bronchiectasis and atelectasis.",
+              "covered": false
+            }
+          ],
+          "elicited": false
+        },
+        {
+          "id": "T2",
+          "content": "What were the laboratory test results?",
+          "response": "The levels of urea nitrogen, creatinine, bilirubin, albumin, electrolytes, aspartate aminotransferase, lactate dehydrogenase, and alkaline phosphatase were normal. Prothrombin and partial-thromboplastin times were normal.",
+          "teaching_points": [
+            {
+              "id": "TP6",
+              "content": "Normal laboratory values can help rule out systemic causes of respiratory symptoms.",
+              "covered": false
+            }
+          ],
+          "elicited": false
+        }
+      ],
+      "optional": [],
+      "current_ideal_differential_diagnosis": [
+        {
+          "name": "Foreign body aspiration",
+          "category": "Respiratory condition",
+          "likelihood": "medium",
+          "key_features": [
+            "chronic cough",
+            "localized bronchiectasis",
+            "atelectasis",
+            "endobronchial lesion"
+          ],
+          "supporting_evidence": [
+            "noncalcified endobronchial lesion in the bronchus intermedius",
+            "atelectasis and bronchiectasis of the right middle and lower lobes"
+          ],
+          "refuting_evidence": [
+            "no acute history of choking or aspiration event noted"
+          ],
+          "additional_information_needed": [
+            "bronchoscopy to directly visualize and potentially remove the foreign body"
+          ]
+        },
+        {
+          "name": "Pulmonary tuberculosis",
+          "category": "Infectious disease",
+          "likelihood": "medium",
+          "key_features": [
+            "history of tuberculosis",
+            "chronic cough",
+            "bronchiectasis",
+            "endobronchial lesion"
+          ],
+          "supporting_evidence": [
+            "history of treatment for tuberculosis",
+            "immigration from a country with high TB prevalence"
+          ],
+          "refuting_evidence": [
+            "no tubercle bacilli detected previously",
+            "no current systemic symptoms like fever or night sweats"
+          ],
+          "additional_information_needed": [
+            "sputum culture and PCR for Mycobacterium tuberculosis",
+            "tuberculin skin test or IGRA"
+          ]
+        },
+        {
+          "name": "Bronchial obstruction due to tumor",
+          "category": "Oncological condition",
+          "likelihood": "low",
+          "key_features": [
+            "endobronchial lesion",
+            "atelectasis",
+            "bronchiectasis"
+          ],
+          "supporting_evidence": [
+            "noncalcified endobronchial lesion in the bronchus intermedius"
+          ],
+          "refuting_evidence": [
+            "age of the patient is less typical for primary lung tumors"
+          ],
+          "additional_information_needed": [
+            "biopsy of the endobronchial lesion",
+            "further imaging studies like MRI or PET scan"
+          ]
+        },
+        {
+          "name": "Allergic bronchopulmonary aspergillosis (ABPA)",
+          "category": "Allergic condition",
+          "likelihood": "low",
+          "key_features": [
+            "bronchiectasis",
+            "history of respiratory problems",
+            "endobronchial lesions"
+          ],
+          "supporting_evidence": [
+            "bronchiectasis noted on imaging"
+          ],
+          "refuting_evidence": [
+            "lack of eosinophilia or elevated IgE levels noted in the case"
+          ],
+          "additional_information_needed": [
+            "serum IgE levels",
+            "aspergillus-specific IgE and IgG tests"
+          ]
+        }
+      ]
+    },
+    "management": {
+      "required": [
+        {
+          "id": "M1",
+          "content": "What was the initial management for the patient's condition?",
+          "response": "An antibiotic was prescribed initially, but repeated radiographs remained abnormal.",
+          "teaching_points": [
+            {
+              "id": "TP7",
+              "content": "Antibiotic treatment is often the first line of management for suspected bacterial infections, but persistent symptoms may require further investigation.",
+              "covered": false
+            }
+          ],
+          "elicited": false
+        }
+      ],
+      "optional": []
+    },
+    "discussion": {
+      "required": [],
+      "optional": []
+    }
+  },
+  "differential_diagnosis": [],
+  "final_diagnosis": {
+    "name": "Bronchiectasis with possible endobronchial lesion",
+    "category": "Respiratory",
+    "key_features": [
+      "Bronchiectasis",
+      "Endobronchial lesion",
+      "Atelectasis"
+    ],
+    "supporting_evidence": [
+      "CT findings of bronchiectasis and endobronchial lesion",
+      "History of respiratory symptoms"
+    ],
+    "refuting_evidence": []
+  }
+}

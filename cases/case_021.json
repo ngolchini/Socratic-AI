@@ -1,0 +1,484 @@
+{
+  "metadata": {
+    "id": "case_021",
+    "title": "2002 Case 09",
+    "original_presentation": "An 80-year-old woman was admitted to the hospital because of sudden unilateral blindness.",
+    "difficulty": "intermediate",
+    "specialties": [
+      "Ophthalmology",
+      "Internal Medicine",
+      "Neurology"
+    ],
+    "keywords": [
+      "unilateral blindness",
+      "preseptal cellulitis",
+      "central retinal artery occlusion"
+    ],
+    "source": "clinical case study",
+    "version": "1.0"
+  },
+  "clinical_elements": {
+    "history": {
+      "required": [
+        {
+          "id": "H1",
+          "content": "What is the patient's medical history?",
+          "response": "The patient had a long history of medical problems including hypertension, mitral and tricuspid regurgitation treated by valvuloplasties, atrial fibrillation treated with warfarin, right-sided congestive heart failure, peripheral vascular disease, chronic renal insufficiency with a baseline creatinine level of 2.4 mg/dL, and chronic pancytopenia due to congestive splenomegaly with hypersplenism. She had a left carotid endarterectomy one year before admission.",
+          "teaching_points": [
+            {
+              "id": "TP1",
+              "content": "A comprehensive medical history is crucial in understanding the patient's current condition and potential complications.",
+              "covered": false
+            }
+          ],
+          "elicited": false
+        },
+        {
+          "id": "H2",
+          "content": "What recent surgeries has the patient undergone?",
+          "response": "Twenty-two days before admission, the patient underwent an elective open cholecystectomy for symptomatic cholelithiasis and a splenectomy due to increasing blood transfusion requirements and anemia.",
+          "teaching_points": [
+            {
+              "id": "TP2",
+              "content": "Recent surgeries can have significant implications on a patient's current health status and may contribute to new symptoms.",
+              "covered": false
+            }
+          ],
+          "elicited": false
+        },
+        {
+          "id": "H3",
+          "content": "What were the patient's symptoms prior to admission?",
+          "response": "Six days before admission, the patient experienced a headache with severe pain in the left eye, which worsened. Examination showed preseptal cellulitis of the left eye with extension across the nasal bridge.",
+          "teaching_points": [
+            {
+              "id": "TP3",
+              "content": "Preseptal cellulitis can lead to serious complications if not treated promptly, including vision loss.",
+              "covered": false
+            }
+          ],
+          "elicited": false
+        }
+      ],
+      "optional": [],
+      "current_ideal_differential_diagnosis": [
+        {
+          "name": "Central Retinal Artery Occlusion (CRAO)",
+          "category": "Vascular",
+          "likelihood": "high",
+          "key_features": [
+            "sudden unilateral blindness",
+            "history of atrial fibrillation",
+            "hypertension",
+            "peripheral vascular disease"
+          ],
+          "supporting_evidence": [
+            "sudden unilateral blindness",
+            "history of atrial fibrillation",
+            "peripheral vascular disease"
+          ],
+          "refuting_evidence": [
+            "none directly refuting"
+          ],
+          "additional_information_needed": [
+            "fundoscopic examination",
+            "ocular ultrasound",
+            "carotid Doppler studies"
+          ]
+        },
+        {
+          "name": "Giant Cell Arteritis (Temporal Arteritis)",
+          "category": "Inflammatory",
+          "likelihood": "medium",
+          "key_features": [
+            "sudden vision loss",
+            "headache",
+            "age over 50"
+          ],
+          "supporting_evidence": [
+            "sudden unilateral blindness",
+            "headache with severe pain in the left eye"
+          ],
+          "refuting_evidence": [
+            "no mention of jaw claudication or scalp tenderness"
+          ],
+          "additional_information_needed": [
+            "ESR and CRP levels",
+            "temporal artery biopsy"
+          ]
+        },
+        {
+          "name": "Ischemic Optic Neuropathy",
+          "category": "Vascular",
+          "likelihood": "medium",
+          "key_features": [
+            "sudden vision loss",
+            "history of hypertension",
+            "history of vascular disease"
+          ],
+          "supporting_evidence": [
+            "sudden unilateral blindness",
+            "history of hypertension and vascular disease"
+          ],
+          "refuting_evidence": [
+            "no specific refuting evidence"
+          ],
+          "additional_information_needed": [
+            "ophthalmologic examination",
+            "visual field testing"
+          ]
+        },
+        {
+          "name": "Orbital Cellulitis",
+          "category": "Infectious",
+          "likelihood": "low",
+          "key_features": [
+            "eye pain",
+            "swelling",
+            "fever",
+            "vision changes"
+          ],
+          "supporting_evidence": [
+            "headache with severe pain in the left eye",
+            "preseptal cellulitis of the left eye"
+          ],
+          "refuting_evidence": [
+            "sudden blindness is less typical without more severe infection signs"
+          ],
+          "additional_information_needed": [
+            "CT or MRI of the orbit",
+            "blood cultures"
+          ]
+        },
+        {
+          "name": "Retinal Detachment",
+          "category": "Ophthalmologic",
+          "likelihood": "low",
+          "key_features": [
+            "sudden vision loss",
+            "flashes of light",
+            "floaters"
+          ],
+          "supporting_evidence": [
+            "sudden unilateral blindness"
+          ],
+          "refuting_evidence": [
+            "no mention of flashes or floaters",
+            "recent preseptal cellulitis"
+          ],
+          "additional_information_needed": [
+            "ophthalmologic examination",
+            "ocular ultrasound"
+          ]
+        }
+      ]
+    },
+    "physical": {
+      "required": [
+        {
+          "id": "P1",
+          "content": "What were the findings on physical examination upon admission?",
+          "response": "The patient was cachectic with a temperature of 37.2°C, pulse of 90, respirations of 20, and blood pressure of 170/75 mm Hg. There was complete loss of light perception in the left eye, occlusion of the central retinal artery, swelling of the optic disk, severely decreased motility in all directions, and complete ptosis. The right eye had visual acuity of 20/400. The heart was enlarged with an irregular rhythm and a grade 2 holosystolic murmur. The lungs were clear.",
+          "teaching_points": [
+            {
+              "id": "TP4",
+              "content": "A thorough physical examination can provide critical clues to the underlying diagnosis, especially in complex cases.",
+              "covered": false
+            }
+          ],
+          "elicited": false
+        }
+      ],
+      "optional": [],
+      "current_ideal_differential_diagnosis": [
+        {
+          "name": "Central Retinal Artery Occlusion (CRAO)",
+          "category": "Ophthalmologic/Vascular",
+          "likelihood": "high",
+          "key_features": [
+            "sudden unilateral blindness",
+            "occlusion of the central retinal artery",
+            "swelling of the optic disk"
+          ],
+          "supporting_evidence": [
+            "sudden unilateral blindness",
+            "occlusion of the central retinal artery",
+            "swelling of the optic disk"
+          ],
+          "refuting_evidence": [],
+          "additional_information_needed": [
+            "Ophthalmologic examination to confirm retinal findings",
+            "Doppler ultrasound of carotid arteries"
+          ]
+        },
+        {
+          "name": "Giant Cell Arteritis (Temporal Arteritis)",
+          "category": "Vascular/Inflammatory",
+          "likelihood": "medium",
+          "key_features": [
+            "sudden vision loss",
+            "headache",
+            "jaw claudication",
+            "elevated ESR"
+          ],
+          "supporting_evidence": [
+            "sudden vision loss",
+            "headache"
+          ],
+          "refuting_evidence": [
+            "No mention of jaw claudication",
+            "No elevated ESR reported"
+          ],
+          "additional_information_needed": [
+            "ESR and CRP levels",
+            "Temporal artery biopsy"
+          ]
+        },
+        {
+          "name": "Orbital Cellulitis",
+          "category": "Infectious",
+          "likelihood": "medium",
+          "key_features": [
+            "painful eye",
+            "proptosis",
+            "ophthalmoplegia",
+            "fever"
+          ],
+          "supporting_evidence": [
+            "headache with severe pain in the left eye",
+            "preseptal cellulitis of the left eye"
+          ],
+          "refuting_evidence": [
+            "No fever",
+            "No proptosis reported"
+          ],
+          "additional_information_needed": [
+            "CT or MRI of the orbit",
+            "Blood cultures"
+          ]
+        },
+        {
+          "name": "Ischemic Optic Neuropathy",
+          "category": "Vascular",
+          "likelihood": "medium",
+          "key_features": [
+            "sudden vision loss",
+            "swollen optic disk",
+            "associated with vascular risk factors"
+          ],
+          "supporting_evidence": [
+            "sudden vision loss",
+            "swelling of the optic disk",
+            "history of hypertension and vascular disease"
+          ],
+          "refuting_evidence": [
+            "No specific mention of altitudinal field defect"
+          ],
+          "additional_information_needed": [
+            "Fluorescein angiography",
+            "Visual field testing"
+          ]
+        },
+        {
+          "name": "Endophthalmitis",
+          "category": "Infectious",
+          "likelihood": "low",
+          "key_features": [
+            "painful red eye",
+            "vision loss",
+            "hypopyon"
+          ],
+          "supporting_evidence": [
+            "recent surgery (splenectomy) increasing infection risk"
+          ],
+          "refuting_evidence": [
+            "No mention of red eye or hypopyon",
+            "No fever"
+          ],
+          "additional_information_needed": [
+            "Ophthalmologic examination",
+            "Vitreal tap for culture"
+          ]
+        }
+      ]
+    },
+    "testing": {
+      "required": [
+        {
+          "id": "T1",
+          "content": "What imaging studies were performed and what were the findings?",
+          "response": "A cranial MRI showed thickening of the mucosa of the left maxillary, sphenoid, and ethmoid sinuses, a retention cyst in the right sphenoid sinus, and smooth, mild dural enhancement. There was enhancement of preseptal and nasal soft-tissue swelling. The superior ophthalmic veins appeared normal with no evidence of cavernous sinus thrombosis.",
+          "teaching_points": [
+            {
+              "id": "TP5",
+              "content": "Imaging studies are essential in diagnosing and assessing the extent of disease, particularly in cases involving potential orbital or sinus involvement.",
+              "covered": false
+            }
+          ],
+          "elicited": false
+        },
+        {
+          "id": "T2",
+          "content": "What laboratory tests were performed and what were the results?",
+          "response": "Laboratory tests included blood cultures, which were sterile, and tests for antinuclear antibodies and rheumatoid factor, which were negative. A lumbar puncture was performed, and further laboratory tests were conducted.",
+          "teaching_points": [
+            {
+              "id": "TP6",
+              "content": "Laboratory tests can help rule out infectious and autoimmune causes in complex clinical presentations.",
+              "covered": false
+            }
+          ],
+          "elicited": false
+        }
+      ],
+      "optional": [],
+      "current_ideal_differential_diagnosis": [
+        {
+          "name": "Giant Cell Arteritis (Temporal Arteritis)",
+          "category": "Vascular disorder",
+          "likelihood": "medium",
+          "key_features": [
+            "sudden unilateral blindness",
+            "headache",
+            "age over 50",
+            "elevated inflammatory markers"
+          ],
+          "supporting_evidence": [
+            "sudden unilateral blindness",
+            "headache with severe pain in the left eye",
+            "age of 80 years"
+          ],
+          "refuting_evidence": [
+            "no mention of elevated ESR or CRP",
+            "no jaw claudication or scalp tenderness reported"
+          ],
+          "additional_information_needed": [
+            "ESR and CRP levels",
+            "temporal artery biopsy"
+          ]
+        },
+        {
+          "name": "Central Retinal Artery Occlusion",
+          "category": "Ophthalmologic emergency",
+          "likelihood": "high",
+          "key_features": [
+            "sudden painless loss of vision",
+            "history of cardiovascular disease",
+            "retinal artery occlusion"
+          ],
+          "supporting_evidence": [
+            "sudden unilateral blindness",
+            "occlusion of the central retinal artery",
+            "history of atrial fibrillation and peripheral vascular disease"
+          ],
+          "refuting_evidence": [
+            "presence of preseptal cellulitis and sinusitis may suggest an alternative cause"
+          ],
+          "additional_information_needed": [
+            "ophthalmologic examination details",
+            "fluorescein angiography"
+          ]
+        },
+        {
+          "name": "Orbital Cellulitis",
+          "category": "Infectious disease",
+          "likelihood": "medium",
+          "key_features": [
+            "painful eye movement",
+            "proptosis",
+            "fever",
+            "recent sinusitis"
+          ],
+          "supporting_evidence": [
+            "preseptal cellulitis of the left eye",
+            "swelling of the optic disk",
+            "headache with severe pain in the left eye",
+            "sinus thickening on MRI"
+          ],
+          "refuting_evidence": [
+            "no fever or systemic signs of infection",
+            "blood cultures were sterile"
+          ],
+          "additional_information_needed": [
+            "white blood cell count",
+            "further imaging to assess for abscess or deeper infection"
+          ]
+        },
+        {
+          "name": "Ischemic Optic Neuropathy",
+          "category": "Vascular disorder",
+          "likelihood": "medium",
+          "key_features": [
+            "sudden vision loss",
+            "swollen optic disk",
+            "history of cardiovascular risk factors"
+          ],
+          "supporting_evidence": [
+            "sudden unilateral blindness",
+            "swelling of the optic disk",
+            "history of hypertension and atrial fibrillation"
+          ],
+          "refuting_evidence": [
+            "presence of preseptal cellulitis and sinusitis may suggest an alternative cause"
+          ],
+          "additional_information_needed": [
+            "detailed fundoscopic examination",
+            "visual field testing"
+          ]
+        },
+        {
+          "name": "Mucormycosis",
+          "category": "Fungal infection",
+          "likelihood": "low",
+          "key_features": [
+            "rapidly progressive sinusitis",
+            "orbital involvement",
+            "immunocompromised state"
+          ],
+          "supporting_evidence": [
+            "thickening of the mucosa of the sinuses",
+            "preseptal and nasal soft-tissue swelling"
+          ],
+          "refuting_evidence": [
+            "no evidence of cavernous sinus thrombosis",
+            "no mention of immunocompromised state"
+          ],
+          "additional_information_needed": [
+            "nasal endoscopy and biopsy",
+            "fungal cultures"
+          ]
+        }
+      ]
+    },
+    "management": {
+      "required": [
+        {
+          "id": "M1",
+          "content": "What treatments were administered during the hospital stay?",
+          "response": "The patient was treated with nafcillin, ceftriaxone, metronidazole, furosemide, lisinopril, spironolactone, hydrochlorothiazide, ranitidine, digoxin, heparin, acetaminophen, morphine, and high-dose methylprednisolone.",
+          "teaching_points": [
+            {
+              "id": "TP7",
+              "content": "Management of complex cases often involves a multidisciplinary approach and the use of multiple medications to address various aspects of the patient's condition.",
+              "covered": false
+            }
+          ],
+          "elicited": false
+        }
+      ],
+      "optional": []
+    },
+    "discussion": {
+      "required": [],
+      "optional": []
+    }
+  },
+  "differential_diagnosis": [],
+  "final_diagnosis": {
+    "name": "Bilateral central retinal artery occlusion with optic nerve ischemia",
+    "category": "Ophthalmology",
+    "key_features": [],
+    "supporting_evidence": [],
+    "refuting_evidence": []
+  }
+}

@@ -1,0 +1,465 @@
+{
+  "metadata": {
+    "id": "case_033",
+    "title": "1998 Case 08",
+    "original_presentation": "A 41-year-old man was admitted to the hospital because of leg weakness and mediastinal lymphadenopathy.",
+    "difficulty": "intermediate",
+    "specialties": [
+      "Neurology",
+      "Radiology",
+      "Internal Medicine"
+    ],
+    "keywords": [
+      "leg weakness",
+      "mediastinal lymphadenopathy",
+      "MRI",
+      "spinal cord"
+    ],
+    "source": "Clinical case study",
+    "version": "1.0"
+  },
+  "clinical_elements": {
+    "history": {
+      "required": [
+        {
+          "id": "H1",
+          "content": "What is the patient's initial complaint and history of present illness?",
+          "response": "The patient had been well until a month earlier, when he fell while walking and felt weakness in the left leg. He had diffuse body pains, numbness of the lateral aspect of the left thigh, calf, and foot, and difficulty emptying his bladder.",
+          "teaching_points": [
+            {
+              "id": "TP1",
+              "content": "Leg weakness and sensory changes can indicate neurological involvement, possibly related to spinal cord or peripheral nerve issues.",
+              "covered": false
+            }
+          ],
+          "elicited": false
+        },
+        {
+          "id": "H2",
+          "content": "What are the patient's past medical history and risk factors?",
+          "response": "The patient had a sedentary job, consulted a chiropractor for lower back pain, and had no history of tick bite, head injury, seizure disorder, recent viral illness, diabetes, hypertension, or intravenous drug abuse.",
+          "teaching_points": [
+            {
+              "id": "TP2",
+              "content": "A thorough history can help rule out common causes of neurological symptoms, such as infections or metabolic disorders.",
+              "covered": false
+            }
+          ],
+          "elicited": false
+        }
+      ],
+      "optional": [],
+      "current_ideal_differential_diagnosis": [
+        {
+          "name": "Multiple Sclerosis",
+          "category": "Neurological disorder",
+          "likelihood": "medium",
+          "key_features": [
+            "leg weakness",
+            "numbness",
+            "bladder dysfunction",
+            "mediastinal lymphadenopathy"
+          ],
+          "supporting_evidence": [
+            "leg weakness",
+            "numbness of the lateral aspect of the left thigh, calf, and foot",
+            "difficulty emptying bladder"
+          ],
+          "refuting_evidence": [
+            "no history of recent viral illness",
+            "age is slightly older than typical onset"
+          ],
+          "additional_information_needed": [
+            "MRI of the brain and spinal cord",
+            "lumbar puncture for cerebrospinal fluid analysis"
+          ]
+        },
+        {
+          "name": "Guillain-Barré Syndrome",
+          "category": "Neurological disorder",
+          "likelihood": "low",
+          "key_features": [
+            "ascending weakness",
+            "recent viral illness",
+            "areflexia"
+          ],
+          "supporting_evidence": [
+            "leg weakness",
+            "numbness"
+          ],
+          "refuting_evidence": [
+            "no recent viral illness",
+            "mediastinal lymphadenopathy is atypical"
+          ],
+          "additional_information_needed": [
+            "nerve conduction studies",
+            "lumbar puncture for cerebrospinal fluid analysis"
+          ]
+        },
+        {
+          "name": "Sarcoidosis",
+          "category": "Systemic inflammatory disease",
+          "likelihood": "medium",
+          "key_features": [
+            "mediastinal lymphadenopathy",
+            "neurological symptoms",
+            "systemic symptoms"
+          ],
+          "supporting_evidence": [
+            "mediastinal lymphadenopathy",
+            "diffuse body pains",
+            "neurological symptoms"
+          ],
+          "refuting_evidence": [
+            "no respiratory symptoms",
+            "no skin lesions"
+          ],
+          "additional_information_needed": [
+            "chest CT scan",
+            "serum ACE levels",
+            "biopsy of lymph nodes"
+          ]
+        },
+        {
+          "name": "Spinal Cord Compression",
+          "category": "Neurological disorder",
+          "likelihood": "medium",
+          "key_features": [
+            "localized back pain",
+            "neurological deficits",
+            "bladder dysfunction"
+          ],
+          "supporting_evidence": [
+            "leg weakness",
+            "numbness",
+            "difficulty emptying bladder"
+          ],
+          "refuting_evidence": [
+            "no history of trauma",
+            "mediastinal lymphadenopathy is atypical"
+          ],
+          "additional_information_needed": [
+            "MRI of the spine",
+            "neurological examination"
+          ]
+        },
+        {
+          "name": "Lymphoma",
+          "category": "Oncological disorder",
+          "likelihood": "medium",
+          "key_features": [
+            "mediastinal lymphadenopathy",
+            "systemic symptoms",
+            "neurological involvement"
+          ],
+          "supporting_evidence": [
+            "mediastinal lymphadenopathy",
+            "diffuse body pains"
+          ],
+          "refuting_evidence": [
+            "no B symptoms reported",
+            "no palpable lymphadenopathy elsewhere"
+          ],
+          "additional_information_needed": [
+            "biopsy of lymph nodes",
+            "PET scan",
+            "blood tests for tumor markers"
+          ]
+        }
+      ]
+    },
+    "physical": {
+      "required": [
+        {
+          "id": "P1",
+          "content": "What were the findings on the physical examination?",
+          "response": "The patient appeared well, with normal motor function in the arms. Muscle strength was reduced in the legs, deep-tendon reflexes were increased, and there was impaired sensation below the costal margins.",
+          "teaching_points": [
+            {
+              "id": "TP3",
+              "content": "Increased deep-tendon reflexes and sensory deficits can indicate upper motor neuron lesions.",
+              "covered": false
+            }
+          ],
+          "elicited": false
+        }
+      ],
+      "optional": [],
+      "current_ideal_differential_diagnosis": [
+        {
+          "name": "Multiple Sclerosis",
+          "category": "Neurological disorder",
+          "likelihood": "medium",
+          "key_features": [
+            "leg weakness",
+            "numbness",
+            "bladder dysfunction",
+            "increased deep-tendon reflexes"
+          ],
+          "supporting_evidence": [
+            "leg weakness",
+            "numbness of the lateral aspect of the left thigh, calf, and foot",
+            "difficulty emptying bladder",
+            "increased deep-tendon reflexes"
+          ],
+          "refuting_evidence": [
+            "no history of recent viral illness",
+            "no head injury"
+          ],
+          "additional_information_needed": [
+            "MRI of the brain and spinal cord",
+            "lumbar puncture for cerebrospinal fluid analysis"
+          ]
+        },
+        {
+          "name": "Transverse Myelitis",
+          "category": "Neurological disorder",
+          "likelihood": "medium",
+          "key_features": [
+            "sudden onset of leg weakness",
+            "sensory changes",
+            "bladder dysfunction",
+            "increased reflexes"
+          ],
+          "supporting_evidence": [
+            "sudden onset of leg weakness",
+            "numbness",
+            "difficulty emptying bladder",
+            "increased deep-tendon reflexes"
+          ],
+          "refuting_evidence": [
+            "no recent viral illness"
+          ],
+          "additional_information_needed": [
+            "MRI of the spinal cord",
+            "lumbar puncture for cerebrospinal fluid analysis"
+          ]
+        },
+        {
+          "name": "Guillain-Barré Syndrome",
+          "category": "Neurological disorder",
+          "likelihood": "low",
+          "key_features": [
+            "ascending weakness",
+            "areflexia",
+            "recent infection"
+          ],
+          "supporting_evidence": [
+            "leg weakness"
+          ],
+          "refuting_evidence": [
+            "increased deep-tendon reflexes",
+            "no recent viral illness",
+            "no areflexia"
+          ],
+          "additional_information_needed": [
+            "nerve conduction studies",
+            "lumbar puncture for cerebrospinal fluid analysis"
+          ]
+        },
+        {
+          "name": "Spinal Cord Compression",
+          "category": "Neurological disorder",
+          "likelihood": "medium",
+          "key_features": [
+            "localized back pain",
+            "progressive weakness",
+            "sensory changes",
+            "bladder dysfunction"
+          ],
+          "supporting_evidence": [
+            "leg weakness",
+            "numbness",
+            "difficulty emptying bladder",
+            "impaired sensation below costal margins"
+          ],
+          "refuting_evidence": [
+            "no history of trauma or cancer"
+          ],
+          "additional_information_needed": [
+            "MRI of the spine",
+            "CT scan of the spine"
+          ]
+        },
+        {
+          "name": "Sarcoidosis",
+          "category": "Systemic inflammatory disease",
+          "likelihood": "low",
+          "key_features": [
+            "mediastinal lymphadenopathy",
+            "neurological symptoms"
+          ],
+          "supporting_evidence": [
+            "mediastinal lymphadenopathy"
+          ],
+          "refuting_evidence": [
+            "no respiratory symptoms",
+            "no skin lesions"
+          ],
+          "additional_information_needed": [
+            "chest CT scan",
+            "biopsy of lymph nodes"
+          ]
+        }
+      ]
+    },
+    "testing": {
+      "required": [
+        {
+          "id": "T1",
+          "content": "What were the results of imaging studies?",
+          "response": "MRI showed a diffuse, abnormal signal within the spinal cord from C5 through T12, with nodular enhancement and abnormal enhancement in the epidural spaces. CT scan showed prominent mediastinal and hilar lymph nodes.",
+          "teaching_points": [
+            {
+              "id": "TP4",
+              "content": "MRI is crucial for visualizing spinal cord pathology, while CT can help assess lymphadenopathy.",
+              "covered": false
+            }
+          ],
+          "elicited": false
+        }
+      ],
+      "optional": [],
+      "current_ideal_differential_diagnosis": [
+        {
+          "name": "Multiple Sclerosis",
+          "category": "Neurological disorder",
+          "likelihood": "medium",
+          "key_features": [
+            "neurological deficits",
+            "spinal cord lesions",
+            "bladder dysfunction"
+          ],
+          "supporting_evidence": [
+            "diffuse abnormal signal within the spinal cord",
+            "muscle weakness and sensory impairment"
+          ],
+          "refuting_evidence": [
+            "age of onset is slightly older than typical",
+            "mediastinal lymphadenopathy is not typical"
+          ],
+          "additional_information_needed": [
+            "oligoclonal bands in CSF",
+            "visual evoked potentials"
+          ]
+        },
+        {
+          "name": "Neurosarcoidosis",
+          "category": "Inflammatory disorder",
+          "likelihood": "high",
+          "key_features": [
+            "neurological symptoms",
+            "mediastinal lymphadenopathy",
+            "spinal cord involvement"
+          ],
+          "supporting_evidence": [
+            "mediastinal and hilar lymphadenopathy",
+            "abnormal spinal cord signal with enhancement"
+          ],
+          "refuting_evidence": [
+            "lack of systemic symptoms like fever or weight loss"
+          ],
+          "additional_information_needed": [
+            "serum ACE levels",
+            "biopsy of lymph nodes",
+            "CSF analysis for lymphocytic pleocytosis"
+          ]
+        },
+        {
+          "name": "Transverse Myelitis",
+          "category": "Neurological disorder",
+          "likelihood": "medium",
+          "key_features": [
+            "acute onset of spinal cord dysfunction",
+            "sensory and motor deficits",
+            "bladder dysfunction"
+          ],
+          "supporting_evidence": [
+            "abnormal spinal cord signal",
+            "sudden onset of leg weakness and sensory changes"
+          ],
+          "refuting_evidence": [
+            "presence of mediastinal lymphadenopathy"
+          ],
+          "additional_information_needed": [
+            "CSF analysis for inflammation",
+            "infectious and autoimmune panel"
+          ]
+        },
+        {
+          "name": "Lymphoma with CNS involvement",
+          "category": "Oncological disorder",
+          "likelihood": "medium",
+          "key_features": [
+            "lymphadenopathy",
+            "neurological symptoms",
+            "spinal cord lesions"
+          ],
+          "supporting_evidence": [
+            "prominent mediastinal and hilar lymph nodes",
+            "nodular enhancement in spinal cord"
+          ],
+          "refuting_evidence": [
+            "lack of systemic B symptoms like night sweats or weight loss"
+          ],
+          "additional_information_needed": [
+            "lymph node biopsy",
+            "PET scan",
+            "CSF cytology"
+          ]
+        },
+        {
+          "name": "Spinal Cord Tumor",
+          "category": "Oncological disorder",
+          "likelihood": "low",
+          "key_features": [
+            "focal neurological deficits",
+            "spinal cord lesion",
+            "possible enhancement on imaging"
+          ],
+          "supporting_evidence": [
+            "nodular enhancement in spinal cord"
+          ],
+          "refuting_evidence": [
+            "mediastinal lymphadenopathy not typical",
+            "diffuse spinal cord involvement"
+          ],
+          "additional_information_needed": [
+            "biopsy of spinal lesion",
+            "further imaging studies"
+          ]
+        }
+      ]
+    },
+    "management": {
+      "required": [
+        {
+          "id": "M1",
+          "content": "What treatments were administered to the patient?",
+          "response": "Minidose heparin was injected subcutaneously, and dexamethasone was administered orally every six hours. An indwelling catheter was inserted.",
+          "teaching_points": [
+            {
+              "id": "TP5",
+              "content": "Dexamethasone can reduce inflammation in cases of spinal cord compression, and anticoagulation may be used to prevent thromboembolic events.",
+              "covered": false
+            }
+          ],
+          "elicited": false
+        }
+      ],
+      "optional": []
+    },
+    "discussion": {
+      "required": [],
+      "optional": []
+    }
+  },
+  "differential_diagnosis": [],
+  "final_diagnosis": {
+    "name": "Unknown",
+    "category": "Neurological disorder",
+    "key_features": [],
+    "supporting_evidence": [],
+    "refuting_evidence": []
+  }
+}

@@ -1,0 +1,420 @@
+{
+  "metadata": {
+    "id": "case_015",
+    "title": "1972 Case 41",
+    "original_presentation": "A nine-month-old boy was admitted to the hospital because of hepatic enlargement.",
+    "difficulty": "intermediate",
+    "specialties": [
+      "Pediatrics",
+      "Hematology",
+      "Gastroenterology"
+    ],
+    "keywords": [
+      "hepatic enlargement",
+      "spherocytosis",
+      "hereditary",
+      "cirrhosis",
+      "ascites"
+    ],
+    "source": "Clinical case study",
+    "version": "1.0"
+  },
+  "clinical_elements": {
+    "history": {
+      "required": [
+        {
+          "id": "H1",
+          "content": "What is the patient's birth and neonatal history?",
+          "response": "The child was the product of a full-term second pregnancy of a 28-year-old mother; gestation was complicated only by iron-deficiency anemia. The birth weight was 15 kg. There was mild neonatal jaundice that cleared on the fourth day.",
+          "teaching_points": [
+            {
+              "id": "TP1",
+              "content": "Neonatal jaundice is common and often benign, but persistent or severe cases may indicate underlying conditions such as hemolytic disease.",
+              "covered": false
+            }
+          ],
+          "elicited": false
+        },
+        {
+          "id": "H2",
+          "content": "What is the family history relevant to the patient's condition?",
+          "response": "There was a family history of hereditary spherocytosis in a five-year-old brother, the mother, the maternal grandfather and a maternal uncle and cousin.",
+          "teaching_points": [
+            {
+              "id": "TP2",
+              "content": "Hereditary spherocytosis is an autosomal dominant condition, often presenting with hemolytic anemia, jaundice, and splenomegaly.",
+              "covered": false
+            }
+          ],
+          "elicited": false
+        },
+        {
+          "id": "H3",
+          "content": "What were the patient's symptoms and medical history leading up to the current admission?",
+          "response": "At the age of two months intermittent icterus developed. The spleen was palpated for the first time, 1 cm below the left costal margin, and the edge of the liver was felt 3 cm below the right costal margin. By the age of six months the liver and spleen were larger. Three weeks before admission wheezing developed and was not responsive to epinephrine; a diagnosis of bronchiolitis was made. One week before admission right otitis media developed and was treated with ampicillin. Bilateral inguinal hernias were noted.",
+          "teaching_points": [
+            {
+              "id": "TP3",
+              "content": "Progressive hepatosplenomegaly in infants can be indicative of underlying hematological or metabolic disorders.",
+              "covered": false
+            }
+          ],
+          "elicited": false
+        }
+      ],
+      "optional": [],
+      "current_ideal_differential_diagnosis": [
+        {
+          "name": "Hereditary Spherocytosis",
+          "category": "Hematologic disorder",
+          "likelihood": "high",
+          "key_features": [
+            "hemolytic anemia",
+            "jaundice",
+            "splenomegaly",
+            "family history of hereditary spherocytosis"
+          ],
+          "supporting_evidence": [
+            "family history of hereditary spherocytosis",
+            "intermittent icterus",
+            "splenomegaly",
+            "mild neonatal jaundice"
+          ],
+          "refuting_evidence": [],
+          "additional_information_needed": [
+            "peripheral blood smear",
+            "osmotic fragility test",
+            "reticulocyte count"
+          ]
+        },
+        {
+          "name": "Glycogen Storage Disease",
+          "category": "Metabolic disorder",
+          "likelihood": "medium",
+          "key_features": [
+            "hepatomegaly",
+            "hypoglycemia",
+            "growth retardation"
+          ],
+          "supporting_evidence": [
+            "hepatic enlargement",
+            "enlarged liver and spleen"
+          ],
+          "refuting_evidence": [
+            "no mention of hypoglycemia",
+            "no growth retardation noted"
+          ],
+          "additional_information_needed": [
+            "blood glucose levels",
+            "liver function tests",
+            "genetic testing for specific enzyme deficiencies"
+          ]
+        },
+        {
+          "name": "Congenital Infection (e.g., CMV, Toxoplasmosis)",
+          "category": "Infectious disease",
+          "likelihood": "low",
+          "key_features": [
+            "hepatosplenomegaly",
+            "jaundice",
+            "developmental delay"
+          ],
+          "supporting_evidence": [
+            "hepatomegaly",
+            "splenomegaly",
+            "jaundice"
+          ],
+          "refuting_evidence": [
+            "no developmental delay mentioned",
+            "no specific signs of congenital infection noted"
+          ],
+          "additional_information_needed": [
+            "serologic tests for congenital infections",
+            "hearing and vision screening"
+          ]
+        }
+      ]
+    },
+    "physical": {
+      "required": [
+        {
+          "id": "P1",
+          "content": "What were the findings on physical examination upon admission?",
+          "response": "The temperature was 37.7°C, the pulse 105, and the respirations 25. The child was a large, heavy boy who appeared well. Both tympanic membranes were injected, without bulging. There were bilateral expiratory wheezes, with diffuse rhonchi. The heart was normal. The abdomen was markedly distended, and an umbilical hernia was present. The edge of the liver was felt 9 cm below the right costal margin, and the spleen 7 cm below the left costal margin. There were bilateral inguinal hernias that descended into the scrotum and could not be reduced.",
+          "teaching_points": [
+            {
+              "id": "TP4",
+              "content": "Hepatosplenomegaly and hernias in infants can be associated with systemic conditions such as metabolic or hematological disorders.",
+              "covered": false
+            }
+          ],
+          "elicited": false
+        }
+      ],
+      "optional": [],
+      "current_ideal_differential_diagnosis": [
+        {
+          "name": "Hereditary Spherocytosis",
+          "category": "Hematologic disorder",
+          "likelihood": "high",
+          "key_features": [
+            "family history of hereditary spherocytosis",
+            "hepatosplenomegaly",
+            "intermittent jaundice"
+          ],
+          "supporting_evidence": [
+            "Family history of hereditary spherocytosis",
+            "Intermittent icterus since two months of age",
+            "Hepatomegaly and splenomegaly noted on physical exam"
+          ],
+          "refuting_evidence": [],
+          "additional_information_needed": [
+            "Peripheral blood smear to look for spherocytes",
+            "Osmotic fragility test",
+            "Complete blood count and reticulocyte count"
+          ]
+        },
+        {
+          "name": "Glycogen Storage Disease",
+          "category": "Metabolic disorder",
+          "likelihood": "medium",
+          "key_features": [
+            "hepatomegaly",
+            "hypoglycemia",
+            "muscle weakness"
+          ],
+          "supporting_evidence": [
+            "Marked hepatomegaly",
+            "Large, heavy boy"
+          ],
+          "refuting_evidence": [
+            "No mention of hypoglycemia or muscle weakness",
+            "Family history more suggestive of hereditary spherocytosis"
+          ],
+          "additional_information_needed": [
+            "Blood glucose levels",
+            "Liver function tests",
+            "Genetic testing for specific glycogen storage diseases"
+          ]
+        },
+        {
+          "name": "Congenital Hepatic Fibrosis",
+          "category": "Liver disorder",
+          "likelihood": "low",
+          "key_features": [
+            "hepatosplenomegaly",
+            "portal hypertension"
+          ],
+          "supporting_evidence": [
+            "Hepatomegaly and splenomegaly"
+          ],
+          "refuting_evidence": [
+            "No evidence of portal hypertension",
+            "Family history suggests hereditary spherocytosis"
+          ],
+          "additional_information_needed": [
+            "Liver biopsy",
+            "Ultrasound of the liver"
+          ]
+        },
+        {
+          "name": "Alpha-1 Antitrypsin Deficiency",
+          "category": "Genetic disorder",
+          "likelihood": "low",
+          "key_features": [
+            "liver disease",
+            "respiratory symptoms"
+          ],
+          "supporting_evidence": [
+            "Hepatomegaly",
+            "Respiratory symptoms (wheezing)"
+          ],
+          "refuting_evidence": [
+            "Family history more consistent with hereditary spherocytosis",
+            "No mention of liver function abnormalities"
+          ],
+          "additional_information_needed": [
+            "Serum alpha-1 antitrypsin levels",
+            "Liver function tests"
+          ]
+        }
+      ]
+    },
+    "testing": {
+      "required": [
+        {
+          "id": "T1",
+          "content": "What were the key laboratory findings?",
+          "response": "The hematocrit was 39.9 per cent; the white-cell count was 4300, with 9 per cent neutrophils, 5 per cent band forms, 71 per cent lymphocytes, 7 per cent atypical lymphocytes and 8 per cent monocytes. The reticulocyte count was 2 per cent, and the platelet count 45,000. A blood smear revealed that approximately 5 per cent of the red cells were spherocytes. The prothrombin time was 14.7 seconds, with a control of 12.5 seconds; the partial thromboplastin time was 64.1 seconds. The calcium was 8.4 mg, the phosphorus 3.9 mg, the conjugated bilirubin 1.1 mg, the total bilirubin 1.3 mg, the cholesterol 237 mg, the iron 119 μg, the iron-binding capacity 380 μg, and the protein 4.5 g per 100 ml.",
+          "teaching_points": [
+            {
+              "id": "TP5",
+              "content": "Spherocytes on a blood smear are indicative of hereditary spherocytosis, a condition that can lead to hemolytic anemia.",
+              "covered": false
+            }
+          ],
+          "elicited": false
+        },
+        {
+          "id": "T2",
+          "content": "What were the imaging and biopsy findings?",
+          "response": "An x-ray film of the abdomen confirmed the enlargement of the liver and spleen. A needle-aspiration biopsy of the liver revealed active cirrhosis with regenerative micronodules that were separated by bands of cellular fibrous tissue; excessive hemosiderin was not found.",
+          "teaching_points": [
+            {
+              "id": "TP6",
+              "content": "Liver biopsy findings of cirrhosis in infants can indicate chronic liver disease, which may be secondary to metabolic or genetic conditions.",
+              "covered": false
+            }
+          ],
+          "elicited": false
+        }
+      ],
+      "optional": [],
+      "current_ideal_differential_diagnosis": [
+        {
+          "name": "Hereditary Spherocytosis",
+          "category": "Hematologic disorder",
+          "likelihood": "high",
+          "key_features": [
+            "spherocytes on blood smear",
+            "family history of hereditary spherocytosis",
+            "splenomegaly",
+            "intermittent jaundice"
+          ],
+          "supporting_evidence": [
+            "Family history of hereditary spherocytosis",
+            "Presence of spherocytes on blood smear",
+            "Splenomegaly",
+            "Intermittent icterus"
+          ],
+          "refuting_evidence": [
+            "Liver biopsy showing active cirrhosis, which is not typical for hereditary spherocytosis"
+          ],
+          "additional_information_needed": [
+            "Osmotic fragility test",
+            "Eosin-5-maleimide (EMA) binding test"
+          ]
+        },
+        {
+          "name": "Congenital Hepatic Fibrosis",
+          "category": "Hepatobiliary disorder",
+          "likelihood": "medium",
+          "key_features": [
+            "hepatic enlargement",
+            "cirrhosis on liver biopsy",
+            "portal hypertension"
+          ],
+          "supporting_evidence": [
+            "Liver biopsy showing active cirrhosis with regenerative micronodules"
+          ],
+          "refuting_evidence": [
+            "Family history and presence of spherocytes suggest hereditary spherocytosis"
+          ],
+          "additional_information_needed": [
+            "Genetic testing for congenital hepatic fibrosis",
+            "Assessment for signs of portal hypertension"
+          ]
+        },
+        {
+          "name": "Glycogen Storage Disease",
+          "category": "Metabolic disorder",
+          "likelihood": "low",
+          "key_features": [
+            "hepatomegaly",
+            "hypoglycemia",
+            "growth retardation"
+          ],
+          "supporting_evidence": [
+            "Hepatomegaly"
+          ],
+          "refuting_evidence": [
+            "Liver biopsy did not show excessive glycogen or fat",
+            "No hypoglycemia or growth retardation noted"
+          ],
+          "additional_information_needed": [
+            "Liver enzyme assays",
+            "Genetic testing for glycogen storage diseases"
+          ]
+        },
+        {
+          "name": "Niemann-Pick Disease",
+          "category": "Lysosomal storage disorder",
+          "likelihood": "low",
+          "key_features": [
+            "hepatosplenomegaly",
+            "neurological symptoms",
+            "failure to thrive"
+          ],
+          "supporting_evidence": [
+            "Hepatosplenomegaly"
+          ],
+          "refuting_evidence": [
+            "No neurological symptoms reported",
+            "Liver biopsy did not show excessive lipid storage"
+          ],
+          "additional_information_needed": [
+            "Enzyme assay for sphingomyelinase activity",
+            "Genetic testing for Niemann-Pick disease"
+          ]
+        }
+      ]
+    },
+    "management": {
+      "required": [
+        {
+          "id": "M1",
+          "content": "What treatments were administered during the hospital stay?",
+          "response": "Ampicillin, folic acid and phytonadione were administered. A needle-aspiration biopsy of the liver was performed. Bilateral inguinal herniorrhaphy was performed.",
+          "teaching_points": [
+            {
+              "id": "TP7",
+              "content": "Management of hereditary spherocytosis often includes folic acid supplementation and may require surgical interventions for complications such as hernias.",
+              "covered": false
+            }
+          ],
+          "elicited": false
+        }
+      ],
+      "optional": []
+    },
+    "discussion": {
+      "required": [
+        {
+          "id": "D1",
+          "content": "What complications arose after discharge?",
+          "response": "Three weeks after discharge ascites was noted, and chlorothiazide was begun, with a loss of 1 kg in weight. Ten days later, after several days of fever and diarrhea and 18 hours of abdominal discomfort, the child was brought to the hospital. Examination revealed that the abdomen was tender and distended, with absence of bowel sounds. Abdominal paracentesis yielded purulent fluid that contained gram-positive diplococci. Penicillin was given. He died a few hours later.",
+          "teaching_points": [
+            {
+              "id": "TP8",
+              "content": "Ascites and abdominal infections in the context of cirrhosis can lead to spontaneous bacterial peritonitis, a serious complication requiring prompt treatment.",
+              "covered": false
+            }
+          ],
+          "elicited": false
+        }
+      ],
+      "optional": []
+    }
+  },
+  "differential_diagnosis": [
+    "Hereditary spherocytosis",
+    "Chronic liver disease",
+    "Metabolic disorder"
+  ],
+  "final_diagnosis": {
+    "name": "Hereditary spherocytosis with secondary cirrhosis",
+    "category": "Hematological and hepatic disorder",
+    "key_features": [
+      "Hepatic enlargement",
+      "Spherocytosis",
+      "Family history of hereditary spherocytosis",
+      "Cirrhosis"
+    ],
+    "supporting_evidence": [
+      "Family history of hereditary spherocytosis",
+      "Blood smear showing spherocytes",
+      "Liver biopsy showing cirrhosis"
+    ],
+    "refuting_evidence": []
+  }
+}

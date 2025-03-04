@@ -1,0 +1,456 @@
+{
+  "metadata": {
+    "id": "case_029",
+    "title": "2007 Case 16",
+    "original_presentation": "A 61-year-old man was referred to the thoracic oncology service of this hospital for management of a thymoma.",
+    "difficulty": "intermediate",
+    "specialties": [
+      "oncology",
+      "thoracic surgery"
+    ],
+    "keywords": [
+      "thymoma",
+      "chest pain",
+      "mediastinal mass"
+    ],
+    "source": "clinical case study",
+    "version": "1.0"
+  },
+  "clinical_elements": {
+    "history": {
+      "required": [
+        {
+          "id": "H1",
+          "content": "What was the initial symptom that led to the patient's hospital visit?",
+          "response": "The patient experienced the sudden onset of sharp left anterior chest pain, which was worse adjacent to the sternum and when he took a deep breath.",
+          "teaching_points": [
+            {
+              "id": "TP1",
+              "content": "Chest pain can be a symptom of various conditions, including cardiac, pulmonary, and mediastinal pathologies.",
+              "covered": false
+            }
+          ],
+          "elicited": false
+        },
+        {
+          "id": "H2",
+          "content": "What is the patient's past medical history?",
+          "response": "The patient was obese, had hypertension and hypercholesterolemia, had undergone parathyroidectomy for hyperparathyroidism, had been treated for Lyme disease, developed Guillain–Barré syndrome after a tetanus toxoid injection, and had undergone neck irradiation for pertussis in childhood.",
+          "teaching_points": [
+            {
+              "id": "TP2",
+              "content": "A comprehensive medical history can provide insights into potential risk factors and comorbidities that may affect diagnosis and treatment.",
+              "covered": false
+            }
+          ],
+          "elicited": false
+        },
+        {
+          "id": "H3",
+          "content": "What is the patient's smoking history?",
+          "response": "The patient had smoked cigarettes for 25 years and had quit smoking 20 years earlier.",
+          "teaching_points": [
+            {
+              "id": "TP3",
+              "content": "Smoking history is important in assessing risk for various cancers and respiratory conditions.",
+              "covered": false
+            }
+          ],
+          "elicited": false
+        }
+      ],
+      "optional": [],
+      "current_ideal_differential_diagnosis": [
+        {
+          "name": "Thymoma",
+          "category": "Neoplasm",
+          "likelihood": "high",
+          "key_features": [
+            "anterior mediastinal mass",
+            "associated with paraneoplastic syndromes"
+          ],
+          "supporting_evidence": [
+            "referred to thoracic oncology for management of a thymoma"
+          ],
+          "refuting_evidence": [],
+          "additional_information_needed": [
+            "imaging studies to confirm size and extent",
+            "biopsy results if available"
+          ]
+        },
+        {
+          "name": "Pulmonary Embolism",
+          "category": "Vascular",
+          "likelihood": "medium",
+          "key_features": [
+            "sudden onset chest pain",
+            "pleuritic pain"
+          ],
+          "supporting_evidence": [
+            "sudden onset of sharp left anterior chest pain, worse with deep breath"
+          ],
+          "refuting_evidence": [
+            "no mention of risk factors like recent surgery or immobilization"
+          ],
+          "additional_information_needed": [
+            "D-dimer test",
+            "CT pulmonary angiography"
+          ]
+        },
+        {
+          "name": "Acute Coronary Syndrome",
+          "category": "Cardiovascular",
+          "likelihood": "medium",
+          "key_features": [
+            "chest pain",
+            "risk factors include hypertension, hypercholesterolemia, smoking history"
+          ],
+          "supporting_evidence": [
+            "sharp chest pain",
+            "history of hypertension and hypercholesterolemia"
+          ],
+          "refuting_evidence": [
+            "pain is pleuritic and not typical for ACS"
+          ],
+          "additional_information_needed": [
+            "ECG",
+            "cardiac enzymes"
+          ]
+        },
+        {
+          "name": "Costochondritis",
+          "category": "Musculoskeletal",
+          "likelihood": "medium",
+          "key_features": [
+            "sharp chest pain",
+            "worse with movement or palpation"
+          ],
+          "supporting_evidence": [
+            "sharp left anterior chest pain, worse adjacent to the sternum"
+          ],
+          "refuting_evidence": [
+            "no mention of tenderness on palpation"
+          ],
+          "additional_information_needed": [
+            "physical examination focusing on chest wall tenderness"
+          ]
+        },
+        {
+          "name": "Pleuritis",
+          "category": "Respiratory",
+          "likelihood": "low",
+          "key_features": [
+            "pleuritic chest pain",
+            "associated with respiratory infections"
+          ],
+          "supporting_evidence": [
+            "chest pain worse with deep breath"
+          ],
+          "refuting_evidence": [
+            "no mention of recent respiratory infection or fever"
+          ],
+          "additional_information_needed": [
+            "chest X-ray",
+            "history of recent respiratory symptoms"
+          ]
+        }
+      ]
+    },
+    "physical": {
+      "required": [
+        {
+          "id": "P1",
+          "content": "What were the findings on physical examination?",
+          "response": "The patient's vital signs were normal. He had a body-mass index of 37. There was no jugular venous distention, cervical or supraclavicular lymphadenopathy. The chest was clear on auscultation, and there was no tenderness on palpation of the ribs or sternum. The remainder of the examination was normal.",
+          "teaching_points": [
+            {
+              "id": "TP4",
+              "content": "A thorough physical examination can help rule out other potential causes of symptoms and assess the patient's overall health status.",
+              "covered": false
+            }
+          ],
+          "elicited": false
+        }
+      ],
+      "optional": [],
+      "current_ideal_differential_diagnosis": [
+        {
+          "name": "Thymoma",
+          "category": "Neoplasm",
+          "likelihood": "high",
+          "key_features": [
+            "anterior mediastinal mass",
+            "chest pain",
+            "association with paraneoplastic syndromes"
+          ],
+          "supporting_evidence": [
+            "referred to thoracic oncology for management of a thymoma",
+            "sudden onset of sharp left anterior chest pain"
+          ],
+          "refuting_evidence": [
+            "none at this point"
+          ],
+          "additional_information_needed": [
+            "imaging studies such as CT or MRI of the chest",
+            "biopsy results if available"
+          ]
+        },
+        {
+          "name": "Pulmonary Embolism",
+          "category": "Vascular",
+          "likelihood": "medium",
+          "key_features": [
+            "sudden onset chest pain",
+            "pleuritic nature of pain",
+            "risk factors such as obesity and smoking history"
+          ],
+          "supporting_evidence": [
+            "sudden onset of sharp chest pain worse on deep breath"
+          ],
+          "refuting_evidence": [
+            "normal vital signs",
+            "clear chest on auscultation"
+          ],
+          "additional_information_needed": [
+            "D-dimer test",
+            "CT pulmonary angiography"
+          ]
+        },
+        {
+          "name": "Acute Coronary Syndrome",
+          "category": "Cardiovascular",
+          "likelihood": "medium",
+          "key_features": [
+            "chest pain",
+            "risk factors such as hypertension, hypercholesterolemia, and smoking history"
+          ],
+          "supporting_evidence": [
+            "sudden onset of chest pain"
+          ],
+          "refuting_evidence": [
+            "normal vital signs",
+            "no tenderness on palpation of the chest"
+          ],
+          "additional_information_needed": [
+            "ECG",
+            "cardiac enzymes"
+          ]
+        },
+        {
+          "name": "Costochondritis",
+          "category": "Musculoskeletal",
+          "likelihood": "low",
+          "key_features": [
+            "chest pain localized to the costosternal, costochondral, or costovertebral joints",
+            "pain worsens with movement or palpation"
+          ],
+          "supporting_evidence": [
+            "sharp anterior chest pain"
+          ],
+          "refuting_evidence": [
+            "no tenderness on palpation of the ribs or sternum"
+          ],
+          "additional_information_needed": [
+            "detailed musculoskeletal examination",
+            "response to anti-inflammatory medications"
+          ]
+        },
+        {
+          "name": "Pericarditis",
+          "category": "Cardiovascular",
+          "likelihood": "low",
+          "key_features": [
+            "sharp chest pain",
+            "pain relieved by sitting forward",
+            "pericardial friction rub"
+          ],
+          "supporting_evidence": [
+            "sharp chest pain"
+          ],
+          "refuting_evidence": [
+            "no mention of positional changes affecting pain",
+            "normal auscultation"
+          ],
+          "additional_information_needed": [
+            "ECG",
+            "echocardiogram"
+          ]
+        }
+      ]
+    },
+    "testing": {
+      "required": [
+        {
+          "id": "T1",
+          "content": "What imaging studies were performed and what were the findings?",
+          "response": "CT scanning of the chest revealed a lobulated, soft-tissue mass in the left anterior mediastinum. An 18F-fluorodeoxyglucose PET scan showed intense focal uptake within the mass, suggesting a malignant condition. A whole-body PET scan showed increased uptake of tracer in the area of the lesion, with no other areas of increased uptake. A bone scan was negative.",
+          "teaching_points": [
+            {
+              "id": "TP5",
+              "content": "Imaging studies are crucial in identifying and characterizing masses, and PET scans can help assess metabolic activity indicative of malignancy.",
+              "covered": false
+            }
+          ],
+          "elicited": false
+        },
+        {
+          "id": "T2",
+          "content": "What were the results of pulmonary-function testing?",
+          "response": "The results were consistent with moderate mixed obstructive and restrictive disease, with a forced expiratory volume in 1 second of 1.96 (56% of the predicted value) and a forced vital capacity of 3.12 (59% of the predicted value).",
+          "teaching_points": [
+            {
+              "id": "TP6",
+              "content": "Pulmonary function tests can help assess the impact of thoracic masses on respiratory function.",
+              "covered": false
+            }
+          ],
+          "elicited": false
+        },
+        {
+          "id": "T3",
+          "content": "What were the findings from the bronchoscopic examination?",
+          "response": "The bronchoscopic examination showed no endobronchial lesions.",
+          "teaching_points": [
+            {
+              "id": "TP7",
+              "content": "Bronchoscopy can be used to visualize the airways and rule out endobronchial involvement in thoracic masses.",
+              "covered": false
+            }
+          ],
+          "elicited": false
+        },
+        {
+          "id": "T4",
+          "content": "What were the biopsy results?",
+          "response": "Mediastinoscopy and biopsy of mediastinal lymph nodes revealed no malignant tumor. A left anterior mediastinal exploration with biopsy showed a poorly circumscribed mass invading the pericardium, diagnosed as a predominantly cortical, type B1 thymoma.",
+          "teaching_points": [
+            {
+              "id": "TP8",
+              "content": "Biopsy is essential for histological diagnosis and can guide treatment decisions.",
+              "covered": false
+            }
+          ],
+          "elicited": false
+        }
+      ],
+      "optional": [],
+      "current_ideal_differential_diagnosis": [
+        {
+          "name": "Thymoma",
+          "category": "Neoplastic disease",
+          "likelihood": "high",
+          "key_features": [
+            "anterior mediastinal mass",
+            "invasion of pericardium",
+            "type B1 thymoma"
+          ],
+          "supporting_evidence": [
+            "CT scan showing lobulated mass in left anterior mediastinum",
+            "Intense focal uptake on PET scan",
+            "Biopsy showing type B1 thymoma"
+          ],
+          "refuting_evidence": [],
+          "additional_information_needed": [
+            "Histological confirmation of thymoma subtype",
+            "Assessment for paraneoplastic syndromes"
+          ]
+        },
+        {
+          "name": "Lung cancer",
+          "category": "Neoplastic disease",
+          "likelihood": "low",
+          "key_features": [
+            "mediastinal mass",
+            "history of smoking"
+          ],
+          "supporting_evidence": [
+            "History of smoking for 25 years",
+            "Intense focal uptake on PET scan"
+          ],
+          "refuting_evidence": [
+            "Biopsy showing thymoma, not lung cancer",
+            "No endobronchial lesions on bronchoscopy"
+          ],
+          "additional_information_needed": [
+            "Further histological examination to rule out lung cancer"
+          ]
+        },
+        {
+          "name": "Lymphoma",
+          "category": "Neoplastic disease",
+          "likelihood": "low",
+          "key_features": [
+            "mediastinal mass",
+            "intense PET uptake"
+          ],
+          "supporting_evidence": [
+            "Intense focal uptake on PET scan"
+          ],
+          "refuting_evidence": [
+            "Biopsy showing thymoma",
+            "No lymphadenopathy on physical examination"
+          ],
+          "additional_information_needed": [
+            "Further histological examination to rule out lymphoma"
+          ]
+        },
+        {
+          "name": "Mediastinal germ cell tumor",
+          "category": "Neoplastic disease",
+          "likelihood": "low",
+          "key_features": [
+            "anterior mediastinal mass",
+            "young to middle-aged males"
+          ],
+          "supporting_evidence": [
+            "Anterior mediastinal mass"
+          ],
+          "refuting_evidence": [
+            "Biopsy showing thymoma",
+            "Patient's age is older than typical presentation"
+          ],
+          "additional_information_needed": [
+            "Serum tumor markers (AFP, beta-HCG)"
+          ]
+        }
+      ]
+    },
+    "management": {
+      "required": [
+        {
+          "id": "M1",
+          "content": "What management decision was made for the patient?",
+          "response": "The patient was referred to the hospital for further treatment of the thymoma.",
+          "teaching_points": [
+            {
+              "id": "TP9",
+              "content": "Referral to a specialized center can be important for the management of complex cases such as thymoma.",
+              "covered": false
+            }
+          ],
+          "elicited": false
+        }
+      ],
+      "optional": []
+    },
+    "discussion": {
+      "required": [],
+      "optional": []
+    }
+  },
+  "differential_diagnosis": [],
+  "final_diagnosis": {
+    "name": "Type B1 Thymoma",
+    "category": "Oncological",
+    "key_features": [
+      "Lobulated, soft-tissue mass in the left anterior mediastinum",
+      "Intense focal uptake on PET scan",
+      "Biopsy confirmed predominantly cortical, type B1 thymoma"
+    ],
+    "supporting_evidence": [
+      "CT and PET scan findings",
+      "Biopsy results"
+    ],
+    "refuting_evidence": []
+  }
+}

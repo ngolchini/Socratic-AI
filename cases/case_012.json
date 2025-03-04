@@ -1,0 +1,526 @@
+{
+  "metadata": {
+    "id": "case_012",
+    "title": "2013 Case 09",
+    "original_presentation": "A 9-year-old boy was admitted to this hospital because of fever, cough, respiratory distress, and chest pain.",
+    "difficulty": "intermediate",
+    "specialties": [
+      "Pediatrics",
+      "Allergy and Immunology",
+      "Pulmonology"
+    ],
+    "keywords": [
+      "fever",
+      "cough",
+      "respiratory distress",
+      "chest pain",
+      "pediatric"
+    ],
+    "source": "Dr. Sarita U. Patil (Allergy and Immunology)",
+    "version": "1.0"
+  },
+  "clinical_elements": {
+    "history": {
+      "required": [
+        {
+          "id": "H1",
+          "content": "What is the patient's recent medical history leading up to the hospital admission?",
+          "response": "The patient had been well until 8 days before admission, when cough, red and watery eyes, and a temperature of 37.2°C developed. Two days later, he vomited and did not want to open his presents. The temperature rose to 38.9°C, and he became increasingly lethargic. The next day, he saw his pediatrician. On examination, the temperature was reportedly 39.4°C, the right periorbital region and cheek were erythematous, and a cervical lymph node on the left side was enlarged. A rapid screening test for streptococcal pharyngitis was negative; supportive care was advised, and the patient returned home. The next day, shortness of breath and tachypnea developed. The patient was seen in the emergency department at another hospital, where a chest radiograph was reportedly normal. A diagnosis of acute otitis media was made, and a 5-day course of azithromycin was prescribed. During the next 3 days, cough and occasional vomiting persisted. On the morning of admission, he returned to his pediatrician with worsening cough, midsternal chest pain with deep inspiration, and weight loss of 1.8 kg in 1 week.",
+          "teaching_points": [
+            {
+              "id": "TP1",
+              "content": "A detailed history of present illness is crucial in identifying the progression and potential causes of symptoms.",
+              "covered": false
+            }
+          ],
+          "elicited": false
+        },
+        {
+          "id": "H2",
+          "content": "What is the patient's past medical history?",
+          "response": "The patient had attention deficit–hyperactivity disorder, had had molluscum contagiosum in the past, and approximately 5 years earlier, had lymphopenia that had resolved spontaneously, with no clinical sequelae. He had five episodes of streptococcal pharyngitis, three episodes of otitis media, and four episodes of cellulitis (most recently, caused by methicillin-resistant Staphylococcus aureus, sensitive to trimethoprim–sulfamethoxazole).",
+          "teaching_points": [
+            {
+              "id": "TP2",
+              "content": "Recurrent infections in a child may suggest an underlying immunodeficiency.",
+              "covered": false
+            }
+          ],
+          "elicited": false
+        },
+        {
+          "id": "H3",
+          "content": "What is the patient's family and social history?",
+          "response": "The patient lived with his parents, a sibling, two dogs (one with a newly diagnosed roundworm infection), a cat, and a snake. His home was heated with forced hot water, and his parents had recently noted mold in the basement. The home had recently been sprayed with permethrin for eradication of lice. He had been exposed to relatives with pneumonia 1 month earlier. His father worked in construction, smoked in the home, and had recurrent skin abscesses. The patient's mother and sister were carriers of cystic fibrosis, a maternal aunt had environmental allergies, and a paternal aunt had rheumatoid arthritis.",
+          "teaching_points": [
+            {
+              "id": "TP3",
+              "content": "Family history can provide clues to genetic conditions or environmental exposures that may affect the patient's health.",
+              "covered": false
+            }
+          ],
+          "elicited": false
+        }
+      ],
+      "optional": [],
+      "current_ideal_differential_diagnosis": [
+        {
+          "name": "Pneumonia",
+          "category": "Infectious disease",
+          "likelihood": "high",
+          "key_features": [
+            "fever",
+            "cough",
+            "respiratory distress",
+            "chest pain",
+            "exposure to relatives with pneumonia"
+          ],
+          "supporting_evidence": [
+            "fever",
+            "cough",
+            "respiratory distress",
+            "chest pain",
+            "exposure to relatives with pneumonia"
+          ],
+          "refuting_evidence": [
+            "normal chest radiograph initially"
+          ],
+          "additional_information_needed": [
+            "repeat chest radiograph or CT scan",
+            "sputum culture",
+            "blood cultures"
+          ]
+        },
+        {
+          "name": "Viral infection (e.g., influenza, adenovirus)",
+          "category": "Infectious disease",
+          "likelihood": "medium",
+          "key_features": [
+            "fever",
+            "cough",
+            "red and watery eyes",
+            "lethargy",
+            "vomiting"
+          ],
+          "supporting_evidence": [
+            "fever",
+            "cough",
+            "red and watery eyes",
+            "lethargy",
+            "vomiting"
+          ],
+          "refuting_evidence": [
+            "negative rapid streptococcal test",
+            "normal initial chest radiograph"
+          ],
+          "additional_information_needed": [
+            "viral panel testing",
+            "PCR for specific viruses"
+          ]
+        },
+        {
+          "name": "Asthma exacerbation",
+          "category": "Respiratory disease",
+          "likelihood": "medium",
+          "key_features": [
+            "cough",
+            "respiratory distress",
+            "wheezing"
+          ],
+          "supporting_evidence": [
+            "cough",
+            "respiratory distress"
+          ],
+          "refuting_evidence": [
+            "no history of asthma",
+            "no wheezing reported"
+          ],
+          "additional_information_needed": [
+            "pulmonary function tests",
+            "response to bronchodilators"
+          ]
+        },
+        {
+          "name": "Allergic reaction or environmental exposure",
+          "category": "Allergic/Environmental",
+          "likelihood": "medium",
+          "key_features": [
+            "respiratory symptoms",
+            "exposure to mold",
+            "exposure to permethrin"
+          ],
+          "supporting_evidence": [
+            "exposure to mold",
+            "exposure to permethrin"
+          ],
+          "refuting_evidence": [
+            "lack of skin or other allergic symptoms"
+          ],
+          "additional_information_needed": [
+            "allergy testing",
+            "environmental assessment"
+          ]
+        },
+        {
+          "name": "Cystic fibrosis-related illness",
+          "category": "Genetic disease",
+          "likelihood": "low",
+          "key_features": [
+            "respiratory symptoms",
+            "family history of cystic fibrosis carriers"
+          ],
+          "supporting_evidence": [
+            "family history of cystic fibrosis carriers"
+          ],
+          "refuting_evidence": [
+            "no personal history of cystic fibrosis",
+            "no chronic respiratory symptoms"
+          ],
+          "additional_information_needed": [
+            "sweat chloride test",
+            "genetic testing for CFTR mutations"
+          ]
+        }
+      ]
+    },
+    "physical": {
+      "required": [
+        {
+          "id": "P1",
+          "content": "What were the findings on physical examination upon admission?",
+          "response": "The patient was alert and oriented. He appeared ill. The temperature was 38.6°C, the blood pressure 110/64 mm Hg, the pulse 109 beats per minute, the respiratory rate 30 breaths per minute, and the oxygen saturation 95% while breathing ambient air. Conjunctival injection with edema (chemosis), mild erythema of the right upper cheek and the left tympanic membrane, dry mucous membranes, and a mildly enlarged and mobile nontender anterior cervical lymph node were present. There was no nasal flaring or suprasternal retraction on inspiration, mild intercostal and subcostal retractions, and the abdomen protruded on inspiration. Air entry was good (with poor inspiratory effort because of chest pain), and there were coarse breath sounds, without crackles or wheezes.",
+          "teaching_points": [
+            {
+              "id": "TP4",
+              "content": "Physical examination can provide critical information about the severity and nature of a patient's condition.",
+              "covered": false
+            }
+          ],
+          "elicited": false
+        }
+      ],
+      "optional": [],
+      "current_ideal_differential_diagnosis": [
+        {
+          "name": "Pneumonia",
+          "category": "Infectious disease",
+          "likelihood": "high",
+          "key_features": [
+            "fever",
+            "cough",
+            "respiratory distress",
+            "chest pain",
+            "exposure to relatives with pneumonia"
+          ],
+          "supporting_evidence": [
+            "fever",
+            "cough",
+            "respiratory distress",
+            "chest pain",
+            "exposure to relatives with pneumonia",
+            "tachypnea",
+            "coarse breath sounds"
+          ],
+          "refuting_evidence": [
+            "normal chest radiograph initially"
+          ],
+          "additional_information_needed": [
+            "repeat chest radiograph",
+            "complete blood count",
+            "blood cultures",
+            "sputum culture"
+          ]
+        },
+        {
+          "name": "Viral infection (e.g., adenovirus, influenza)",
+          "category": "Infectious disease",
+          "likelihood": "medium",
+          "key_features": [
+            "fever",
+            "cough",
+            "conjunctivitis",
+            "respiratory symptoms"
+          ],
+          "supporting_evidence": [
+            "fever",
+            "cough",
+            "conjunctival injection",
+            "respiratory distress"
+          ],
+          "refuting_evidence": [
+            "negative rapid streptococcal test",
+            "normal initial chest radiograph"
+          ],
+          "additional_information_needed": [
+            "viral panel testing",
+            "nasopharyngeal swab for viral PCR"
+          ]
+        },
+        {
+          "name": "Sinusitis with orbital cellulitis",
+          "category": "Infectious disease",
+          "likelihood": "medium",
+          "key_features": [
+            "fever",
+            "periorbital erythema",
+            "conjunctival injection",
+            "cough"
+          ],
+          "supporting_evidence": [
+            "fever",
+            "right periorbital erythema",
+            "conjunctival injection",
+            "cough"
+          ],
+          "refuting_evidence": [
+            "no significant nasal symptoms reported",
+            "normal initial chest radiograph"
+          ],
+          "additional_information_needed": [
+            "sinus CT scan",
+            "ophthalmologic evaluation"
+          ]
+        },
+        {
+          "name": "Asthma exacerbation",
+          "category": "Respiratory disease",
+          "likelihood": "low",
+          "key_features": [
+            "cough",
+            "respiratory distress",
+            "wheezing"
+          ],
+          "supporting_evidence": [
+            "cough",
+            "respiratory distress"
+          ],
+          "refuting_evidence": [
+            "no wheezing noted",
+            "no history of asthma"
+          ],
+          "additional_information_needed": [
+            "pulmonary function tests",
+            "response to bronchodilator therapy"
+          ]
+        },
+        {
+          "name": "Allergic reaction",
+          "category": "Allergic/Immunologic",
+          "likelihood": "low",
+          "key_features": [
+            "conjunctival injection",
+            "erythema",
+            "respiratory symptoms"
+          ],
+          "supporting_evidence": [
+            "conjunctival injection",
+            "erythema of cheek"
+          ],
+          "refuting_evidence": [
+            "fever",
+            "no clear allergen exposure"
+          ],
+          "additional_information_needed": [
+            "allergy testing",
+            "detailed history of exposures"
+          ]
+        }
+      ]
+    },
+    "testing": {
+      "required": [
+        {
+          "id": "T1",
+          "content": "What were the results of the initial laboratory tests and imaging studies?",
+          "response": "The platelet count and blood levels of electrolytes, calcium, magnesium, glucose, total protein, globulin, amylase, and lipase were normal, as were the results of renal-function tests. Rapid screening of a nasal swab for influenza viruses A and B, parainfluenza, adenovirus, and respiratory syncytial virus was negative, as was testing for influenza A (seasonal and H1N1) nucleic acid. Urinalysis revealed clear amber fluid with 2+ albumin, 1+ urobilinogen, and 2+ bilirubin; 3 to 5 red cells, 5 to 10 white cells, and many bacteria per high-power field; 3 to 5 hyaline casts per low-power field; and mucin. An electrocardiogram revealed sinus tachycardia and nonspecific T-wave changes in the inferior leads. A chest radiograph showed hilar lymphadenopathy and multiple nodular opacities throughout both lungs, more prominent in the middle and lower zones.",
+          "teaching_points": [
+            {
+              "id": "TP5",
+              "content": "Laboratory and imaging studies are essential for confirming clinical suspicions and guiding further management.",
+              "covered": false
+            }
+          ],
+          "elicited": false
+        },
+        {
+          "id": "T2",
+          "content": "What were the findings from the CT scan and other imaging studies?",
+          "response": "Computed tomography (CT) of the chest revealed multifocal ill-defined nodular opacities throughout all lung lobes, superimposed areas of consolidation, scattered ground-glass opacities, and mediastinal and hilar lymphadenopathy. Ultrasonography of the abdomen revealed a small pleural effusion on the right side and was otherwise normal. Ultrasound examination of the neck showed bilateral cervical lymphadenopathy, more prominent on the right side; there was no evidence of deep venous thrombosis in the neck.",
+          "teaching_points": [
+            {
+              "id": "TP6",
+              "content": "CT scans provide detailed images that can help identify the extent and nature of pulmonary and mediastinal pathology.",
+              "covered": false
+            }
+          ],
+          "elicited": false
+        }
+      ],
+      "optional": [],
+      "current_ideal_differential_diagnosis": [
+        {
+          "name": "Pneumonia (Bacterial or Atypical)",
+          "category": "Infectious disease",
+          "likelihood": "high",
+          "key_features": [
+            "fever",
+            "cough",
+            "respiratory distress",
+            "chest pain",
+            "hilar lymphadenopathy",
+            "nodular opacities on chest imaging"
+          ],
+          "supporting_evidence": [
+            "fever",
+            "cough",
+            "respiratory distress",
+            "chest pain",
+            "hilar lymphadenopathy",
+            "nodular opacities on chest imaging",
+            "exposure to relatives with pneumonia"
+          ],
+          "refuting_evidence": [
+            "negative rapid screening for common respiratory viruses"
+          ],
+          "additional_information_needed": [
+            "sputum culture",
+            "blood culture",
+            "mycoplasma and chlamydia serologies",
+            "further history on exposure to other infectious agents"
+          ]
+        },
+        {
+          "name": "Tuberculosis",
+          "category": "Infectious disease",
+          "likelihood": "medium",
+          "key_features": [
+            "fever",
+            "cough",
+            "weight loss",
+            "hilar lymphadenopathy",
+            "nodular opacities on chest imaging"
+          ],
+          "supporting_evidence": [
+            "fever",
+            "cough",
+            "weight loss",
+            "hilar lymphadenopathy",
+            "nodular opacities on chest imaging"
+          ],
+          "refuting_evidence": [
+            "no known TB exposure",
+            "no night sweats reported"
+          ],
+          "additional_information_needed": [
+            "PPD skin test or IGRA",
+            "sputum for acid-fast bacilli",
+            "history of travel or exposure to TB"
+          ]
+        },
+        {
+          "name": "Sarcoidosis",
+          "category": "Autoimmune disease",
+          "likelihood": "medium",
+          "key_features": [
+            "hilar lymphadenopathy",
+            "nodular opacities",
+            "respiratory symptoms"
+          ],
+          "supporting_evidence": [
+            "hilar lymphadenopathy",
+            "nodular opacities on chest imaging"
+          ],
+          "refuting_evidence": [
+            "age is atypical for sarcoidosis",
+            "lack of other systemic symptoms"
+          ],
+          "additional_information_needed": [
+            "serum ACE level",
+            "biopsy of lymph nodes or lung nodules",
+            "history of systemic symptoms like skin lesions or eye involvement"
+          ]
+        },
+        {
+          "name": "Hypersensitivity Pneumonitis",
+          "category": "Allergic/Environmental disease",
+          "likelihood": "medium",
+          "key_features": [
+            "cough",
+            "dyspnea",
+            "exposure to environmental antigens",
+            "ground-glass opacities"
+          ],
+          "supporting_evidence": [
+            "cough",
+            "dyspnea",
+            "ground-glass opacities",
+            "exposure to mold and permethrin"
+          ],
+          "refuting_evidence": [
+            "lack of clear temporal relationship with exposure",
+            "no improvement with removal from exposure"
+          ],
+          "additional_information_needed": [
+            "detailed environmental history",
+            "specific IgG antibodies to potential antigens",
+            "lung function tests"
+          ]
+        },
+        {
+          "name": "Lymphoma",
+          "category": "Oncological disease",
+          "likelihood": "low",
+          "key_features": [
+            "lymphadenopathy",
+            "systemic symptoms",
+            "nodular opacities"
+          ],
+          "supporting_evidence": [
+            "bilateral cervical lymphadenopathy",
+            "hilar lymphadenopathy",
+            "nodular opacities"
+          ],
+          "refuting_evidence": [
+            "acute presentation",
+            "lack of significant systemic symptoms like night sweats or significant weight loss"
+          ],
+          "additional_information_needed": [
+            "biopsy of lymph nodes",
+            "LDH levels",
+            "further imaging studies"
+          ]
+        }
+      ]
+    },
+    "management": {
+      "required": [
+        {
+          "id": "M1",
+          "content": "What treatments were initiated upon admission?",
+          "response": "Normal saline (a total of 1500 ml) was infused in three boluses. Cultures of the blood and urine were obtained and remained sterile. Vancomycin was administered intravenously. The patient was admitted to the pediatric intensive care unit, and the administration of meropenem (intravenously) and azithromycin and trimethoprim–sulfamethoxazole (orally) was added.",
+          "teaching_points": [
+            {
+              "id": "TP7",
+              "content": "Empiric broad-spectrum antibiotics are often initiated in severe cases of suspected infection pending culture results.",
+              "covered": false
+            }
+          ],
+          "elicited": false
+        }
+      ],
+      "optional": []
+    },
+    "discussion": {
+      "required": [],
+      "optional": []
+    }
+  },
+  "differential_diagnosis": [],
+  "final_diagnosis": {
+    "name": "Unknown",
+    "category": "Infectious/Immunological",
+    "key_features": [],
+    "supporting_evidence": [],
+    "refuting_evidence": []
+  }
+}

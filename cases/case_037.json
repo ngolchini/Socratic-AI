@@ -1,0 +1,425 @@
+{
+  "metadata": {
+    "id": "case_037",
+    "title": "1975 Case 50",
+    "original_presentation": "A seven-week-old girl was admitted to the hospital for cardiac catheterization. She was born at full term after an uneventful primiparous pregnancy. Cyanosis and a heart murmur were noted at birth.",
+    "difficulty": "intermediate",
+    "specialties": [
+      "Pediatrics",
+      "Cardiology",
+      "Hepatology"
+    ],
+    "keywords": [
+      "cyanosis",
+      "heart murmur",
+      "jaundice",
+      "cholestasis",
+      "cardiac catheterization"
+    ],
+    "source": "Clinical case study",
+    "version": "1.0"
+  },
+  "clinical_elements": {
+    "history": {
+      "required": [
+        {
+          "id": "H1",
+          "content": "What is the birth history and initial findings of the patient?",
+          "response": "The patient was born at full term after an uneventful primiparous pregnancy with a birth weight of 2.7 kg. Cyanosis and a heart murmur were noted at birth.",
+          "teaching_points": [
+            {
+              "id": "TP1",
+              "content": "Cyanosis and heart murmur at birth can indicate congenital heart defects.",
+              "covered": false
+            }
+          ],
+          "elicited": false
+        },
+        {
+          "id": "H2",
+          "content": "What was the neonatal course and any treatments given?",
+          "response": "Icterus was observed on the third day of life; phototherapy was administered for 10 days. The child was discharged after two weeks in the nursery.",
+          "teaching_points": [
+            {
+              "id": "TP2",
+              "content": "Phototherapy is a common treatment for neonatal jaundice.",
+              "covered": false
+            }
+          ],
+          "elicited": false
+        },
+        {
+          "id": "H3",
+          "content": "What is the family and perinatal history?",
+          "response": "The mother had not used drugs and recalled no infections in the perinatal period; there was no family history of cardiac or hepatic disease.",
+          "teaching_points": [
+            {
+              "id": "TP3",
+              "content": "Family history and maternal health can provide clues to congenital conditions.",
+              "covered": false
+            }
+          ],
+          "elicited": false
+        }
+      ],
+      "optional": [],
+      "current_ideal_differential_diagnosis": [
+        {
+          "name": "Congenital Heart Disease (e.g., Tetralogy of Fallot, Transposition of the Great Arteries)",
+          "category": "Cardiovascular",
+          "likelihood": "high",
+          "key_features": [
+            "cyanosis at birth",
+            "heart murmur",
+            "requirement for cardiac catheterization"
+          ],
+          "supporting_evidence": [
+            "cyanosis noted at birth",
+            "heart murmur noted at birth",
+            "admission for cardiac catheterization"
+          ],
+          "refuting_evidence": [
+            "none at this point"
+          ],
+          "additional_information_needed": [
+            "results of cardiac catheterization",
+            "echocardiogram findings",
+            "oxygen saturation levels"
+          ]
+        },
+        {
+          "name": "Neonatal Jaundice",
+          "category": "Hepatic",
+          "likelihood": "medium",
+          "key_features": [
+            "icterus on third day of life",
+            "requirement for phototherapy"
+          ],
+          "supporting_evidence": [
+            "icterus observed on the third day of life",
+            "phototherapy administered for 10 days"
+          ],
+          "refuting_evidence": [
+            "discharged after two weeks, suggesting resolution"
+          ],
+          "additional_information_needed": [
+            "bilirubin levels during phototherapy",
+            "liver function tests"
+          ]
+        },
+        {
+          "name": "Persistent Pulmonary Hypertension of the Newborn (PPHN)",
+          "category": "Respiratory/Cardiovascular",
+          "likelihood": "low",
+          "key_features": [
+            "cyanosis",
+            "heart murmur",
+            "respiratory distress"
+          ],
+          "supporting_evidence": [
+            "cyanosis noted at birth"
+          ],
+          "refuting_evidence": [
+            "no mention of respiratory distress",
+            "discharged after two weeks"
+          ],
+          "additional_information_needed": [
+            "chest X-ray",
+            "echocardiogram findings",
+            "oxygen saturation levels"
+          ]
+        }
+      ]
+    },
+    "physical": {
+      "required": [
+        {
+          "id": "P1",
+          "content": "What were the findings on physical examination during the first admission?",
+          "response": "The patient was an irritable, jaundiced baby with mild cyanosis of the lips at rest. The heart was not enlarged; there was a prominent right ventricular impulse and a Grade 3 holosystolic murmur.",
+          "teaching_points": [
+            {
+              "id": "TP4",
+              "content": "A holosystolic murmur can indicate a ventricular septal defect or other cardiac anomalies.",
+              "covered": false
+            }
+          ],
+          "elicited": false
+        },
+        {
+          "id": "P2",
+          "content": "What were the findings on physical examination during the second admission?",
+          "response": "The child was icteric with acral cyanosis, alert and playful. The abdomen was distended, the liver was firm and extended 4 cm below the right costal margin.",
+          "teaching_points": [
+            {
+              "id": "TP5",
+              "content": "Hepatomegaly and jaundice in infants can be signs of liver dysfunction or biliary atresia.",
+              "covered": false
+            }
+          ],
+          "elicited": false
+        }
+      ],
+      "optional": [],
+      "current_ideal_differential_diagnosis": [
+        {
+          "name": "Congenital Heart Disease (e.g., Tetralogy of Fallot)",
+          "category": "Cardiovascular",
+          "likelihood": "high",
+          "key_features": [
+            "cyanosis at birth",
+            "heart murmur",
+            "right ventricular impulse"
+          ],
+          "supporting_evidence": [
+            "cyanosis and heart murmur noted at birth",
+            "prominent right ventricular impulse",
+            "Grade 3 holosystolic murmur"
+          ],
+          "refuting_evidence": [
+            "heart not enlarged"
+          ],
+          "additional_information_needed": [
+            "echocardiogram results",
+            "oxygen saturation levels",
+            "cardiac catheterization findings"
+          ]
+        },
+        {
+          "name": "Neonatal Jaundice (e.g., due to Hemolytic Disease or Liver Dysfunction)",
+          "category": "Hepatic",
+          "likelihood": "medium",
+          "key_features": [
+            "jaundice",
+            "icterus",
+            "liver enlargement"
+          ],
+          "supporting_evidence": [
+            "icterus observed on the third day of life",
+            "phototherapy for 10 days",
+            "jaundice on physical examination",
+            "liver firm and extended 4 cm below the right costal margin"
+          ],
+          "refuting_evidence": [
+            "no family history of hepatic disease",
+            "uneventful pregnancy"
+          ],
+          "additional_information_needed": [
+            "bilirubin levels",
+            "liver function tests",
+            "blood type and Coombs test"
+          ]
+        },
+        {
+          "name": "Biliary Atresia",
+          "category": "Gastrointestinal",
+          "likelihood": "medium",
+          "key_features": [
+            "persistent jaundice",
+            "hepatomegaly",
+            "acholic stools"
+          ],
+          "supporting_evidence": [
+            "persistent jaundice",
+            "liver firm and extended 4 cm below the right costal margin"
+          ],
+          "refuting_evidence": [
+            "no specific mention of acholic stools"
+          ],
+          "additional_information_needed": [
+            "stool color assessment",
+            "abdominal ultrasound",
+            "liver biopsy"
+          ]
+        },
+        {
+          "name": "Congenital Heart Disease with Hepatic Congestion",
+          "category": "Cardiovascular and Hepatic",
+          "likelihood": "medium",
+          "key_features": [
+            "cyanosis",
+            "heart murmur",
+            "hepatomegaly"
+          ],
+          "supporting_evidence": [
+            "cyanosis and heart murmur noted at birth",
+            "liver firm and extended 4 cm below the right costal margin"
+          ],
+          "refuting_evidence": [
+            "heart not enlarged"
+          ],
+          "additional_information_needed": [
+            "echocardiogram results",
+            "liver function tests",
+            "cardiac catheterization findings"
+          ]
+        }
+      ]
+    },
+    "testing": {
+      "required": [
+        {
+          "id": "T1",
+          "content": "What were the key laboratory findings?",
+          "response": "The conjugated bilirubin was elevated, SGOT was high, and the 5′ nucleotidase was elevated. The urine was dark with a positive test for bilirubin.",
+          "teaching_points": [
+            {
+              "id": "TP6",
+              "content": "Elevated conjugated bilirubin and liver enzymes suggest cholestasis or liver dysfunction.",
+              "covered": false
+            }
+          ],
+          "elicited": false
+        },
+        {
+          "id": "T2",
+          "content": "What were the imaging and biopsy findings?",
+          "response": "Chest x-ray showed right ventricular enlargement. Liver biopsy revealed moderate cholestasis and giant-cell transformation.",
+          "teaching_points": [
+            {
+              "id": "TP7",
+              "content": "Liver biopsy can help diagnose the cause of jaundice and liver dysfunction.",
+              "covered": false
+            }
+          ],
+          "elicited": false
+        }
+      ],
+      "optional": [],
+      "current_ideal_differential_diagnosis": [
+        {
+          "name": "Congenital Heart Disease (e.g., Tetralogy of Fallot)",
+          "category": "Cardiovascular",
+          "likelihood": "high",
+          "key_features": [
+            "cyanosis at birth",
+            "heart murmur",
+            "right ventricular enlargement"
+          ],
+          "supporting_evidence": [
+            "cyanosis and heart murmur noted at birth",
+            "right ventricular enlargement on chest x-ray",
+            "prominent right ventricular impulse"
+          ],
+          "refuting_evidence": [
+            "none noted"
+          ],
+          "additional_information_needed": [
+            "Echocardiogram to assess cardiac anatomy and function"
+          ]
+        },
+        {
+          "name": "Biliary Atresia",
+          "category": "Hepatobiliary",
+          "likelihood": "medium",
+          "key_features": [
+            "prolonged jaundice",
+            "elevated conjugated bilirubin",
+            "dark urine",
+            "liver enlargement"
+          ],
+          "supporting_evidence": [
+            "prolonged icterus",
+            "elevated conjugated bilirubin",
+            "dark urine with positive bilirubin",
+            "liver firm and enlarged"
+          ],
+          "refuting_evidence": [
+            "none noted"
+          ],
+          "additional_information_needed": [
+            "Hepatobiliary scintigraphy to assess bile flow",
+            "Further liver function tests"
+          ]
+        },
+        {
+          "name": "Neonatal Hepatitis",
+          "category": "Hepatobiliary",
+          "likelihood": "medium",
+          "key_features": [
+            "jaundice",
+            "elevated liver enzymes",
+            "giant-cell transformation on liver biopsy"
+          ],
+          "supporting_evidence": [
+            "icterus",
+            "elevated SGOT",
+            "giant-cell transformation on liver biopsy"
+          ],
+          "refuting_evidence": [
+            "none noted"
+          ],
+          "additional_information_needed": [
+            "Viral serologies to rule out infectious causes",
+            "Genetic testing for metabolic disorders"
+          ]
+        },
+        {
+          "name": "Alagille Syndrome",
+          "category": "Genetic",
+          "likelihood": "low",
+          "key_features": [
+            "cholestasis",
+            "cardiac defects",
+            "facial dysmorphism",
+            "vertebral anomalies"
+          ],
+          "supporting_evidence": [
+            "cholestasis on liver biopsy",
+            "cardiac murmur"
+          ],
+          "refuting_evidence": [
+            "no mention of facial dysmorphism or vertebral anomalies"
+          ],
+          "additional_information_needed": [
+            "Genetic testing for JAG1 mutations",
+            "Ophthalmologic and skeletal examination"
+          ]
+        }
+      ]
+    },
+    "management": {
+      "required": [
+        {
+          "id": "M1",
+          "content": "What treatments were initiated during the hospital stay?",
+          "response": "Cholestyramine was begun, and cardiac catheterization was cancelled.",
+          "teaching_points": [
+            {
+              "id": "TP8",
+              "content": "Cholestyramine is used to treat pruritus associated with cholestasis.",
+              "covered": false
+            }
+          ],
+          "elicited": false
+        }
+      ],
+      "optional": []
+    },
+    "discussion": {
+      "required": [],
+      "optional": []
+    }
+  },
+  "differential_diagnosis": [
+    "Congenital heart defect",
+    "Biliary atresia",
+    "Neonatal hepatitis"
+  ],
+  "final_diagnosis": {
+    "name": "Congenital heart defect with associated liver dysfunction",
+    "category": "Cardiac and hepatic",
+    "key_features": [
+      "Cyanosis",
+      "Heart murmur",
+      "Jaundice",
+      "Hepatomegaly"
+    ],
+    "supporting_evidence": [
+      "Elevated liver enzymes",
+      "Right ventricular enlargement",
+      "Liver biopsy findings"
+    ],
+    "refuting_evidence": []
+  }
+}

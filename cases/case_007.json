@@ -1,0 +1,370 @@
+{
+  "metadata": {
+    "id": "case_007",
+    "title": "1966 Case 30",
+    "original_presentation": "Dr. Castleman: Will you continue with a description of the findings at operation, Dr. Yurchak? Dr. Yurchak: Dr. Bean and Dr. Katz may be surprised to learn that the operation was neither ligation of the inferior vena cava or the femoral veins nor an abdominal exploration, but open-heart surgery.",
+    "difficulty": "intermediate",
+    "specialties": [
+      "Cardiology",
+      "Cardiothoracic Surgery",
+      "Pathology"
+    ],
+    "keywords": [
+      "aortic aneurysm",
+      "aortic dissection",
+      "open-heart surgery",
+      "pulmonary embolism"
+    ],
+    "source": "Clinical case discussion",
+    "version": "1.0"
+  },
+  "clinical_elements": {
+    "history": {
+      "required": [
+        {
+          "id": "H1",
+          "content": "What was the initial suspected condition of the patient?",
+          "response": "The patient was thought to have a pulmonary embolus but responded to conservative measures.",
+          "teaching_points": [
+            {
+              "id": "TP1",
+              "content": "Pulmonary embolism can present with sudden onset of symptoms and may stabilize with anticoagulation and supportive care.",
+              "covered": false
+            }
+          ],
+          "elicited": false
+        },
+        {
+          "id": "H2",
+          "content": "What was the patient's condition prior to surgery?",
+          "response": "The patient's condition stabilized after a day and a half of conservative treatment.",
+          "teaching_points": [
+            {
+              "id": "TP2",
+              "content": "Stabilization of a patient with suspected pulmonary embolism is crucial before proceeding with elective surgeries.",
+              "covered": false
+            }
+          ],
+          "elicited": false
+        }
+      ],
+      "optional": [],
+      "current_ideal_differential_diagnosis": [
+        {
+          "name": "Pulmonary Embolism",
+          "category": "Vascular",
+          "likelihood": "medium",
+          "key_features": [
+            "sudden onset of dyspnea",
+            "chest pain",
+            "hypoxia",
+            "tachycardia"
+          ],
+          "supporting_evidence": [
+            "initial suspicion of pulmonary embolus",
+            "response to conservative measures"
+          ],
+          "refuting_evidence": [
+            "stabilization of condition without surgical intervention specific to embolism"
+          ],
+          "additional_information_needed": [
+            "imaging studies such as CT pulmonary angiography",
+            "D-dimer test results"
+          ]
+        },
+        {
+          "name": "Cardiac Tamponade",
+          "category": "Cardiovascular",
+          "likelihood": "low",
+          "key_features": [
+            "hypotension",
+            "jugular venous distension",
+            "muffled heart sounds"
+          ],
+          "supporting_evidence": [
+            "open-heart surgery performed"
+          ],
+          "refuting_evidence": [
+            "stabilization with conservative treatment",
+            "no mention of classic triad symptoms"
+          ],
+          "additional_information_needed": [
+            "echocardiogram results",
+            "clinical signs of tamponade"
+          ]
+        },
+        {
+          "name": "Myocardial Infarction",
+          "category": "Cardiovascular",
+          "likelihood": "low",
+          "key_features": [
+            "chest pain",
+            "elevated cardiac enzymes",
+            "ECG changes"
+          ],
+          "supporting_evidence": [
+            "open-heart surgery could suggest cardiac issue"
+          ],
+          "refuting_evidence": [
+            "stabilization with conservative treatment",
+            "no mention of chest pain or ECG changes"
+          ],
+          "additional_information_needed": [
+            "cardiac enzyme levels",
+            "ECG results"
+          ]
+        },
+        {
+          "name": "Aortic Dissection",
+          "category": "Vascular",
+          "likelihood": "low",
+          "key_features": [
+            "sudden severe chest or back pain",
+            "pulse deficit",
+            "widened mediastinum on X-ray"
+          ],
+          "supporting_evidence": [
+            "open-heart surgery"
+          ],
+          "refuting_evidence": [
+            "stabilization with conservative treatment",
+            "no mention of severe pain or pulse deficit"
+          ],
+          "additional_information_needed": [
+            "CT or MRI of the chest",
+            "transesophageal echocardiogram"
+          ]
+        }
+      ]
+    },
+    "physical": {
+      "required": [],
+      "optional": [],
+      "current_ideal_differential_diagnosis": [
+        {
+          "name": "Pulmonary Embolism",
+          "category": "Vascular",
+          "likelihood": "medium",
+          "key_features": [
+            "sudden onset of dyspnea",
+            "chest pain",
+            "hypoxia"
+          ],
+          "supporting_evidence": [
+            "initial suspicion of pulmonary embolus",
+            "response to conservative measures"
+          ],
+          "refuting_evidence": [
+            "stabilization of condition without surgical intervention",
+            "decision to perform open-heart surgery instead of addressing embolism directly"
+          ],
+          "additional_information_needed": [
+            "imaging results such as CT pulmonary angiography",
+            "D-dimer test results",
+            "echocardiogram findings"
+          ]
+        },
+        {
+          "name": "Cardiac Tamponade",
+          "category": "Cardiac",
+          "likelihood": "medium",
+          "key_features": [
+            "hypotension",
+            "jugular venous distension",
+            "muffled heart sounds"
+          ],
+          "supporting_evidence": [
+            "decision to perform open-heart surgery",
+            "stabilization with conservative treatment could suggest fluid management"
+          ],
+          "refuting_evidence": [
+            "lack of specific mention of classic triad symptoms",
+            "initial suspicion was pulmonary embolism"
+          ],
+          "additional_information_needed": [
+            "echocardiogram results",
+            "clinical signs of Beck's triad",
+            "pericardial fluid analysis if applicable"
+          ]
+        },
+        {
+          "name": "Aortic Dissection",
+          "category": "Vascular",
+          "likelihood": "low",
+          "key_features": [
+            "sudden severe chest or back pain",
+            "pulse deficit",
+            "widened mediastinum on chest X-ray"
+          ],
+          "supporting_evidence": [
+            "open-heart surgery could be related to aortic repair"
+          ],
+          "refuting_evidence": [
+            "initial suspicion was pulmonary embolism",
+            "stabilization with conservative treatment unlikely in acute dissection"
+          ],
+          "additional_information_needed": [
+            "CT or MRI of the chest",
+            "transesophageal echocardiogram",
+            "blood pressure differential in limbs"
+          ]
+        }
+      ]
+    },
+    "testing": {
+      "required": [
+        {
+          "id": "T1",
+          "content": "What were the findings during the operation?",
+          "response": "Diffuse dilatation of the ascending aorta, normal aortic-valve leaflets, incompetent valve due to annulus dilatation, and tattered aortic intima.",
+          "teaching_points": [
+            {
+              "id": "TP3",
+              "content": "Aortic aneurysms can lead to valve incompetence due to annular dilatation.",
+              "covered": false
+            }
+          ],
+          "elicited": false
+        },
+        {
+          "id": "T2",
+          "content": "What were the autopsy findings?",
+          "response": "Large aneurysmal channel, linear tear, triangular pocket with flaps of intima, and destruction of the media.",
+          "teaching_points": [
+            {
+              "id": "TP4",
+              "content": "Autopsy can reveal underlying pathologies such as old dissections and medial necrosis.",
+              "covered": false
+            }
+          ],
+          "elicited": false
+        }
+      ],
+      "optional": [],
+      "current_ideal_differential_diagnosis": [
+        {
+          "name": "Aortic Dissection",
+          "category": "Cardiovascular",
+          "likelihood": "high",
+          "key_features": [
+            "sudden chest pain",
+            "aortic intimal tear",
+            "dilatation of the ascending aorta"
+          ],
+          "supporting_evidence": [
+            "tattered aortic intima",
+            "linear tear",
+            "triangular pocket with flaps of intima",
+            "destruction of the media"
+          ],
+          "refuting_evidence": [
+            "none noted"
+          ],
+          "additional_information_needed": [
+            "patient's history of hypertension or connective tissue disorders",
+            "imaging studies such as CT or MRI"
+          ]
+        },
+        {
+          "name": "Aortic Aneurysm",
+          "category": "Cardiovascular",
+          "likelihood": "medium",
+          "key_features": [
+            "dilatation of the aorta",
+            "risk of rupture",
+            "possible chest or back pain"
+          ],
+          "supporting_evidence": [
+            "diffuse dilatation of the ascending aorta",
+            "large aneurysmal channel"
+          ],
+          "refuting_evidence": [
+            "tattered aortic intima suggests dissection rather than a simple aneurysm"
+          ],
+          "additional_information_needed": [
+            "imaging studies to confirm aneurysm size and extent",
+            "family history of aneurysms"
+          ]
+        },
+        {
+          "name": "Aortic Valve Insufficiency",
+          "category": "Cardiovascular",
+          "likelihood": "medium",
+          "key_features": [
+            "incompetent aortic valve",
+            "dilatation of the aortic annulus",
+            "heart failure symptoms"
+          ],
+          "supporting_evidence": [
+            "incompetent valve due to annulus dilatation"
+          ],
+          "refuting_evidence": [
+            "primary issue appears to be dissection rather than isolated valve disease"
+          ],
+          "additional_information_needed": [
+            "echocardiogram to assess valve function",
+            "patient's history of rheumatic fever or endocarditis"
+          ]
+        }
+      ]
+    },
+    "management": {
+      "required": [
+        {
+          "id": "M1",
+          "content": "What surgical procedures were performed?",
+          "response": "A large tuck was taken in the anterior wall of the aneurysm, aortic lumen was restored, and aortic-valve replacement was carried out.",
+          "teaching_points": [
+            {
+              "id": "TP5",
+              "content": "Surgical intervention in aortic aneurysms may involve resection and valve replacement to restore function.",
+              "covered": false
+            }
+          ],
+          "elicited": false
+        }
+      ],
+      "optional": []
+    },
+    "discussion": {
+      "required": [
+        {
+          "id": "D1",
+          "content": "What was the underlying condition suspected in this case?",
+          "response": "Annuloaortic ectasia of the ascending aorta due to medial disease.",
+          "teaching_points": [
+            {
+              "id": "TP6",
+              "content": "Annuloaortic ectasia can lead to aortic dissection and aneurysm formation without external rupture.",
+              "covered": false
+            }
+          ],
+          "elicited": false
+        }
+      ],
+      "optional": []
+    }
+  },
+  "differential_diagnosis": [
+    "Aortic dissection",
+    "Marfan syndrome",
+    "Pulmonary embolism"
+  ],
+  "final_diagnosis": {
+    "name": "Annuloaortic ectasia",
+    "category": "Cardiovascular disease",
+    "key_features": [
+      "Diffuse dilatation of the ascending aorta",
+      "Aortic valve incompetence",
+      "Tattered aortic intima"
+    ],
+    "supporting_evidence": [
+      "Autopsy findings of aneurysmal channel and intimal tears",
+      "Surgical findings of dilated aortic annulus"
+    ],
+    "refuting_evidence": [
+      "Absence of hypertension",
+      "No other signs of Marfan syndrome"
+    ]
+  }
+}

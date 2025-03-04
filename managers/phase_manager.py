@@ -27,6 +27,7 @@ class PhaseManager:
         self.prompt_manager = prompt_manager  # Add this line
         self.coverage_cache: Dict[str, bool] = {}
         self.logger = logging.getLogger(__name__)
+        self.phase_summaries = {}
         self._initialize_phase()
         
         # Add new attributes for phase management
@@ -302,19 +303,24 @@ class PhaseManager:
         if not self.check_phase_completion():
             return None
 
-        completion_message = self.current_phase.config.completion_message
-        
-        # Determine next phase
+        chat_history = st.session_state.chat_messages
+        phase_summary = self.generate_phase_summary(chat_history)  # ✅ Generate Summary
+
+        # Store phase summary in session state
+        if 'phase_summaries' not in st.session_state:
+            st.session_state.phase_summaries = {}
+        st.session_state.phase_summaries[current_phase] = phase_summary.get("phase_summary", {}) 
+
+        # Transition to the next phase
         current_index = list(PhaseType).index(self.current_phase_type)
         if current_index < len(PhaseType) - 1:
             self.current_phase_type = list(PhaseType)[current_index + 1]
-            # Update session state with new phase
             st.session_state.current_phase = self.current_phase_type
-            # Reload phase config for new phase
             self._initialize_phase()
             self.current_phase = self.case_data.get_current_phase(self.current_phase_type)
-        
-        return completion_message
+
+        return self.current_phase.config.completion_message
+
         
     def generate_phase_summary(
             self,
@@ -418,4 +424,65 @@ class PhaseManager:
             "covered_elements": [e.content for e in self.current_phase.required_elements if e.elicited],
             "teaching_points": [p.content for p in self.current_phase.teaching_points if not p.covered],
             "prohibited_topics": self.current_phase.config.prohibited_topics
+        }
+    
+    def generate_phase_summary(self, chat_history: List[Dict[str, str]]) -> Dict[str, Any]:
+        """
+        Generate comprehensive summaries of the phase using chat history.
+        Returns:
+            Dictionary containing:
+            - chat_summary: General summary of the phase discussion.
+            - learner_assessment: Feedback on the learner’s reasoning.
+            - clinical_summary: Structured medical summary.
+            - phase_summary: The full summary to be stored in `st.session_state.phase_summaries`.
+        """
+        self.logger.info(f"Generating phase summary for {self.current_phase_type.value}")
+
+        formatted_chat = "\n".join([
+            f"{msg['role'].upper()}: {msg['content']}"
+            for msg in chat_history if msg['role'] in ['user', 'assistant']
+        ])
+
+        system_prompt = f"""
+        You are analyzing a clinical case discussion in the {self.current_phase_type.value} phase.
+        
+        Generate the following:
+        1. **A summary of retrieved information**.
+        2. **Feedback on AI nudges provided**.
+        3. **Information missed** by the user.
+        4. **An assessment of the final differential diagnosis**.
+        5. **A long-term evaluation of how the differential evolved**.
+
+        Return a JSON object with:
+        {{
+            "retrieved_info": "string",
+            "ai_nudges": ["list of nudges"],
+            "missed_info": ["list of missing details"],
+            "final_ddx_assessment": "string",
+            "ddx_evolution": "string"
+        }}
+        """
+
+        response = self.llm_manager.get_json_response(
+            system_prompt,
+            f"Phase: {self.current_phase_type.value}\n\nConversation:\n{formatted_chat}"
+        )
+
+        # Ensure response contains all keys, filling in defaults if missing
+        phase_summary = {
+            "retrieved_info": response.get("retrieved_info", "No summary available."),
+            "ai_nudges": response.get("ai_nudges", []),
+            "missed_info": response.get("missed_info", []),
+            "final_ddx_assessment": response.get("final_ddx_assessment", "No assessment."),
+            "ddx_evolution": response.get("ddx_evolution", "No evolution recorded.")
+        }
+
+        # Store the phase summary properly
+        self.phase_summaries[self.current_phase_type] = phase_summary
+
+        return {
+            "chat_summary": response.get("chat_summary", ""),
+            "learner_assessment": response.get("learner_assessment", {}),
+            "clinical_summary": response.get("clinical_summary", {}),
+            "phase_summary": phase_summary  # Ensures 'phase_summary' always exists
         }

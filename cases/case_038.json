@@ -1,0 +1,414 @@
+{
+  "metadata": {
+    "id": "case_038",
+    "title": "1983 Case 44",
+    "original_presentation": "A 41-year-old woman was admitted to the hospital because of spastic tetraparesis.",
+    "difficulty": "intermediate",
+    "specialties": [
+      "neurology",
+      "orthopedics",
+      "radiology"
+    ],
+    "keywords": [
+      "spastic tetraparesis",
+      "hydrocephalus",
+      "cervical myelopathy"
+    ],
+    "source": "clinical case study",
+    "version": "1.0"
+  },
+  "clinical_elements": {
+    "history": {
+      "required": [
+        {
+          "id": "H1",
+          "content": "What is the patient's birth and early childhood history?",
+          "response": "The patient was the firstborn child of three siblings, considered normal at birth but clumsy during childhood, frequently dropping objects. She was left-handed.",
+          "teaching_points": [
+            {
+              "id": "TP1",
+              "content": "Early childhood motor development can provide clues to underlying neurological conditions.",
+              "covered": false
+            }
+          ],
+          "elicited": false
+        },
+        {
+          "id": "H2",
+          "content": "What significant events occurred during the patient's adolescence?",
+          "response": "At age 12, linear growth ceased. X-ray films taken two years later showed arrested growth.",
+          "teaching_points": [
+            {
+              "id": "TP2",
+              "content": "Growth arrest in adolescence can indicate endocrine or skeletal disorders.",
+              "covered": false
+            }
+          ],
+          "elicited": false
+        },
+        {
+          "id": "H3",
+          "content": "What were the patient's symptoms and medical history in adulthood?",
+          "response": "She had a cesarean section due to a small pelvis, experienced severe leg pain during her second pregnancy, and developed numbness in the right leg. Neurologic deficits worsened over the years, with symptoms including papilledema, hypoesthesia, impaired sensation, and frequent falls.",
+          "teaching_points": [
+            {
+              "id": "TP3",
+              "content": "Progressive neurological symptoms warrant thorough investigation for potential central nervous system disorders.",
+              "covered": false
+            }
+          ],
+          "elicited": false
+        },
+        {
+          "id": "H4",
+          "content": "What family history is relevant to the patient's condition?",
+          "response": "Her father had a broad forehead and died of a myocardial infarct at 51. Her brothers also had broad foreheads. One brother's son was described as 'spastic and mentally retarded.'",
+          "teaching_points": [
+            {
+              "id": "TP4",
+              "content": "Family history can provide insights into genetic or hereditary conditions.",
+              "covered": false
+            }
+          ],
+          "elicited": false
+        }
+      ],
+      "optional": [],
+      "current_ideal_differential_diagnosis": [
+        {
+          "name": "Hereditary Spastic Paraplegia (HSP)",
+          "category": "Genetic/Neurological disorder",
+          "likelihood": "high",
+          "key_features": [
+            "spasticity",
+            "progressive weakness",
+            "family history of similar symptoms"
+          ],
+          "supporting_evidence": [
+            "spastic tetraparesis",
+            "family history of spasticity and neurological issues",
+            "progressive neurological deficits"
+          ],
+          "refuting_evidence": [],
+          "additional_information_needed": [
+            "genetic testing for known HSP mutations",
+            "detailed family history to identify inheritance pattern"
+          ]
+        },
+        {
+          "name": "Multiple Sclerosis (MS)",
+          "category": "Neurological disorder",
+          "likelihood": "medium",
+          "key_features": [
+            "spasticity",
+            "numbness",
+            "progressive neurological symptoms"
+          ],
+          "supporting_evidence": [
+            "spastic tetraparesis",
+            "numbness in the right leg",
+            "progressive neurological deficits"
+          ],
+          "refuting_evidence": [
+            "early cessation of growth",
+            "family history suggesting a genetic disorder"
+          ],
+          "additional_information_needed": [
+            "MRI of the brain and spinal cord",
+            "lumbar puncture for oligoclonal bands"
+          ]
+        },
+        {
+          "name": "Congenital Hypopituitarism",
+          "category": "Endocrine disorder",
+          "likelihood": "medium",
+          "key_features": [
+            "growth arrest",
+            "small pelvis",
+            "neurological symptoms"
+          ],
+          "supporting_evidence": [
+            "arrested growth at age 12",
+            "small pelvis",
+            "neurological symptoms"
+          ],
+          "refuting_evidence": [
+            "family history of spasticity and neurological issues"
+          ],
+          "additional_information_needed": [
+            "hormonal profile including growth hormone levels",
+            "pituitary imaging"
+          ]
+        },
+        {
+          "name": "Cerebral Palsy",
+          "category": "Neurological disorder",
+          "likelihood": "low",
+          "key_features": [
+            "spasticity",
+            "clumsiness in childhood",
+            "neurological deficits"
+          ],
+          "supporting_evidence": [
+            "clumsiness during childhood",
+            "spastic tetraparesis"
+          ],
+          "refuting_evidence": [
+            "progressive nature of symptoms",
+            "family history of similar symptoms"
+          ],
+          "additional_information_needed": [
+            "detailed birth history",
+            "neuroimaging to assess for perinatal brain injury"
+          ]
+        }
+      ]
+    },
+    "physical": {
+      "required": [
+        {
+          "id": "P1",
+          "content": "What were the findings on physical examination?",
+          "response": "The patient was small with a broad, high forehead, coarsened features, peripheral stromal opacity in corneas, normal ears and gums, thickened tongue, scoliosis, lumbar lordosis, winged scapulas, scarring on hands, reduced joint motion, increased muscle tone, and spastic tetraparesis.",
+          "teaching_points": [
+            {
+              "id": "TP5",
+              "content": "Physical examination can reveal signs of systemic or neurological disorders.",
+              "covered": false
+            }
+          ],
+          "elicited": false
+        }
+      ],
+      "optional": [],
+      "current_ideal_differential_diagnosis": [
+        {
+          "name": "Mucopolysaccharidosis (MPS)",
+          "category": "Genetic/Metabolic disorder",
+          "likelihood": "high",
+          "key_features": [
+            "coarse facial features",
+            "corneal clouding",
+            "skeletal abnormalities",
+            "neurological deficits"
+          ],
+          "supporting_evidence": [
+            "broad, high forehead and coarsened features",
+            "peripheral stromal opacity in corneas",
+            "scoliosis and lumbar lordosis",
+            "spastic tetraparesis",
+            "family history of similar features"
+          ],
+          "refuting_evidence": [],
+          "additional_information_needed": [
+            "Enzyme assay for specific MPS type",
+            "Genetic testing for confirmation"
+          ]
+        },
+        {
+          "name": "Congenital Hypothyroidism",
+          "category": "Endocrine disorder",
+          "likelihood": "medium",
+          "key_features": [
+            "growth retardation",
+            "coarse facial features",
+            "neurological deficits"
+          ],
+          "supporting_evidence": [
+            "arrested growth at age 12",
+            "coarsened features",
+            "neurological deficits"
+          ],
+          "refuting_evidence": [
+            "lack of typical hypothyroid symptoms like cold intolerance or weight gain"
+          ],
+          "additional_information_needed": [
+            "Thyroid function tests"
+          ]
+        },
+        {
+          "name": "Hereditary Spastic Paraplegia",
+          "category": "Neurological disorder",
+          "likelihood": "medium",
+          "key_features": [
+            "spasticity",
+            "progressive weakness",
+            "family history of similar symptoms"
+          ],
+          "supporting_evidence": [
+            "spastic tetraparesis",
+            "family history of spasticity"
+          ],
+          "refuting_evidence": [
+            "presence of coarse facial features and corneal clouding, which are not typical"
+          ],
+          "additional_information_needed": [
+            "Genetic testing for specific mutations"
+          ]
+        },
+        {
+          "name": "Marfan Syndrome",
+          "category": "Connective tissue disorder",
+          "likelihood": "low",
+          "key_features": [
+            "tall stature",
+            "scoliosis",
+            "joint hypermobility"
+          ],
+          "supporting_evidence": [
+            "scoliosis and lumbar lordosis"
+          ],
+          "refuting_evidence": [
+            "small stature",
+            "coarsened features not typical of Marfan syndrome"
+          ],
+          "additional_information_needed": [
+            "Genetic testing for FBN1 mutation"
+          ]
+        }
+      ]
+    },
+    "testing": {
+      "required": [
+        {
+          "id": "T1",
+          "content": "What were the results of the cerebrospinal fluid analysis?",
+          "response": "The cerebrospinal fluid was clear and colorless, containing 1050 red cells, no white cells, and a protein content of 178 mg per 100 ml.",
+          "teaching_points": [
+            {
+              "id": "TP6",
+              "content": "CSF analysis can help diagnose central nervous system infections, hemorrhages, and other conditions.",
+              "covered": false
+            }
+          ],
+          "elicited": false
+        },
+        {
+          "id": "T2",
+          "content": "What did the cervical myelographic examination reveal?",
+          "response": "It showed narrowing of the subarachnoid space by an extradural or subdural process from the foramen magnum to T3, with reduced cord diameter from C1 to C3.",
+          "teaching_points": [
+            {
+              "id": "TP7",
+              "content": "Myelography can identify spinal cord compression and other abnormalities.",
+              "covered": false
+            }
+          ],
+          "elicited": false
+        }
+      ],
+      "optional": [],
+      "current_ideal_differential_diagnosis": [
+        {
+          "name": "Mucopolysaccharidosis (MPS)",
+          "category": "Genetic/Metabolic Disorder",
+          "likelihood": "high",
+          "key_features": [
+            "coarse facial features",
+            "skeletal abnormalities",
+            "neurological deficits",
+            "corneal clouding"
+          ],
+          "supporting_evidence": [
+            "broad, high forehead and coarsened features",
+            "peripheral stromal opacity in corneas",
+            "scoliosis and lumbar lordosis",
+            "spastic tetraparesis",
+            "family history of similar features"
+          ],
+          "refuting_evidence": [],
+          "additional_information_needed": [
+            "Enzyme assay for specific MPS type",
+            "Genetic testing for confirmation"
+          ]
+        },
+        {
+          "name": "Achondroplasia",
+          "category": "Genetic Skeletal Disorder",
+          "likelihood": "medium",
+          "key_features": [
+            "short stature",
+            "skeletal abnormalities",
+            "spinal stenosis"
+          ],
+          "supporting_evidence": [
+            "small stature",
+            "scoliosis and lumbar lordosis",
+            "narrowing of the subarachnoid space"
+          ],
+          "refuting_evidence": [
+            "coarsened facial features not typical",
+            "corneal opacity not typical"
+          ],
+          "additional_information_needed": [
+            "Genetic testing for FGFR3 mutation"
+          ]
+        },
+        {
+          "name": "Cervical Spondylotic Myelopathy",
+          "category": "Degenerative Spine Disorder",
+          "likelihood": "low",
+          "key_features": [
+            "spastic tetraparesis",
+            "narrowing of cervical canal",
+            "neurological deficits"
+          ],
+          "supporting_evidence": [
+            "narrowing of the subarachnoid space from foramen magnum to T3",
+            "reduced cord diameter from C1 to C3"
+          ],
+          "refuting_evidence": [
+            "young age of onset",
+            "coarsened facial features and corneal opacity not typical"
+          ],
+          "additional_information_needed": [
+            "MRI of the cervical spine",
+            "Neurological examination"
+          ]
+        }
+      ]
+    },
+    "management": {
+      "required": [
+        {
+          "id": "M1",
+          "content": "What management was previously attempted for the patient's condition?",
+          "response": "A ventriculoatrial shunt was implanted, which improved hearing, speech, sensation, and mentation.",
+          "teaching_points": [
+            {
+              "id": "TP8",
+              "content": "Shunting can relieve symptoms of hydrocephalus by diverting excess cerebrospinal fluid.",
+              "covered": false
+            }
+          ],
+          "elicited": false
+        }
+      ],
+      "optional": []
+    },
+    "discussion": {
+      "required": [],
+      "optional": []
+    }
+  },
+  "differential_diagnosis": [
+    "Cervical myelopathy",
+    "Hydrocephalus",
+    "Spinal cord compression"
+  ],
+  "final_diagnosis": {
+    "name": "Cervical myelopathy with hydrocephalus",
+    "category": "Neurological disorder",
+    "key_features": [
+      "Spastic tetraparesis",
+      "Hydrocephalus",
+      "Cervical spinal cord compression"
+    ],
+    "supporting_evidence": [
+      "Narrowing of subarachnoid space",
+      "Increased muscle tone and reflexes",
+      "Improvement after shunt placement"
+    ],
+    "refuting_evidence": []
+  }
+}

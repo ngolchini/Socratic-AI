@@ -1,0 +1,463 @@
+{
+  "metadata": {
+    "id": "case_018",
+    "title": "1969 Case 07",
+    "original_presentation": "A fifty-six-year-old woman was admitted to the hospital because of a cough, fever and pain in the chest.",
+    "difficulty": "intermediate",
+    "specialties": [
+      "Pulmonology",
+      "Neurology",
+      "Infectious Disease"
+    ],
+    "keywords": [
+      "cough",
+      "fever",
+      "chest pain",
+      "pneumonia",
+      "seizure",
+      "pleural effusion"
+    ],
+    "source": "Clinical case study",
+    "version": "1.0"
+  },
+  "clinical_elements": {
+    "history": {
+      "required": [
+        {
+          "id": "H1",
+          "content": "What is the patient's history of alcohol use?",
+          "response": "She had begun to imbibe alcohol heavily at the time of her husband's death five years previously and increased her intake during the year before entry.",
+          "teaching_points": [
+            {
+              "id": "TP1",
+              "content": "Chronic alcohol use can lead to immunosuppression and increase the risk of infections such as pneumonia.",
+              "covered": false
+            }
+          ],
+          "elicited": false
+        },
+        {
+          "id": "H2",
+          "content": "What were the patient's symptoms prior to admission?",
+          "response": "Nine months before admission there was the onset of agitation and a progressively severe cough with hemoptysis. She was anorectic, with a loss of 40 pounds in weight. Persistent pleuritic pain in the right anterior portion of the chest developed, accompanied by a cough productive of rusty, mucoid sputum. She had intermittent episodes of fever, chills and sweats.",
+          "teaching_points": [
+            {
+              "id": "TP2",
+              "content": "Weight loss and hemoptysis in a patient with chronic cough and fever may suggest a serious underlying condition such as tuberculosis or malignancy.",
+              "covered": false
+            }
+          ],
+          "elicited": false
+        },
+        {
+          "id": "H3",
+          "content": "Does the patient have any known allergies?",
+          "response": "She was allergic to penicillin.",
+          "teaching_points": [
+            {
+              "id": "TP3",
+              "content": "Knowledge of drug allergies is crucial in selecting appropriate antibiotic therapy.",
+              "covered": false
+            }
+          ],
+          "elicited": false
+        }
+      ],
+      "optional": [],
+      "current_ideal_differential_diagnosis": [
+        {
+          "name": "Tuberculosis",
+          "category": "Infectious disease",
+          "likelihood": "high",
+          "key_features": [
+            "chronic cough",
+            "hemoptysis",
+            "weight loss",
+            "fever",
+            "night sweats"
+          ],
+          "supporting_evidence": [
+            "progressively severe cough with hemoptysis",
+            "loss of 40 pounds",
+            "persistent pleuritic pain",
+            "fever, chills, and sweats"
+          ],
+          "refuting_evidence": [],
+          "additional_information_needed": [
+            "chest X-ray",
+            "sputum culture for Mycobacterium tuberculosis",
+            "PPD skin test or IGRA"
+          ]
+        },
+        {
+          "name": "Lung cancer",
+          "category": "Oncological disease",
+          "likelihood": "medium",
+          "key_features": [
+            "chronic cough",
+            "hemoptysis",
+            "weight loss",
+            "chest pain"
+          ],
+          "supporting_evidence": [
+            "progressively severe cough with hemoptysis",
+            "loss of 40 pounds",
+            "persistent pleuritic pain"
+          ],
+          "refuting_evidence": [
+            "intermittent fever, chills, and sweats are less typical"
+          ],
+          "additional_information_needed": [
+            "chest CT scan",
+            "bronchoscopy with biopsy"
+          ]
+        },
+        {
+          "name": "Pneumonia",
+          "category": "Infectious disease",
+          "likelihood": "medium",
+          "key_features": [
+            "fever",
+            "cough with sputum",
+            "pleuritic chest pain"
+          ],
+          "supporting_evidence": [
+            "fever, chills, and sweats",
+            "cough productive of rusty, mucoid sputum",
+            "pleuritic chest pain"
+          ],
+          "refuting_evidence": [
+            "chronicity of symptoms",
+            "significant weight loss"
+          ],
+          "additional_information_needed": [
+            "chest X-ray",
+            "sputum culture and sensitivity"
+          ]
+        },
+        {
+          "name": "Alcoholic lung disease",
+          "category": "Pulmonary disease",
+          "likelihood": "low",
+          "key_features": [
+            "chronic cough",
+            "hemoptysis",
+            "history of heavy alcohol use"
+          ],
+          "supporting_evidence": [
+            "history of heavy alcohol use",
+            "cough with hemoptysis"
+          ],
+          "refuting_evidence": [
+            "fever, chills, and sweats are less typical",
+            "significant weight loss"
+          ],
+          "additional_information_needed": [
+            "chest X-ray",
+            "evaluation of liver function"
+          ]
+        }
+      ]
+    },
+    "physical": {
+      "required": [
+        {
+          "id": "P1",
+          "content": "What were the findings on physical examination upon admission?",
+          "response": "The patient was cachectic and dehydrated. The mouth was dry, and the teeth were carious. A small, firm lymph node was palpable in the right posterior cervical region. Coarse rhonchi were audible over the anterior and posterior portions of the right lung field; there was no friction rub. The heart was normal; no murmur or friction rub was heard. The liver and spleen were not enlarged, no tenderness was elicited in the abdomen, and the bowel sounds were present. There was no clubbing or edema of the extremities, and no petechiae were seen. Neurologic examination was negative.",
+          "teaching_points": [
+            {
+              "id": "TP4",
+              "content": "Cachexia and dehydration can indicate chronic illness and poor nutritional status, which may complicate recovery.",
+              "covered": false
+            }
+          ],
+          "elicited": false
+        }
+      ],
+      "optional": [],
+      "current_ideal_differential_diagnosis": [
+        {
+          "name": "Tuberculosis",
+          "category": "Infectious disease",
+          "likelihood": "high",
+          "key_features": [
+            "chronic cough with hemoptysis",
+            "weight loss",
+            "fever",
+            "night sweats",
+            "pleuritic chest pain"
+          ],
+          "supporting_evidence": [
+            "progressively severe cough with hemoptysis",
+            "weight loss of 40 pounds",
+            "persistent pleuritic pain in the right anterior portion of the chest",
+            "intermittent episodes of fever, chills, and sweats",
+            "cachectic appearance",
+            "coarse rhonchi over the right lung field"
+          ],
+          "refuting_evidence": [],
+          "additional_information_needed": [
+            "chest X-ray",
+            "sputum culture for acid-fast bacilli",
+            "tuberculin skin test or IGRA"
+          ]
+        },
+        {
+          "name": "Lung cancer",
+          "category": "Oncological disease",
+          "likelihood": "medium",
+          "key_features": [
+            "chronic cough",
+            "hemoptysis",
+            "weight loss",
+            "chest pain",
+            "smoking history"
+          ],
+          "supporting_evidence": [
+            "chronic cough with hemoptysis",
+            "weight loss of 40 pounds",
+            "persistent pleuritic pain in the right anterior portion of the chest",
+            "cachectic appearance",
+            "small, firm lymph node in the right posterior cervical region"
+          ],
+          "refuting_evidence": [
+            "no smoking history provided"
+          ],
+          "additional_information_needed": [
+            "chest CT scan",
+            "bronchoscopy with biopsy",
+            "smoking history"
+          ]
+        },
+        {
+          "name": "Pneumonia",
+          "category": "Infectious disease",
+          "likelihood": "medium",
+          "key_features": [
+            "fever",
+            "cough with sputum production",
+            "pleuritic chest pain",
+            "rhonchi on lung exam"
+          ],
+          "supporting_evidence": [
+            "fever, chills, and sweats",
+            "cough productive of rusty, mucoid sputum",
+            "pleuritic chest pain",
+            "coarse rhonchi over the right lung field"
+          ],
+          "refuting_evidence": [
+            "chronicity of symptoms",
+            "weight loss"
+          ],
+          "additional_information_needed": [
+            "chest X-ray",
+            "sputum culture and sensitivity"
+          ]
+        },
+        {
+          "name": "Alcoholic lung disease",
+          "category": "Substance-related disorder",
+          "likelihood": "low",
+          "key_features": [
+            "chronic cough",
+            "weight loss",
+            "history of heavy alcohol use"
+          ],
+          "supporting_evidence": [
+            "history of heavy alcohol use",
+            "chronic cough",
+            "weight loss"
+          ],
+          "refuting_evidence": [
+            "no specific lung findings typical of alcoholic lung disease"
+          ],
+          "additional_information_needed": [
+            "detailed alcohol use history",
+            "liver function tests"
+          ]
+        }
+      ]
+    },
+    "testing": {
+      "required": [
+        {
+          "id": "T1",
+          "content": "What were the initial laboratory test results?",
+          "response": "The urine had a specific gravity of 1.033 and gave a + test for protein; the sediment contained 5 to 8 white cells per high-power field. The hematocrit was 42 per cent, and the white-cell count 23,500, with 82 per cent neutrophils and 5 per cent band forms. The urea nitrogen was 16 mg, the glucose 180 mg, the calcium 8.8 mg, the phosphorus 2.9 mg, and the protein 5.5 gm (the albumin 3.2 gm, and the globulin 2.3 gm) per 100 ml. The sodium was 137 mEq, and the potassium 3.1 mEq per liter.",
+          "teaching_points": [
+            {
+              "id": "TP5",
+              "content": "Leukocytosis with a left shift is indicative of an acute bacterial infection.",
+              "covered": false
+            }
+          ],
+          "elicited": false
+        },
+        {
+          "id": "T2",
+          "content": "What were the findings from the chest x-ray?",
+          "response": "An x-ray film of the chest revealed almost complete collapse of the left lower lobe and an amorphous infiltrate in the right lower lobe; the lungs were otherwise clear, and the heart and aorta were normal; there was a small right pleural effusion.",
+          "teaching_points": [
+            {
+              "id": "TP6",
+              "content": "Lobar collapse and infiltrates on chest x-ray can indicate pneumonia or other pulmonary pathology.",
+              "covered": false
+            }
+          ],
+          "elicited": false
+        }
+      ],
+      "optional": [],
+      "current_ideal_differential_diagnosis": [
+        {
+          "name": "Pneumonia",
+          "category": "Infectious disease",
+          "likelihood": "high",
+          "key_features": [
+            "fever",
+            "cough with rusty sputum",
+            "pleuritic chest pain",
+            "infiltrate on chest x-ray"
+          ],
+          "supporting_evidence": [
+            "fever",
+            "cough with rusty, mucoid sputum",
+            "pleuritic chest pain",
+            "infiltrate in right lower lobe on chest x-ray",
+            "elevated white-cell count with neutrophilia"
+          ],
+          "refuting_evidence": [
+            "chronicity of symptoms",
+            "weight loss"
+          ],
+          "additional_information_needed": [
+            "sputum culture and sensitivity",
+            "blood cultures",
+            "consideration of atypical pathogens given chronicity"
+          ]
+        },
+        {
+          "name": "Tuberculosis",
+          "category": "Infectious disease",
+          "likelihood": "medium",
+          "key_features": [
+            "chronic cough",
+            "hemoptysis",
+            "weight loss",
+            "fever",
+            "night sweats"
+          ],
+          "supporting_evidence": [
+            "chronic cough with hemoptysis",
+            "weight loss",
+            "fever, chills, and sweats",
+            "cachexia",
+            "right pleural effusion"
+          ],
+          "refuting_evidence": [
+            "no cavitary lesions noted on chest x-ray"
+          ],
+          "additional_information_needed": [
+            "PPD skin test or IGRA",
+            "sputum acid-fast bacilli (AFB) smear and culture",
+            "CT scan of the chest"
+          ]
+        },
+        {
+          "name": "Lung Cancer",
+          "category": "Oncological disease",
+          "likelihood": "medium",
+          "key_features": [
+            "chronic cough",
+            "hemoptysis",
+            "weight loss",
+            "chest pain",
+            "smoking history"
+          ],
+          "supporting_evidence": [
+            "chronic cough with hemoptysis",
+            "weight loss",
+            "chest pain",
+            "right pleural effusion",
+            "small, firm lymph node in cervical region"
+          ],
+          "refuting_evidence": [
+            "no smoking history provided",
+            "no mass noted on chest x-ray"
+          ],
+          "additional_information_needed": [
+            "CT scan of the chest",
+            "bronchoscopy with biopsy",
+            "PET scan"
+          ]
+        },
+        {
+          "name": "Alcoholic Lung Disease",
+          "category": "Pulmonary disease",
+          "likelihood": "low",
+          "key_features": [
+            "chronic cough",
+            "alcohol abuse history",
+            "weight loss"
+          ],
+          "supporting_evidence": [
+            "history of heavy alcohol use",
+            "chronic cough",
+            "weight loss"
+          ],
+          "refuting_evidence": [
+            "no specific radiological findings typical of alcoholic lung disease"
+          ],
+          "additional_information_needed": [
+            "detailed history of alcohol use",
+            "evaluation for other alcohol-related organ damage"
+          ]
+        }
+      ]
+    },
+    "management": {
+      "required": [
+        {
+          "id": "M1",
+          "content": "What treatments were administered during the hospital stay?",
+          "response": "Erythromycin was administered intravenously. Diazepam (Valium) was administered intravenously, and the trachea was intubated. Intermittent positive-pressure respiration was instituted, and digoxin and aminophylline were given. Diazepam was continued, and diphenylhydantoin was added to the regimen. Plasma was administered.",
+          "teaching_points": [
+            {
+              "id": "TP7",
+              "content": "Management of respiratory distress and seizures involves airway protection, seizure control, and addressing the underlying cause.",
+              "covered": false
+            }
+          ],
+          "elicited": false
+        }
+      ],
+      "optional": []
+    },
+    "discussion": {
+      "required": [],
+      "optional": []
+    }
+  },
+  "differential_diagnosis": [
+    "Pneumonia",
+    "Pulmonary embolism",
+    "Tuberculosis",
+    "Lung cancer"
+  ],
+  "final_diagnosis": {
+    "name": "Pneumonia with complications",
+    "category": "Infectious Disease",
+    "key_features": [
+      "Cough with rusty sputum",
+      "Fever and chills",
+      "Weight loss",
+      "Pleural effusion"
+    ],
+    "supporting_evidence": [
+      "Chest x-ray findings",
+      "Sputum culture growing pneumococci"
+    ],
+    "refuting_evidence": []
+  }
+}

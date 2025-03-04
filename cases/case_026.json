@@ -1,0 +1,469 @@
+{
+  "metadata": {
+    "id": "case_026",
+    "title": "1969 Case 09",
+    "original_presentation": "A fifty-six-year-old woman was admitted to the hospital because of fever. She had been well until a month previously, when there was the onset of daily chills and sweats, with elevation of the temperature to between 102 and 104°F.",
+    "difficulty": "intermediate",
+    "specialties": [
+      "Infectious Disease",
+      "Rheumatology",
+      "Hematology"
+    ],
+    "keywords": [
+      "fever",
+      "joint stiffness",
+      "splenomegaly",
+      "rash"
+    ],
+    "source": "Clinical case study",
+    "version": "1.0"
+  },
+  "clinical_elements": {
+    "history": {
+      "required": [
+        {
+          "id": "H1",
+          "content": "What symptoms did the patient experience prior to admission?",
+          "response": "The patient experienced daily chills and sweats, with fever ranging from 102 to 104°F. She had no cough, chest or abdominal pain, dysuria, or urinary frequency.",
+          "teaching_points": [
+            {
+              "id": "TP1",
+              "content": "Fever with chills and sweats can indicate an infectious process or inflammatory condition.",
+              "covered": false
+            }
+          ],
+          "elicited": false
+        },
+        {
+          "id": "H2",
+          "content": "What is the patient's travel and dietary history?",
+          "response": "A year earlier, she had traveled to the southeastern United States. She did not eat pork or drink raw milk.",
+          "teaching_points": [
+            {
+              "id": "TP2",
+              "content": "Travel history can provide clues to infectious diseases endemic to certain regions.",
+              "covered": false
+            }
+          ],
+          "elicited": false
+        },
+        {
+          "id": "H3",
+          "content": "What were the patient's previous medical evaluations and treatments?",
+          "response": "She had been taking exercises for stiffness of the thigh muscles but had experienced no articular discomfort. Previous tests included negative heterophil-agglutination and agglutination tests for typhoid, paratyphoid, and brucella. Four L.E.-cell tests were negative.",
+          "teaching_points": [
+            {
+              "id": "TP3",
+              "content": "Negative serological tests can help rule out specific infectious diseases.",
+              "covered": false
+            }
+          ],
+          "elicited": false
+        }
+      ],
+      "optional": [],
+      "current_ideal_differential_diagnosis": [
+        {
+          "name": "Malaria",
+          "category": "Infectious disease",
+          "likelihood": "medium",
+          "key_features": [
+            "fever with chills and sweats",
+            "travel history to endemic area"
+          ],
+          "supporting_evidence": [
+            "daily chills and sweats",
+            "fever ranging from 102 to 104°F",
+            "travel to southeastern United States (possible exposure)"
+          ],
+          "refuting_evidence": [
+            "no specific travel to known malaria-endemic regions mentioned"
+          ],
+          "additional_information_needed": [
+            "blood smear for malaria parasites",
+            "rapid diagnostic test for malaria"
+          ]
+        },
+        {
+          "name": "Brucellosis",
+          "category": "Infectious disease",
+          "likelihood": "low",
+          "key_features": [
+            "fever",
+            "sweats",
+            "muscle stiffness"
+          ],
+          "supporting_evidence": [
+            "fever with chills and sweats",
+            "muscle stiffness"
+          ],
+          "refuting_evidence": [
+            "negative agglutination tests for brucella",
+            "no consumption of raw milk or pork"
+          ],
+          "additional_information_needed": [
+            "repeat brucella serology",
+            "blood cultures"
+          ]
+        },
+        {
+          "name": "Endocarditis",
+          "category": "Cardiovascular disease",
+          "likelihood": "medium",
+          "key_features": [
+            "fever",
+            "chills",
+            "sweats",
+            "possible heart murmur"
+          ],
+          "supporting_evidence": [
+            "persistent fever with chills and sweats"
+          ],
+          "refuting_evidence": [
+            "no mention of heart murmur or predisposing heart conditions"
+          ],
+          "additional_information_needed": [
+            "blood cultures",
+            "echocardiogram"
+          ]
+        },
+        {
+          "name": "Lymphoma",
+          "category": "Oncological disease",
+          "likelihood": "low",
+          "key_features": [
+            "fever",
+            "night sweats",
+            "weight loss"
+          ],
+          "supporting_evidence": [
+            "fever with chills and sweats"
+          ],
+          "refuting_evidence": [
+            "no mention of weight loss or lymphadenopathy"
+          ],
+          "additional_information_needed": [
+            "complete blood count",
+            "imaging studies (CT scan)"
+          ]
+        },
+        {
+          "name": "Rheumatic fever",
+          "category": "Rheumatological disease",
+          "likelihood": "low",
+          "key_features": [
+            "fever",
+            "arthralgia",
+            "history of streptococcal infection"
+          ],
+          "supporting_evidence": [
+            "fever",
+            "muscle stiffness"
+          ],
+          "refuting_evidence": [
+            "no history of recent sore throat or streptococcal infection",
+            "negative L.E.-cell tests"
+          ],
+          "additional_information_needed": [
+            "ASO titer",
+            "throat culture"
+          ]
+        }
+      ]
+    },
+    "physical": {
+      "required": [
+        {
+          "id": "P1",
+          "content": "What were the findings on physical examination?",
+          "response": "No rash or petechiae were seen on the skin or mucosal surfaces. The lungs were clear, cardiac sounds were normal, and no murmur or friction rub was heard. The abdomen was soft with no tenderness or palpable mass. There was slight fusiform deformity of the interphalangeal joints of the hands.",
+          "teaching_points": [
+            {
+              "id": "TP4",
+              "content": "Physical examination can reveal signs of systemic disease, such as joint deformities or skin changes.",
+              "covered": false
+            }
+          ],
+          "elicited": false
+        }
+      ],
+      "optional": [],
+      "current_ideal_differential_diagnosis": [
+        {
+          "name": "Infective Endocarditis",
+          "category": "Infectious disease",
+          "likelihood": "medium",
+          "key_features": [
+            "fever",
+            "chills",
+            "sweats",
+            "normal cardiac sounds"
+          ],
+          "supporting_evidence": [
+            "fever with chills and sweats",
+            "normal cardiac sounds"
+          ],
+          "refuting_evidence": [
+            "no murmur or friction rub",
+            "no rash or petechiae"
+          ],
+          "additional_information_needed": [
+            "blood cultures",
+            "echocardiogram"
+          ]
+        },
+        {
+          "name": "Rheumatoid Arthritis",
+          "category": "Autoimmune disease",
+          "likelihood": "low",
+          "key_features": [
+            "joint deformity",
+            "fever"
+          ],
+          "supporting_evidence": [
+            "slight fusiform deformity of the interphalangeal joints"
+          ],
+          "refuting_evidence": [
+            "no articular discomfort",
+            "negative L.E.-cell tests"
+          ],
+          "additional_information_needed": [
+            "rheumatoid factor, anti-CCP antibodies"
+          ]
+        },
+        {
+          "name": "Systemic Lupus Erythematosus (SLE)",
+          "category": "Autoimmune disease",
+          "likelihood": "low",
+          "key_features": [
+            "fever",
+            "joint involvement",
+            "negative L.E.-cell tests"
+          ],
+          "supporting_evidence": [
+            "fever",
+            "slight fusiform deformity of the interphalangeal joints"
+          ],
+          "refuting_evidence": [
+            "negative L.E.-cell tests",
+            "no rash or petechiae"
+          ],
+          "additional_information_needed": [
+            "ANA test, anti-dsDNA antibodies"
+          ]
+        },
+        {
+          "name": "Brucellosis",
+          "category": "Infectious disease",
+          "likelihood": "low",
+          "key_features": [
+            "fever",
+            "chills",
+            "sweats",
+            "travel history"
+          ],
+          "supporting_evidence": [
+            "fever with chills and sweats",
+            "travel to southeastern United States"
+          ],
+          "refuting_evidence": [
+            "negative brucella agglutination test"
+          ],
+          "additional_information_needed": [
+            "repeat brucella serology, consider PCR for brucella"
+          ]
+        },
+        {
+          "name": "Malaria",
+          "category": "Infectious disease",
+          "likelihood": "low",
+          "key_features": [
+            "fever",
+            "chills",
+            "sweats",
+            "travel history"
+          ],
+          "supporting_evidence": [
+            "fever with chills and sweats"
+          ],
+          "refuting_evidence": [
+            "no travel to malaria-endemic area"
+          ],
+          "additional_information_needed": [
+            "thick and thin blood smears for malaria parasites"
+          ]
+        }
+      ]
+    },
+    "testing": {
+      "required": [
+        {
+          "id": "T1",
+          "content": "What were the results of the initial laboratory tests?",
+          "response": "Urinalysis was negative; hematocrit was 37%, white-cell count 3000 with 47% neutrophils, 26% band forms, 26% lymphocytes, and 1% basophils. Culture of the urine grew proteus organisms; numerous blood cultures yielded no growth.",
+          "teaching_points": [
+            {
+              "id": "TP5",
+              "content": "Laboratory tests can help identify infections and hematological abnormalities.",
+              "covered": false
+            }
+          ],
+          "elicited": false
+        },
+        {
+          "id": "T2",
+          "content": "What imaging studies were performed and what were their results?",
+          "response": "X-ray films of the chest and intravenous pyelograms were normal. An upper gastrointestinal series was normal except for a small hiatus hernia and a duodenal diverticulum.",
+          "teaching_points": [
+            {
+              "id": "TP6",
+              "content": "Imaging studies can help rule out structural abnormalities and identify incidental findings.",
+              "covered": false
+            }
+          ],
+          "elicited": false
+        }
+      ],
+      "optional": [],
+      "current_ideal_differential_diagnosis": [
+        {
+          "name": "Infective Endocarditis",
+          "category": "Infectious disease",
+          "likelihood": "medium",
+          "key_features": [
+            "fever",
+            "chills",
+            "sweats",
+            "negative blood cultures"
+          ],
+          "supporting_evidence": [
+            "persistent fever with chills and sweats",
+            "normal cardiac examination"
+          ],
+          "refuting_evidence": [
+            "negative blood cultures",
+            "no murmur or friction rub"
+          ],
+          "additional_information_needed": [
+            "transesophageal echocardiogram",
+            "repeat blood cultures"
+          ]
+        },
+        {
+          "name": "Brucellosis",
+          "category": "Infectious disease",
+          "likelihood": "low",
+          "key_features": [
+            "fever",
+            "sweats",
+            "negative brucella agglutination test"
+          ],
+          "supporting_evidence": [
+            "fever with chills and sweats",
+            "travel history to southeastern US"
+          ],
+          "refuting_evidence": [
+            "negative brucella agglutination test"
+          ],
+          "additional_information_needed": [
+            "repeat brucella serology",
+            "detailed occupational history"
+          ]
+        },
+        {
+          "name": "Systemic Lupus Erythematosus (SLE)",
+          "category": "Autoimmune disease",
+          "likelihood": "low",
+          "key_features": [
+            "fever",
+            "joint deformity",
+            "negative L.E.-cell tests"
+          ],
+          "supporting_evidence": [
+            "slight fusiform deformity of interphalangeal joints"
+          ],
+          "refuting_evidence": [
+            "negative L.E.-cell tests",
+            "no rash or other systemic symptoms"
+          ],
+          "additional_information_needed": [
+            "ANA test",
+            "anti-dsDNA antibodies"
+          ]
+        },
+        {
+          "name": "Rheumatoid Arthritis",
+          "category": "Autoimmune disease",
+          "likelihood": "low",
+          "key_features": [
+            "joint deformity",
+            "fever"
+          ],
+          "supporting_evidence": [
+            "slight fusiform deformity of interphalangeal joints"
+          ],
+          "refuting_evidence": [
+            "no articular discomfort",
+            "no significant joint pain"
+          ],
+          "additional_information_needed": [
+            "rheumatoid factor",
+            "anti-CCP antibodies"
+          ]
+        },
+        {
+          "name": "Viral Infection",
+          "category": "Infectious disease",
+          "likelihood": "medium",
+          "key_features": [
+            "fever",
+            "leukopenia",
+            "negative cultures"
+          ],
+          "supporting_evidence": [
+            "fever with chills and sweats",
+            "leukopenia"
+          ],
+          "refuting_evidence": [
+            "prolonged duration of symptoms",
+            "negative blood cultures"
+          ],
+          "additional_information_needed": [
+            "viral serologies",
+            "PCR for common viral pathogens"
+          ]
+        }
+      ]
+    },
+    "management": {
+      "required": [
+        {
+          "id": "M1",
+          "content": "What treatments were administered during the hospital stay?",
+          "response": "Buffered aspirin, 2.4 gm daily, was administered, which decreased the temperature to 100°F. Aspirin therapy was resumed on the fourteenth hospital day, and the patient remained afebrile thereafter.",
+          "teaching_points": [
+            {
+              "id": "TP7",
+              "content": "Aspirin can be used to manage fever and inflammation.",
+              "covered": false
+            }
+          ],
+          "elicited": false
+        }
+      ],
+      "optional": []
+    },
+    "discussion": {
+      "required": [],
+      "optional": []
+    }
+  },
+  "differential_diagnosis": [],
+  "final_diagnosis": {
+    "name": "Unknown",
+    "category": "Infectious/Inflammatory",
+    "key_features": [],
+    "supporting_evidence": [],
+    "refuting_evidence": []
+  }
+}

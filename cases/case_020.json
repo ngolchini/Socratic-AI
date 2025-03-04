@@ -1,0 +1,490 @@
+{
+  "metadata": {
+    "id": "case_020",
+    "title": "2001 Case 38",
+    "original_presentation": "A 51-year-old woman was admitted to the hospital because of paresthesias, ataxic gait, and hallucinations.",
+    "difficulty": "intermediate",
+    "specialties": [
+      "Neurology",
+      "Oncology",
+      "Pulmonology"
+    ],
+    "keywords": [
+      "paresthesias",
+      "ataxic gait",
+      "hallucinations",
+      "small-cell carcinoma",
+      "neuropathy"
+    ],
+    "source": "Clinical case study",
+    "version": "1.0"
+  },
+  "clinical_elements": {
+    "history": {
+      "required": [
+        {
+          "id": "H1",
+          "content": "What symptoms did the patient experience initially?",
+          "response": "The patient experienced tingling and numbness in all her fingers, weakness of her hands, and a burning sensation in her feet.",
+          "teaching_points": [
+            {
+              "id": "TP1",
+              "content": "Paresthesias and weakness in extremities can indicate peripheral neuropathy.",
+              "covered": false
+            }
+          ],
+          "elicited": false
+        },
+        {
+          "id": "H2",
+          "content": "What respiratory symptoms did the patient develop?",
+          "response": "The patient developed 'asthmatic bronchitis' with a productive cough and mild hemoptysis.",
+          "teaching_points": [
+            {
+              "id": "TP2",
+              "content": "Respiratory symptoms in smokers can be indicative of underlying malignancy.",
+              "covered": false
+            }
+          ],
+          "elicited": false
+        },
+        {
+          "id": "H3",
+          "content": "What cognitive changes did the patient experience?",
+          "response": "The patient had difficulty finding words and remembering the names of family members.",
+          "teaching_points": [
+            {
+              "id": "TP3",
+              "content": "Cognitive changes can be associated with paraneoplastic syndromes.",
+              "covered": false
+            }
+          ],
+          "elicited": false
+        },
+        {
+          "id": "H4",
+          "content": "What was the patient's smoking history?",
+          "response": "The patient smoked three packs of cigarettes daily for 30 years.",
+          "teaching_points": [
+            {
+              "id": "TP4",
+              "content": "Long-term smoking is a major risk factor for lung cancer.",
+              "covered": false
+            }
+          ],
+          "elicited": false
+        }
+      ],
+      "optional": [],
+      "current_ideal_differential_diagnosis": [
+        {
+          "name": "Chronic Obstructive Pulmonary Disease (COPD) with exacerbation",
+          "category": "Respiratory disease",
+          "likelihood": "high",
+          "key_features": [
+            "chronic cough",
+            "productive cough",
+            "history of heavy smoking"
+          ],
+          "supporting_evidence": [
+            "productive cough",
+            "mild hemoptysis",
+            "history of smoking three packs daily for 30 years"
+          ],
+          "refuting_evidence": [
+            "none directly refuting COPD"
+          ],
+          "additional_information_needed": [
+            "pulmonary function tests",
+            "chest X-ray or CT scan"
+          ]
+        },
+        {
+          "name": "Vitamin B12 deficiency",
+          "category": "Nutritional deficiency",
+          "likelihood": "medium",
+          "key_features": [
+            "paresthesias",
+            "ataxic gait",
+            "cognitive changes"
+          ],
+          "supporting_evidence": [
+            "paresthesias",
+            "ataxic gait",
+            "difficulty finding words",
+            "memory issues"
+          ],
+          "refuting_evidence": [
+            "none directly refuting B12 deficiency"
+          ],
+          "additional_information_needed": [
+            "serum vitamin B12 level",
+            "complete blood count"
+          ]
+        },
+        {
+          "name": "Multiple Sclerosis",
+          "category": "Neurological disease",
+          "likelihood": "medium",
+          "key_features": [
+            "paresthesias",
+            "ataxic gait",
+            "cognitive changes"
+          ],
+          "supporting_evidence": [
+            "paresthesias",
+            "ataxic gait",
+            "cognitive changes"
+          ],
+          "refuting_evidence": [
+            "age of onset is somewhat atypical"
+          ],
+          "additional_information_needed": [
+            "MRI of the brain and spinal cord",
+            "lumbar puncture for oligoclonal bands"
+          ]
+        },
+        {
+          "name": "Lung cancer with paraneoplastic syndrome",
+          "category": "Oncological disease",
+          "likelihood": "medium",
+          "key_features": [
+            "history of heavy smoking",
+            "respiratory symptoms",
+            "neurological symptoms"
+          ],
+          "supporting_evidence": [
+            "history of smoking",
+            "productive cough",
+            "neurological symptoms"
+          ],
+          "refuting_evidence": [
+            "no direct evidence of a mass or cancer"
+          ],
+          "additional_information_needed": [
+            "chest CT scan",
+            "biopsy if a mass is found"
+          ]
+        },
+        {
+          "name": "Chronic heavy metal poisoning (e.g., lead, mercury)",
+          "category": "Toxicological condition",
+          "likelihood": "low",
+          "key_features": [
+            "paresthesias",
+            "cognitive changes",
+            "ataxic gait"
+          ],
+          "supporting_evidence": [
+            "paresthesias",
+            "cognitive changes"
+          ],
+          "refuting_evidence": [
+            "no known exposure history provided"
+          ],
+          "additional_information_needed": [
+            "heavy metal screening tests"
+          ]
+        }
+      ]
+    },
+    "physical": {
+      "required": [
+        {
+          "id": "P1",
+          "content": "What were the findings on neurologic examination?",
+          "response": "The patient was fully oriented, with impaired sensation of light touch and pinprick, absent sense of joint position and vibratory perception, mild dysmetria, extremely ataxic gait, and absent deep-tendon reflexes.",
+          "teaching_points": [
+            {
+              "id": "TP5",
+              "content": "Neurologic examination can reveal signs of sensory neuropathy and ataxia.",
+              "covered": false
+            }
+          ],
+          "elicited": false
+        }
+      ],
+      "optional": [],
+      "current_ideal_differential_diagnosis": [
+        {
+          "name": "Vitamin B12 deficiency",
+          "category": "Nutritional deficiency",
+          "likelihood": "high",
+          "key_features": [
+            "paresthesias",
+            "ataxic gait",
+            "cognitive changes",
+            "absent deep-tendon reflexes"
+          ],
+          "supporting_evidence": [
+            "paresthesias",
+            "ataxic gait",
+            "difficulty finding words",
+            "absent sense of joint position and vibratory perception",
+            "absent deep-tendon reflexes"
+          ],
+          "refuting_evidence": [],
+          "additional_information_needed": [
+            "serum vitamin B12 level",
+            "methylmalonic acid level",
+            "homocysteine level"
+          ]
+        },
+        {
+          "name": "Chronic obstructive pulmonary disease (COPD) with hypoxemia",
+          "category": "Respiratory disease",
+          "likelihood": "medium",
+          "key_features": [
+            "smoking history",
+            "productive cough",
+            "mild hemoptysis"
+          ],
+          "supporting_evidence": [
+            "smoking three packs of cigarettes daily for 30 years",
+            "productive cough",
+            "mild hemoptysis"
+          ],
+          "refuting_evidence": [
+            "neurological symptoms are not typical for COPD"
+          ],
+          "additional_information_needed": [
+            "pulmonary function tests",
+            "arterial blood gas analysis"
+          ]
+        },
+        {
+          "name": "Multiple sclerosis",
+          "category": "Neurological disease",
+          "likelihood": "low",
+          "key_features": [
+            "paresthesias",
+            "ataxic gait",
+            "cognitive changes"
+          ],
+          "supporting_evidence": [
+            "paresthesias",
+            "ataxic gait",
+            "cognitive changes"
+          ],
+          "refuting_evidence": [
+            "age of onset is atypical",
+            "smoking history and respiratory symptoms are not typical"
+          ],
+          "additional_information_needed": [
+            "MRI of the brain and spinal cord",
+            "cerebrospinal fluid analysis"
+          ]
+        },
+        {
+          "name": "Paraneoplastic syndrome",
+          "category": "Oncological/neurological disease",
+          "likelihood": "low",
+          "key_features": [
+            "neurological symptoms",
+            "history of smoking"
+          ],
+          "supporting_evidence": [
+            "neurological symptoms",
+            "history of heavy smoking"
+          ],
+          "refuting_evidence": [
+            "no evidence of malignancy provided"
+          ],
+          "additional_information_needed": [
+            "chest CT scan",
+            "oncological markers"
+          ]
+        }
+      ]
+    },
+    "testing": {
+      "required": [
+        {
+          "id": "T1",
+          "content": "What were the findings on chest radiograph and CT?",
+          "response": "A hilar mass with mediastinal lymphadenopathy and blunting of the costophrenic angle on the right side.",
+          "teaching_points": [
+            {
+              "id": "TP6",
+              "content": "Imaging can reveal masses indicative of malignancy.",
+              "covered": false
+            }
+          ],
+          "elicited": false
+        },
+        {
+          "id": "T2",
+          "content": "What did the bronchoscopy and cytologic examination reveal?",
+          "response": "Diffuse mucosal infiltration and thickening, with small mucosal nodules; fine-needle aspirate revealed undifferentiated small-cell carcinoma.",
+          "teaching_points": [
+            {
+              "id": "TP7",
+              "content": "Bronchoscopy and cytology are key in diagnosing lung cancer.",
+              "covered": false
+            }
+          ],
+          "elicited": false
+        },
+        {
+          "id": "T3",
+          "content": "What were the MRI findings of the brain and cervical spine?",
+          "response": "Minimal prominence of ventricles, scattered foci of hyperintensity in white matter, straightening of cervical spine, and mild-to-moderate stenosis at C4–5 level.",
+          "teaching_points": [
+            {
+              "id": "TP8",
+              "content": "MRI can identify structural changes and potential causes of neurologic symptoms.",
+              "covered": false
+            }
+          ],
+          "elicited": false
+        }
+      ],
+      "optional": [],
+      "current_ideal_differential_diagnosis": [
+        {
+          "name": "Paraneoplastic Neuropathy",
+          "category": "Neurological/Paraneoplastic Syndrome",
+          "likelihood": "high",
+          "key_features": [
+            "paresthesias",
+            "ataxic gait",
+            "absent deep-tendon reflexes",
+            "cognitive changes"
+          ],
+          "supporting_evidence": [
+            "paresthesias, ataxic gait, absent deep-tendon reflexes, cognitive changes",
+            "history of small-cell lung carcinoma"
+          ],
+          "refuting_evidence": [
+            "none noted"
+          ],
+          "additional_information_needed": [
+            "paraneoplastic antibody panel"
+          ]
+        },
+        {
+          "name": "Small-Cell Lung Carcinoma with Metastasis",
+          "category": "Oncological",
+          "likelihood": "high",
+          "key_features": [
+            "hilar mass",
+            "mediastinal lymphadenopathy",
+            "neurological symptoms"
+          ],
+          "supporting_evidence": [
+            "hilar mass with mediastinal lymphadenopathy",
+            "undifferentiated small-cell carcinoma on cytology"
+          ],
+          "refuting_evidence": [
+            "none noted"
+          ],
+          "additional_information_needed": [
+            "PET scan to assess for metastasis"
+          ]
+        },
+        {
+          "name": "Chronic Obstructive Pulmonary Disease (COPD)",
+          "category": "Pulmonary",
+          "likelihood": "medium",
+          "key_features": [
+            "productive cough",
+            "smoking history",
+            "mild hemoptysis"
+          ],
+          "supporting_evidence": [
+            "productive cough",
+            "smoking three packs daily for 30 years"
+          ],
+          "refuting_evidence": [
+            "no specific mention of airflow limitation or emphysema"
+          ],
+          "additional_information_needed": [
+            "pulmonary function tests"
+          ]
+        },
+        {
+          "name": "Vitamin B12 Deficiency",
+          "category": "Nutritional/Metabolic",
+          "likelihood": "low",
+          "key_features": [
+            "paresthesias",
+            "ataxic gait",
+            "cognitive changes"
+          ],
+          "supporting_evidence": [
+            "paresthesias, ataxic gait, cognitive changes"
+          ],
+          "refuting_evidence": [
+            "presence of small-cell lung carcinoma provides a more likely explanation"
+          ],
+          "additional_information_needed": [
+            "serum vitamin B12 levels"
+          ]
+        },
+        {
+          "name": "Multiple Sclerosis",
+          "category": "Neurological",
+          "likelihood": "low",
+          "key_features": [
+            "paresthesias",
+            "ataxic gait",
+            "cognitive changes",
+            "white matter changes on MRI"
+          ],
+          "supporting_evidence": [
+            "scattered foci of hyperintensity in white matter on MRI"
+          ],
+          "refuting_evidence": [
+            "age of onset is atypical",
+            "presence of small-cell lung carcinoma"
+          ],
+          "additional_information_needed": [
+            "lumbar puncture for oligoclonal bands"
+          ]
+        }
+      ]
+    },
+    "management": {
+      "required": [
+        {
+          "id": "M1",
+          "content": "What treatments were administered to the patient?",
+          "response": "Cisplatin and etoposide, later substituted with carboplatin; radiation treatment; prednisone; comfort care.",
+          "teaching_points": [
+            {
+              "id": "TP9",
+              "content": "Chemotherapy and radiation are standard treatments for small-cell lung cancer.",
+              "covered": false
+            }
+          ],
+          "elicited": false
+        }
+      ],
+      "optional": []
+    },
+    "discussion": {
+      "required": [],
+      "optional": []
+    }
+  },
+  "differential_diagnosis": [
+    "Paraneoplastic syndrome",
+    "Peripheral neuropathy",
+    "Small-cell lung cancer"
+  ],
+  "final_diagnosis": {
+    "name": "Paraneoplastic syndrome associated with small-cell lung cancer",
+    "category": "Oncologic",
+    "key_features": [
+      "Paresthesias",
+      "Ataxic gait",
+      "Hallucinations",
+      "Small-cell carcinoma"
+    ],
+    "supporting_evidence": [
+      "Undifferentiated small-cell carcinoma on cytology",
+      "Neurologic symptoms consistent with paraneoplastic syndrome"
+    ],
+    "refuting_evidence": []
+  }
+}

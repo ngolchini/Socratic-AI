@@ -1,0 +1,574 @@
+{
+  "metadata": {
+    "id": "case_030",
+    "title": "1984 Case 29",
+    "original_presentation": "A 21-year-old man was admitted to the hospital because of fever and facial diplegia.",
+    "difficulty": "intermediate",
+    "specialties": [
+      "Infectious Disease",
+      "Neurology"
+    ],
+    "keywords": [
+      "fever",
+      "facial diplegia",
+      "headache",
+      "rash",
+      "lymphadenopathy"
+    ],
+    "source": "clinical case study",
+    "version": "1.0"
+  },
+  "clinical_elements": {
+    "history": {
+      "required": [
+        {
+          "id": "H1",
+          "content": "What symptoms did the patient experience prior to admission?",
+          "response": "The patient experienced a severe headache, fever, blisters over sunburned area, rash, myalgia, anorexia, ear pain, swelling of cheeks and mandible, fatigue, inability to smile or close eyes tightly, cervical pain and stiffness, and vomiting.",
+          "teaching_points": [
+            {
+              "id": "TP1",
+              "content": "Facial diplegia can be associated with various infectious and neurological conditions.",
+              "covered": false
+            }
+          ],
+          "elicited": false
+        },
+        {
+          "id": "H2",
+          "content": "What is the patient's past medical history?",
+          "response": "The patient had a history of varicella in childhood and was prescribed phenobarbital for an idiopathic seizure disorder.",
+          "teaching_points": [
+            {
+              "id": "TP2",
+              "content": "Past medical history can provide clues to current symptoms and potential complications.",
+              "covered": false
+            }
+          ],
+          "elicited": false
+        },
+        {
+          "id": "H3",
+          "content": "What recent exposures did the patient have?",
+          "response": "The patient camped in northern New York state, was bitten by black flies, and was told the drinking water was contaminated by giardia. He also visited a beach in Boston.",
+          "teaching_points": [
+            {
+              "id": "TP3",
+              "content": "Environmental exposures can be critical in diagnosing infectious diseases.",
+              "covered": false
+            }
+          ],
+          "elicited": false
+        }
+      ],
+      "optional": [],
+      "current_ideal_differential_diagnosis": [
+        {
+          "name": "Lyme disease",
+          "category": "Infectious disease",
+          "likelihood": "medium",
+          "key_features": [
+            "fever",
+            "facial diplegia",
+            "rash",
+            "myalgia",
+            "history of camping in endemic area"
+          ],
+          "supporting_evidence": [
+            "camping in northern New York state",
+            "facial diplegia",
+            "rash",
+            "fever"
+          ],
+          "refuting_evidence": [
+            "no specific mention of erythema migrans rash"
+          ],
+          "additional_information_needed": [
+            "serologic testing for Borrelia burgdorferi",
+            "detailed description of rash"
+          ]
+        },
+        {
+          "name": "Viral meningitis",
+          "category": "Infectious disease",
+          "likelihood": "medium",
+          "key_features": [
+            "fever",
+            "headache",
+            "neck stiffness",
+            "vomiting",
+            "facial diplegia"
+          ],
+          "supporting_evidence": [
+            "fever",
+            "severe headache",
+            "cervical pain and stiffness",
+            "vomiting"
+          ],
+          "refuting_evidence": [
+            "facial diplegia is less common"
+          ],
+          "additional_information_needed": [
+            "lumbar puncture for CSF analysis"
+          ]
+        },
+        {
+          "name": "Guillain-Barré syndrome",
+          "category": "Neurological disorder",
+          "likelihood": "low",
+          "key_features": [
+            "facial diplegia",
+            "ascending weakness",
+            "recent infection"
+          ],
+          "supporting_evidence": [
+            "facial diplegia",
+            "recent viral-like symptoms"
+          ],
+          "refuting_evidence": [
+            "absence of ascending weakness"
+          ],
+          "additional_information_needed": [
+            "nerve conduction studies",
+            "CSF analysis for albuminocytologic dissociation"
+          ]
+        },
+        {
+          "name": "Bell's palsy",
+          "category": "Neurological disorder",
+          "likelihood": "low",
+          "key_features": [
+            "facial diplegia",
+            "recent viral infection"
+          ],
+          "supporting_evidence": [
+            "facial diplegia",
+            "recent viral-like symptoms"
+          ],
+          "refuting_evidence": [
+            "bilateral involvement is uncommon",
+            "presence of systemic symptoms"
+          ],
+          "additional_information_needed": [
+            "neurological examination",
+            "MRI to rule out other causes"
+          ]
+        },
+        {
+          "name": "Mumps",
+          "category": "Infectious disease",
+          "likelihood": "low",
+          "key_features": [
+            "parotitis",
+            "fever",
+            "facial swelling"
+          ],
+          "supporting_evidence": [
+            "swelling of cheeks and mandible",
+            "fever"
+          ],
+          "refuting_evidence": [
+            "history of varicella but no mention of mumps vaccination status"
+          ],
+          "additional_information_needed": [
+            "serology for mumps IgM antibodies",
+            "vaccination history"
+          ]
+        },
+        {
+          "name": "Herpes zoster (shingles)",
+          "category": "Infectious disease",
+          "likelihood": "medium",
+          "key_features": [
+            "rash",
+            "blisters",
+            "history of varicella",
+            "facial nerve involvement"
+          ],
+          "supporting_evidence": [
+            "history of varicella",
+            "blisters over sunburned area",
+            "facial diplegia"
+          ],
+          "refuting_evidence": [
+            "no mention of dermatomal distribution"
+          ],
+          "additional_information_needed": [
+            "examination of rash for dermatomal pattern",
+            "PCR testing of blister fluid"
+          ]
+        }
+      ]
+    },
+    "physical": {
+      "required": [
+        {
+          "id": "P1",
+          "content": "What were the findings on physical examination upon admission?",
+          "response": "The patient appeared lethargic with an immobile face, desquamating rash on the dorsal region, slight neck fullness, no lymphadenopathy, + nuchal rigidity, clear lungs, normal heart, and normal abdominal and extremity examination.",
+          "teaching_points": [
+            {
+              "id": "TP4",
+              "content": "Physical examination can reveal signs that are not immediately apparent from history alone.",
+              "covered": false
+            }
+          ],
+          "elicited": false
+        },
+        {
+          "id": "P2",
+          "content": "What were the neurological examination findings?",
+          "response": "The patient was alert and oriented, with mild labial dysarthria, inability to wrinkle forehead or close eyes tightly, hyperacusis, normal muscle tone and strength, intact sensation, and normal gait and coordination.",
+          "teaching_points": [
+            {
+              "id": "TP5",
+              "content": "Neurological examination is crucial in assessing cranial nerve function and identifying potential central nervous system involvement.",
+              "covered": false
+            }
+          ],
+          "elicited": false
+        }
+      ],
+      "optional": [],
+      "current_ideal_differential_diagnosis": [
+        {
+          "name": "Lyme disease",
+          "category": "Infectious disease",
+          "likelihood": "medium",
+          "key_features": [
+            "facial diplegia",
+            "fever",
+            "rash",
+            "history of camping in endemic area"
+          ],
+          "supporting_evidence": [
+            "facial diplegia",
+            "fever",
+            "rash",
+            "camping in northern New York state"
+          ],
+          "refuting_evidence": [
+            "no mention of erythema migrans",
+            "no lymphadenopathy"
+          ],
+          "additional_information_needed": [
+            "serologic testing for Borrelia burgdorferi",
+            "history of tick bites"
+          ]
+        },
+        {
+          "name": "Guillain-Barré Syndrome (GBS)",
+          "category": "Neurological disorder",
+          "likelihood": "low",
+          "key_features": [
+            "facial diplegia",
+            "preceding infection",
+            "nuchal rigidity"
+          ],
+          "supporting_evidence": [
+            "facial diplegia",
+            "preceding symptoms like fever and myalgia"
+          ],
+          "refuting_evidence": [
+            "normal muscle tone and strength",
+            "intact sensation"
+          ],
+          "additional_information_needed": [
+            "lumbar puncture for CSF analysis",
+            "nerve conduction studies"
+          ]
+        },
+        {
+          "name": "Bell's Palsy",
+          "category": "Neurological disorder",
+          "likelihood": "low",
+          "key_features": [
+            "facial diplegia",
+            "inability to wrinkle forehead or close eyes tightly"
+          ],
+          "supporting_evidence": [
+            "facial diplegia",
+            "inability to wrinkle forehead or close eyes tightly"
+          ],
+          "refuting_evidence": [
+            "bilateral involvement is rare",
+            "presence of systemic symptoms like fever and rash"
+          ],
+          "additional_information_needed": [
+            "MRI of the brain",
+            "further evaluation of cranial nerve function"
+          ]
+        },
+        {
+          "name": "Viral meningitis",
+          "category": "Infectious disease",
+          "likelihood": "medium",
+          "key_features": [
+            "fever",
+            "nuchal rigidity",
+            "headache",
+            "vomiting"
+          ],
+          "supporting_evidence": [
+            "fever",
+            "nuchal rigidity",
+            "headache",
+            "vomiting"
+          ],
+          "refuting_evidence": [
+            "alert and oriented",
+            "normal gait and coordination"
+          ],
+          "additional_information_needed": [
+            "lumbar puncture for CSF analysis",
+            "viral PCR testing"
+          ]
+        },
+        {
+          "name": "Herpes Simplex Virus (HSV) infection",
+          "category": "Infectious disease",
+          "likelihood": "medium",
+          "key_features": [
+            "fever",
+            "blisters",
+            "facial diplegia"
+          ],
+          "supporting_evidence": [
+            "fever",
+            "blisters over sunburned area",
+            "facial diplegia"
+          ],
+          "refuting_evidence": [
+            "no mention of oral or genital lesions",
+            "no lymphadenopathy"
+          ],
+          "additional_information_needed": [
+            "HSV PCR testing",
+            "lumbar puncture for CSF analysis"
+          ]
+        },
+        {
+          "name": "Mumps",
+          "category": "Infectious disease",
+          "likelihood": "low",
+          "key_features": [
+            "fever",
+            "swelling of cheeks and mandible",
+            "ear pain"
+          ],
+          "supporting_evidence": [
+            "fever",
+            "swelling of cheeks and mandible",
+            "ear pain"
+          ],
+          "refuting_evidence": [
+            "history of varicella but no mention of mumps vaccination",
+            "no lymphadenopathy"
+          ],
+          "additional_information_needed": [
+            "mumps IgM and IgG serology",
+            "history of vaccination"
+          ]
+        }
+      ]
+    },
+    "testing": {
+      "required": [
+        {
+          "id": "T1",
+          "content": "What were the results of the initial laboratory tests?",
+          "response": "Hematocrit was 52.2%, white-cell count was 7900 with 76% neutrophils, 17% lymphocytes, 7% monocytes, platelet count was 290,000, and ESR was 6 mm/hr. Electrolytes, liver enzymes, and renal function were normal.",
+          "teaching_points": [
+            {
+              "id": "TP6",
+              "content": "Laboratory tests can help differentiate between infectious and non-infectious causes of symptoms.",
+              "covered": false
+            }
+          ],
+          "elicited": false
+        },
+        {
+          "id": "T2",
+          "content": "What were the findings from the cerebrospinal fluid analysis?",
+          "response": "CSF contained 35 red cells, 556 white cells with 87% lymphocytes, glucose was 44 mg/dL, and protein was 122 mg/dL. No microorganisms were found.",
+          "teaching_points": [
+            {
+              "id": "TP7",
+              "content": "CSF analysis is essential in diagnosing central nervous system infections.",
+              "covered": false
+            }
+          ],
+          "elicited": false
+        },
+        {
+          "id": "T3",
+          "content": "What were the results of the serologic and culture tests?",
+          "response": "Tests for heterophil agglutinins, cold agglutinins, toxoplasmosis, syphilis, and Epstein–Barr virus were negative. Cultures of blood, urine, and CSF were negative.",
+          "teaching_points": [
+            {
+              "id": "TP8",
+              "content": "Negative serologic and culture tests can help rule out specific infectious agents.",
+              "covered": false
+            }
+          ],
+          "elicited": false
+        }
+      ],
+      "optional": [],
+      "current_ideal_differential_diagnosis": [
+        {
+          "name": "Lyme disease with neurological involvement",
+          "category": "Infectious disease",
+          "likelihood": "medium",
+          "key_features": [
+            "facial diplegia",
+            "fever",
+            "history of camping in endemic area",
+            "rash",
+            "neck stiffness"
+          ],
+          "supporting_evidence": [
+            "facial diplegia",
+            "fever",
+            "camping in northern New York state",
+            "rash",
+            "nuchal rigidity"
+          ],
+          "refuting_evidence": [
+            "negative serologic tests for common infections",
+            "no specific mention of erythema migrans"
+          ],
+          "additional_information_needed": [
+            "Lyme serology",
+            "detailed history of tick exposure"
+          ]
+        },
+        {
+          "name": "Viral meningitis",
+          "category": "Infectious disease",
+          "likelihood": "medium",
+          "key_features": [
+            "fever",
+            "headache",
+            "nuchal rigidity",
+            "CSF lymphocytic pleocytosis"
+          ],
+          "supporting_evidence": [
+            "fever",
+            "headache",
+            "nuchal rigidity",
+            "CSF with lymphocytic pleocytosis"
+          ],
+          "refuting_evidence": [
+            "negative viral cultures",
+            "no specific viral serology results"
+          ],
+          "additional_information_needed": [
+            "PCR for enteroviruses and other common viral pathogens in CSF"
+          ]
+        },
+        {
+          "name": "Guillain-Barré syndrome (Miller Fisher variant)",
+          "category": "Neurological disorder",
+          "likelihood": "low",
+          "key_features": [
+            "facial diplegia",
+            "areflexia",
+            "CSF albuminocytologic dissociation"
+          ],
+          "supporting_evidence": [
+            "facial diplegia"
+          ],
+          "refuting_evidence": [
+            "normal muscle tone and strength",
+            "no areflexia",
+            "CSF findings not typical"
+          ],
+          "additional_information_needed": [
+            "nerve conduction studies",
+            "anti-GQ1b antibodies"
+          ]
+        },
+        {
+          "name": "Bell's palsy secondary to herpes zoster (Ramsay Hunt syndrome)",
+          "category": "Neurological disorder",
+          "likelihood": "medium",
+          "key_features": [
+            "facial paralysis",
+            "ear pain",
+            "vesicular rash",
+            "history of varicella"
+          ],
+          "supporting_evidence": [
+            "facial diplegia",
+            "ear pain",
+            "history of varicella",
+            "blisters over sunburned area"
+          ],
+          "refuting_evidence": [
+            "no vesicular rash in ear or mouth",
+            "negative viral cultures"
+          ],
+          "additional_information_needed": [
+            "PCR for varicella-zoster virus in CSF",
+            "detailed examination of ear and mouth for vesicles"
+          ]
+        },
+        {
+          "name": "Mumps with neurological complications",
+          "category": "Infectious disease",
+          "likelihood": "low",
+          "key_features": [
+            "parotitis",
+            "fever",
+            "facial nerve involvement",
+            "CSF pleocytosis"
+          ],
+          "supporting_evidence": [
+            "swelling of cheeks and mandible",
+            "fever",
+            "facial diplegia"
+          ],
+          "refuting_evidence": [
+            "no lymphadenopathy",
+            "negative serologic tests"
+          ],
+          "additional_information_needed": [
+            "mumps IgM and IgG serology",
+            "history of mumps vaccination"
+          ]
+        }
+      ]
+    },
+    "management": {
+      "required": [
+        {
+          "id": "M1",
+          "content": "What treatments were administered during the hospital stay?",
+          "response": "Phenobarbital was continued, and the patient was given acetaminophen for fever and codeine for headache.",
+          "teaching_points": [
+            {
+              "id": "TP9",
+              "content": "Symptomatic treatment is often necessary while awaiting a definitive diagnosis.",
+              "covered": false
+            }
+          ],
+          "elicited": false
+        }
+      ],
+      "optional": []
+    },
+    "discussion": {
+      "required": [],
+      "optional": []
+    }
+  },
+  "differential_diagnosis": [],
+  "final_diagnosis": {
+    "name": "Unknown",
+    "category": "Infectious/Neurological",
+    "key_features": [],
+    "supporting_evidence": [],
+    "refuting_evidence": []
+  }
+}

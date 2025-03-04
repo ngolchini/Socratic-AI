@@ -1,0 +1,476 @@
+{
+  "metadata": {
+    "id": "case_006",
+    "title": "1970 Case 42",
+    "original_presentation": "A 56-year-old woman was admitted to the hospital because of weakness of the shoulders, arms and neck.",
+    "difficulty": "intermediate",
+    "specialties": [
+      "neurology",
+      "internal medicine"
+    ],
+    "keywords": [
+      "weakness",
+      "dysphagia",
+      "neurological symptoms",
+      "muscle atrophy"
+    ],
+    "source": "clinical case study",
+    "version": "1.0"
+  },
+  "clinical_elements": {
+    "history": {
+      "required": [
+        {
+          "id": "H1",
+          "content": "What is the patient's history of presenting illness?",
+          "response": "The patient had been well until three years previously, when she began to experience difficulty in swallowing solids. Over the next two years, the dysphagia progressed, and she lost 18 kg in weight. One year before entry, she was admitted to another hospital, where a stricture was found in the lower portion of the esophagus; a thoracotomy was performed, with repair of the stricture and symptomatic improvement. Eight months before admission, she experienced loss of hearing in the left ear, accompanied by mild dizziness. Six months before entry, mild dysphagia recurred, with soreness in the left side of the neck and throat. Two months before admission, she began to have progressive weakness and mild soreness of both arms and shoulders. Three weeks before entry, the neck muscles became weak, and the voice faint. During the week before admission, dyspnea developed.",
+          "teaching_points": [
+            {
+              "id": "TP1",
+              "content": "Progressive dysphagia and weight loss can indicate esophageal or neurological disorders.",
+              "covered": false
+            },
+            {
+              "id": "TP2",
+              "content": "Hearing loss and dizziness may suggest cranial nerve involvement.",
+              "covered": false
+            },
+            {
+              "id": "TP3",
+              "content": "Progressive muscle weakness and dyspnea can be signs of neuromuscular disorders.",
+              "covered": false
+            }
+          ],
+          "elicited": false
+        }
+      ],
+      "optional": [],
+      "current_ideal_differential_diagnosis": [
+        {
+          "name": "Myasthenia Gravis",
+          "category": "Neuromuscular disorder",
+          "likelihood": "medium",
+          "key_features": [
+            "muscle weakness",
+            "dysphagia",
+            "dyspnea",
+            "voice changes"
+          ],
+          "supporting_evidence": [
+            "progressive weakness of shoulders, arms, and neck",
+            "dysphagia",
+            "faint voice",
+            "dyspnea"
+          ],
+          "refuting_evidence": [
+            "hearing loss and dizziness are not typical features"
+          ],
+          "additional_information_needed": [
+            "anti-acetylcholine receptor antibody test",
+            "repetitive nerve stimulation test",
+            "CT scan of the chest to check for thymoma"
+          ]
+        },
+        {
+          "name": "Polymyositis",
+          "category": "Inflammatory myopathy",
+          "likelihood": "medium",
+          "key_features": [
+            "proximal muscle weakness",
+            "dysphagia",
+            "muscle soreness"
+          ],
+          "supporting_evidence": [
+            "progressive weakness of shoulders and arms",
+            "mild soreness of arms and shoulders",
+            "dysphagia"
+          ],
+          "refuting_evidence": [
+            "hearing loss and dizziness are not typical features"
+          ],
+          "additional_information_needed": [
+            "serum creatine kinase levels",
+            "muscle biopsy",
+            "autoantibody panel"
+          ]
+        },
+        {
+          "name": "Amyotrophic Lateral Sclerosis (ALS)",
+          "category": "Neurodegenerative disorder",
+          "likelihood": "medium",
+          "key_features": [
+            "muscle weakness",
+            "dysphagia",
+            "respiratory difficulties"
+          ],
+          "supporting_evidence": [
+            "progressive weakness of shoulders, arms, and neck",
+            "dysphagia",
+            "dyspnea"
+          ],
+          "refuting_evidence": [
+            "hearing loss and dizziness are not typical features"
+          ],
+          "additional_information_needed": [
+            "electromyography (EMG)",
+            "nerve conduction studies",
+            "neurological examination"
+          ]
+        },
+        {
+          "name": "Multiple Sclerosis",
+          "category": "Demyelinating disease",
+          "likelihood": "low",
+          "key_features": [
+            "neurological deficits",
+            "dysphagia",
+            "muscle weakness"
+          ],
+          "supporting_evidence": [
+            "dysphagia",
+            "muscle weakness"
+          ],
+          "refuting_evidence": [
+            "age of onset is atypical",
+            "hearing loss and dizziness are not classic features"
+          ],
+          "additional_information_needed": [
+            "MRI of the brain and spinal cord",
+            "lumbar puncture for cerebrospinal fluid analysis"
+          ]
+        },
+        {
+          "name": "Paraneoplastic Syndrome",
+          "category": "Paraneoplastic neurological disorder",
+          "likelihood": "low",
+          "key_features": [
+            "muscle weakness",
+            "dysphagia",
+            "neurological symptoms"
+          ],
+          "supporting_evidence": [
+            "progressive weakness",
+            "dysphagia",
+            "history of esophageal stricture"
+          ],
+          "refuting_evidence": [
+            "hearing loss and dizziness are not typical features"
+          ],
+          "additional_information_needed": [
+            "cancer screening tests",
+            "paraneoplastic antibody panel"
+          ]
+        }
+      ]
+    },
+    "physical": {
+      "required": [
+        {
+          "id": "P1",
+          "content": "What were the findings on physical examination?",
+          "response": "The patient was severely dehydrated and cachectic, with a whispering voice and a weak cough. Neurologic examination showed moderate loss of recent memory, mild left facial paresis, absent hearing in the left ear, marked atrophy of several muscles, fasciculations, and marked weakness of proximal muscles of the shoulder girdle. Sensory examination revealed diminished pain and temperature sensations in certain cervical segments. Reflexes were diminished or absent in the arms, and the plantar responses were flexor.",
+          "teaching_points": [
+            {
+              "id": "TP4",
+              "content": "Muscle atrophy and fasciculations are indicative of lower motor neuron lesions.",
+              "covered": false
+            },
+            {
+              "id": "TP5",
+              "content": "Diminished reflexes and sensory loss can help localize neurological lesions.",
+              "covered": false
+            }
+          ],
+          "elicited": false
+        }
+      ],
+      "optional": [],
+      "current_ideal_differential_diagnosis": [
+        {
+          "name": "Amyotrophic Lateral Sclerosis (ALS)",
+          "category": "Neuromuscular disease",
+          "likelihood": "medium",
+          "key_features": [
+            "progressive muscle weakness",
+            "muscle atrophy",
+            "fasciculations",
+            "dysphagia",
+            "respiratory involvement"
+          ],
+          "supporting_evidence": [
+            "progressive weakness of shoulders, arms, and neck",
+            "marked atrophy of several muscles",
+            "fasciculations",
+            "marked weakness of proximal muscles",
+            "dysphagia",
+            "dyspnea"
+          ],
+          "refuting_evidence": [
+            "sensory deficits are not typical in ALS"
+          ],
+          "additional_information_needed": [
+            "EMG and nerve conduction studies",
+            "MRI of the brain and spinal cord",
+            "genetic testing if familial ALS is suspected"
+          ]
+        },
+        {
+          "name": "Myasthenia Gravis",
+          "category": "Autoimmune neuromuscular disorder",
+          "likelihood": "medium",
+          "key_features": [
+            "muscle weakness that worsens with activity",
+            "dysphagia",
+            "respiratory muscle involvement",
+            "ptosis or diplopia"
+          ],
+          "supporting_evidence": [
+            "progressive weakness of shoulders, arms, and neck",
+            "dysphagia",
+            "dyspnea",
+            "faint voice"
+          ],
+          "refuting_evidence": [
+            "absence of ocular symptoms",
+            "presence of sensory deficits"
+          ],
+          "additional_information_needed": [
+            "acetylcholine receptor antibody test",
+            "repetitive nerve stimulation test",
+            "CT scan of the chest to check for thymoma"
+          ]
+        },
+        {
+          "name": "Multiple Sclerosis",
+          "category": "Demyelinating disease",
+          "likelihood": "low",
+          "key_features": [
+            "neurological deficits that vary over time",
+            "sensory disturbances",
+            "motor weakness",
+            "dysphagia"
+          ],
+          "supporting_evidence": [
+            "mild left facial paresis",
+            "diminished pain and temperature sensations",
+            "weakness of proximal muscles"
+          ],
+          "refuting_evidence": [
+            "age of onset is atypical",
+            "progressive nature without remissions is atypical"
+          ],
+          "additional_information_needed": [
+            "MRI of the brain and spinal cord",
+            "lumbar puncture for CSF analysis"
+          ]
+        },
+        {
+          "name": "Bulbar Palsy",
+          "category": "Neurological disorder",
+          "likelihood": "medium",
+          "key_features": [
+            "dysphagia",
+            "dysarthria",
+            "muscle atrophy",
+            "fasciculations"
+          ],
+          "supporting_evidence": [
+            "dysphagia",
+            "faint voice",
+            "muscle atrophy",
+            "fasciculations"
+          ],
+          "refuting_evidence": [
+            "sensory deficits are not typical",
+            "hearing loss is not typical"
+          ],
+          "additional_information_needed": [
+            "neurological examination focusing on cranial nerves",
+            "EMG studies"
+          ]
+        },
+        {
+          "name": "Cervical Spondylotic Myelopathy",
+          "category": "Spinal cord disorder",
+          "likelihood": "low",
+          "key_features": [
+            "neck pain",
+            "upper extremity weakness",
+            "sensory deficits",
+            "reflex changes"
+          ],
+          "supporting_evidence": [
+            "soreness in the neck",
+            "diminished pain and temperature sensations",
+            "weakness of proximal muscles"
+          ],
+          "refuting_evidence": [
+            "absence of typical gait disturbances",
+            "progressive nature without remissions is atypical"
+          ],
+          "additional_information_needed": [
+            "MRI of the cervical spine",
+            "neurological examination focusing on gait and coordination"
+          ]
+        }
+      ]
+    },
+    "testing": {
+      "required": [
+        {
+          "id": "T1",
+          "content": "What were the results of the diagnostic tests performed?",
+          "response": "X-ray films of the skull and mastoid views disclosed no abnormality. A contrast study of the left posterior fossa was negative. Chest X-ray revealed minimal left ventricular prominence and clear lungs. Cerebrospinal fluid analysis showed clear fluid with 2 lymphocytes per cubic millimeter and protein of 21 mg per 100 ml. Blood tests showed a white-cell count of 13,000 with 81% neutrophils, and other values were within normal limits. Cervical spine films showed degenerative changes and osteophytic spurs. A cervical myelographic study showed a normal-sized spinal cord with no evidence of syrinx or Arnold-Chiari malformation.",
+          "teaching_points": [
+            {
+              "id": "TP6",
+              "content": "Normal imaging of the brain and skull can help rule out central causes of neurological symptoms.",
+              "covered": false
+            },
+            {
+              "id": "TP7",
+              "content": "Cervical spine changes can contribute to neurological symptoms through nerve compression.",
+              "covered": false
+            }
+          ],
+          "elicited": false
+        }
+      ],
+      "optional": [],
+      "current_ideal_differential_diagnosis": [
+        {
+          "name": "Amyotrophic Lateral Sclerosis (ALS)",
+          "category": "Neuromuscular disease",
+          "likelihood": "high",
+          "key_features": [
+            "progressive muscle weakness",
+            "muscle atrophy",
+            "fasciculations",
+            "dysphagia",
+            "respiratory involvement"
+          ],
+          "supporting_evidence": [
+            "progressive weakness of shoulders, arms, and neck",
+            "marked atrophy of several muscles",
+            "fasciculations",
+            "marked weakness of proximal muscles of the shoulder girdle",
+            "dysphagia",
+            "dyspnea"
+          ],
+          "refuting_evidence": [
+            "mild left facial paresis and absent hearing in the left ear are atypical for ALS"
+          ],
+          "additional_information_needed": [
+            "Electromyography (EMG) to assess for denervation and reinnervation patterns typical of ALS"
+          ]
+        },
+        {
+          "name": "Myasthenia Gravis",
+          "category": "Autoimmune neuromuscular disorder",
+          "likelihood": "medium",
+          "key_features": [
+            "muscle weakness that worsens with activity",
+            "dysphagia",
+            "respiratory muscle involvement",
+            "ptosis"
+          ],
+          "supporting_evidence": [
+            "progressive weakness of shoulders, arms, and neck",
+            "dysphagia",
+            "dyspnea"
+          ],
+          "refuting_evidence": [
+            "marked atrophy of several muscles",
+            "fasciculations",
+            "absence of ptosis or ocular involvement"
+          ],
+          "additional_information_needed": [
+            "Acetylcholine receptor antibody test",
+            "Tensilon test"
+          ]
+        },
+        {
+          "name": "Cervical Spondylotic Myelopathy",
+          "category": "Spinal cord disorder",
+          "likelihood": "medium",
+          "key_features": [
+            "neck pain",
+            "upper extremity weakness",
+            "sensory changes",
+            "reflex changes"
+          ],
+          "supporting_evidence": [
+            "soreness in the left side of the neck",
+            "diminished pain and temperature sensations in certain cervical segments",
+            "degenerative changes and osteophytic spurs on cervical spine films"
+          ],
+          "refuting_evidence": [
+            "marked atrophy of several muscles",
+            "fasciculations",
+            "normal-sized spinal cord with no evidence of syrinx or Arnold-Chiari malformation"
+          ],
+          "additional_information_needed": [
+            "MRI of the cervical spine to assess for spinal cord compression"
+          ]
+        },
+        {
+          "name": "Multiple Sclerosis",
+          "category": "Demyelinating disease",
+          "likelihood": "low",
+          "key_features": [
+            "neurological deficits separated in time and space",
+            "sensory disturbances",
+            "motor weakness"
+          ],
+          "supporting_evidence": [
+            "mild left facial paresis",
+            "diminished pain and temperature sensations in certain cervical segments"
+          ],
+          "refuting_evidence": [
+            "marked atrophy of several muscles",
+            "fasciculations",
+            "normal cerebrospinal fluid analysis"
+          ],
+          "additional_information_needed": [
+            "MRI of the brain and spinal cord to look for demyelinating lesions"
+          ]
+        }
+      ]
+    },
+    "management": {
+      "required": [
+        {
+          "id": "M1",
+          "content": "What management decisions and treatments were made during the hospital stay?",
+          "response": "Fluids were given intravenously. Prednisone was started at 60 mg daily and later reduced to 40 mg daily. Chlorpromazine was begun. A nasogastric tube was passed for feeding. Oxygen was administered via a nasal catheter.",
+          "teaching_points": [
+            {
+              "id": "TP8",
+              "content": "Corticosteroids like prednisone are used to reduce inflammation and immune response.",
+              "covered": false
+            },
+            {
+              "id": "TP9",
+              "content": "Supportive care, including nutritional support and oxygen therapy, is crucial in managing severe cases.",
+              "covered": false
+            }
+          ],
+          "elicited": false
+        }
+      ],
+      "optional": []
+    },
+    "discussion": {
+      "required": [],
+      "optional": []
+    }
+  },
+  "differential_diagnosis": [],
+  "final_diagnosis": {
+    "name": "Unknown",
+    "category": "Neuromuscular disorder",
+    "key_features": [],
+    "supporting_evidence": [],
+    "refuting_evidence": []
+  }
+}

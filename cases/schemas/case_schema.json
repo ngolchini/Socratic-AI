@@ -2,20 +2,7 @@
     "metadata": {
         "id": "string",
         "title": "string",
-<<<<<<< HEAD
-        "difficulty": "string",
-        "specialties": ["string"],
-        "keywords": ["string"]
-    },
-    "phases": {
-        "history": {
-            "elements": [
-                {
-                    "id": "string",
-                    "content": "string",
-                    "required": "boolean",
-=======
-        "original_pesentation": "string",
+        "original_presentation": "string",
         "difficulty": "string",
         "specialties": ["string"],
         "keywords": ["string"],
@@ -28,202 +15,34 @@
                 {
                     "id": "string",
                     "content": "string",
->>>>>>> tz-updates
                     "response": "string",
                     "teaching_points": [
                         {
                             "id": "string",
                             "content": "string",
-<<<<<<< HEAD
-                            "required": "boolean"
+                            "covered": false
                         }
-                    ]
+                    ],
+                    "elicited": false
                 }
             ],
-            "advancement_criteria": {
-                "required_elements_covered": "boolean",
-                "teaching_points_covered": "boolean",
-                "additional_criteria": "any"
-            }
+            "optional": []
         },
         "physical": {
-            "elements": [
-                {
-                    "id": "string",
-                    "content": "string",
-                    "required": "boolean",
-=======
-                            "covered": "boolean"
-                        }
-                    ],
-                    "elicited": "boolean"
-                }
-            ],
-            "optional": [
-                {
-                    "id": "string",
-                    "content": "string",
-                    "response": "string",
-                    "teaching_points": [
-                        {
-                            "id": "string",
-                            "content": "string",
-                            "covered": "boolean"
-                        }
-                    ],
-                    "elicited": "boolean"
-                }
-            ]
-        },
-        "physical": {
-            "required": [
-                {
-                    "id": "string",
-                    "content": "string",
->>>>>>> tz-updates
-                    "response": "string",
-                    "teaching_points": [
-                        {
-                            "id": "string",
-                            "content": "string",
-<<<<<<< HEAD
-                            "required": "boolean"
-                        }
-                    ]
-                }
-            ],
-            "advancement_criteria": {
-                "required_elements_covered": "boolean",
-                "teaching_points_covered": "boolean",
-                "additional_criteria": "any"
-            }
+            "required": [],
+            "optional": []
         },
         "testing": {
-            "elements": [
-                {
-                    "id": "string",
-                    "content": "string",
-                    "required": "boolean",
-=======
-                            "covered": "boolean"
-                        }
-                    ],
-                    "elicited": "boolean"
-                }
-            ],
-            "optional": [
-                {
-                    "id": "string",
-                    "content": "string",
-                    "response": "string",
-                    "teaching_points": [
-                        {
-                            "id": "string",
-                            "content": "string",
-                            "covered": "boolean"
-                        }
-                    ],
-                    "elicited": "boolean"
-                }
-            ]
-        },
-        "testing": {
-            "required": [
-                {
-                    "id": "string",
-                    "content": "string",
->>>>>>> tz-updates
-                    "response": "string",
-                    "teaching_points": [
-                        {
-                            "id": "string",
-                            "content": "string",
-<<<<<<< HEAD
-                            "required": "boolean"
-                        }
-                    ]
-                }
-            ],
-            "advancement_criteria": {
-                "required_elements_covered": "boolean",
-                "teaching_points_covered": "boolean",
-                "additional_criteria": "any"
-            }
+            "required": [],
+            "optional": []
         },
         "management": {
-            "elements": [
-                {
-                    "id": "string",
-                    "content": "string",
-                    "required": "boolean",
-=======
-                            "covered": "boolean"
-                        }
-                    ],
-                    "elicited": "boolean"
-                }
-            ],
-            "optional": [
-                {
-                    "id": "string",
-                    "content": "string",
-                    "response": "string",
-                    "teaching_points": [
-                        {
-                            "id": "string",
-                            "content": "string",
-                            "covered": "boolean"
-                        }
-                    ],
-                    "elicited": "boolean"
-                }
-            ]
+            "required": [],
+            "optional": []
         },
-        "management": {
-            "required": [
-                {
-                    "id": "string",
-                    "content": "string",
->>>>>>> tz-updates
-                    "response": "string",
-                    "teaching_points": [
-                        {
-                            "id": "string",
-                            "content": "string",
-<<<<<<< HEAD
-                            "required": "boolean"
-                        }
-                    ]
-                }
-            ],
-            "advancement_criteria": {
-                "required_elements_covered": "boolean",
-                "teaching_points_covered": "boolean",
-                "additional_criteria": "any"
-            }
-        }
-=======
-                            "covered": "boolean"
-                        }
-                    ],
-                    "elicited": "boolean"
-                }
-            ],
-            "optional": [
-                {
-                    "id": "string",
-                    "content": "string",
-                    "response": "string",
-                    "teaching_points": [
-                        {
-                            "id": "string",
-                            "content": "string",
-                            "covered": "boolean"
-                        }
-                    ],
-                    "elicited": "boolean"
-                }
-            ]
+        "discussion": {
+            "required": [],
+            "optional": []
         }
     },
     "differential_diagnosis": [
@@ -241,6 +60,5 @@
         "key_features": ["string"],
         "supporting_evidence": ["string"],
         "refuting_evidence": ["string"]
->>>>>>> tz-updates
     }
 }

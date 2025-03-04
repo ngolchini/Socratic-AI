@@ -1,0 +1,496 @@
+{
+  "metadata": {
+    "id": "case_003",
+    "title": "1991 Case 38",
+    "original_presentation": "A 33-year-old man was admitted to the hospital because of aortic regurgitation and aneurysmal dilatation of the ascending aorta.",
+    "difficulty": "intermediate",
+    "specialties": [
+      "Cardiology",
+      "Internal Medicine"
+    ],
+    "keywords": [
+      "aortic regurgitation",
+      "aneurysm",
+      "bicuspid aortic valve"
+    ],
+    "source": "Clinical case study",
+    "version": "1.0"
+  },
+  "clinical_elements": {
+    "history": {
+      "required": [
+        {
+          "id": "H1",
+          "content": "What symptoms did the patient experience six months prior to admission?",
+          "response": "Severe substernal pain developed.",
+          "teaching_points": [
+            {
+              "id": "TP1",
+              "content": "Substernal pain can be a symptom of cardiac issues, including aortic dissection or myocardial infarction.",
+              "covered": false
+            }
+          ],
+          "elicited": false
+        },
+        {
+          "id": "H2",
+          "content": "What were the patient's symptoms following the initial presentation?",
+          "response": "Occasional mild exertional dyspnea, fatigue, and extensive loss of scalp hair.",
+          "teaching_points": [
+            {
+              "id": "TP2",
+              "content": "Exertional dyspnea and fatigue can indicate heart failure or significant valvular heart disease.",
+              "covered": false
+            }
+          ],
+          "elicited": false
+        },
+        {
+          "id": "H3",
+          "content": "What was the patient's medical history regarding infections or procedures?",
+          "response": "Treated for urethritis of uncertain cause five years before admission; had venereal warts; dental procedure performed four months before entry.",
+          "teaching_points": [
+            {
+              "id": "TP3",
+              "content": "Urethritis and venereal warts suggest a history of sexually transmitted infections, which can be relevant in differential diagnosis.",
+              "covered": false
+            }
+          ],
+          "elicited": false
+        },
+        {
+          "id": "H4",
+          "content": "What is the patient's family medical history?",
+          "response": "Mother died of lymphoma; no family history of heart disease or Marfan's syndrome.",
+          "teaching_points": [
+            {
+              "id": "TP4",
+              "content": "Family history can provide clues to genetic conditions such as Marfan's syndrome, which is associated with aortic aneurysms.",
+              "covered": false
+            }
+          ],
+          "elicited": false
+        }
+      ],
+      "optional": [],
+      "current_ideal_differential_diagnosis": [
+        {
+          "name": "Syphilitic Aortitis",
+          "category": "Infectious disease",
+          "likelihood": "medium",
+          "key_features": [
+            "aortic regurgitation",
+            "aneurysmal dilatation of the ascending aorta",
+            "history of urethritis"
+          ],
+          "supporting_evidence": [
+            "aortic regurgitation",
+            "aneurysmal dilatation",
+            "history of urethritis of uncertain cause"
+          ],
+          "refuting_evidence": [
+            "no direct evidence of syphilis diagnosis or treatment"
+          ],
+          "additional_information_needed": [
+            "serologic tests for syphilis (RPR, FTA-ABS)"
+          ]
+        },
+        {
+          "name": "Marfan Syndrome",
+          "category": "Genetic disorder",
+          "likelihood": "low",
+          "key_features": [
+            "aortic regurgitation",
+            "aneurysmal dilatation",
+            "tall stature",
+            "long limbs"
+          ],
+          "supporting_evidence": [
+            "aortic regurgitation",
+            "aneurysmal dilatation"
+          ],
+          "refuting_evidence": [
+            "no family history of Marfan's syndrome",
+            "no mention of physical features typical of Marfan syndrome"
+          ],
+          "additional_information_needed": [
+            "genetic testing for FBN1 mutations",
+            "physical examination for Marfan features"
+          ]
+        },
+        {
+          "name": "Takayasu Arteritis",
+          "category": "Vasculitis",
+          "likelihood": "low",
+          "key_features": [
+            "aortic regurgitation",
+            "aneurysmal dilatation",
+            "systemic symptoms like fatigue"
+          ],
+          "supporting_evidence": [
+            "aortic regurgitation",
+            "aneurysmal dilatation",
+            "fatigue"
+          ],
+          "refuting_evidence": [
+            "age and gender are less typical",
+            "no systemic inflammatory symptoms"
+          ],
+          "additional_information_needed": [
+            "ESR/CRP levels",
+            "imaging studies of other arteries"
+          ]
+        },
+        {
+          "name": "Bicuspid Aortic Valve",
+          "category": "Congenital heart defect",
+          "likelihood": "medium",
+          "key_features": [
+            "aortic regurgitation",
+            "aneurysmal dilatation",
+            "family history of heart disease"
+          ],
+          "supporting_evidence": [
+            "aortic regurgitation",
+            "aneurysmal dilatation"
+          ],
+          "refuting_evidence": [
+            "no family history of heart disease"
+          ],
+          "additional_information_needed": [
+            "echocardiogram to assess valve morphology"
+          ]
+        },
+        {
+          "name": "Infective Endocarditis",
+          "category": "Infectious disease",
+          "likelihood": "low",
+          "key_features": [
+            "aortic regurgitation",
+            "history of dental procedure",
+            "fever",
+            "murmur"
+          ],
+          "supporting_evidence": [
+            "aortic regurgitation",
+            "recent dental procedure"
+          ],
+          "refuting_evidence": [
+            "no fever or systemic signs of infection"
+          ],
+          "additional_information_needed": [
+            "blood cultures",
+            "echocardiogram for vegetations"
+          ]
+        }
+      ]
+    },
+    "physical": {
+      "required": [
+        {
+          "id": "P1",
+          "content": "What were the key findings on the physical examination?",
+          "response": "A Grade 3 diastolic murmur radiated from the base of the heart down to the right sternal border; a systolic murmur was heard along the lower left sternal border; carotid pulses were hyperdynamic.",
+          "teaching_points": [
+            {
+              "id": "TP5",
+              "content": "Diastolic murmurs are often associated with aortic regurgitation, while systolic murmurs can indicate aortic stenosis or other valvular abnormalities.",
+              "covered": false
+            }
+          ],
+          "elicited": false
+        }
+      ],
+      "optional": [],
+      "current_ideal_differential_diagnosis": [
+        {
+          "name": "Syphilitic Aortitis",
+          "category": "Infectious disease",
+          "likelihood": "medium",
+          "key_features": [
+            "aortic regurgitation",
+            "aneurysmal dilatation of the ascending aorta",
+            "history of urethritis"
+          ],
+          "supporting_evidence": [
+            "aortic regurgitation",
+            "aneurysmal dilatation of the ascending aorta",
+            "history of urethritis of uncertain cause"
+          ],
+          "refuting_evidence": [
+            "no specific mention of syphilis diagnosis or treatment"
+          ],
+          "additional_information_needed": [
+            "serologic tests for syphilis (RPR, FTA-ABS)"
+          ]
+        },
+        {
+          "name": "Marfan Syndrome",
+          "category": "Genetic disorder",
+          "likelihood": "low",
+          "key_features": [
+            "aortic regurgitation",
+            "aneurysmal dilatation of the ascending aorta",
+            "tall stature",
+            "long limbs"
+          ],
+          "supporting_evidence": [
+            "aortic regurgitation",
+            "aneurysmal dilatation of the ascending aorta"
+          ],
+          "refuting_evidence": [
+            "no family history of Marfan's syndrome",
+            "no mention of physical features typical of Marfan syndrome"
+          ],
+          "additional_information_needed": [
+            "genetic testing for FBN1 mutations",
+            "assessment of physical features"
+          ]
+        },
+        {
+          "name": "Ankylosing Spondylitis",
+          "category": "Rheumatologic disorder",
+          "likelihood": "low",
+          "key_features": [
+            "aortic regurgitation",
+            "back pain",
+            "stiffness",
+            "HLA-B27 positivity"
+          ],
+          "supporting_evidence": [
+            "aortic regurgitation"
+          ],
+          "refuting_evidence": [
+            "no mention of back pain or stiffness",
+            "no family history of ankylosing spondylitis"
+          ],
+          "additional_information_needed": [
+            "HLA-B27 testing",
+            "assessment for back pain or stiffness"
+          ]
+        },
+        {
+          "name": "Takayasu Arteritis",
+          "category": "Vasculitis",
+          "likelihood": "low",
+          "key_features": [
+            "aortic regurgitation",
+            "aneurysmal changes",
+            "young age",
+            "systemic symptoms"
+          ],
+          "supporting_evidence": [
+            "aortic regurgitation",
+            "aneurysmal dilatation of the ascending aorta"
+          ],
+          "refuting_evidence": [
+            "no systemic symptoms like fever or weight loss",
+            "no mention of pulse discrepancies"
+          ],
+          "additional_information_needed": [
+            "imaging studies of other arteries",
+            "inflammatory markers like ESR or CRP"
+          ]
+        },
+        {
+          "name": "Bicuspid Aortic Valve",
+          "category": "Congenital heart defect",
+          "likelihood": "medium",
+          "key_features": [
+            "aortic regurgitation",
+            "aneurysmal dilatation of the ascending aorta",
+            "systolic murmur"
+          ],
+          "supporting_evidence": [
+            "aortic regurgitation",
+            "systolic murmur",
+            "aneurysmal dilatation of the ascending aorta"
+          ],
+          "refuting_evidence": [
+            "no mention of bicuspid aortic valve on echocardiogram"
+          ],
+          "additional_information_needed": [
+            "echocardiogram to assess valve morphology"
+          ]
+        }
+      ]
+    },
+    "testing": {
+      "required": [
+        {
+          "id": "T1",
+          "content": "What were the results of the echocardiographic study?",
+          "response": "Massive dilatation of the aortic root, probable bicuspid aortic valve, moderate aortic regurgitation, slightly enlarged left ventricle with good systolic function.",
+          "teaching_points": [
+            {
+              "id": "TP6",
+              "content": "Echocardiography is crucial for assessing valvular heart disease and aortic root dimensions.",
+              "covered": false
+            }
+          ],
+          "elicited": false
+        },
+        {
+          "id": "T2",
+          "content": "What did the MRI scan of the heart reveal?",
+          "response": "Ascending aorta was markedly enlarged, with a maximal diameter of 7.4 by 7.6 cm; no evidence of aortic dissection.",
+          "teaching_points": [
+            {
+              "id": "TP7",
+              "content": "MRI provides detailed imaging of the aorta and can help rule out dissection.",
+              "covered": false
+            }
+          ],
+          "elicited": false
+        }
+      ],
+      "optional": [],
+      "current_ideal_differential_diagnosis": [
+        {
+          "name": "Bicuspid Aortic Valve with Aortic Regurgitation and Aneurysm",
+          "category": "Congenital Heart Disease",
+          "likelihood": "high",
+          "key_features": [
+            "bicuspid aortic valve",
+            "aortic regurgitation",
+            "aortic root dilatation"
+          ],
+          "supporting_evidence": [
+            "Echocardiographic study showed probable bicuspid aortic valve",
+            "Massive dilatation of the aortic root",
+            "Moderate aortic regurgitation"
+          ],
+          "refuting_evidence": [],
+          "additional_information_needed": [
+            "Genetic testing for connective tissue disorders"
+          ]
+        },
+        {
+          "name": "Syphilitic Aortitis",
+          "category": "Infectious Disease",
+          "likelihood": "medium",
+          "key_features": [
+            "aortic aneurysm",
+            "aortic regurgitation",
+            "history of untreated syphilis"
+          ],
+          "supporting_evidence": [
+            "History of urethritis of uncertain cause",
+            "Aortic regurgitation and aneurysmal dilatation"
+          ],
+          "refuting_evidence": [
+            "No direct evidence of syphilis provided"
+          ],
+          "additional_information_needed": [
+            "Serologic tests for syphilis (RPR, FTA-ABS)"
+          ]
+        },
+        {
+          "name": "Marfan Syndrome",
+          "category": "Genetic Disorder",
+          "likelihood": "low",
+          "key_features": [
+            "aortic root dilatation",
+            "ectopia lentis",
+            "tall stature"
+          ],
+          "supporting_evidence": [
+            "Massive dilatation of the aortic root"
+          ],
+          "refuting_evidence": [
+            "No family history of Marfan's syndrome",
+            "No mention of other Marfan's features like ectopia lentis or tall stature"
+          ],
+          "additional_information_needed": [
+            "Genetic testing for FBN1 mutations",
+            "Ophthalmologic examination"
+          ]
+        },
+        {
+          "name": "Connective Tissue Disorder (e.g., Ehlers-Danlos Syndrome)",
+          "category": "Genetic Disorder",
+          "likelihood": "low",
+          "key_features": [
+            "aortic aneurysm",
+            "skin hyperextensibility",
+            "joint hypermobility"
+          ],
+          "supporting_evidence": [
+            "Aortic root dilatation"
+          ],
+          "refuting_evidence": [
+            "No mention of skin or joint abnormalities"
+          ],
+          "additional_information_needed": [
+            "Genetic testing for connective tissue disorders",
+            "Clinical evaluation for skin and joint features"
+          ]
+        },
+        {
+          "name": "Takayasu Arteritis",
+          "category": "Vasculitis",
+          "likelihood": "low",
+          "key_features": [
+            "aortic aneurysm",
+            "pulseless disease",
+            "systemic symptoms"
+          ],
+          "supporting_evidence": [
+            "Aortic aneurysm"
+          ],
+          "refuting_evidence": [
+            "No systemic symptoms or pulselessness reported"
+          ],
+          "additional_information_needed": [
+            "Inflammatory markers (ESR, CRP)",
+            "Angiography"
+          ]
+        }
+      ]
+    },
+    "management": {
+      "required": [
+        {
+          "id": "M1",
+          "content": "What initial treatment was administered?",
+          "response": "Nafcillin was administered by vein.",
+          "teaching_points": [
+            {
+              "id": "TP8",
+              "content": "Empirical antibiotic therapy may be initiated in cases of suspected endocarditis, pending culture results.",
+              "covered": false
+            }
+          ],
+          "elicited": false
+        }
+      ],
+      "optional": []
+    },
+    "discussion": {
+      "required": [],
+      "optional": []
+    }
+  },
+  "differential_diagnosis": [
+    "Aortic dissection",
+    "Infective endocarditis",
+    "Marfan's syndrome"
+  ],
+  "final_diagnosis": {
+    "name": "Aortic regurgitation with aneurysmal dilatation of the ascending aorta",
+    "category": "Cardiovascular",
+    "key_features": [
+      "Aortic regurgitation",
+      "Bicuspid aortic valve",
+      "Aneurysmal dilatation of the ascending aorta"
+    ],
+    "supporting_evidence": [
+      "Echocardiographic findings",
+      "MRI findings",
+      "Physical examination findings"
+    ],
+    "refuting_evidence": [
+      "Negative serologic test for syphilis"
+    ]
+  }
+}

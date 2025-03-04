@@ -1,0 +1,447 @@
+{
+  "metadata": {
+    "id": "case_040",
+    "title": "1991 Case 18",
+    "original_presentation": "A 70-year-old man with treated lymphoma was admitted to the hospital because of fever and weakness.",
+    "difficulty": "intermediate",
+    "specialties": [
+      "Hematology",
+      "Oncology"
+    ],
+    "keywords": [
+      "lymphoma",
+      "fever",
+      "weakness",
+      "chemotherapy",
+      "lymphadenopathy"
+    ],
+    "source": "Clinical case study",
+    "version": "1.0"
+  },
+  "clinical_elements": {
+    "history": {
+      "required": [
+        {
+          "id": "H1",
+          "content": "What is the patient's medical history related to lymphoma?",
+          "response": "The patient was diagnosed with diffuse, well-differentiated lymphocytic lymphoma 16 years ago, treated with CVP chemotherapy. He experienced recurrent lymphadenopathy and paraproteinemia.",
+          "teaching_points": [
+            {
+              "id": "TP1",
+              "content": "Lymphocytic lymphoma can have a chronic course with periods of remission and relapse.",
+              "covered": false
+            }
+          ],
+          "elicited": false
+        },
+        {
+          "id": "H2",
+          "content": "What symptoms did the patient experience leading to the current admission?",
+          "response": "The patient experienced fever, weakness, peripheral lymphadenopathy, weight loss, and recurrent pleural effusions.",
+          "teaching_points": [
+            {
+              "id": "TP2",
+              "content": "Fever and weight loss in lymphoma patients can indicate disease progression or recurrence.",
+              "covered": false
+            }
+          ],
+          "elicited": false
+        }
+      ],
+      "optional": [],
+      "current_ideal_differential_diagnosis": [
+        {
+          "name": "Lymphoma relapse",
+          "category": "Oncological",
+          "likelihood": "high",
+          "key_features": [
+            "fever",
+            "weakness",
+            "peripheral lymphadenopathy",
+            "weight loss",
+            "recurrent pleural effusions"
+          ],
+          "supporting_evidence": [
+            "history of diffuse, well-differentiated lymphocytic lymphoma",
+            "recurrent lymphadenopathy",
+            "paraproteinemia",
+            "fever",
+            "weight loss"
+          ],
+          "refuting_evidence": [],
+          "additional_information_needed": [
+            "imaging studies to assess lymphadenopathy",
+            "biopsy of lymph nodes",
+            "serum protein electrophoresis"
+          ]
+        },
+        {
+          "name": "Infection",
+          "category": "Infectious disease",
+          "likelihood": "medium",
+          "key_features": [
+            "fever",
+            "weakness",
+            "immunocompromised state due to lymphoma and chemotherapy"
+          ],
+          "supporting_evidence": [
+            "fever",
+            "weakness",
+            "history of chemotherapy which may cause immunosuppression"
+          ],
+          "refuting_evidence": [
+            "no specific infectious symptoms like cough, dysuria, or localized pain mentioned"
+          ],
+          "additional_information_needed": [
+            "blood cultures",
+            "chest X-ray",
+            "urinalysis",
+            "complete blood count with differential"
+          ]
+        },
+        {
+          "name": "Paraneoplastic syndrome",
+          "category": "Oncological",
+          "likelihood": "medium",
+          "key_features": [
+            "fever",
+            "weight loss",
+            "weakness"
+          ],
+          "supporting_evidence": [
+            "history of lymphoma",
+            "fever",
+            "weight loss"
+          ],
+          "refuting_evidence": [
+            "no specific paraneoplastic symptoms described"
+          ],
+          "additional_information_needed": [
+            "detailed neurological examination",
+            "autoimmune panel"
+          ]
+        },
+        {
+          "name": "Secondary malignancy",
+          "category": "Oncological",
+          "likelihood": "low",
+          "key_features": [
+            "fever",
+            "weight loss",
+            "weakness"
+          ],
+          "supporting_evidence": [
+            "history of lymphoma which increases risk for secondary malignancies"
+          ],
+          "refuting_evidence": [
+            "no specific symptoms or findings suggestive of a new primary cancer"
+          ],
+          "additional_information_needed": [
+            "imaging studies",
+            "tumor markers"
+          ]
+        },
+        {
+          "name": "Autoimmune disorder",
+          "category": "Rheumatological",
+          "likelihood": "low",
+          "key_features": [
+            "fever",
+            "weakness",
+            "weight loss"
+          ],
+          "supporting_evidence": [
+            "fever",
+            "weight loss"
+          ],
+          "refuting_evidence": [
+            "no specific autoimmune symptoms or history"
+          ],
+          "additional_information_needed": [
+            "autoimmune panel",
+            "rheumatological assessment"
+          ]
+        }
+      ]
+    },
+    "physical": {
+      "required": [
+        {
+          "id": "P1",
+          "content": "What were the findings on physical examination?",
+          "response": "The patient had bilateral axillary, cervical, and supraclavicular lymphadenopathy, diminished breath sounds with bilateral basal crackles, and a Grade 2 systolic murmur.",
+          "teaching_points": [
+            {
+              "id": "TP3",
+              "content": "Lymphadenopathy and respiratory findings can be indicative of lymphoma involvement and pleural effusions.",
+              "covered": false
+            }
+          ],
+          "elicited": false
+        }
+      ],
+      "optional": [],
+      "current_ideal_differential_diagnosis": [
+        {
+          "name": "Lymphoma relapse",
+          "category": "Oncological",
+          "likelihood": "high",
+          "key_features": [
+            "fever",
+            "weakness",
+            "lymphadenopathy",
+            "weight loss",
+            "recurrent pleural effusions"
+          ],
+          "supporting_evidence": [
+            "history of diffuse, well-differentiated lymphocytic lymphoma",
+            "recurrent lymphadenopathy",
+            "fever and weakness",
+            "weight loss",
+            "peripheral lymphadenopathy"
+          ],
+          "refuting_evidence": [],
+          "additional_information_needed": [
+            "biopsy of lymph nodes",
+            "imaging studies to assess extent of disease"
+          ]
+        },
+        {
+          "name": "Infectious process (e.g., bacterial or viral infection)",
+          "category": "Infectious disease",
+          "likelihood": "medium",
+          "key_features": [
+            "fever",
+            "weakness",
+            "lymphadenopathy",
+            "diminished breath sounds with crackles"
+          ],
+          "supporting_evidence": [
+            "fever and weakness",
+            "diminished breath sounds with bilateral basal crackles"
+          ],
+          "refuting_evidence": [
+            "chronicity of symptoms like weight loss and recurrent pleural effusions may be less typical for acute infection"
+          ],
+          "additional_information_needed": [
+            "blood cultures",
+            "chest X-ray or CT scan",
+            "complete blood count with differential"
+          ]
+        },
+        {
+          "name": "Paraneoplastic syndrome",
+          "category": "Oncological",
+          "likelihood": "medium",
+          "key_features": [
+            "fever",
+            "weight loss",
+            "lymphadenopathy"
+          ],
+          "supporting_evidence": [
+            "history of lymphoma",
+            "fever and weight loss"
+          ],
+          "refuting_evidence": [
+            "presence of recurrent pleural effusions and specific lymphadenopathy may suggest direct lymphoma involvement"
+          ],
+          "additional_information_needed": [
+            "serological tests for paraneoplastic antibodies",
+            "further oncological assessment"
+          ]
+        },
+        {
+          "name": "Heart failure",
+          "category": "Cardiovascular",
+          "likelihood": "low",
+          "key_features": [
+            "weakness",
+            "diminished breath sounds with crackles",
+            "systolic murmur"
+          ],
+          "supporting_evidence": [
+            "diminished breath sounds with bilateral basal crackles",
+            "Grade 2 systolic murmur"
+          ],
+          "refuting_evidence": [
+            "fever and lymphadenopathy are not typical features of heart failure",
+            "history of lymphoma and related symptoms"
+          ],
+          "additional_information_needed": [
+            "echocardiogram",
+            "BNP levels",
+            "assessment of fluid status"
+          ]
+        }
+      ]
+    },
+    "testing": {
+      "required": [
+        {
+          "id": "T1",
+          "content": "What were the key laboratory findings?",
+          "response": "Elevated white-cell count, low hematocrit, abnormal IgM levels, and elevated LDH.",
+          "teaching_points": [
+            {
+              "id": "TP4",
+              "content": "Elevated LDH and abnormal immunoglobulin levels can indicate active lymphoma.",
+              "covered": false
+            }
+          ],
+          "elicited": false
+        },
+        {
+          "id": "T2",
+          "content": "What imaging studies were performed and what did they show?",
+          "response": "CT scans showed cystic lesions in the liver, retroperitoneal lymphadenopathy, and pleural effusions.",
+          "teaching_points": [
+            {
+              "id": "TP5",
+              "content": "Imaging can help assess the extent of lymphoma involvement and guide management.",
+              "covered": false
+            }
+          ],
+          "elicited": false
+        }
+      ],
+      "optional": [],
+      "current_ideal_differential_diagnosis": [
+        {
+          "name": "Relapse of Lymphoma",
+          "category": "Oncological",
+          "likelihood": "high",
+          "key_features": [
+            "lymphadenopathy",
+            "fever",
+            "weight loss",
+            "elevated LDH"
+          ],
+          "supporting_evidence": [
+            "history of lymphoma",
+            "recurrent lymphadenopathy",
+            "elevated LDH",
+            "weight loss",
+            "fever"
+          ],
+          "refuting_evidence": [],
+          "additional_information_needed": [
+            "biopsy of lymph nodes",
+            "flow cytometry"
+          ]
+        },
+        {
+          "name": "Infection",
+          "category": "Infectious Disease",
+          "likelihood": "medium",
+          "key_features": [
+            "fever",
+            "elevated white-cell count",
+            "weakness"
+          ],
+          "supporting_evidence": [
+            "fever",
+            "elevated white-cell count",
+            "weakness"
+          ],
+          "refuting_evidence": [
+            "chronicity of symptoms",
+            "presence of lymphadenopathy and pleural effusions more suggestive of malignancy"
+          ],
+          "additional_information_needed": [
+            "blood cultures",
+            "chest X-ray",
+            "sputum culture"
+          ]
+        },
+        {
+          "name": "Waldenström's Macroglobulinemia",
+          "category": "Hematological",
+          "likelihood": "medium",
+          "key_features": [
+            "IgM paraproteinemia",
+            "lymphadenopathy",
+            "anemia"
+          ],
+          "supporting_evidence": [
+            "abnormal IgM levels",
+            "lymphadenopathy",
+            "low hematocrit"
+          ],
+          "refuting_evidence": [
+            "lack of hyperviscosity symptoms",
+            "no mention of retinal changes or neurological symptoms"
+          ],
+          "additional_information_needed": [
+            "serum protein electrophoresis",
+            "bone marrow biopsy"
+          ]
+        },
+        {
+          "name": "Chronic Lymphocytic Leukemia (CLL)",
+          "category": "Hematological",
+          "likelihood": "low",
+          "key_features": [
+            "lymphadenopathy",
+            "elevated white-cell count",
+            "anemia"
+          ],
+          "supporting_evidence": [
+            "lymphadenopathy",
+            "elevated white-cell count",
+            "low hematocrit"
+          ],
+          "refuting_evidence": [
+            "history of different lymphoma type",
+            "lack of specific CLL markers"
+          ],
+          "additional_information_needed": [
+            "peripheral blood smear",
+            "flow cytometry"
+          ]
+        }
+      ]
+    },
+    "management": {
+      "required": [
+        {
+          "id": "M1",
+          "content": "What treatments were administered during this admission?",
+          "response": "The patient received doxorubicin, etoposide, prednisone, cefazolin, gentamicin, and supportive care including fluids and erythropoietin.",
+          "teaching_points": [
+            {
+              "id": "TP6",
+              "content": "Combination chemotherapy and supportive care are crucial in managing lymphoma exacerbations.",
+              "covered": false
+            }
+          ],
+          "elicited": false
+        }
+      ],
+      "optional": []
+    },
+    "discussion": {
+      "required": [],
+      "optional": []
+    }
+  },
+  "differential_diagnosis": [
+    "Recurrent lymphoma",
+    "Infection",
+    "Paraneoplastic syndrome"
+  ],
+  "final_diagnosis": {
+    "name": "Recurrent lymphoma with systemic symptoms",
+    "category": "Hematologic malignancy",
+    "key_features": [
+      "Recurrent lymphadenopathy",
+      "Elevated IgM",
+      "Pleural effusions"
+    ],
+    "supporting_evidence": [
+      "CT findings of lymphadenopathy",
+      "Elevated white-cell count",
+      "Biopsy showing lymphoma cells"
+    ],
+    "refuting_evidence": []
+  }
+}

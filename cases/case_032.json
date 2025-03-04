@@ -1,0 +1,438 @@
+{
+  "metadata": {
+    "id": "case_032",
+    "title": "1983 Case 45",
+    "original_presentation": "A 31-year-old man was admitted to the hospital because of chest pain and a mass in the anterior thoracic wall.",
+    "difficulty": "intermediate",
+    "specialties": [
+      "Pulmonology",
+      "Oncology",
+      "Internal Medicine"
+    ],
+    "keywords": [
+      "chest pain",
+      "thoracic mass",
+      "pleurisy",
+      "fibrositis"
+    ],
+    "source": "Clinical case study",
+    "version": "1.0"
+  },
+  "clinical_elements": {
+    "history": {
+      "required": [
+        {
+          "id": "H1",
+          "content": "What is the patient's history of present illness?",
+          "response": "The patient experienced left anterior chest pain 3 1/2 months ago, was diagnosed with pleurisy, and prescribed ibuprofen. He later developed night sweats, chills, feverish sensation, and a mass in the left anterior chest wall.",
+          "teaching_points": [
+            {
+              "id": "TP1",
+              "content": "Pleurisy can present with chest pain and may be associated with other systemic symptoms.",
+              "covered": false
+            }
+          ],
+          "elicited": false
+        },
+        {
+          "id": "H2",
+          "content": "What is the patient's past medical and social history?",
+          "response": "The patient worked cleaning boiler rooms, smoked two packs of cigarettes daily for 10 years, drank alcohol in moderation, and smoked marijuana. He has a family history of malignant tumors.",
+          "teaching_points": [
+            {
+              "id": "TP2",
+              "content": "Occupational exposure and smoking history are important risk factors for respiratory and systemic diseases.",
+              "covered": false
+            }
+          ],
+          "elicited": false
+        }
+      ],
+      "optional": [],
+      "current_ideal_differential_diagnosis": [
+        {
+          "name": "Lung Cancer with Chest Wall Involvement",
+          "category": "Oncological",
+          "likelihood": "high",
+          "key_features": [
+            "chest pain",
+            "mass in anterior thoracic wall",
+            "history of smoking",
+            "family history of malignant tumors"
+          ],
+          "supporting_evidence": [
+            "chest pain",
+            "mass in anterior thoracic wall",
+            "history of heavy smoking",
+            "family history of malignant tumors"
+          ],
+          "refuting_evidence": [
+            "none at this point"
+          ],
+          "additional_information_needed": [
+            "chest X-ray or CT scan",
+            "biopsy of the mass",
+            "smoking history details"
+          ]
+        },
+        {
+          "name": "Tuberculosis",
+          "category": "Infectious",
+          "likelihood": "medium",
+          "key_features": [
+            "night sweats",
+            "chills",
+            "feverish sensation",
+            "chest pain"
+          ],
+          "supporting_evidence": [
+            "night sweats",
+            "chills",
+            "feverish sensation",
+            "chest pain"
+          ],
+          "refuting_evidence": [
+            "mass in anterior thoracic wall is less typical"
+          ],
+          "additional_information_needed": [
+            "PPD skin test or IGRA",
+            "chest X-ray",
+            "sputum culture for acid-fast bacilli"
+          ]
+        },
+        {
+          "name": "Pleurisy",
+          "category": "Respiratory",
+          "likelihood": "low",
+          "key_features": [
+            "chest pain",
+            "history of pleurisy diagnosis"
+          ],
+          "supporting_evidence": [
+            "initial diagnosis of pleurisy",
+            "chest pain"
+          ],
+          "refuting_evidence": [
+            "development of mass in anterior thoracic wall",
+            "systemic symptoms like night sweats and chills"
+          ],
+          "additional_information_needed": [
+            "repeat imaging studies",
+            "evaluation of pleural fluid if present"
+          ]
+        },
+        {
+          "name": "Lymphoma",
+          "category": "Oncological",
+          "likelihood": "medium",
+          "key_features": [
+            "mass in anterior thoracic wall",
+            "night sweats",
+            "feverish sensation"
+          ],
+          "supporting_evidence": [
+            "mass in anterior thoracic wall",
+            "night sweats",
+            "feverish sensation"
+          ],
+          "refuting_evidence": [
+            "smoking history more suggestive of lung cancer"
+          ],
+          "additional_information_needed": [
+            "biopsy of the mass",
+            "CT scan of chest and abdomen",
+            "blood tests for lymphoma markers"
+          ]
+        }
+      ]
+    },
+    "physical": {
+      "required": [
+        {
+          "id": "P1",
+          "content": "What were the findings on physical examination?",
+          "response": "The patient appeared thin, with a very firm mass in the left pectoral region, diminished respiratory movement on the left side, and no rales. The rest of the examination was normal.",
+          "teaching_points": [
+            {
+              "id": "TP3",
+              "content": "Physical examination can reveal important clues such as masses and respiratory changes that guide further investigation.",
+              "covered": false
+            }
+          ],
+          "elicited": false
+        }
+      ],
+      "optional": [],
+      "current_ideal_differential_diagnosis": [
+        {
+          "name": "Pancoast tumor",
+          "category": "oncological",
+          "likelihood": "medium",
+          "key_features": [
+            "chest pain",
+            "mass in thoracic wall",
+            "history of smoking",
+            "weight loss"
+          ],
+          "supporting_evidence": [
+            "mass in the left anterior chest wall",
+            "history of heavy smoking",
+            "chest pain"
+          ],
+          "refuting_evidence": [
+            "mass location is anterior rather than apical",
+            "no mention of Horner's syndrome or arm pain"
+          ],
+          "additional_information_needed": [
+            "chest X-ray or CT scan",
+            "biopsy of the mass",
+            "evaluation for Horner's syndrome"
+          ]
+        },
+        {
+          "name": "Tuberculosis",
+          "category": "infectious",
+          "likelihood": "medium",
+          "key_features": [
+            "night sweats",
+            "fever",
+            "chest pain",
+            "mass could be a tuberculous abscess"
+          ],
+          "supporting_evidence": [
+            "night sweats",
+            "feverish sensation",
+            "chest pain"
+          ],
+          "refuting_evidence": [
+            "no cough or hemoptysis",
+            "mass is very firm rather than fluctuant"
+          ],
+          "additional_information_needed": [
+            "PPD skin test or IGRA",
+            "chest X-ray",
+            "sputum culture for acid-fast bacilli"
+          ]
+        },
+        {
+          "name": "Lung cancer",
+          "category": "oncological",
+          "likelihood": "medium",
+          "key_features": [
+            "chest pain",
+            "mass in thoracic wall",
+            "history of smoking",
+            "weight loss"
+          ],
+          "supporting_evidence": [
+            "history of heavy smoking",
+            "chest pain",
+            "family history of malignant tumors"
+          ],
+          "refuting_evidence": [
+            "mass is in the chest wall rather than lung parenchyma"
+          ],
+          "additional_information_needed": [
+            "chest CT scan",
+            "biopsy of the mass",
+            "tumor markers"
+          ]
+        },
+        {
+          "name": "Chest wall sarcoma",
+          "category": "oncological",
+          "likelihood": "medium",
+          "key_features": [
+            "firm mass in chest wall",
+            "chest pain",
+            "weight loss"
+          ],
+          "supporting_evidence": [
+            "very firm mass in the left pectoral region",
+            "chest pain"
+          ],
+          "refuting_evidence": [
+            "no specific refuting evidence"
+          ],
+          "additional_information_needed": [
+            "biopsy of the mass",
+            "imaging studies to assess local invasion"
+          ]
+        },
+        {
+          "name": "Chronic pleuritis with effusion",
+          "category": "inflammatory",
+          "likelihood": "low",
+          "key_features": [
+            "chest pain",
+            "pleuritic symptoms",
+            "mass could be an effusion"
+          ],
+          "supporting_evidence": [
+            "initial diagnosis of pleurisy",
+            "chest pain"
+          ],
+          "refuting_evidence": [
+            "very firm mass rather than fluid collection",
+            "no rales or signs of effusion"
+          ],
+          "additional_information_needed": [
+            "chest ultrasound or CT scan",
+            "pleural fluid analysis if effusion is present"
+          ]
+        }
+      ]
+    },
+    "testing": {
+      "required": [
+        {
+          "id": "T1",
+          "content": "What were the results of the laboratory tests and imaging studies?",
+          "response": "Hematocrit was 33.6%, WBC 13,700 with 75% neutrophils, ESR 115 mm/hr. Chest X-ray showed a density in the lingula, CT scan revealed a mass in the lingula extending into the mediastinum and thoracic wall.",
+          "teaching_points": [
+            {
+              "id": "TP4",
+              "content": "Elevated ESR and WBC can indicate inflammation or infection. Imaging studies are crucial for assessing the extent of thoracic masses.",
+              "covered": false
+            }
+          ],
+          "elicited": false
+        }
+      ],
+      "optional": [],
+      "current_ideal_differential_diagnosis": [
+        {
+          "name": "Lung cancer",
+          "category": "Oncological",
+          "likelihood": "high",
+          "key_features": [
+            "chest mass",
+            "smoking history",
+            "weight loss",
+            "night sweats",
+            "chest pain"
+          ],
+          "supporting_evidence": [
+            "mass in the anterior thoracic wall",
+            "smoking history",
+            "family history of malignant tumors",
+            "CT scan showing mass in the lingula extending into the mediastinum and thoracic wall"
+          ],
+          "refuting_evidence": [
+            "age is relatively young for typical lung cancer presentation"
+          ],
+          "additional_information_needed": [
+            "biopsy of the mass",
+            "further imaging studies to assess for metastasis",
+            "tumor markers"
+          ]
+        },
+        {
+          "name": "Tuberculosis",
+          "category": "Infectious",
+          "likelihood": "medium",
+          "key_features": [
+            "night sweats",
+            "fever",
+            "chest pain",
+            "mass in the chest wall"
+          ],
+          "supporting_evidence": [
+            "night sweats",
+            "feverish sensation",
+            "mass in the chest wall",
+            "ESR 115 mm/hr"
+          ],
+          "refuting_evidence": [
+            "absence of cough or hemoptysis",
+            "no rales on examination"
+          ],
+          "additional_information_needed": [
+            "PPD test or IGRA",
+            "sputum culture for acid-fast bacilli",
+            "biopsy of the mass for histology and culture"
+          ]
+        },
+        {
+          "name": "Lymphoma",
+          "category": "Oncological",
+          "likelihood": "medium",
+          "key_features": [
+            "chest mass",
+            "night sweats",
+            "fever",
+            "weight loss"
+          ],
+          "supporting_evidence": [
+            "mass in the anterior thoracic wall",
+            "night sweats",
+            "feverish sensation",
+            "family history of malignant tumors"
+          ],
+          "refuting_evidence": [
+            "no lymphadenopathy noted on physical examination"
+          ],
+          "additional_information_needed": [
+            "biopsy of the mass",
+            "lymph node assessment",
+            "PET scan"
+          ]
+        },
+        {
+          "name": "Pleurisy with secondary infection or abscess",
+          "category": "Infectious/Inflammatory",
+          "likelihood": "low",
+          "key_features": [
+            "chest pain",
+            "fever",
+            "mass due to abscess"
+          ],
+          "supporting_evidence": [
+            "initial diagnosis of pleurisy",
+            "feverish sensation",
+            "chest pain"
+          ],
+          "refuting_evidence": [
+            "mass extending into the mediastinum and thoracic wall is atypical for simple pleurisy",
+            "no rales on examination"
+          ],
+          "additional_information_needed": [
+            "blood cultures",
+            "biopsy or aspiration of the mass",
+            "repeat imaging to assess for abscess formation"
+          ]
+        }
+      ]
+    },
+    "management": {
+      "required": [
+        {
+          "id": "M1",
+          "content": "What management decisions were made for this patient?",
+          "response": "A diagnostic procedure was performed, and cultures of blood and urine were obtained.",
+          "teaching_points": [
+            {
+              "id": "TP5",
+              "content": "Diagnostic procedures and cultures are essential for identifying the underlying cause of complex presentations.",
+              "covered": false
+            }
+          ],
+          "elicited": false
+        }
+      ],
+      "optional": []
+    },
+    "discussion": {
+      "required": [],
+      "optional": []
+    }
+  },
+  "differential_diagnosis": [],
+  "final_diagnosis": {
+    "name": "Unknown",
+    "category": "Pending further investigation",
+    "key_features": [],
+    "supporting_evidence": [],
+    "refuting_evidence": []
+  }
+}

@@ -1,0 +1,524 @@
+{
+  "metadata": {
+    "id": "case_019",
+    "title": "1973 Case 14",
+    "original_presentation": "An 81-year-old woman was admitted to the hospital because of anemia. She was well and vigorous until three years previously, when anorexia developed after the death of her husband, with gradual loss of 30 kg in weight.",
+    "difficulty": "intermediate",
+    "specialties": [
+      "Hematology",
+      "Cardiology",
+      "Oncology"
+    ],
+    "keywords": [
+      "anemia",
+      "mediastinal mass",
+      "elderly",
+      "dyspnea",
+      "chest pain"
+    ],
+    "source": "Clinical case study",
+    "version": "1.0"
+  },
+  "clinical_elements": {
+    "history": {
+      "required": [
+        {
+          "id": "H1",
+          "content": "What is the patient's medical history and recent symptoms?",
+          "response": "The patient experienced anorexia and weight loss after her husband's death three years ago. She developed fatigue, dizziness, exertional dyspnea, and chest pain. She was prescribed iron and digoxin without benefit.",
+          "teaching_points": [
+            {
+              "id": "TP1",
+              "content": "Anorexia and significant weight loss in the elderly can be indicative of underlying medical or psychological conditions.",
+              "covered": false
+            },
+            {
+              "id": "TP2",
+              "content": "Exertional dyspnea and chest pain in an elderly patient can suggest cardiac or pulmonary issues.",
+              "covered": false
+            }
+          ],
+          "elicited": false
+        },
+        {
+          "id": "H2",
+          "content": "What treatments were attempted prior to admission?",
+          "response": "Iron and digoxin were prescribed without benefit.",
+          "teaching_points": [
+            {
+              "id": "TP3",
+              "content": "Iron supplementation is commonly used for anemia, but its effectiveness depends on the underlying cause.",
+              "covered": false
+            },
+            {
+              "id": "TP4",
+              "content": "Digoxin is used for heart conditions, but its use should be carefully monitored, especially in the elderly.",
+              "covered": false
+            }
+          ],
+          "elicited": false
+        }
+      ],
+      "optional": [],
+      "current_ideal_differential_diagnosis": [
+        {
+          "name": "Iron Deficiency Anemia",
+          "category": "Hematologic",
+          "likelihood": "medium",
+          "key_features": [
+            "anemia",
+            "fatigue",
+            "dizziness",
+            "exertional dyspnea"
+          ],
+          "supporting_evidence": [
+            "anemia",
+            "prescribed iron"
+          ],
+          "refuting_evidence": [
+            "iron supplementation without benefit"
+          ],
+          "additional_information_needed": [
+            "serum ferritin",
+            "total iron binding capacity",
+            "stool occult blood test"
+          ]
+        },
+        {
+          "name": "Chronic Disease Anemia",
+          "category": "Hematologic",
+          "likelihood": "medium",
+          "key_features": [
+            "anemia",
+            "fatigue",
+            "chronic illness"
+          ],
+          "supporting_evidence": [
+            "anemia",
+            "chronic symptoms over three years"
+          ],
+          "refuting_evidence": [
+            "none specific"
+          ],
+          "additional_information_needed": [
+            "inflammatory markers",
+            "renal function tests"
+          ]
+        },
+        {
+          "name": "Depression-related Anorexia and Weight Loss",
+          "category": "Psychiatric",
+          "likelihood": "high",
+          "key_features": [
+            "anorexia",
+            "weight loss",
+            "recent bereavement"
+          ],
+          "supporting_evidence": [
+            "anorexia and weight loss after husband's death"
+          ],
+          "refuting_evidence": [
+            "none specific"
+          ],
+          "additional_information_needed": [
+            "psychiatric evaluation",
+            "screening for depression"
+          ]
+        },
+        {
+          "name": "Cardiac-related Anemia",
+          "category": "Cardiovascular",
+          "likelihood": "medium",
+          "key_features": [
+            "chest pain",
+            "exertional dyspnea",
+            "fatigue"
+          ],
+          "supporting_evidence": [
+            "chest pain",
+            "exertional dyspnea",
+            "prescribed digoxin"
+          ],
+          "refuting_evidence": [
+            "digoxin without benefit"
+          ],
+          "additional_information_needed": [
+            "echocardiogram",
+            "BNP levels",
+            "ECG"
+          ]
+        },
+        {
+          "name": "Malignancy",
+          "category": "Oncologic",
+          "likelihood": "medium",
+          "key_features": [
+            "anorexia",
+            "weight loss",
+            "anemia"
+          ],
+          "supporting_evidence": [
+            "significant weight loss",
+            "anemia"
+          ],
+          "refuting_evidence": [
+            "none specific"
+          ],
+          "additional_information_needed": [
+            "CT scan of chest/abdomen/pelvis",
+            "tumor markers"
+          ]
+        }
+      ]
+    },
+    "physical": {
+      "required": [
+        {
+          "id": "P1",
+          "content": "What were the findings on physical examination?",
+          "response": "The patient was pale and sallow, with shotty left axillary lymph nodes, enlarged tonsils and tongue, increased jugular venous pressure, dullness at the right lung base, inspiratory rales, an enlarged heart with a Grade 3 aortic systolic ejection murmur, and absence of ankle and knee jerks.",
+          "teaching_points": [
+            {
+              "id": "TP5",
+              "content": "Pallor and sallow complexion can indicate anemia or other systemic conditions.",
+              "covered": false
+            },
+            {
+              "id": "TP6",
+              "content": "Jugular venous pressure can be a sign of heart failure or fluid overload.",
+              "covered": false
+            }
+          ],
+          "elicited": false
+        }
+      ],
+      "optional": [],
+      "current_ideal_differential_diagnosis": [
+        {
+          "name": "Iron Deficiency Anemia",
+          "category": "Hematologic",
+          "likelihood": "medium",
+          "key_features": [
+            "anemia",
+            "fatigue",
+            "pallor",
+            "weight loss"
+          ],
+          "supporting_evidence": [
+            "anemia",
+            "fatigue",
+            "pallor",
+            "weight loss"
+          ],
+          "refuting_evidence": [
+            "lack of response to iron supplementation"
+          ],
+          "additional_information_needed": [
+            "serum ferritin, iron studies"
+          ]
+        },
+        {
+          "name": "Chronic Disease Anemia",
+          "category": "Hematologic",
+          "likelihood": "medium",
+          "key_features": [
+            "anemia",
+            "chronic illness",
+            "inflammatory markers"
+          ],
+          "supporting_evidence": [
+            "anemia",
+            "chronic symptoms"
+          ],
+          "refuting_evidence": [
+            "no specific chronic inflammatory condition identified"
+          ],
+          "additional_information_needed": [
+            "inflammatory markers, detailed history of chronic conditions"
+          ]
+        },
+        {
+          "name": "Multiple Myeloma",
+          "category": "Hematologic/Oncologic",
+          "likelihood": "medium",
+          "key_features": [
+            "anemia",
+            "bone pain",
+            "renal impairment",
+            "hypercalcemia"
+          ],
+          "supporting_evidence": [
+            "anemia",
+            "enlarged tongue",
+            "shotty lymph nodes"
+          ],
+          "refuting_evidence": [
+            "absence of bone pain or renal impairment noted"
+          ],
+          "additional_information_needed": [
+            "serum protein electrophoresis, urine protein electrophoresis, skeletal survey"
+          ]
+        },
+        {
+          "name": "Amyloidosis",
+          "category": "Systemic",
+          "likelihood": "medium",
+          "key_features": [
+            "anemia",
+            "enlarged tongue",
+            "cardiac involvement",
+            "peripheral neuropathy"
+          ],
+          "supporting_evidence": [
+            "enlarged tongue",
+            "increased jugular venous pressure",
+            "absence of ankle and knee jerks"
+          ],
+          "refuting_evidence": [
+            "no direct evidence of amyloid deposits"
+          ],
+          "additional_information_needed": [
+            "tissue biopsy for amyloid, serum and urine protein electrophoresis"
+          ]
+        },
+        {
+          "name": "Heart Failure",
+          "category": "Cardiovascular",
+          "likelihood": "medium",
+          "key_features": [
+            "dyspnea",
+            "jugular venous distension",
+            "rales",
+            "enlarged heart"
+          ],
+          "supporting_evidence": [
+            "increased jugular venous pressure",
+            "inspiratory rales",
+            "enlarged heart"
+          ],
+          "refuting_evidence": [
+            "anemia as primary presentation"
+          ],
+          "additional_information_needed": [
+            "echocardiogram, BNP levels"
+          ]
+        },
+        {
+          "name": "Hypothyroidism",
+          "category": "Endocrine",
+          "likelihood": "low",
+          "key_features": [
+            "fatigue",
+            "weight gain",
+            "anemia",
+            "bradycardia"
+          ],
+          "supporting_evidence": [
+            "fatigue",
+            "anemia"
+          ],
+          "refuting_evidence": [
+            "weight loss instead of gain"
+          ],
+          "additional_information_needed": [
+            "TSH, free T4 levels"
+          ]
+        }
+      ]
+    },
+    "testing": {
+      "required": [
+        {
+          "id": "T1",
+          "content": "What were the key laboratory findings?",
+          "response": "Hematocrit was 10.5%, white-cell count 6300, reticulocyte count 0.6%, platelet count 550,000, normal haptoglobin, positive antinuclear antibody, and mild macrocytosis on blood smear.",
+          "teaching_points": [
+            {
+              "id": "TP7",
+              "content": "A low hematocrit indicates anemia, and a low reticulocyte count suggests inadequate bone marrow response.",
+              "covered": false
+            },
+            {
+              "id": "TP8",
+              "content": "Positive antinuclear antibody can be associated with autoimmune conditions.",
+              "covered": false
+            }
+          ],
+          "elicited": false
+        },
+        {
+          "id": "T2",
+          "content": "What imaging findings were noted?",
+          "response": "Chest X-ray showed a large anterior mediastinal mass, enlarged heart, elongated aorta, and pulmonary vascular congestion.",
+          "teaching_points": [
+            {
+              "id": "TP9",
+              "content": "Mediastinal masses can be due to various causes, including lymphomas, thymomas, or other tumors.",
+              "covered": false
+            },
+            {
+              "id": "TP10",
+              "content": "Cardiomegaly and pulmonary congestion can indicate heart failure.",
+              "covered": false
+            }
+          ],
+          "elicited": false
+        }
+      ],
+      "optional": [],
+      "current_ideal_differential_diagnosis": [
+        {
+          "name": "Anemia of chronic disease",
+          "category": "Hematologic",
+          "likelihood": "medium",
+          "key_features": [
+            "anemia with low reticulocyte count",
+            "chronic illness or inflammation"
+          ],
+          "supporting_evidence": [
+            "anemia with low reticulocyte count",
+            "positive antinuclear antibody"
+          ],
+          "refuting_evidence": [
+            "no clear chronic inflammatory condition identified"
+          ],
+          "additional_information_needed": [
+            "further evaluation for chronic inflammatory or neoplastic conditions"
+          ]
+        },
+        {
+          "name": "Myelodysplastic syndrome",
+          "category": "Hematologic",
+          "likelihood": "medium",
+          "key_features": [
+            "macrocytic anemia",
+            "low reticulocyte count",
+            "elderly patient"
+          ],
+          "supporting_evidence": [
+            "mild macrocytosis",
+            "low reticulocyte count",
+            "age of patient"
+          ],
+          "refuting_evidence": [
+            "normal haptoglobin",
+            "no mention of dysplastic changes on blood smear"
+          ],
+          "additional_information_needed": [
+            "bone marrow biopsy"
+          ]
+        },
+        {
+          "name": "Lymphoma",
+          "category": "Oncologic",
+          "likelihood": "high",
+          "key_features": [
+            "mediastinal mass",
+            "lymphadenopathy",
+            "systemic symptoms"
+          ],
+          "supporting_evidence": [
+            "large anterior mediastinal mass",
+            "shotty left axillary lymph nodes",
+            "enlarged tonsils"
+          ],
+          "refuting_evidence": [
+            "absence of B symptoms like fever, night sweats, or significant weight loss recently"
+          ],
+          "additional_information_needed": [
+            "biopsy of mediastinal mass or lymph nodes"
+          ]
+        },
+        {
+          "name": "Amyloidosis",
+          "category": "Metabolic",
+          "likelihood": "medium",
+          "key_features": [
+            "macroglossia",
+            "cardiac involvement",
+            "peripheral neuropathy"
+          ],
+          "supporting_evidence": [
+            "enlarged tongue",
+            "enlarged heart",
+            "absence of ankle and knee jerks"
+          ],
+          "refuting_evidence": [
+            "no mention of proteinuria or other systemic involvement"
+          ],
+          "additional_information_needed": [
+            "serum and urine protein electrophoresis",
+            "biopsy of affected tissue"
+          ]
+        },
+        {
+          "name": "Hypothyroidism",
+          "category": "Endocrine",
+          "likelihood": "low",
+          "key_features": [
+            "fatigue",
+            "macrocytic anemia",
+            "bradycardia"
+          ],
+          "supporting_evidence": [
+            "fatigue",
+            "macrocytosis"
+          ],
+          "refuting_evidence": [
+            "no mention of other classic symptoms like cold intolerance or constipation"
+          ],
+          "additional_information_needed": [
+            "thyroid function tests"
+          ]
+        }
+      ]
+    },
+    "management": {
+      "required": [
+        {
+          "id": "M1",
+          "content": "What treatments were administered during the hospital stay?",
+          "response": "The patient received transfusions of packed red cells, fluoxymesterone, prednisone, cyclophosphamide, ampicillin for pneumonia, and tetracycline for a urinary tract infection.",
+          "teaching_points": [
+            {
+              "id": "TP11",
+              "content": "Blood transfusions are used to manage severe anemia and improve oxygen delivery.",
+              "covered": false
+            },
+            {
+              "id": "TP12",
+              "content": "Immunosuppressive therapy may be used in cases of suspected autoimmune anemia.",
+              "covered": false
+            }
+          ],
+          "elicited": false
+        }
+      ],
+      "optional": []
+    },
+    "discussion": {
+      "required": [],
+      "optional": []
+    }
+  },
+  "differential_diagnosis": [
+    "Anemia of chronic disease",
+    "Myelodysplastic syndrome",
+    "Thymoma",
+    "Lymphoma"
+  ],
+  "final_diagnosis": {
+    "name": "Anemia with mediastinal mass",
+    "category": "Hematologic/Oncologic",
+    "key_features": [
+      "Severe anemia",
+      "Mediastinal mass",
+      "Positive antinuclear antibody"
+    ],
+    "supporting_evidence": [
+      "Low hematocrit and reticulocyte count",
+      "Large anterior mediastinal mass on imaging"
+    ],
+    "refuting_evidence": []
+  }
+}

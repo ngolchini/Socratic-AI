@@ -1,0 +1,371 @@
+{
+  "metadata": {
+    "id": "case_025",
+    "title": "2010 Case 34",
+    "original_presentation": "A 65-year-old woman was admitted to the day-surgery unit at this hospital for release of a trigger finger of the left ring finger.",
+    "difficulty": "intermediate",
+    "specialties": [
+      "Orthopedics",
+      "Surgery"
+    ],
+    "keywords": [
+      "trigger finger",
+      "stenosing tenosynovitis",
+      "surgical error"
+    ],
+    "source": "hospital case",
+    "version": "1.0"
+  },
+  "clinical_elements": {
+    "history": {
+      "required": [
+        {
+          "id": "H1",
+          "content": "What symptoms did the patient experience with her left ring finger?",
+          "response": "The patient experienced pain, stiffness, and intermittent locking in flexion of the left ring finger.",
+          "teaching_points": [
+            {
+              "id": "TP1",
+              "content": "Trigger finger is characterized by pain and a catching or locking sensation in the affected finger.",
+              "covered": false
+            }
+          ],
+          "elicited": false
+        },
+        {
+          "id": "H2",
+          "content": "What is the patient's past medical history?",
+          "response": "The patient has a history of coronary-artery and carotid-artery atherosclerosis, hypertension, diabetes mellitus, hyperlipidemia, and hypothyroidism.",
+          "teaching_points": [
+            {
+              "id": "TP2",
+              "content": "Chronic conditions such as diabetes and hypothyroidism can contribute to the development of trigger finger.",
+              "covered": false
+            }
+          ],
+          "elicited": false
+        },
+        {
+          "id": "H3",
+          "content": "What medications is the patient currently taking?",
+          "response": "The patient is taking nitroglycerin and nitrate preparations, metformin, levothyroxine, simvastatin, acetylsalicylic acid, and vitamins.",
+          "teaching_points": [
+            {
+              "id": "TP3",
+              "content": "Medication history is important to assess potential interactions and contraindications for surgery.",
+              "covered": false
+            }
+          ],
+          "elicited": false
+        },
+        {
+          "id": "H4",
+          "content": "What is the patient's social history?",
+          "response": "The patient was born in a Caribbean country, speaks only Spanish, lives with her son, and does not smoke, drink alcohol, or use illicit drugs.",
+          "teaching_points": [
+            {
+              "id": "TP4",
+              "content": "Social history, including language and living situation, can impact patient care and communication.",
+              "covered": false
+            }
+          ],
+          "elicited": false
+        }
+      ],
+      "optional": [],
+      "current_ideal_differential_diagnosis": [
+        {
+          "name": "Trigger Finger (Stenosing Tenosynovitis)",
+          "category": "Musculoskeletal",
+          "likelihood": "high",
+          "key_features": [
+            "pain in the affected finger",
+            "stiffness",
+            "intermittent locking in flexion"
+          ],
+          "supporting_evidence": [
+            "patient experienced pain, stiffness, and intermittent locking in flexion of the left ring finger"
+          ],
+          "refuting_evidence": [],
+          "additional_information_needed": [
+            "physical examination findings",
+            "response to conservative treatments if any"
+          ]
+        },
+        {
+          "name": "Diabetic Hand Syndrome",
+          "category": "Endocrine/Metabolic",
+          "likelihood": "medium",
+          "key_features": [
+            "limited joint mobility",
+            "thickening of skin",
+            "flexor tenosynovitis"
+          ],
+          "supporting_evidence": [
+            "patient has diabetes mellitus",
+            "symptoms in the hand"
+          ],
+          "refuting_evidence": [
+            "specific mention of trigger finger symptoms rather than generalized hand stiffness"
+          ],
+          "additional_information_needed": [
+            "examination of other hand joints",
+            "assessment of skin changes"
+          ]
+        },
+        {
+          "name": "Rheumatoid Arthritis",
+          "category": "Rheumatologic",
+          "likelihood": "low",
+          "key_features": [
+            "joint pain",
+            "morning stiffness",
+            "symmetric joint involvement"
+          ],
+          "supporting_evidence": [
+            "stiffness in the finger"
+          ],
+          "refuting_evidence": [
+            "lack of mention of other joint involvement",
+            "no mention of systemic symptoms"
+          ],
+          "additional_information_needed": [
+            "rheumatoid factor and anti-CCP antibody tests",
+            "X-rays of hands"
+          ]
+        },
+        {
+          "name": "Osteoarthritis",
+          "category": "Musculoskeletal",
+          "likelihood": "low",
+          "key_features": [
+            "joint pain",
+            "stiffness",
+            "bony enlargements"
+          ],
+          "supporting_evidence": [
+            "age of the patient",
+            "stiffness in the finger"
+          ],
+          "refuting_evidence": [
+            "intermittent locking is more characteristic of trigger finger"
+          ],
+          "additional_information_needed": [
+            "X-ray of the affected finger",
+            "examination for Heberden's or Bouchard's nodes"
+          ]
+        }
+      ]
+    },
+    "physical": {
+      "required": [
+        {
+          "id": "P1",
+          "content": "What were the findings on physical examination of the left ring finger?",
+          "response": "There was tenderness in the palm at the base of the left ring finger over the A1 pulley, a slight flexion contracture of the proximal interphalangeal joint, and snapping with flexion and extension.",
+          "teaching_points": [
+            {
+              "id": "TP5",
+              "content": "Physical examination can confirm the diagnosis of trigger finger by identifying tenderness and snapping.",
+              "covered": false
+            }
+          ],
+          "elicited": false
+        }
+      ],
+      "optional": [],
+      "current_ideal_differential_diagnosis": [
+        {
+          "name": "Trigger Finger (Stenosing Tenosynovitis)",
+          "category": "Musculoskeletal disorder",
+          "likelihood": "high",
+          "key_features": [
+            "pain and stiffness in the finger",
+            "intermittent locking in flexion",
+            "tenderness over A1 pulley",
+            "snapping with flexion and extension"
+          ],
+          "supporting_evidence": [
+            "pain, stiffness, and intermittent locking in flexion of the left ring finger",
+            "tenderness in the palm at the base of the left ring finger over the A1 pulley",
+            "slight flexion contracture of the proximal interphalangeal joint",
+            "snapping with flexion and extension"
+          ],
+          "refuting_evidence": [],
+          "additional_information_needed": [
+            "None, diagnosis is consistent with clinical presentation"
+          ]
+        },
+        {
+          "name": "Diabetic Hand Syndrome",
+          "category": "Endocrine-related musculoskeletal disorder",
+          "likelihood": "medium",
+          "key_features": [
+            "limited joint mobility",
+            "flexion contractures",
+            "association with diabetes"
+          ],
+          "supporting_evidence": [
+            "history of diabetes mellitus",
+            "slight flexion contracture of the proximal interphalangeal joint"
+          ],
+          "refuting_evidence": [
+            "specific tenderness over A1 pulley and snapping suggest trigger finger more strongly"
+          ],
+          "additional_information_needed": [
+            "Assessment of other hand joints for limited mobility"
+          ]
+        },
+        {
+          "name": "Dupuytren's Contracture",
+          "category": "Connective tissue disorder",
+          "likelihood": "low",
+          "key_features": [
+            "nodular thickening of the palmar fascia",
+            "flexion contractures of the fingers"
+          ],
+          "supporting_evidence": [
+            "slight flexion contracture of the proximal interphalangeal joint"
+          ],
+          "refuting_evidence": [
+            "no mention of nodular thickening or palmar fascia involvement",
+            "snapping and locking are more characteristic of trigger finger"
+          ],
+          "additional_information_needed": [
+            "Examination for palmar nodules or thickening"
+          ]
+        }
+      ]
+    },
+    "testing": {
+      "required": [],
+      "optional": [],
+      "current_ideal_differential_diagnosis": [
+        {
+          "name": "Trigger Finger (Stenosing Tenosynovitis)",
+          "category": "Musculoskeletal disorder",
+          "likelihood": "high",
+          "key_features": [
+            "pain and stiffness in the finger",
+            "intermittent locking in flexion",
+            "tenderness over A1 pulley",
+            "snapping with flexion and extension"
+          ],
+          "supporting_evidence": [
+            "pain, stiffness, and intermittent locking in flexion of the left ring finger",
+            "tenderness in the palm at the base of the left ring finger over the A1 pulley",
+            "snapping with flexion and extension"
+          ],
+          "refuting_evidence": [],
+          "additional_information_needed": [
+            "None, diagnosis is consistent with clinical presentation"
+          ]
+        },
+        {
+          "name": "Diabetic Hand Syndrome",
+          "category": "Endocrine-related musculoskeletal disorder",
+          "likelihood": "medium",
+          "key_features": [
+            "limited joint mobility",
+            "flexion contractures",
+            "association with diabetes"
+          ],
+          "supporting_evidence": [
+            "history of diabetes mellitus",
+            "slight flexion contracture of the proximal interphalangeal joint"
+          ],
+          "refuting_evidence": [
+            "specific symptoms and findings are more consistent with trigger finger"
+          ],
+          "additional_information_needed": [
+            "Assessment of other hand joints for limited mobility or contractures"
+          ]
+        },
+        {
+          "name": "Rheumatoid Arthritis",
+          "category": "Autoimmune disorder",
+          "likelihood": "low",
+          "key_features": [
+            "joint pain and stiffness",
+            "swelling",
+            "morning stiffness"
+          ],
+          "supporting_evidence": [
+            "pain and stiffness in the finger"
+          ],
+          "refuting_evidence": [
+            "lack of swelling or systemic symptoms",
+            "no mention of morning stiffness"
+          ],
+          "additional_information_needed": [
+            "Rheumatoid factor and anti-CCP antibody tests",
+            "evaluation for other joint involvement"
+          ]
+        }
+      ]
+    },
+    "management": {
+      "required": [
+        {
+          "id": "M1",
+          "content": "What initial treatment was attempted for the trigger finger?",
+          "response": "The patient elected a trial of dexamethasone, which was injected locally.",
+          "teaching_points": [
+            {
+              "id": "TP6",
+              "content": "Corticosteroid injections are a common non-surgical treatment for trigger finger.",
+              "covered": false
+            }
+          ],
+          "elicited": false
+        },
+        {
+          "id": "M2",
+          "content": "What was the outcome of the initial treatment?",
+          "response": "At follow-up 8 weeks later, the patient reported no improvement in the joint symptoms.",
+          "teaching_points": [
+            {
+              "id": "TP7",
+              "content": "Lack of improvement after corticosteroid injection may necessitate surgical intervention.",
+              "covered": false
+            }
+          ],
+          "elicited": false
+        },
+        {
+          "id": "M3",
+          "content": "What surgical procedure was planned and what was performed?",
+          "response": "The planned procedure was trigger finger release, but carpal-tunnel-release surgery was performed instead.",
+          "teaching_points": [
+            {
+              "id": "TP8",
+              "content": "Surgical errors can occur, highlighting the importance of pre-operative verification processes.",
+              "covered": false
+            }
+          ],
+          "elicited": false
+        }
+      ],
+      "optional": []
+    },
+    "discussion": {
+      "required": [],
+      "optional": []
+    }
+  },
+  "differential_diagnosis": [],
+  "final_diagnosis": {
+    "name": "Idiopathic Trigger Finger (Stenosing Tenosynovitis)",
+    "category": "Musculoskeletal",
+    "key_features": [
+      "Pain and stiffness in the finger",
+      "Intermittent locking in flexion",
+      "Tenderness over the A1 pulley"
+    ],
+    "supporting_evidence": [
+      "Physical examination findings",
+      "Lack of improvement with corticosteroid injection"
+    ],
+    "refuting_evidence": []
+  }
+}

@@ -1,0 +1,415 @@
+{
+  "metadata": {
+    "id": "case_043",
+    "title": "1976 Case 32",
+    "original_presentation": "A 52-year-old woman was admitted to the hospital because of collapse of the left lung.",
+    "difficulty": "intermediate",
+    "specialties": [
+      "pulmonology",
+      "internal medicine"
+    ],
+    "keywords": [
+      "lung collapse",
+      "asthma",
+      "tuberculosis",
+      "bronchial obstruction"
+    ],
+    "source": "clinical case study",
+    "version": "1.0"
+  },
+  "clinical_elements": {
+    "history": {
+      "required": [
+        {
+          "id": "H1",
+          "content": "What is the patient's past medical history?",
+          "response": "The patient had mild episodes of wheezing 15 years ago, arthritis in the hips and knees 3 years ago, and severe wheezing 2 years ago. She had episodes of fever and sweats 14 months ago, and a sputum culture showed tubercle bacilli 12 months ago.",
+          "teaching_points": [
+            {
+              "id": "TP1",
+              "content": "A history of wheezing and arthritis can suggest underlying systemic conditions. Tuberculosis should be considered in patients with respiratory symptoms and a history of exposure.",
+              "covered": false
+            }
+          ],
+          "elicited": false
+        },
+        {
+          "id": "H2",
+          "content": "What treatments has the patient received?",
+          "response": "The patient received adrenocorticosteroid therapy for arthritis, and ethambutol and isoniazid for tuberculosis.",
+          "teaching_points": [
+            {
+              "id": "TP2",
+              "content": "Adrenocorticosteroids are used for inflammatory conditions, but long-term use can have side effects. Ethambutol and isoniazid are first-line treatments for tuberculosis.",
+              "covered": false
+            }
+          ],
+          "elicited": false
+        },
+        {
+          "id": "H3",
+          "content": "What is the patient's family history?",
+          "response": "A brother died as a result of tuberculosis 30 years earlier.",
+          "teaching_points": [
+            {
+              "id": "TP3",
+              "content": "Family history of tuberculosis can increase suspicion for the disease in patients with compatible symptoms.",
+              "covered": false
+            }
+          ],
+          "elicited": false
+        }
+      ],
+      "optional": [],
+      "current_ideal_differential_diagnosis": [
+        {
+          "name": "Tuberculosis (TB) reactivation or complication",
+          "category": "Infectious disease",
+          "likelihood": "high",
+          "key_features": [
+            "lung collapse",
+            "history of TB",
+            "fever and sweats",
+            "positive sputum culture for tubercle bacilli"
+          ],
+          "supporting_evidence": [
+            "History of tuberculosis with positive sputum culture 12 months ago",
+            "Family history of tuberculosis",
+            "Collapse of the left lung could be due to TB-related complications such as bronchial obstruction or pleural effusion"
+          ],
+          "refuting_evidence": [],
+          "additional_information_needed": [
+            "Current chest X-ray or CT scan to assess for active TB or complications",
+            "Sputum culture and sensitivity to check for active TB"
+          ]
+        },
+        {
+          "name": "Bronchogenic carcinoma",
+          "category": "Oncological disease",
+          "likelihood": "medium",
+          "key_features": [
+            "lung collapse",
+            "history of smoking or exposure",
+            "weight loss",
+            "cough"
+          ],
+          "supporting_evidence": [
+            "Collapse of the lung could be due to a mass obstructing the bronchus"
+          ],
+          "refuting_evidence": [
+            "No mention of smoking history or significant weight loss"
+          ],
+          "additional_information_needed": [
+            "Chest imaging to look for masses or lesions",
+            "Biopsy if a mass is found"
+          ]
+        },
+        {
+          "name": "Pulmonary embolism",
+          "category": "Vascular disease",
+          "likelihood": "low",
+          "key_features": [
+            "sudden onset of symptoms",
+            "pleuritic chest pain",
+            "dyspnea"
+          ],
+          "supporting_evidence": [
+            "Sudden collapse of the lung could be due to vascular obstruction"
+          ],
+          "refuting_evidence": [
+            "No mention of risk factors such as recent surgery, immobility, or history of DVT/PE",
+            "No mention of pleuritic chest pain or acute dyspnea"
+          ],
+          "additional_information_needed": [
+            "D-dimer test",
+            "CT pulmonary angiography"
+          ]
+        },
+        {
+          "name": "Pneumothorax",
+          "category": "Respiratory disease",
+          "likelihood": "low",
+          "key_features": [
+            "sudden chest pain",
+            "dyspnea",
+            "hyperresonance on percussion"
+          ],
+          "supporting_evidence": [
+            "Collapse of the lung could be due to pneumothorax"
+          ],
+          "refuting_evidence": [
+            "No mention of sudden chest pain or dyspnea",
+            "No physical exam findings suggestive of pneumothorax"
+          ],
+          "additional_information_needed": [
+            "Chest X-ray to confirm presence of pneumothorax"
+          ]
+        }
+      ]
+    },
+    "physical": {
+      "required": [
+        {
+          "id": "P1",
+          "content": "What were the findings on physical examination?",
+          "response": "The patient appeared obese and slightly dyspneic at rest. The left hemithorax was dull with distant bronchial breath sounds, and the right side was hyperresonant with normal breath sounds.",
+          "teaching_points": [
+            {
+              "id": "TP4",
+              "content": "Physical examination can reveal signs of lung collapse, such as dullness to percussion and altered breath sounds.",
+              "covered": false
+            }
+          ],
+          "elicited": false
+        }
+      ],
+      "optional": [],
+      "current_ideal_differential_diagnosis": [
+        {
+          "name": "Tuberculosis (TB) reactivation or complication",
+          "category": "Infectious disease",
+          "likelihood": "high",
+          "key_features": [
+            "history of TB",
+            "collapse of the lung",
+            "fever and sweats",
+            "sputum culture positive for tubercle bacilli"
+          ],
+          "supporting_evidence": [
+            "history of TB with positive sputum culture 12 months ago",
+            "collapse of the left lung",
+            "family history of TB"
+          ],
+          "refuting_evidence": [],
+          "additional_information_needed": [
+            "current sputum culture",
+            "chest X-ray or CT scan",
+            "TB skin test or IGRA"
+          ]
+        },
+        {
+          "name": "Pulmonary embolism",
+          "category": "Vascular disease",
+          "likelihood": "medium",
+          "key_features": [
+            "sudden respiratory symptoms",
+            "obesity as a risk factor",
+            "dyspnea"
+          ],
+          "supporting_evidence": [
+            "sudden collapse of the lung",
+            "obesity and dyspnea at rest"
+          ],
+          "refuting_evidence": [
+            "no mention of leg swelling or pain",
+            "no history of recent immobility or surgery"
+          ],
+          "additional_information_needed": [
+            "D-dimer test",
+            "CT pulmonary angiography"
+          ]
+        },
+        {
+          "name": "Pneumothorax",
+          "category": "Respiratory disease",
+          "likelihood": "medium",
+          "key_features": [
+            "sudden onset of dyspnea",
+            "hyperresonance on one side",
+            "distant breath sounds"
+          ],
+          "supporting_evidence": [
+            "hyperresonance on the right side",
+            "distant breath sounds on the left"
+          ],
+          "refuting_evidence": [
+            "no history of trauma or underlying lung disease typically associated with pneumothorax"
+          ],
+          "additional_information_needed": [
+            "chest X-ray",
+            "history of any recent trauma or vigorous activity"
+          ]
+        },
+        {
+          "name": "Chronic obstructive pulmonary disease (COPD) exacerbation",
+          "category": "Respiratory disease",
+          "likelihood": "low",
+          "key_features": [
+            "history of wheezing",
+            "dyspnea",
+            "obesity"
+          ],
+          "supporting_evidence": [
+            "history of wheezing episodes"
+          ],
+          "refuting_evidence": [
+            "no chronic smoking history mentioned",
+            "sudden collapse of the lung is atypical for COPD"
+          ],
+          "additional_information_needed": [
+            "spirometry",
+            "smoking history"
+          ]
+        }
+      ]
+    },
+    "testing": {
+      "required": [
+        {
+          "id": "T1",
+          "content": "What were the results of the chest x-ray and tomographic examination?",
+          "response": "The chest x-ray showed almost complete collapse of the left lung and platelike atelectasis in the right-middle-lung field. Tomographic examination showed complete fusiform occlusion of the left main-stem bronchus.",
+          "teaching_points": [
+            {
+              "id": "TP5",
+              "content": "Imaging studies are crucial in diagnosing lung collapse and identifying the cause, such as bronchial obstruction.",
+              "covered": false
+            }
+          ],
+          "elicited": false
+        },
+        {
+          "id": "T2",
+          "content": "What were the findings from the bronchoscopic examination?",
+          "response": "Bronchoscopy revealed complete occlusion of the left main-stem bronchus by apparent extrinsic compression and a white, firm lesion in the right bronchus intermedius.",
+          "teaching_points": [
+            {
+              "id": "TP6",
+              "content": "Bronchoscopy allows direct visualization of the airways and can help identify obstructions or lesions.",
+              "covered": false
+            }
+          ],
+          "elicited": false
+        }
+      ],
+      "optional": [],
+      "current_ideal_differential_diagnosis": [
+        {
+          "name": "Bronchogenic carcinoma",
+          "category": "Oncological",
+          "likelihood": "high",
+          "key_features": [
+            "lung collapse",
+            "bronchial obstruction",
+            "extrinsic compression",
+            "firm lesion in bronchus"
+          ],
+          "supporting_evidence": [
+            "complete occlusion of the left main-stem bronchus",
+            "white, firm lesion in the right bronchus intermedius",
+            "history of smoking is not mentioned but age and presentation are suggestive"
+          ],
+          "refuting_evidence": [
+            "no direct evidence of malignancy from biopsy or cytology yet"
+          ],
+          "additional_information_needed": [
+            "biopsy of the bronchial lesion",
+            "CT scan of the chest",
+            "smoking history"
+          ]
+        },
+        {
+          "name": "Tuberculosis",
+          "category": "Infectious",
+          "likelihood": "medium",
+          "key_features": [
+            "history of tuberculosis",
+            "lung collapse",
+            "bronchial obstruction"
+          ],
+          "supporting_evidence": [
+            "history of sputum culture showing tubercle bacilli",
+            "family history of tuberculosis"
+          ],
+          "refuting_evidence": [
+            "patient has been treated with ethambutol and isoniazid",
+            "no current evidence of active infection"
+          ],
+          "additional_information_needed": [
+            "repeat sputum culture",
+            "tuberculin skin test or IGRA",
+            "chest CT to assess for cavitary lesions"
+          ]
+        },
+        {
+          "name": "Bronchial carcinoid tumor",
+          "category": "Oncological",
+          "likelihood": "medium",
+          "key_features": [
+            "bronchial obstruction",
+            "firm lesion in bronchus",
+            "extrinsic compression"
+          ],
+          "supporting_evidence": [
+            "white, firm lesion in the right bronchus intermedius",
+            "complete occlusion of the left main-stem bronchus"
+          ],
+          "refuting_evidence": [
+            "no evidence of carcinoid syndrome symptoms",
+            "age is slightly older than typical presentation"
+          ],
+          "additional_information_needed": [
+            "biopsy of the bronchial lesion",
+            "serum chromogranin A levels"
+          ]
+        },
+        {
+          "name": "Sarcoidosis",
+          "category": "Inflammatory",
+          "likelihood": "low",
+          "key_features": [
+            "lung involvement",
+            "bronchial obstruction",
+            "extrinsic compression"
+          ],
+          "supporting_evidence": [
+            "history of arthritis and wheezing could suggest systemic involvement"
+          ],
+          "refuting_evidence": [
+            "no evidence of hilar lymphadenopathy or other systemic signs typical of sarcoidosis"
+          ],
+          "additional_information_needed": [
+            "ACE levels",
+            "biopsy of the lesion for non-caseating granulomas"
+          ]
+        }
+      ]
+    },
+    "management": {
+      "required": [
+        {
+          "id": "M1",
+          "content": "What was the management plan for this patient?",
+          "response": "Ethambutol and isoniazid were continued, and an operation was performed on the sixth hospital day.",
+          "teaching_points": [
+            {
+              "id": "TP7",
+              "content": "Continuation of anti-tubercular therapy is important in managing tuberculosis. Surgical intervention may be necessary for obstructive lesions.",
+              "covered": false
+            }
+          ],
+          "elicited": false
+        }
+      ],
+      "optional": []
+    },
+    "discussion": {
+      "required": [],
+      "optional": []
+    }
+  },
+  "differential_diagnosis": [],
+  "final_diagnosis": {
+    "name": "Bronchial obstruction due to extrinsic compression",
+    "category": "Pulmonary",
+    "key_features": [
+      "Collapse of the left lung",
+      "Complete occlusion of the left main-stem bronchus"
+    ],
+    "supporting_evidence": [
+      "Bronchoscopic findings",
+      "Imaging studies"
+    ],
+    "refuting_evidence": []
+  }
+}

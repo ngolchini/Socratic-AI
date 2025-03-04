@@ -1,0 +1,458 @@
+{
+  "metadata": {
+    "id": "case_031",
+    "title": "1997 Case 30",
+    "original_presentation": "An 18-day-old girl was admitted to the hospital because of a left pneumothorax and cystic changes in the left lung.",
+    "difficulty": "intermediate",
+    "specialties": [
+      "pediatrics",
+      "neonatology",
+      "pulmonology"
+    ],
+    "keywords": [
+      "pneumothorax",
+      "cystic lung changes",
+      "neonatal respiratory distress"
+    ],
+    "source": "clinical case study",
+    "version": "1.0"
+  },
+  "clinical_elements": {
+    "history": {
+      "required": [
+        {
+          "id": "H1",
+          "content": "What is the birth history of the patient?",
+          "response": "The infant was a triplet, born by cesarean section to a 36-year-old mother after a 32-week gestation.",
+          "teaching_points": [
+            {
+              "id": "TP1",
+              "content": "Premature birth and multiple gestations can increase the risk of respiratory complications in neonates.",
+              "covered": false
+            }
+          ],
+          "elicited": false
+        },
+        {
+          "id": "H2",
+          "content": "What were the initial respiratory issues after birth?",
+          "response": "The patient had mild respiratory distress and required nasal continuous positive airway pressure for two days.",
+          "teaching_points": [
+            {
+              "id": "TP2",
+              "content": "Respiratory distress syndrome is common in preterm infants due to surfactant deficiency.",
+              "covered": false
+            }
+          ],
+          "elicited": false
+        },
+        {
+          "id": "H3",
+          "content": "What treatments were given initially?",
+          "response": "Theophylline was given for periodic apnea and bradycardia, and gavage feedings were begun.",
+          "teaching_points": [
+            {
+              "id": "TP3",
+              "content": "Theophylline can be used to treat apnea of prematurity by stimulating the respiratory center.",
+              "covered": false
+            }
+          ],
+          "elicited": false
+        },
+        {
+          "id": "H4",
+          "content": "What changes occurred two days before admission?",
+          "response": "Tachypnea and tachycardia developed abruptly.",
+          "teaching_points": [
+            {
+              "id": "TP4",
+              "content": "Sudden onset of tachypnea and tachycardia in neonates can indicate respiratory or cardiac issues.",
+              "covered": false
+            }
+          ],
+          "elicited": false
+        }
+      ],
+      "optional": [],
+      "current_ideal_differential_diagnosis": [
+        {
+          "name": "Congenital Pulmonary Airway Malformation (CPAM)",
+          "category": "Congenital lung malformation",
+          "likelihood": "high",
+          "key_features": [
+            "cystic changes in the lung",
+            "respiratory distress",
+            "pneumothorax"
+          ],
+          "supporting_evidence": [
+            "cystic changes in the left lung",
+            "left pneumothorax",
+            "respiratory distress"
+          ],
+          "refuting_evidence": [],
+          "additional_information_needed": [
+            "Chest CT scan to evaluate lung structure",
+            "Prenatal ultrasound findings"
+          ]
+        },
+        {
+          "name": "Neonatal Respiratory Distress Syndrome (RDS)",
+          "category": "Respiratory condition",
+          "likelihood": "medium",
+          "key_features": [
+            "prematurity",
+            "respiratory distress shortly after birth"
+          ],
+          "supporting_evidence": [
+            "32-week gestation",
+            "mild respiratory distress after birth"
+          ],
+          "refuting_evidence": [
+            "cystic changes in the lung are not typical for RDS"
+          ],
+          "additional_information_needed": [
+            "Chest X-ray findings",
+            "Surfactant therapy history"
+          ]
+        },
+        {
+          "name": "Bronchopulmonary Dysplasia (BPD)",
+          "category": "Chronic lung disease",
+          "likelihood": "medium",
+          "key_features": [
+            "prematurity",
+            "prolonged oxygen therapy",
+            "chronic lung changes"
+          ],
+          "supporting_evidence": [
+            "32-week gestation",
+            "initial respiratory support needed"
+          ],
+          "refuting_evidence": [
+            "BPD typically develops after prolonged mechanical ventilation, which is not indicated here"
+          ],
+          "additional_information_needed": [
+            "History of oxygen requirement beyond the first few days of life",
+            "Chest imaging over time"
+          ]
+        },
+        {
+          "name": "Pneumonia",
+          "category": "Infectious disease",
+          "likelihood": "low",
+          "key_features": [
+            "fever",
+            "cough",
+            "respiratory distress"
+          ],
+          "supporting_evidence": [
+            "tachypnea and tachycardia developed abruptly"
+          ],
+          "refuting_evidence": [
+            "No mention of fever or infectious symptoms",
+            "Cystic changes are not typical for pneumonia"
+          ],
+          "additional_information_needed": [
+            "Complete blood count",
+            "Blood cultures",
+            "Chest X-ray"
+          ]
+        }
+      ]
+    },
+    "physical": {
+      "required": [
+        {
+          "id": "P1",
+          "content": "What were the findings on physical examination upon admission?",
+          "response": "The infant was pale and jaundiced, with diminished breath sounds over the left lung and faint breath sounds over the right lung.",
+          "teaching_points": [
+            {
+              "id": "TP5",
+              "content": "Diminished breath sounds can indicate underlying lung pathology such as pneumothorax or cystic changes.",
+              "covered": false
+            }
+          ],
+          "elicited": false
+        }
+      ],
+      "optional": [],
+      "current_ideal_differential_diagnosis": [
+        {
+          "name": "Congenital Pulmonary Airway Malformation (CPAM)",
+          "category": "Congenital lung malformation",
+          "likelihood": "high",
+          "key_features": [
+            "cystic changes in the lung",
+            "respiratory distress",
+            "pneumothorax"
+          ],
+          "supporting_evidence": [
+            "cystic changes in the left lung",
+            "left pneumothorax",
+            "respiratory distress"
+          ],
+          "refuting_evidence": [],
+          "additional_information_needed": [
+            "Chest CT scan to evaluate lung structure",
+            "Prenatal ultrasound findings"
+          ]
+        },
+        {
+          "name": "Neonatal Respiratory Distress Syndrome (RDS)",
+          "category": "Respiratory condition",
+          "likelihood": "medium",
+          "key_features": [
+            "prematurity",
+            "respiratory distress shortly after birth"
+          ],
+          "supporting_evidence": [
+            "32-week gestation",
+            "initial respiratory distress"
+          ],
+          "refuting_evidence": [
+            "cystic changes in the lung are not typical for RDS",
+            "pneumothorax is not a common feature"
+          ],
+          "additional_information_needed": [
+            "Chest X-ray findings",
+            "Surfactant therapy history"
+          ]
+        },
+        {
+          "name": "Bronchopulmonary Dysplasia (BPD)",
+          "category": "Chronic lung disease",
+          "likelihood": "medium",
+          "key_features": [
+            "prematurity",
+            "prolonged oxygen therapy",
+            "chronic lung changes"
+          ],
+          "supporting_evidence": [
+            "premature birth",
+            "initial respiratory support"
+          ],
+          "refuting_evidence": [
+            "BPD typically develops after prolonged mechanical ventilation",
+            "cystic changes and pneumothorax are not classic features"
+          ],
+          "additional_information_needed": [
+            "History of mechanical ventilation",
+            "Oxygen requirement over time"
+          ]
+        },
+        {
+          "name": "Neonatal Pneumonia",
+          "category": "Infectious disease",
+          "likelihood": "low",
+          "key_features": [
+            "respiratory distress",
+            "fever",
+            "infiltrates on chest imaging"
+          ],
+          "supporting_evidence": [
+            "tachypnea and tachycardia",
+            "diminished breath sounds"
+          ],
+          "refuting_evidence": [
+            "absence of fever",
+            "cystic changes are not typical for pneumonia"
+          ],
+          "additional_information_needed": [
+            "Blood cultures",
+            "Complete blood count",
+            "Chest X-ray findings"
+          ]
+        },
+        {
+          "name": "Spontaneous Pneumothorax",
+          "category": "Respiratory condition",
+          "likelihood": "low",
+          "key_features": [
+            "sudden onset respiratory distress",
+            "unilateral diminished breath sounds"
+          ],
+          "supporting_evidence": [
+            "left pneumothorax",
+            "diminished breath sounds over the left lung"
+          ],
+          "refuting_evidence": [
+            "cystic changes suggest an underlying structural lung issue"
+          ],
+          "additional_information_needed": [
+            "Chest X-ray to confirm pneumothorax",
+            "History of trauma or procedures"
+          ]
+        }
+      ]
+    },
+    "testing": {
+      "required": [
+        {
+          "id": "T1",
+          "content": "What were the initial radiographic findings?",
+          "response": "Radiographs showed cystic changes in the left lung and a shift of the mediastinum to the right.",
+          "teaching_points": [
+            {
+              "id": "TP6",
+              "content": "Mediastinal shift can occur due to volume changes in the thoracic cavity, such as from a pneumothorax or large cysts.",
+              "covered": false
+            }
+          ],
+          "elicited": false
+        },
+        {
+          "id": "T2",
+          "content": "What did the CT scan of the thorax reveal?",
+          "response": "The CT scan showed nearly total replacement of the left lung by multiple thick-walled cysts.",
+          "teaching_points": [
+            {
+              "id": "TP7",
+              "content": "CT scans provide detailed images of lung structure and can help identify cystic lung diseases.",
+              "covered": false
+            }
+          ],
+          "elicited": false
+        },
+        {
+          "id": "T3",
+          "content": "What were the results of the ventilation–perfusion scan?",
+          "response": "The scan revealed equal initial ventilation of the lungs, with trapping in the left-upper-lung zone.",
+          "teaching_points": [
+            {
+              "id": "TP8",
+              "content": "Ventilation-perfusion scans can help assess the distribution of air and blood flow in the lungs.",
+              "covered": false
+            }
+          ],
+          "elicited": false
+        }
+      ],
+      "optional": [],
+      "current_ideal_differential_diagnosis": [
+        {
+          "name": "Congenital Pulmonary Airway Malformation (CPAM)",
+          "category": "Congenital lung malformation",
+          "likelihood": "high",
+          "key_features": [
+            "cystic changes in the lung",
+            "mediastinal shift",
+            "respiratory distress"
+          ],
+          "supporting_evidence": [
+            "CT scan showed nearly total replacement of the left lung by multiple thick-walled cysts",
+            "Radiographs showed cystic changes in the left lung",
+            "Mediastinal shift to the right"
+          ],
+          "refuting_evidence": [],
+          "additional_information_needed": [
+            "Histological examination of lung tissue",
+            "Genetic testing for associated syndromes"
+          ]
+        },
+        {
+          "name": "Bronchopulmonary Dysplasia (BPD)",
+          "category": "Chronic lung disease of prematurity",
+          "likelihood": "medium",
+          "key_features": [
+            "history of respiratory distress",
+            "oxygen requirement",
+            "cystic changes in the lung"
+          ],
+          "supporting_evidence": [
+            "History of mild respiratory distress and CPAP requirement",
+            "Premature birth at 32 weeks gestation"
+          ],
+          "refuting_evidence": [
+            "Cystic changes are more consistent with CPAM than typical BPD",
+            "Abrupt development of tachypnea and tachycardia"
+          ],
+          "additional_information_needed": [
+            "Longitudinal follow-up of respiratory status",
+            "Response to bronchodilators and steroids"
+          ]
+        },
+        {
+          "name": "Pneumonia with Pneumatoceles",
+          "category": "Infectious lung disease",
+          "likelihood": "low",
+          "key_features": [
+            "cystic changes in the lung",
+            "respiratory distress",
+            "fever"
+          ],
+          "supporting_evidence": [
+            "Cystic changes in the lung could be consistent with pneumatoceles"
+          ],
+          "refuting_evidence": [
+            "Lack of fever or other signs of infection",
+            "CT findings more consistent with congenital malformation"
+          ],
+          "additional_information_needed": [
+            "Blood cultures",
+            "Complete blood count",
+            "C-reactive protein levels"
+          ]
+        },
+        {
+          "name": "Congenital Lobar Emphysema",
+          "category": "Congenital lung disorder",
+          "likelihood": "low",
+          "key_features": [
+            "overinflation of a lung lobe",
+            "respiratory distress",
+            "mediastinal shift"
+          ],
+          "supporting_evidence": [
+            "Mediastinal shift to the right"
+          ],
+          "refuting_evidence": [
+            "CT scan showed cystic changes rather than overinflation",
+            "No mention of hyperinflation on imaging"
+          ],
+          "additional_information_needed": [
+            "Further imaging studies",
+            "Bronchoscopy"
+          ]
+        }
+      ]
+    },
+    "management": {
+      "required": [
+        {
+          "id": "M1",
+          "content": "What treatments were administered during hospitalization?",
+          "response": "Antibiotics, oxygen, and total parenteral nutrition were administered. A chest tube was placed to suction.",
+          "teaching_points": [
+            {
+              "id": "TP9",
+              "content": "Management of neonatal respiratory distress may include supportive care with oxygen and nutrition, as well as addressing any underlying infections.",
+              "covered": false
+            }
+          ],
+          "elicited": false
+        }
+      ],
+      "optional": []
+    },
+    "discussion": {
+      "required": [],
+      "optional": []
+    }
+  },
+  "differential_diagnosis": [],
+  "final_diagnosis": {
+    "name": "Cystic lung disease",
+    "category": "Pulmonary",
+    "key_features": [
+      "Cystic changes in the left lung",
+      "Mediastinal shift",
+      "Respiratory distress"
+    ],
+    "supporting_evidence": [
+      "CT scan showing cystic lung replacement",
+      "Ventilation-perfusion scan results"
+    ],
+    "refuting_evidence": []
+  }
+}

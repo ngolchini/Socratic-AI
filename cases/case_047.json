@@ -1,0 +1,462 @@
+{
+  "metadata": {
+    "id": "case_047",
+    "title": "2014 Case 21",
+    "original_presentation": "A 68-year-old man was admitted to this hospital because of diplopia of 2 days' duration.",
+    "difficulty": "intermediate",
+    "specialties": [
+      "Neurology",
+      "Nephrology"
+    ],
+    "keywords": [
+      "diplopia",
+      "granulomatosis with polyangiitis",
+      "vasculitis",
+      "renal insufficiency"
+    ],
+    "source": "Dr. Robert L. Carruthers",
+    "version": "1.0"
+  },
+  "clinical_elements": {
+    "history": {
+      "required": [
+        {
+          "id": "H1",
+          "content": "What is the patient's medical history?",
+          "response": "The patient had a history of granulomatosis with polyangiitis, chronic renal insufficiency, hypertension, hypercholesterolemia, coronary artery disease, and a remote history of steatohepatitis, bilateral inguinal herniorrhaphies, and laminectomies and lateral fusion between the third and sixth vertebrae of the cervical spine.",
+          "teaching_points": [
+            {
+              "id": "TP1",
+              "content": "Granulomatosis with polyangiitis is an ANCA-associated vasculitis that can affect multiple organ systems, including the kidneys and respiratory tract.",
+              "covered": false
+            }
+          ],
+          "elicited": false
+        },
+        {
+          "id": "H2",
+          "content": "What symptoms did the patient experience prior to admission?",
+          "response": "The patient experienced diplopia, nausea, vomiting, mild headache, unsteadiness while walking, fatigue, light-headedness, weakness, and clumsiness of the left hand.",
+          "teaching_points": [
+            {
+              "id": "TP2",
+              "content": "Diplopia can be a sign of neurological involvement and may indicate cranial nerve dysfunction.",
+              "covered": false
+            }
+          ],
+          "elicited": false
+        },
+        {
+          "id": "H3",
+          "content": "What medications was the patient taking?",
+          "response": "The patient's medications included rituximab, prednisone, furosemide, amlodipine, metoprolol, ranitidine, calcium carbonate with vitamin D, calcium acetate, sodium bicarbonate, dapsone, omeprazole, erythropoietin, and topical mupirocin calcium cream.",
+          "teaching_points": [
+            {
+              "id": "TP3",
+              "content": "Rituximab is a monoclonal antibody used to treat certain autoimmune diseases and cancers.",
+              "covered": false
+            }
+          ],
+          "elicited": false
+        }
+      ],
+      "optional": [],
+      "current_ideal_differential_diagnosis": [
+        {
+          "name": "Cerebrovascular accident (stroke)",
+          "category": "Neurological",
+          "likelihood": "high",
+          "key_features": [
+            "sudden onset of neurological symptoms",
+            "diplopia",
+            "unsteadiness",
+            "weakness"
+          ],
+          "supporting_evidence": [
+            "sudden onset of diplopia",
+            "unsteadiness while walking",
+            "weakness and clumsiness of the left hand",
+            "history of hypertension and coronary artery disease"
+          ],
+          "refuting_evidence": [],
+          "additional_information_needed": [
+            "neurological examination",
+            "brain imaging (CT/MRI)",
+            "vascular studies"
+          ]
+        },
+        {
+          "name": "Granulomatosis with polyangiitis (GPA) flare",
+          "category": "Autoimmune",
+          "likelihood": "medium",
+          "key_features": [
+            "systemic vasculitis",
+            "neurological involvement",
+            "history of GPA"
+          ],
+          "supporting_evidence": [
+            "history of granulomatosis with polyangiitis",
+            "use of rituximab and prednisone"
+          ],
+          "refuting_evidence": [
+            "no specific evidence of active vasculitis provided"
+          ],
+          "additional_information_needed": [
+            "ANCA levels",
+            "inflammatory markers",
+            "ENT examination",
+            "chest imaging"
+          ]
+        },
+        {
+          "name": "Medication side effect",
+          "category": "Pharmacological",
+          "likelihood": "medium",
+          "key_features": [
+            "diplopia",
+            "neurological symptoms",
+            "polypharmacy"
+          ],
+          "supporting_evidence": [
+            "multiple medications including rituximab, prednisone, and metoprolol"
+          ],
+          "refuting_evidence": [
+            "no specific medication known to cause these symptoms directly"
+          ],
+          "additional_information_needed": [
+            "review of medication side effects",
+            "possible drug interactions"
+          ]
+        },
+        {
+          "name": "Hypertensive crisis",
+          "category": "Cardiovascular",
+          "likelihood": "low",
+          "key_features": [
+            "sudden neurological symptoms",
+            "history of hypertension"
+          ],
+          "supporting_evidence": [
+            "history of hypertension"
+          ],
+          "refuting_evidence": [
+            "no mention of elevated blood pressure at presentation"
+          ],
+          "additional_information_needed": [
+            "blood pressure measurement",
+            "fundoscopic examination"
+          ]
+        },
+        {
+          "name": "Posterior reversible encephalopathy syndrome (PRES)",
+          "category": "Neurological",
+          "likelihood": "low",
+          "key_features": [
+            "headache",
+            "visual disturbances",
+            "hypertension"
+          ],
+          "supporting_evidence": [
+            "mild headache",
+            "diplopia",
+            "history of hypertension"
+          ],
+          "refuting_evidence": [
+            "no mention of severe hypertension or typical imaging findings"
+          ],
+          "additional_information_needed": [
+            "brain MRI",
+            "blood pressure monitoring"
+          ]
+        }
+      ]
+    },
+    "physical": {
+      "required": [
+        {
+          "id": "P1",
+          "content": "What were the findings on physical examination?",
+          "response": "The patient was fatigued but arousable, with mild ptosis on the left side, normal pupils and extraocular movements, subjective diplopia, left-sided upper and lower facial weakness, diminished soft-palate elevation on the left side, and mild weakness in the left wrist extensors and finger abductors.",
+          "teaching_points": [
+            {
+              "id": "TP4",
+              "content": "Ptosis and facial weakness can indicate cranial nerve involvement, often seen in neurological disorders.",
+              "covered": false
+            }
+          ],
+          "elicited": false
+        }
+      ],
+      "optional": [],
+      "current_ideal_differential_diagnosis": [
+        {
+          "name": "Cerebrovascular accident (CVA) or stroke",
+          "category": "Neurological",
+          "likelihood": "high",
+          "key_features": [
+            "sudden onset of neurological deficits",
+            "facial weakness",
+            "diplopia",
+            "unilateral weakness"
+          ],
+          "supporting_evidence": [
+            "sudden onset of diplopia",
+            "left-sided facial weakness",
+            "mild weakness in left wrist extensors and finger abductors",
+            "unsteadiness while walking"
+          ],
+          "refuting_evidence": [
+            "normal pupils and extraocular movements"
+          ],
+          "additional_information_needed": [
+            "brain imaging (CT or MRI)",
+            "vascular studies",
+            "assessment of risk factors for stroke"
+          ]
+        },
+        {
+          "name": "Granulomatosis with polyangiitis (GPA) flare",
+          "category": "Autoimmune",
+          "likelihood": "medium",
+          "key_features": [
+            "history of GPA",
+            "neurological involvement",
+            "systemic symptoms"
+          ],
+          "supporting_evidence": [
+            "history of granulomatosis with polyangiitis",
+            "fatigue",
+            "nausea and vomiting"
+          ],
+          "refuting_evidence": [
+            "no clear evidence of active systemic vasculitis",
+            "no respiratory or renal symptoms indicating active GPA"
+          ],
+          "additional_information_needed": [
+            "ANCA levels",
+            "inflammatory markers",
+            "ENT examination",
+            "chest imaging"
+          ]
+        },
+        {
+          "name": "Medication side effect or interaction",
+          "category": "Pharmacological",
+          "likelihood": "medium",
+          "key_features": [
+            "polypharmacy",
+            "neurological symptoms"
+          ],
+          "supporting_evidence": [
+            "multiple medications including rituximab and prednisone"
+          ],
+          "refuting_evidence": [
+            "specific symptoms not typically associated with listed medications"
+          ],
+          "additional_information_needed": [
+            "review of recent medication changes",
+            "drug interaction analysis"
+          ]
+        },
+        {
+          "name": "Myasthenia gravis",
+          "category": "Neuromuscular",
+          "likelihood": "low",
+          "key_features": [
+            "ptosis",
+            "diplopia",
+            "muscle weakness"
+          ],
+          "supporting_evidence": [
+            "mild ptosis on the left side",
+            "subjective diplopia"
+          ],
+          "refuting_evidence": [
+            "normal pupils and extraocular movements",
+            "no fluctuating weakness pattern"
+          ],
+          "additional_information_needed": [
+            "acetylcholine receptor antibody test",
+            "edrophonium test",
+            "repetitive nerve stimulation study"
+          ]
+        },
+        {
+          "name": "Brain tumor",
+          "category": "Oncological",
+          "likelihood": "low",
+          "key_features": [
+            "progressive neurological deficits",
+            "headache",
+            "nausea"
+          ],
+          "supporting_evidence": [
+            "mild headache",
+            "nausea and vomiting"
+          ],
+          "refuting_evidence": [
+            "sudden onset of symptoms",
+            "no progressive pattern"
+          ],
+          "additional_information_needed": [
+            "brain imaging (MRI with contrast)"
+          ]
+        }
+      ]
+    },
+    "testing": {
+      "required": [
+        {
+          "id": "T1",
+          "content": "What were the results of the MRI of the head?",
+          "response": "MRI showed nonspecific white-matter changes and punctate infarcts suggestive of a vasculitic process, with mild, scattered white-matter changes consistent with chronic microangiopathic disease.",
+          "teaching_points": [
+            {
+              "id": "TP5",
+              "content": "MRI is a critical tool in diagnosing neurological conditions, providing detailed images of brain structures.",
+              "covered": false
+            }
+          ],
+          "elicited": false
+        },
+        {
+          "id": "T2",
+          "content": "What were the results of the lumbar puncture?",
+          "response": "The opening pressure was normal, and cultures of blood, urine, and CSF remained sterile.",
+          "teaching_points": [
+            {
+              "id": "TP6",
+              "content": "A lumbar puncture can help diagnose infections, bleeding, and other conditions affecting the brain and spinal cord.",
+              "covered": false
+            }
+          ],
+          "elicited": false
+        }
+      ],
+      "optional": [],
+      "current_ideal_differential_diagnosis": [
+        {
+          "name": "Cerebral vasculitis",
+          "category": "Vascular disease",
+          "likelihood": "high",
+          "key_features": [
+            "headache",
+            "neurological deficits",
+            "white-matter changes on MRI",
+            "history of granulomatosis with polyangiitis"
+          ],
+          "supporting_evidence": [
+            "history of granulomatosis with polyangiitis",
+            "MRI showing punctate infarcts suggestive of a vasculitic process",
+            "neurological symptoms including diplopia, facial weakness, and limb weakness"
+          ],
+          "refuting_evidence": [
+            "normal opening pressure and sterile cultures from lumbar puncture"
+          ],
+          "additional_information_needed": [
+            "angiography to assess for vasculitis",
+            "autoimmune panel to check for active vasculitis markers"
+          ]
+        },
+        {
+          "name": "Ischemic stroke",
+          "category": "Cerebrovascular disease",
+          "likelihood": "medium",
+          "key_features": [
+            "sudden onset of neurological deficits",
+            "risk factors such as hypertension and coronary artery disease"
+          ],
+          "supporting_evidence": [
+            "sudden onset of diplopia and other neurological symptoms",
+            "history of hypertension and coronary artery disease"
+          ],
+          "refuting_evidence": [
+            "MRI findings more suggestive of vasculitis than acute ischemic stroke"
+          ],
+          "additional_information_needed": [
+            "repeat MRI or CT angiography to rule out acute ischemic changes",
+            "carotid ultrasound to assess for carotid artery disease"
+          ]
+        },
+        {
+          "name": "Multiple sclerosis",
+          "category": "Demyelinating disease",
+          "likelihood": "low",
+          "key_features": [
+            "neurological symptoms",
+            "white-matter changes on MRI"
+          ],
+          "supporting_evidence": [
+            "white-matter changes on MRI"
+          ],
+          "refuting_evidence": [
+            "age of onset atypical for multiple sclerosis",
+            "lack of typical MS lesions on MRI"
+          ],
+          "additional_information_needed": [
+            "oligoclonal bands in CSF",
+            "visual evoked potentials"
+          ]
+        },
+        {
+          "name": "Myasthenia gravis",
+          "category": "Neuromuscular junction disorder",
+          "likelihood": "low",
+          "key_features": [
+            "ptosis",
+            "diplopia",
+            "muscle weakness"
+          ],
+          "supporting_evidence": [
+            "mild ptosis and diplopia"
+          ],
+          "refuting_evidence": [
+            "absence of fluctuating muscle weakness",
+            "MRI findings not typical for myasthenia gravis"
+          ],
+          "additional_information_needed": [
+            "acetylcholine receptor antibody test",
+            "edrophonium test"
+          ]
+        }
+      ]
+    },
+    "management": {
+      "required": [
+        {
+          "id": "M1",
+          "content": "What treatments were administered during the hospital stay?",
+          "response": "The patient received vancomycin, ceftriaxone, ampicillin, acyclovir, methylprednisolone, hemodialysis, and levetiracetam. Glucocorticoids were discontinued, and comfort measures were initiated.",
+          "teaching_points": [
+            {
+              "id": "TP7",
+              "content": "Management of complex cases often involves a multidisciplinary approach and may include both pharmacological and supportive care.",
+              "covered": false
+            }
+          ],
+          "elicited": false
+        }
+      ],
+      "optional": []
+    },
+    "discussion": {
+      "required": [],
+      "optional": []
+    }
+  },
+  "differential_diagnosis": [],
+  "final_diagnosis": {
+    "name": "Vasculitic process with granulomatosis with polyangiitis",
+    "category": "Vasculitis",
+    "key_features": [
+      "Diplopia",
+      "White-matter changes",
+      "Punctate infarcts"
+    ],
+    "supporting_evidence": [
+      "History of granulomatosis with polyangiitis",
+      "MRI findings"
+    ],
+    "refuting_evidence": []
+  }
+}

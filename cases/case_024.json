@@ -1,0 +1,485 @@
+{
+  "metadata": {
+    "id": "case_024",
+    "title": "1995 Case 39",
+    "original_presentation": "A 72-year-old man was admitted to the hospital because of exertional dyspnea, fatigue, and extensive ecchymoses and purpuric lesions.",
+    "difficulty": "intermediate",
+    "specialties": [
+      "Internal Medicine",
+      "Hematology",
+      "Cardiology"
+    ],
+    "keywords": [
+      "dyspnea",
+      "ecchymoses",
+      "purpuric lesions",
+      "alcoholism",
+      "hypertension"
+    ],
+    "source": "Clinical case study",
+    "version": "1.0"
+  },
+  "clinical_elements": {
+    "history": {
+      "required": [
+        {
+          "id": "H1",
+          "content": "What symptoms did the patient experience prior to admission?",
+          "response": "Exertional dyspnea, fatigue, extensive ecchymoses and purpuric lesions, anorexia, persistent exertional dyspnea, frontal headache, apathy, irritability, increasing anorexia, nausea, unsteady gait, bruises on the left leg and abdomen, worsening dyspnea, lightheadedness, and increasing fatigue.",
+          "teaching_points": [
+            {
+              "id": "TP1",
+              "content": "Exertional dyspnea and fatigue in elderly patients can indicate cardiac or pulmonary issues, anemia, or systemic disease.",
+              "covered": false
+            }
+          ],
+          "elicited": false
+        },
+        {
+          "id": "H2",
+          "content": "What is the patient's past medical history?",
+          "response": "Chronic alcoholism, severe hepatitis 20 years earlier, long history of hypertension treated with enalapril and verapamil.",
+          "teaching_points": [
+            {
+              "id": "TP2",
+              "content": "Chronic alcoholism can lead to liver disease, nutritional deficiencies, and cardiovascular issues.",
+              "covered": false
+            }
+          ],
+          "elicited": false
+        },
+        {
+          "id": "H3",
+          "content": "What medications was the patient taking prior to admission?",
+          "response": "Enalapril and verapamil.",
+          "teaching_points": [
+            {
+              "id": "TP3",
+              "content": "Enalapril and verapamil are used to manage hypertension and can have side effects that impact cardiovascular and renal function.",
+              "covered": false
+            }
+          ],
+          "elicited": false
+        }
+      ],
+      "optional": [],
+      "current_ideal_differential_diagnosis": [
+        {
+          "name": "Liver Cirrhosis with Coagulopathy",
+          "category": "Hepatology",
+          "likelihood": "high",
+          "key_features": [
+            "history of chronic alcoholism",
+            "ecchymoses and purpuric lesions",
+            "fatigue",
+            "anorexia"
+          ],
+          "supporting_evidence": [
+            "chronic alcoholism",
+            "history of severe hepatitis",
+            "extensive ecchymoses and purpuric lesions",
+            "fatigue",
+            "anorexia"
+          ],
+          "refuting_evidence": [],
+          "additional_information_needed": [
+            "liver function tests",
+            "coagulation profile",
+            "abdominal ultrasound or CT scan"
+          ]
+        },
+        {
+          "name": "Vitamin B12 Deficiency",
+          "category": "Hematology/Nutrition",
+          "likelihood": "medium",
+          "key_features": [
+            "unsteady gait",
+            "apathy",
+            "irritability",
+            "anorexia",
+            "ecchymoses"
+          ],
+          "supporting_evidence": [
+            "unsteady gait",
+            "apathy",
+            "irritability",
+            "anorexia",
+            "chronic alcoholism"
+          ],
+          "refuting_evidence": [],
+          "additional_information_needed": [
+            "serum vitamin B12 level",
+            "complete blood count with peripheral smear"
+          ]
+        },
+        {
+          "name": "Hypertensive Heart Disease",
+          "category": "Cardiology",
+          "likelihood": "medium",
+          "key_features": [
+            "exertional dyspnea",
+            "fatigue",
+            "history of hypertension"
+          ],
+          "supporting_evidence": [
+            "exertional dyspnea",
+            "fatigue",
+            "long history of hypertension"
+          ],
+          "refuting_evidence": [
+            "extensive ecchymoses and purpuric lesions not typically associated"
+          ],
+          "additional_information_needed": [
+            "echocardiogram",
+            "chest X-ray",
+            "BNP level"
+          ]
+        },
+        {
+          "name": "Alcoholic Cardiomyopathy",
+          "category": "Cardiology",
+          "likelihood": "medium",
+          "key_features": [
+            "chronic alcoholism",
+            "exertional dyspnea",
+            "fatigue"
+          ],
+          "supporting_evidence": [
+            "chronic alcoholism",
+            "exertional dyspnea",
+            "fatigue"
+          ],
+          "refuting_evidence": [
+            "extensive ecchymoses and purpuric lesions not typically associated"
+          ],
+          "additional_information_needed": [
+            "echocardiogram",
+            "chest X-ray",
+            "BNP level"
+          ]
+        },
+        {
+          "name": "Drug-induced Thrombocytopenia",
+          "category": "Hematology",
+          "likelihood": "low",
+          "key_features": [
+            "ecchymoses",
+            "purpuric lesions",
+            "medication history"
+          ],
+          "supporting_evidence": [
+            "extensive ecchymoses and purpuric lesions"
+          ],
+          "refuting_evidence": [
+            "no new medications started",
+            "long-term use of enalapril and verapamil without prior issues"
+          ],
+          "additional_information_needed": [
+            "platelet count",
+            "review of medication history for recent changes"
+          ]
+        }
+      ]
+    },
+    "physical": {
+      "required": [
+        {
+          "id": "P1",
+          "content": "What were the findings on physical examination?",
+          "response": "Obese, mildly icteric, weak, confluent purpuric plaques on legs, perineum, scrotum, abdomen, flanks, and back, hemorrhagic nodule on gingiva, poor oral hygiene, liver edge 4 cm below right costal margin, ++ peripheral edema, stool positive for occult blood, deep tendon reflexes + in arms and absent in legs.",
+          "teaching_points": [
+            {
+              "id": "TP4",
+              "content": "Icterus and purpuric lesions can indicate liver dysfunction and coagulopathy.",
+              "covered": false
+            }
+          ],
+          "elicited": false
+        }
+      ],
+      "optional": [],
+      "current_ideal_differential_diagnosis": [
+        {
+          "name": "Liver Cirrhosis with Coagulopathy",
+          "category": "Hepatology",
+          "likelihood": "high",
+          "key_features": [
+            "jaundice",
+            "ecchymoses",
+            "peripheral edema",
+            "history of chronic alcoholism"
+          ],
+          "supporting_evidence": [
+            "mild icterus",
+            "confluent purpuric plaques",
+            "history of chronic alcoholism",
+            "liver edge 4 cm below right costal margin",
+            "peripheral edema",
+            "positive stool occult blood"
+          ],
+          "refuting_evidence": [],
+          "additional_information_needed": [
+            "Liver function tests",
+            "Coagulation profile",
+            "Abdominal ultrasound or CT scan"
+          ]
+        },
+        {
+          "name": "Vitamin K Deficiency",
+          "category": "Nutritional Deficiency",
+          "likelihood": "medium",
+          "key_features": [
+            "bleeding tendency",
+            "ecchymoses",
+            "history of poor nutrition or malabsorption"
+          ],
+          "supporting_evidence": [
+            "extensive ecchymoses and purpuric lesions",
+            "positive stool occult blood",
+            "poor oral hygiene"
+          ],
+          "refuting_evidence": [],
+          "additional_information_needed": [
+            "Vitamin K levels",
+            "Dietary history",
+            "Coagulation profile"
+          ]
+        },
+        {
+          "name": "Alcoholic Hepatitis",
+          "category": "Hepatology",
+          "likelihood": "medium",
+          "key_features": [
+            "jaundice",
+            "hepatomegaly",
+            "history of alcohol use"
+          ],
+          "supporting_evidence": [
+            "mild icterus",
+            "liver edge 4 cm below right costal margin",
+            "history of chronic alcoholism"
+          ],
+          "refuting_evidence": [],
+          "additional_information_needed": [
+            "Liver function tests",
+            "Alcohol use history",
+            "Abdominal imaging"
+          ]
+        },
+        {
+          "name": "Scurvy (Vitamin C Deficiency)",
+          "category": "Nutritional Deficiency",
+          "likelihood": "low",
+          "key_features": [
+            "gingival bleeding",
+            "ecchymoses",
+            "poor wound healing"
+          ],
+          "supporting_evidence": [
+            "hemorrhagic nodule on gingiva",
+            "poor oral hygiene",
+            "confluent purpuric plaques"
+          ],
+          "refuting_evidence": [],
+          "additional_information_needed": [
+            "Vitamin C levels",
+            "Dietary history"
+          ]
+        },
+        {
+          "name": "Hypertensive Heart Disease",
+          "category": "Cardiology",
+          "likelihood": "low",
+          "key_features": [
+            "exertional dyspnea",
+            "fatigue",
+            "history of hypertension"
+          ],
+          "supporting_evidence": [
+            "exertional dyspnea",
+            "history of hypertension"
+          ],
+          "refuting_evidence": [
+            "extensive ecchymoses and purpuric lesions not typical"
+          ],
+          "additional_information_needed": [
+            "Echocardiogram",
+            "Blood pressure monitoring",
+            "Cardiac biomarkers"
+          ]
+        }
+      ]
+    },
+    "testing": {
+      "required": [
+        {
+          "id": "T1",
+          "content": "What were the key laboratory and imaging findings?",
+          "response": "Urine positive for protein, ketones, bile, and urobilinogen; ECG showed prolonged QTc interval and evidence of myocardial infarct; echocardiogram revealed severe left-ventricular-wall motion abnormalities; radionuclide scan showed low probability of pulmonary embolus; abdominal ultrasound and CT showed fatty liver change; hepatitis B surface antibody positive.",
+          "teaching_points": [
+            {
+              "id": "TP5",
+              "content": "Fatty liver change is common in chronic alcoholics and can lead to liver dysfunction.",
+              "covered": false
+            }
+          ],
+          "elicited": false
+        }
+      ],
+      "optional": [],
+      "current_ideal_differential_diagnosis": [
+        {
+          "name": "Liver Cirrhosis",
+          "category": "Hepatology",
+          "likelihood": "high",
+          "key_features": [
+            "jaundice",
+            "ecchymoses",
+            "portal hypertension",
+            "ascites",
+            "hepatic encephalopathy"
+          ],
+          "supporting_evidence": [
+            "history of chronic alcoholism",
+            "mild icterus",
+            "confluent purpuric plaques",
+            "liver edge 4 cm below right costal margin",
+            "fatty liver change on imaging"
+          ],
+          "refuting_evidence": [
+            "none noted"
+          ],
+          "additional_information_needed": [
+            "liver function tests",
+            "coagulation profile",
+            "serum albumin levels"
+          ]
+        },
+        {
+          "name": "Vitamin K Deficiency",
+          "category": "Nutritional Deficiency",
+          "likelihood": "medium",
+          "key_features": [
+            "bleeding tendency",
+            "ecchymoses",
+            "prolonged PT/INR"
+          ],
+          "supporting_evidence": [
+            "extensive ecchymoses and purpuric lesions",
+            "history of poor nutrition due to alcoholism"
+          ],
+          "refuting_evidence": [
+            "none noted"
+          ],
+          "additional_information_needed": [
+            "prothrombin time (PT) and INR",
+            "dietary history"
+          ]
+        },
+        {
+          "name": "Alcoholic Cardiomyopathy",
+          "category": "Cardiology",
+          "likelihood": "medium",
+          "key_features": [
+            "heart failure symptoms",
+            "history of alcohol abuse",
+            "left ventricular dysfunction"
+          ],
+          "supporting_evidence": [
+            "history of chronic alcoholism",
+            "severe left-ventricular-wall motion abnormalities",
+            "prolonged QTc interval"
+          ],
+          "refuting_evidence": [
+            "none noted"
+          ],
+          "additional_information_needed": [
+            "BNP levels",
+            "further cardiac imaging"
+          ]
+        },
+        {
+          "name": "Scurvy (Vitamin C Deficiency)",
+          "category": "Nutritional Deficiency",
+          "likelihood": "low",
+          "key_features": [
+            "gingival bleeding",
+            "ecchymoses",
+            "poor wound healing"
+          ],
+          "supporting_evidence": [
+            "hemorrhagic nodule on gingiva",
+            "poor oral hygiene",
+            "extensive ecchymoses"
+          ],
+          "refuting_evidence": [
+            "none noted"
+          ],
+          "additional_information_needed": [
+            "serum vitamin C levels",
+            "dietary history"
+          ]
+        },
+        {
+          "name": "Hypertensive Heart Disease",
+          "category": "Cardiology",
+          "likelihood": "medium",
+          "key_features": [
+            "left ventricular hypertrophy",
+            "heart failure symptoms",
+            "history of hypertension"
+          ],
+          "supporting_evidence": [
+            "long history of hypertension",
+            "severe left-ventricular-wall motion abnormalities"
+          ],
+          "refuting_evidence": [
+            "none noted"
+          ],
+          "additional_information_needed": [
+            "echocardiogram findings of left ventricular hypertrophy",
+            "blood pressure control history"
+          ]
+        }
+      ]
+    },
+    "management": {
+      "required": [
+        {
+          "id": "M1",
+          "content": "What treatments were administered during hospitalization?",
+          "response": "Verapamil, cimetidine, oxazepam, vitamin K, thiamine, multivitamin, ciprofloxacin, and transfusion of six units of packed red cells.",
+          "teaching_points": [
+            {
+              "id": "TP6",
+              "content": "Vitamin K and thiamine are important in managing coagulopathy and preventing Wernicke's encephalopathy in alcoholics.",
+              "covered": false
+            }
+          ],
+          "elicited": false
+        }
+      ],
+      "optional": []
+    },
+    "discussion": {
+      "required": [],
+      "optional": []
+    }
+  },
+  "differential_diagnosis": [],
+  "final_diagnosis": {
+    "name": "Chronic liver disease with coagulopathy",
+    "category": "Hepatology",
+    "key_features": [
+      "Exertional dyspnea",
+      "Ecchymoses and purpuric lesions",
+      "Fatty liver change"
+    ],
+    "supporting_evidence": [
+      "Positive hepatitis B surface antibody",
+      "Fatty liver on imaging",
+      "Coagulopathy symptoms"
+    ],
+    "refuting_evidence": []
+  }
+}

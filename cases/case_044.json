@@ -1,0 +1,504 @@
+{
+  "metadata": {
+    "id": "case_044",
+    "title": "1992 Case 28",
+    "original_presentation": "A 45-year-old man was admitted to the hospital because of increasing confusion and a lymphocytic pleocytosis.",
+    "difficulty": "intermediate",
+    "specialties": [
+      "Neurology",
+      "Infectious Disease"
+    ],
+    "keywords": [
+      "confusion",
+      "lymphocytic pleocytosis",
+      "neurological symptoms",
+      "metallic taste",
+      "rash",
+      "MRI",
+      "EEG"
+    ],
+    "source": "Clinical case study",
+    "version": "1.0"
+  },
+  "clinical_elements": {
+    "history": {
+      "required": [
+        {
+          "id": "H1",
+          "content": "What is the patient's travel history and exposure to potential toxins?",
+          "response": "The patient traveled to Texas on a business trip, worked in an enclosure with numerous insects, and was exposed to fumigation in a motel room.",
+          "teaching_points": [
+            {
+              "id": "TP1",
+              "content": "Travel history and exposure to environmental toxins can be crucial in diagnosing neurological symptoms.",
+              "covered": false
+            }
+          ],
+          "elicited": false
+        },
+        {
+          "id": "H2",
+          "content": "What symptoms did the patient experience upon returning from the trip?",
+          "response": "The patient experienced a metallic taste, anorexia, an elevated rash on the right upper abdominal quadrant, fatigue, slurred speech, difficulty organizing thoughts, and unsteadiness of gait.",
+          "teaching_points": [
+            {
+              "id": "TP2",
+              "content": "A combination of systemic and neurological symptoms can indicate a complex underlying condition.",
+              "covered": false
+            }
+          ],
+          "elicited": false
+        },
+        {
+          "id": "H3",
+          "content": "What is the patient's past medical history?",
+          "response": "A melanoma was excised from his back 12 years earlier.",
+          "teaching_points": [
+            {
+              "id": "TP3",
+              "content": "Past medical history, including cancer, can provide context for current symptoms.",
+              "covered": false
+            }
+          ],
+          "elicited": false
+        }
+      ],
+      "optional": [],
+      "current_ideal_differential_diagnosis": [
+        {
+          "name": "West Nile Virus Encephalitis",
+          "category": "Infectious disease",
+          "likelihood": "medium",
+          "key_features": [
+            "confusion",
+            "lymphocytic pleocytosis",
+            "travel to Texas",
+            "exposure to insects"
+          ],
+          "supporting_evidence": [
+            "increasing confusion",
+            "lymphocytic pleocytosis",
+            "travel to Texas",
+            "worked in an enclosure with numerous insects"
+          ],
+          "refuting_evidence": [
+            "no specific mention of fever or headache, which are common in West Nile Virus"
+          ],
+          "additional_information_needed": [
+            "serology for West Nile Virus",
+            "CSF analysis for viral PCR"
+          ]
+        },
+        {
+          "name": "Acute Toxic Encephalopathy",
+          "category": "Toxicological condition",
+          "likelihood": "medium",
+          "key_features": [
+            "confusion",
+            "exposure to toxins",
+            "metallic taste",
+            "neurological symptoms"
+          ],
+          "supporting_evidence": [
+            "exposure to fumigation",
+            "metallic taste",
+            "slurred speech",
+            "difficulty organizing thoughts",
+            "unsteadiness of gait"
+          ],
+          "refuting_evidence": [
+            "no specific toxin identified yet"
+          ],
+          "additional_information_needed": [
+            "toxicology screen",
+            "details of chemicals used in fumigation"
+          ]
+        },
+        {
+          "name": "Herpes Simplex Virus Encephalitis",
+          "category": "Infectious disease",
+          "likelihood": "low",
+          "key_features": [
+            "confusion",
+            "lymphocytic pleocytosis",
+            "neurological symptoms"
+          ],
+          "supporting_evidence": [
+            "increasing confusion",
+            "lymphocytic pleocytosis",
+            "slurred speech",
+            "difficulty organizing thoughts"
+          ],
+          "refuting_evidence": [
+            "no mention of fever or temporal lobe involvement symptoms"
+          ],
+          "additional_information_needed": [
+            "CSF analysis for HSV PCR",
+            "brain MRI"
+          ]
+        },
+        {
+          "name": "Paraneoplastic Encephalitis",
+          "category": "Neurological condition",
+          "likelihood": "low",
+          "key_features": [
+            "confusion",
+            "history of cancer",
+            "neurological symptoms"
+          ],
+          "supporting_evidence": [
+            "history of melanoma",
+            "confusion",
+            "neurological symptoms"
+          ],
+          "refuting_evidence": [
+            "no evidence of current malignancy or typical paraneoplastic antibodies"
+          ],
+          "additional_information_needed": [
+            "oncological evaluation",
+            "paraneoplastic antibody panel"
+          ]
+        }
+      ]
+    },
+    "physical": {
+      "required": [
+        {
+          "id": "P1",
+          "content": "What were the findings on the initial physical examination?",
+          "response": "The patient was confused, picking at restraints, with no other abnormalities detected. Neurologic examination showed limited and dysphasic speech, slight increase in tone in all extremities, and symmetric deep-tendon reflexes.",
+          "teaching_points": [
+            {
+              "id": "TP4",
+              "content": "Neurological examination can reveal subtle signs of central nervous system involvement.",
+              "covered": false
+            }
+          ],
+          "elicited": false
+        },
+        {
+          "id": "P2",
+          "content": "What were the findings on the second admission physical examination?",
+          "response": "The patient was obtunded with ++ nuchal rigidity, unresponsive, with intermittent flexion-extension movements of the upper extremities, and intact cranial-nerve functions.",
+          "teaching_points": [
+            {
+              "id": "TP5",
+              "content": "Nuchal rigidity and altered mental status can indicate meningeal irritation or central nervous system infection.",
+              "covered": false
+            }
+          ],
+          "elicited": false
+        }
+      ],
+      "optional": [],
+      "current_ideal_differential_diagnosis": [
+        {
+          "name": "Viral Encephalitis",
+          "category": "Infectious disease",
+          "likelihood": "high",
+          "key_features": [
+            "confusion",
+            "lymphocytic pleocytosis",
+            "nuchal rigidity",
+            "neurological symptoms"
+          ],
+          "supporting_evidence": [
+            "increasing confusion",
+            "lymphocytic pleocytosis",
+            "nuchal rigidity",
+            "neurological symptoms such as slurred speech and unsteadiness of gait"
+          ],
+          "refuting_evidence": [],
+          "additional_information_needed": [
+            "CSF analysis for viral PCR",
+            "MRI of the brain",
+            "EEG"
+          ]
+        },
+        {
+          "name": "Toxic Encephalopathy",
+          "category": "Toxicological condition",
+          "likelihood": "medium",
+          "key_features": [
+            "confusion",
+            "exposure to toxins",
+            "neurological symptoms"
+          ],
+          "supporting_evidence": [
+            "exposure to fumigation",
+            "metallic taste",
+            "confusion",
+            "neurological symptoms"
+          ],
+          "refuting_evidence": [],
+          "additional_information_needed": [
+            "Toxicology screen",
+            "Details of chemicals used in fumigation"
+          ]
+        },
+        {
+          "name": "Meningitis",
+          "category": "Infectious disease",
+          "likelihood": "medium",
+          "key_features": [
+            "nuchal rigidity",
+            "confusion",
+            "pleocytosis"
+          ],
+          "supporting_evidence": [
+            "nuchal rigidity",
+            "confusion",
+            "lymphocytic pleocytosis"
+          ],
+          "refuting_evidence": [
+            "no fever reported",
+            "no mention of headache"
+          ],
+          "additional_information_needed": [
+            "CSF culture and analysis",
+            "Blood cultures"
+          ]
+        },
+        {
+          "name": "Autoimmune Encephalitis",
+          "category": "Neurological disorder",
+          "likelihood": "low",
+          "key_features": [
+            "confusion",
+            "neurological symptoms",
+            "pleocytosis"
+          ],
+          "supporting_evidence": [
+            "confusion",
+            "neurological symptoms",
+            "lymphocytic pleocytosis"
+          ],
+          "refuting_evidence": [
+            "recent travel and exposure history suggest infectious or toxic cause"
+          ],
+          "additional_information_needed": [
+            "Autoimmune panel",
+            "CSF analysis for autoimmune markers"
+          ]
+        },
+        {
+          "name": "Paraneoplastic Syndrome",
+          "category": "Oncological condition",
+          "likelihood": "low",
+          "key_features": [
+            "neurological symptoms",
+            "history of cancer"
+          ],
+          "supporting_evidence": [
+            "history of melanoma",
+            "neurological symptoms"
+          ],
+          "refuting_evidence": [
+            "recent travel and exposure history suggest infectious or toxic cause"
+          ],
+          "additional_information_needed": [
+            "Onconeural antibody panel",
+            "CT scan to rule out malignancy recurrence"
+          ]
+        }
+      ]
+    },
+    "testing": {
+      "required": [
+        {
+          "id": "T1",
+          "content": "What were the results of the initial diagnostic tests?",
+          "response": "Lumbar punctures showed lymphocytic pleocytosis. Blood count, ESR, urinalysis, and routine blood chemistry were normal. MRI showed chronic maxillary sinusitis. EEG revealed generalized slowing.",
+          "teaching_points": [
+            {
+              "id": "TP6",
+              "content": "Lumbar puncture and imaging studies are essential in evaluating neurological symptoms.",
+              "covered": false
+            }
+          ],
+          "elicited": false
+        },
+        {
+          "id": "T2",
+          "content": "What were the findings on the second admission diagnostic tests?",
+          "response": "CT scan showed no change. EEG showed generalized slowing. MRI revealed meningeal enhancement over parietooccipital convexities.",
+          "teaching_points": [
+            {
+              "id": "TP7",
+              "content": "Meningeal enhancement on MRI can suggest inflammation or infection.",
+              "covered": false
+            }
+          ],
+          "elicited": false
+        }
+      ],
+      "optional": [],
+      "current_ideal_differential_diagnosis": [
+        {
+          "name": "Viral Encephalitis",
+          "category": "Infectious disease",
+          "likelihood": "medium",
+          "key_features": [
+            "confusion",
+            "lymphocytic pleocytosis",
+            "fever",
+            "headache",
+            "nuchal rigidity"
+          ],
+          "supporting_evidence": [
+            "increasing confusion",
+            "lymphocytic pleocytosis",
+            "nuchal rigidity",
+            "generalized slowing on EEG"
+          ],
+          "refuting_evidence": [
+            "absence of fever",
+            "no specific viral exposure identified"
+          ],
+          "additional_information_needed": [
+            "viral PCR tests on CSF",
+            "serology for common viral pathogens"
+          ]
+        },
+        {
+          "name": "Toxic Encephalopathy",
+          "category": "Toxicological condition",
+          "likelihood": "high",
+          "key_features": [
+            "confusion",
+            "exposure to toxins",
+            "metallic taste",
+            "neurological symptoms"
+          ],
+          "supporting_evidence": [
+            "exposure to fumigation",
+            "metallic taste",
+            "confusion",
+            "slurred speech",
+            "difficulty organizing thoughts"
+          ],
+          "refuting_evidence": [
+            "no specific toxin identified",
+            "normal routine blood chemistry"
+          ],
+          "additional_information_needed": [
+            "toxicology screen",
+            "details of chemicals used in fumigation"
+          ]
+        },
+        {
+          "name": "Meningitis",
+          "category": "Infectious disease",
+          "likelihood": "medium",
+          "key_features": [
+            "nuchal rigidity",
+            "fever",
+            "headache",
+            "lymphocytic pleocytosis"
+          ],
+          "supporting_evidence": [
+            "nuchal rigidity",
+            "lymphocytic pleocytosis",
+            "meningeal enhancement on MRI"
+          ],
+          "refuting_evidence": [
+            "absence of fever",
+            "no headache reported"
+          ],
+          "additional_information_needed": [
+            "CSF culture and sensitivity",
+            "further history of infectious contacts"
+          ]
+        },
+        {
+          "name": "Autoimmune Encephalitis",
+          "category": "Neurological disorder",
+          "likelihood": "low",
+          "key_features": [
+            "confusion",
+            "neurological symptoms",
+            "lymphocytic pleocytosis"
+          ],
+          "supporting_evidence": [
+            "confusion",
+            "lymphocytic pleocytosis",
+            "neurological symptoms"
+          ],
+          "refuting_evidence": [
+            "no history of autoimmune disease",
+            "no specific autoimmune markers identified"
+          ],
+          "additional_information_needed": [
+            "autoimmune panel",
+            "history of autoimmune symptoms"
+          ]
+        },
+        {
+          "name": "Paraneoplastic Syndrome",
+          "category": "Oncological condition",
+          "likelihood": "low",
+          "key_features": [
+            "neurological symptoms",
+            "history of cancer",
+            "lymphocytic pleocytosis"
+          ],
+          "supporting_evidence": [
+            "history of melanoma",
+            "neurological symptoms"
+          ],
+          "refuting_evidence": [
+            "no current evidence of malignancy",
+            "normal CT scan"
+          ],
+          "additional_information_needed": [
+            "oncological workup",
+            "paraneoplastic antibody panel"
+          ]
+        }
+      ]
+    },
+    "management": {
+      "required": [
+        {
+          "id": "M1",
+          "content": "What treatments were administered during the hospital stay?",
+          "response": "Haloperidol, cimetidine, and acyclovir were administered. Phenytoin sodium was given for seizure control.",
+          "teaching_points": [
+            {
+              "id": "TP8",
+              "content": "Empirical antiviral therapy can be considered in cases of suspected viral encephalitis.",
+              "covered": false
+            }
+          ],
+          "elicited": false
+        }
+      ],
+      "optional": []
+    },
+    "discussion": {
+      "required": [],
+      "optional": []
+    }
+  },
+  "differential_diagnosis": [
+    "Viral encephalitis",
+    "Toxic encephalopathy",
+    "Autoimmune encephalitis"
+  ],
+  "final_diagnosis": {
+    "name": "Encephalitis of unknown etiology",
+    "category": "Neurological",
+    "key_features": [
+      "Confusion",
+      "Lymphocytic pleocytosis",
+      "Meningeal enhancement on MRI"
+    ],
+    "supporting_evidence": [
+      "Positive cytomegalovirus antibodies",
+      "Generalized slowing on EEG"
+    ],
+    "refuting_evidence": [
+      "Negative tests for other viral and bacterial infections"
+    ]
+  }
+}

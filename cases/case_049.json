@@ -1,0 +1,444 @@
+{
+  "metadata": {
+    "id": "case_049",
+    "title": "1999 Case 01",
+    "original_presentation": "A 53-year-old right-handed man was admitted to the hospital in December because of fever and an altered mental state.",
+    "difficulty": "intermediate",
+    "specialties": [
+      "Neurology",
+      "Infectious Disease",
+      "Critical Care"
+    ],
+    "keywords": [
+      "fever",
+      "altered mental state",
+      "intracranial pressure",
+      "edema",
+      "CT scan"
+    ],
+    "source": "Clinical case study",
+    "version": "1.0"
+  },
+  "clinical_elements": {
+    "history": {
+      "required": [
+        {
+          "id": "H1",
+          "content": "What was the patient's condition prior to admission?",
+          "response": "The patient had been well until two weeks earlier, when a cough and rhinorrhea developed. Three days before admission, he became lethargic, febrile, and forgetful.",
+          "teaching_points": [
+            {
+              "id": "TP1",
+              "content": "A sudden change in mental status and fever can indicate a serious underlying condition such as infection or neurological event.",
+              "covered": false
+            }
+          ],
+          "elicited": false
+        },
+        {
+          "id": "H2",
+          "content": "What is the patient's medical history?",
+          "response": "The patient had a history of impaired glucose tolerance but was said to have avoided medical care. He did not drink alcohol or take medications or illicit drugs, and he had no pets.",
+          "teaching_points": [
+            {
+              "id": "TP2",
+              "content": "Impaired glucose tolerance can be a risk factor for various complications, including infections.",
+              "covered": false
+            }
+          ],
+          "elicited": false
+        }
+      ],
+      "optional": [],
+      "current_ideal_differential_diagnosis": [
+        {
+          "name": "Viral Encephalitis",
+          "category": "Infectious disease",
+          "likelihood": "high",
+          "key_features": [
+            "fever",
+            "altered mental state",
+            "recent upper respiratory symptoms"
+          ],
+          "supporting_evidence": [
+            "fever",
+            "altered mental state",
+            "recent cough and rhinorrhea"
+          ],
+          "refuting_evidence": [
+            "none at this point"
+          ],
+          "additional_information_needed": [
+            "CSF analysis",
+            "brain MRI",
+            "viral PCR tests"
+          ]
+        },
+        {
+          "name": "Bacterial Meningitis",
+          "category": "Infectious disease",
+          "likelihood": "medium",
+          "key_features": [
+            "fever",
+            "altered mental state",
+            "rapid progression"
+          ],
+          "supporting_evidence": [
+            "fever",
+            "altered mental state"
+          ],
+          "refuting_evidence": [
+            "absence of neck stiffness or photophobia noted"
+          ],
+          "additional_information_needed": [
+            "CSF analysis",
+            "blood cultures"
+          ]
+        },
+        {
+          "name": "Metabolic Encephalopathy",
+          "category": "Metabolic disorder",
+          "likelihood": "low",
+          "key_features": [
+            "altered mental state",
+            "history of glucose intolerance"
+          ],
+          "supporting_evidence": [
+            "altered mental state",
+            "history of impaired glucose tolerance"
+          ],
+          "refuting_evidence": [
+            "presence of fever and recent respiratory symptoms"
+          ],
+          "additional_information_needed": [
+            "blood glucose levels",
+            "electrolyte panel"
+          ]
+        },
+        {
+          "name": "Autoimmune Encephalitis",
+          "category": "Neurological disorder",
+          "likelihood": "low",
+          "key_features": [
+            "altered mental state",
+            "subacute onset"
+          ],
+          "supporting_evidence": [
+            "altered mental state"
+          ],
+          "refuting_evidence": [
+            "presence of fever and recent respiratory symptoms"
+          ],
+          "additional_information_needed": [
+            "autoimmune panel",
+            "brain MRI"
+          ]
+        }
+      ]
+    },
+    "physical": {
+      "required": [
+        {
+          "id": "P1",
+          "content": "What were the findings on physical examination upon admission?",
+          "response": "The patient was pharmacologically paralyzed, with an indwelling bladder catheter. He was markedly obese. On neurologic examination, he was unresponsive to voice or to noxious stimuli but intermittently gagged on the endotracheal tube. The pupils were equal and minimally reactive to light. There was no response to the doll's-head maneuver. The corneal reflexes were weak. The deep-tendon reflexes were ++ and equal; bilateral Babinski signs were present.",
+          "teaching_points": [
+            {
+              "id": "TP3",
+              "content": "Neurological examination findings such as Babinski signs and weak corneal reflexes can indicate severe brain dysfunction.",
+              "covered": false
+            }
+          ],
+          "elicited": false
+        }
+      ],
+      "optional": [],
+      "current_ideal_differential_diagnosis": [
+        {
+          "name": "Viral Encephalitis",
+          "category": "Infectious disease",
+          "likelihood": "high",
+          "key_features": [
+            "fever",
+            "altered mental state",
+            "recent upper respiratory symptoms",
+            "neurological deficits"
+          ],
+          "supporting_evidence": [
+            "fever",
+            "altered mental state",
+            "recent cough and rhinorrhea",
+            "neurological examination findings"
+          ],
+          "refuting_evidence": [],
+          "additional_information_needed": [
+            "CSF analysis for viral PCR",
+            "brain MRI",
+            "EEG"
+          ]
+        },
+        {
+          "name": "Bacterial Meningitis",
+          "category": "Infectious disease",
+          "likelihood": "medium",
+          "key_features": [
+            "fever",
+            "altered mental state",
+            "neurological signs",
+            "possible neck stiffness"
+          ],
+          "supporting_evidence": [
+            "fever",
+            "altered mental state",
+            "neurological examination findings"
+          ],
+          "refuting_evidence": [
+            "absence of neck stiffness noted in the case"
+          ],
+          "additional_information_needed": [
+            "CSF analysis for cell count, glucose, protein, and culture",
+            "blood cultures"
+          ]
+        },
+        {
+          "name": "Non-convulsive Status Epilepticus",
+          "category": "Neurological disorder",
+          "likelihood": "medium",
+          "key_features": [
+            "altered mental state",
+            "unresponsiveness",
+            "possible subtle motor signs"
+          ],
+          "supporting_evidence": [
+            "altered mental state",
+            "unresponsiveness"
+          ],
+          "refuting_evidence": [
+            "no specific mention of seizure activity or subtle motor signs"
+          ],
+          "additional_information_needed": [
+            "EEG to assess for seizure activity"
+          ]
+        },
+        {
+          "name": "Diabetic Hyperosmolar Syndrome",
+          "category": "Metabolic disorder",
+          "likelihood": "low",
+          "key_features": [
+            "altered mental state",
+            "history of impaired glucose tolerance",
+            "dehydration"
+          ],
+          "supporting_evidence": [
+            "altered mental state",
+            "history of impaired glucose tolerance"
+          ],
+          "refuting_evidence": [
+            "no mention of hyperglycemia or dehydration symptoms"
+          ],
+          "additional_information_needed": [
+            "serum glucose levels",
+            "serum osmolality"
+          ]
+        },
+        {
+          "name": "Stroke",
+          "category": "Neurological disorder",
+          "likelihood": "low",
+          "key_features": [
+            "sudden onset of neurological deficits",
+            "altered mental state"
+          ],
+          "supporting_evidence": [
+            "altered mental state",
+            "neurological examination findings"
+          ],
+          "refuting_evidence": [
+            "gradual onset of symptoms over days",
+            "no focal neurological deficits"
+          ],
+          "additional_information_needed": [
+            "brain imaging (CT/MRI)"
+          ]
+        }
+      ]
+    },
+    "testing": {
+      "required": [
+        {
+          "id": "T1",
+          "content": "What were the results of the initial CT scan?",
+          "response": "A CT scan of the head showed diffuse white-matter hypodensity in both cerebral hemispheres, predominantly at and above the level of the basal ganglia. More discrete areas of hypodensity were seen in the right internal capsule and the left inferior frontal region, and there was mass effect, with obliteration of the perimesencephalic and peripontine cisterns.",
+          "teaching_points": [
+            {
+              "id": "TP4",
+              "content": "CT findings of hypodensity and mass effect suggest significant cerebral edema and possible herniation.",
+              "covered": false
+            }
+          ],
+          "elicited": false
+        },
+        {
+          "id": "T2",
+          "content": "What were the laboratory findings?",
+          "response": "The urine was positive for glucose (++++) and protein (++); the sediment contained 35 red cells, 4 white cells, and a few bacteria per high-power field. Serum tests for drugs of abuse were negative.",
+          "teaching_points": [
+            {
+              "id": "TP5",
+              "content": "Presence of glucose and protein in urine can indicate renal involvement or systemic illness.",
+              "covered": false
+            }
+          ],
+          "elicited": false
+        }
+      ],
+      "optional": [],
+      "current_ideal_differential_diagnosis": [
+        {
+          "name": "Viral Encephalitis",
+          "category": "Infectious disease",
+          "likelihood": "high",
+          "key_features": [
+            "fever",
+            "altered mental state",
+            "diffuse white-matter hypodensity on CT",
+            "history of recent upper respiratory symptoms"
+          ],
+          "supporting_evidence": [
+            "fever and altered mental state",
+            "recent cough and rhinorrhea",
+            "CT findings of diffuse white-matter hypodensity"
+          ],
+          "refuting_evidence": [
+            "none specific at this point"
+          ],
+          "additional_information_needed": [
+            "CSF analysis for viral PCR",
+            "EEG to assess for encephalitis patterns",
+            "MRI for further brain imaging"
+          ]
+        },
+        {
+          "name": "Acute Disseminated Encephalomyelitis (ADEM)",
+          "category": "Neurological disorder",
+          "likelihood": "medium",
+          "key_features": [
+            "recent infection",
+            "altered mental status",
+            "diffuse white-matter changes on imaging"
+          ],
+          "supporting_evidence": [
+            "recent upper respiratory infection",
+            "diffuse white-matter hypodensity on CT"
+          ],
+          "refuting_evidence": [
+            "age is less typical for ADEM",
+            "no clear post-vaccination or post-infectious trigger identified"
+          ],
+          "additional_information_needed": [
+            "MRI to better characterize white-matter changes",
+            "CSF analysis for oligoclonal bands"
+          ]
+        },
+        {
+          "name": "Diabetic Hyperosmolar Syndrome with Cerebral Edema",
+          "category": "Metabolic disorder",
+          "likelihood": "medium",
+          "key_features": [
+            "altered mental status",
+            "marked obesity",
+            "glucosuria",
+            "cerebral edema"
+          ],
+          "supporting_evidence": [
+            "glucosuria",
+            "altered mental state",
+            "obesity"
+          ],
+          "refuting_evidence": [
+            "no mention of hyperglycemia or serum osmolality",
+            "CT findings more suggestive of encephalitis"
+          ],
+          "additional_information_needed": [
+            "serum glucose and osmolality levels",
+            "electrolyte panel"
+          ]
+        },
+        {
+          "name": "Cerebral Vasculitis",
+          "category": "Vascular disorder",
+          "likelihood": "low",
+          "key_features": [
+            "altered mental status",
+            "diffuse white-matter changes",
+            "fever"
+          ],
+          "supporting_evidence": [
+            "fever",
+            "altered mental state",
+            "CT findings"
+          ],
+          "refuting_evidence": [
+            "lack of systemic vasculitis symptoms",
+            "no clear evidence of vessel involvement"
+          ],
+          "additional_information_needed": [
+            "angiography to assess for vasculitis",
+            "autoimmune panel"
+          ]
+        },
+        {
+          "name": "Toxic-Metabolic Encephalopathy",
+          "category": "Metabolic disorder",
+          "likelihood": "low",
+          "key_features": [
+            "altered mental status",
+            "diffuse brain changes"
+          ],
+          "supporting_evidence": [
+            "altered mental state",
+            "CT findings"
+          ],
+          "refuting_evidence": [
+            "negative drug screen",
+            "no known toxin exposure"
+          ],
+          "additional_information_needed": [
+            "comprehensive metabolic panel",
+            "liver and renal function tests"
+          ]
+        }
+      ]
+    },
+    "management": {
+      "required": [
+        {
+          "id": "M1",
+          "content": "What treatments were administered during hospitalization?",
+          "response": "Ceftriaxone treatment was continued, and acyclovir, ampicillin, vancomycin, insulin, phenytoin sodium, mannitol, minidose heparin, and sucralfate were given. Repeated increases in intracranial pressure were managed with mannitol and pentobarbital.",
+          "teaching_points": [
+            {
+              "id": "TP6",
+              "content": "Management of increased intracranial pressure often involves medications like mannitol and pentobarbital to reduce cerebral edema.",
+              "covered": false
+            }
+          ],
+          "elicited": false
+        }
+      ],
+      "optional": []
+    },
+    "discussion": {
+      "required": [],
+      "optional": []
+    }
+  },
+  "differential_diagnosis": [],
+  "final_diagnosis": {
+    "name": "Unknown",
+    "category": "Neurological/Infectious",
+    "key_features": [],
+    "supporting_evidence": [],
+    "refuting_evidence": []
+  }
+}

@@ -1,0 +1,481 @@
+{
+  "metadata": {
+    "id": "case_046",
+    "title": "2016 Case 17",
+    "original_presentation": "A 60-year-old woman was seen in the outpatient pulmonary clinic of this hospital because of increasing dyspnea.",
+    "difficulty": "intermediate",
+    "specialties": [
+      "pulmonology",
+      "internal medicine"
+    ],
+    "keywords": [
+      "dyspnea",
+      "bronchiectasis",
+      "pulmonary function tests",
+      "bronchoscopy"
+    ],
+    "source": "Dr. R. Scott Harris",
+    "version": "1.0"
+  },
+  "clinical_elements": {
+    "history": {
+      "required": [
+        {
+          "id": "H1",
+          "content": "What is the patient's history of presenting illness?",
+          "response": "The patient had been well until 2 years before the current evaluation, when episodes of mild, nonproductive coughing developed and occurred multiple times daily. Between 13 months and 10 months before the current evaluation, three febrile illnesses occurred, with temperatures up to 38.9°C. After the third illness, the patient noted dyspnea with exertion.",
+          "teaching_points": [
+            {
+              "id": "TP1",
+              "content": "Chronic cough and recurrent febrile illnesses can be indicative of underlying pulmonary pathology.",
+              "covered": false
+            }
+          ],
+          "elicited": false
+        },
+        {
+          "id": "H2",
+          "content": "What treatments were administered during the patient's previous evaluations?",
+          "response": "Oral azithromycin and combined inhaled budesonide–formoterol fumarate dihydrate were administered. Levofloxacin was administered after a chest radiograph showed pulmonary findings suggestive of possible scarring or consolidation.",
+          "teaching_points": [
+            {
+              "id": "TP2",
+              "content": "Antibiotics and inhaled corticosteroids are common treatments for respiratory infections and obstructive lung diseases.",
+              "covered": false
+            }
+          ],
+          "elicited": false
+        },
+        {
+          "id": "H3",
+          "content": "What are the patient's past medical history and lifestyle factors?",
+          "response": "The patient had hypothyroidism, hypercholesterolemia, hypertensive disorder, recurrent urinary tract infections, and lichen sclerosus. She had smoked one to two packs of cigarettes weekly for 10 years as a young adult.",
+          "teaching_points": [
+            {
+              "id": "TP3",
+              "content": "Smoking history is a significant risk factor for chronic lung diseases.",
+              "covered": false
+            }
+          ],
+          "elicited": false
+        }
+      ],
+      "optional": [],
+      "current_ideal_differential_diagnosis": [
+        {
+          "name": "Chronic Obstructive Pulmonary Disease (COPD)",
+          "category": "Pulmonary disease",
+          "likelihood": "medium",
+          "key_features": [
+            "chronic cough",
+            "dyspnea",
+            "history of smoking"
+          ],
+          "supporting_evidence": [
+            "history of smoking",
+            "chronic cough",
+            "dyspnea with exertion"
+          ],
+          "refuting_evidence": [
+            "nonproductive cough",
+            "no mention of wheezing or significant sputum production"
+          ],
+          "additional_information_needed": [
+            "spirometry results",
+            "chest CT scan"
+          ]
+        },
+        {
+          "name": "Interstitial Lung Disease (ILD)",
+          "category": "Pulmonary disease",
+          "likelihood": "medium",
+          "key_features": [
+            "progressive dyspnea",
+            "nonproductive cough",
+            "possible scarring on imaging"
+          ],
+          "supporting_evidence": [
+            "nonproductive cough",
+            "dyspnea with exertion",
+            "pulmonary findings suggestive of scarring"
+          ],
+          "refuting_evidence": [
+            "no specific mention of crackles on lung exam"
+          ],
+          "additional_information_needed": [
+            "high-resolution CT scan of the chest",
+            "pulmonary function tests"
+          ]
+        },
+        {
+          "name": "Pulmonary Fibrosis",
+          "category": "Pulmonary disease",
+          "likelihood": "medium",
+          "key_features": [
+            "progressive dyspnea",
+            "nonproductive cough",
+            "scarring on imaging"
+          ],
+          "supporting_evidence": [
+            "nonproductive cough",
+            "dyspnea with exertion",
+            "pulmonary findings suggestive of scarring"
+          ],
+          "refuting_evidence": [
+            "no specific mention of clubbing or crackles"
+          ],
+          "additional_information_needed": [
+            "high-resolution CT scan of the chest",
+            "lung biopsy if needed"
+          ]
+        },
+        {
+          "name": "Asthma",
+          "category": "Pulmonary disease",
+          "likelihood": "low",
+          "key_features": [
+            "episodic wheezing",
+            "cough",
+            "dyspnea"
+          ],
+          "supporting_evidence": [
+            "use of inhaled budesonide–formoterol"
+          ],
+          "refuting_evidence": [
+            "age of onset",
+            "nonproductive cough",
+            "no mention of wheezing"
+          ],
+          "additional_information_needed": [
+            "spirometry with bronchodilator response",
+            "allergy testing"
+          ]
+        },
+        {
+          "name": "Bronchiectasis",
+          "category": "Pulmonary disease",
+          "likelihood": "low",
+          "key_features": [
+            "chronic cough",
+            "sputum production",
+            "recurrent infections"
+          ],
+          "supporting_evidence": [
+            "recurrent febrile illnesses",
+            "pulmonary findings suggestive of scarring"
+          ],
+          "refuting_evidence": [
+            "nonproductive cough",
+            "no mention of significant sputum production"
+          ],
+          "additional_information_needed": [
+            "chest CT scan",
+            "sputum culture"
+          ]
+        }
+      ]
+    },
+    "physical": {
+      "required": [
+        {
+          "id": "P1",
+          "content": "What were the findings on physical examination?",
+          "response": "The temperature was 36.7°C, the blood pressure 132/63 mm Hg, the pulse 81 beats per minute, the respiratory rate 16 breaths per minute, and the oxygen saturation 93% while she was breathing ambient air. The lungs were clear, and the remainder of the examination was normal.",
+          "teaching_points": [
+            {
+              "id": "TP4",
+              "content": "Normal lung sounds do not rule out underlying pulmonary pathology.",
+              "covered": false
+            }
+          ],
+          "elicited": false
+        }
+      ],
+      "optional": [],
+      "current_ideal_differential_diagnosis": [
+        {
+          "name": "Chronic Obstructive Pulmonary Disease (COPD)",
+          "category": "Pulmonary disease",
+          "likelihood": "medium",
+          "key_features": [
+            "chronic cough",
+            "dyspnea",
+            "history of smoking"
+          ],
+          "supporting_evidence": [
+            "history of smoking",
+            "chronic cough",
+            "dyspnea with exertion"
+          ],
+          "refuting_evidence": [
+            "lungs were clear on examination",
+            "oxygen saturation slightly low but not severely impaired"
+          ],
+          "additional_information_needed": [
+            "spirometry to assess for obstructive pattern",
+            "chest CT to evaluate for emphysema or chronic bronchitis"
+          ]
+        },
+        {
+          "name": "Interstitial Lung Disease (ILD)",
+          "category": "Pulmonary disease",
+          "likelihood": "medium",
+          "key_features": [
+            "progressive dyspnea",
+            "nonproductive cough",
+            "possible scarring on chest radiograph"
+          ],
+          "supporting_evidence": [
+            "progressive dyspnea",
+            "nonproductive cough",
+            "chest radiograph suggestive of scarring"
+          ],
+          "refuting_evidence": [
+            "lungs were clear on examination"
+          ],
+          "additional_information_needed": [
+            "high-resolution CT scan of the chest",
+            "pulmonary function tests to assess for restrictive pattern"
+          ]
+        },
+        {
+          "name": "Asthma",
+          "category": "Pulmonary disease",
+          "likelihood": "low",
+          "key_features": [
+            "episodic dyspnea",
+            "cough",
+            "response to bronchodilators"
+          ],
+          "supporting_evidence": [
+            "dyspnea with exertion",
+            "cough"
+          ],
+          "refuting_evidence": [
+            "no wheezing noted on examination",
+            "no significant improvement with inhaled budesonide–formoterol"
+          ],
+          "additional_information_needed": [
+            "spirometry with bronchodilator response",
+            "methacholine challenge test"
+          ]
+        },
+        {
+          "name": "Pulmonary Fibrosis",
+          "category": "Pulmonary disease",
+          "likelihood": "medium",
+          "key_features": [
+            "progressive dyspnea",
+            "nonproductive cough",
+            "scarring on imaging"
+          ],
+          "supporting_evidence": [
+            "progressive dyspnea",
+            "nonproductive cough",
+            "chest radiograph suggestive of scarring"
+          ],
+          "refuting_evidence": [
+            "lungs were clear on examination"
+          ],
+          "additional_information_needed": [
+            "high-resolution CT scan of the chest",
+            "lung biopsy if diagnosis remains unclear"
+          ]
+        },
+        {
+          "name": "Heart Failure",
+          "category": "Cardiovascular disease",
+          "likelihood": "low",
+          "key_features": [
+            "dyspnea on exertion",
+            "possible pulmonary congestion"
+          ],
+          "supporting_evidence": [
+            "dyspnea with exertion"
+          ],
+          "refuting_evidence": [
+            "lungs were clear on examination",
+            "no peripheral edema noted"
+          ],
+          "additional_information_needed": [
+            "echocardiogram",
+            "BNP levels"
+          ]
+        }
+      ]
+    },
+    "testing": {
+      "required": [
+        {
+          "id": "T1",
+          "content": "What were the results of the pulmonary function tests?",
+          "response": "Pulmonary-function tests were thought to be consistent with obstructive lung disease. The level of α1-antitrypsin was normal.",
+          "teaching_points": [
+            {
+              "id": "TP5",
+              "content": "Pulmonary function tests are crucial in diagnosing and assessing the severity of obstructive lung diseases.",
+              "covered": false
+            }
+          ],
+          "elicited": false
+        },
+        {
+          "id": "T2",
+          "content": "What did the CT scans reveal?",
+          "response": "CT of the chest revealed mild cylindrical bronchiectasis predominantly in the lower lobes, with mild, diffuse bronchial-wall thickening and a small focus of atelectasis or scarring.",
+          "teaching_points": [
+            {
+              "id": "TP6",
+              "content": "Bronchiectasis is characterized by permanent dilation of bronchi and can be associated with chronic infections.",
+              "covered": false
+            }
+          ],
+          "elicited": false
+        },
+        {
+          "id": "T3",
+          "content": "What were the findings from the bronchoscopy?",
+          "response": "Bronchoalveolar lavage fluid revealed clear and colorless fluid, with no evidence of pepsin A or galactomannan antigen. Cytologic examination revealed no viral cytopathic changes, fungal elements, or malignant cells.",
+          "teaching_points": [
+            {
+              "id": "TP7",
+              "content": "Bronchoscopy with bronchoalveolar lavage can help diagnose infections and other lung conditions.",
+              "covered": false
+            }
+          ],
+          "elicited": false
+        }
+      ],
+      "optional": [],
+      "current_ideal_differential_diagnosis": [
+        {
+          "name": "Chronic Obstructive Pulmonary Disease (COPD)",
+          "category": "Pulmonary disease",
+          "likelihood": "medium",
+          "key_features": [
+            "chronic cough",
+            "dyspnea",
+            "obstructive pattern on PFTs",
+            "history of smoking"
+          ],
+          "supporting_evidence": [
+            "obstructive lung disease pattern on PFTs",
+            "history of smoking",
+            "dyspnea with exertion"
+          ],
+          "refuting_evidence": [
+            "lungs were clear on physical examination",
+            "normal α1-antitrypsin level"
+          ],
+          "additional_information_needed": [
+            "Detailed smoking history",
+            "Response to bronchodilators on PFTs"
+          ]
+        },
+        {
+          "name": "Bronchiectasis",
+          "category": "Pulmonary disease",
+          "likelihood": "high",
+          "key_features": [
+            "chronic cough",
+            "recurrent respiratory infections",
+            "dyspnea",
+            "bronchial wall thickening on CT"
+          ],
+          "supporting_evidence": [
+            "CT showing mild cylindrical bronchiectasis and bronchial-wall thickening",
+            "history of recurrent febrile illnesses"
+          ],
+          "refuting_evidence": [
+            "clear lungs on physical examination"
+          ],
+          "additional_information_needed": [
+            "Sputum culture results",
+            "History of childhood respiratory infections or conditions"
+          ]
+        },
+        {
+          "name": "Asthma",
+          "category": "Pulmonary disease",
+          "likelihood": "low",
+          "key_features": [
+            "episodic wheezing",
+            "cough",
+            "dyspnea",
+            "reversible airway obstruction"
+          ],
+          "supporting_evidence": [
+            "dyspnea with exertion",
+            "use of inhaled budesonide–formoterol"
+          ],
+          "refuting_evidence": [
+            "no wheezing noted on examination",
+            "obstructive pattern not clearly reversible"
+          ],
+          "additional_information_needed": [
+            "Bronchodilator response on PFTs",
+            "History of atopy or allergies"
+          ]
+        },
+        {
+          "name": "Interstitial Lung Disease",
+          "category": "Pulmonary disease",
+          "likelihood": "low",
+          "key_features": [
+            "progressive dyspnea",
+            "cough",
+            "interstitial changes on imaging"
+          ],
+          "supporting_evidence": [
+            "dyspnea with exertion"
+          ],
+          "refuting_evidence": [
+            "CT findings more consistent with bronchiectasis",
+            "clear lungs on examination"
+          ],
+          "additional_information_needed": [
+            "High-resolution CT scan",
+            "Detailed occupational and environmental exposure history"
+          ]
+        }
+      ]
+    },
+    "management": {
+      "required": [
+        {
+          "id": "M1",
+          "content": "What management strategies were employed?",
+          "response": "Albuterol (by nebulizer or by inhaler with a spacer) and a course of azithromycin were administered.",
+          "teaching_points": [
+            {
+              "id": "TP8",
+              "content": "Bronchodilators and antibiotics are commonly used in the management of respiratory conditions.",
+              "covered": false
+            }
+          ],
+          "elicited": false
+        }
+      ],
+      "optional": []
+    },
+    "discussion": {
+      "required": [],
+      "optional": []
+    }
+  },
+  "differential_diagnosis": [],
+  "final_diagnosis": {
+    "name": "Bronchiectasis",
+    "category": "Pulmonary disease",
+    "key_features": [
+      "Mild cylindrical bronchiectasis",
+      "Diffuse bronchial-wall thickening",
+      "Obstructive lung disease pattern on PFTs"
+    ],
+    "supporting_evidence": [
+      "CT findings of bronchiectasis",
+      "History of recurrent respiratory infections"
+    ],
+    "refuting_evidence": []
+  }
+}

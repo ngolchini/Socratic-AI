@@ -1,0 +1,434 @@
+{
+  "metadata": {
+    "id": "case_004",
+    "title": "2015 Case 19",
+    "original_presentation": "A 71-year-old man with congestive heart failure and ischemic cardiomyopathy was admitted to this hospital because of sudden chest pain, diaphoresis, and shortness of breath.",
+    "difficulty": "intermediate",
+    "specialties": [
+      "Cardiology",
+      "Internal Medicine"
+    ],
+    "keywords": [
+      "chest pain",
+      "ischemic cardiomyopathy",
+      "congestive heart failure",
+      "ICD",
+      "pleural effusion"
+    ],
+    "source": "Dr. Katharine R. Clapham",
+    "version": "1.0"
+  },
+  "clinical_elements": {
+    "history": {
+      "required": [
+        {
+          "id": "H1",
+          "content": "What is the patient's past medical history?",
+          "response": "The patient had hypertension, hyperlipidemia, diabetes mellitus, ischemic cardiomyopathy, and a history of myocardial infarctions.",
+          "teaching_points": [
+            {
+              "id": "TP1",
+              "content": "A comprehensive medical history is crucial in understanding the patient's current condition and potential complications.",
+              "covered": false
+            }
+          ],
+          "elicited": false
+        },
+        {
+          "id": "H2",
+          "content": "What are the patient's symptoms upon admission?",
+          "response": "Sudden chest pain, diaphoresis, and shortness of breath.",
+          "teaching_points": [
+            {
+              "id": "TP2",
+              "content": "Acute chest pain with diaphoresis and dyspnea can indicate a cardiac event and requires immediate evaluation.",
+              "covered": false
+            }
+          ],
+          "elicited": false
+        }
+      ],
+      "optional": [],
+      "current_ideal_differential_diagnosis": [
+        {
+          "name": "Acute Myocardial Infarction (AMI)",
+          "category": "Cardiovascular",
+          "likelihood": "high",
+          "key_features": [
+            "sudden chest pain",
+            "diaphoresis",
+            "shortness of breath",
+            "history of myocardial infarctions"
+          ],
+          "supporting_evidence": [
+            "sudden chest pain",
+            "diaphoresis",
+            "shortness of breath",
+            "history of myocardial infarctions",
+            "ischemic cardiomyopathy"
+          ],
+          "refuting_evidence": [],
+          "additional_information_needed": [
+            "ECG",
+            "cardiac biomarkers (troponin levels)",
+            "coronary angiography"
+          ]
+        },
+        {
+          "name": "Pulmonary Embolism",
+          "category": "Respiratory",
+          "likelihood": "medium",
+          "key_features": [
+            "sudden chest pain",
+            "shortness of breath",
+            "diaphoresis"
+          ],
+          "supporting_evidence": [
+            "sudden chest pain",
+            "shortness of breath",
+            "diaphoresis"
+          ],
+          "refuting_evidence": [
+            "history of ischemic cardiomyopathy and myocardial infarctions makes AMI more likely"
+          ],
+          "additional_information_needed": [
+            "D-dimer test",
+            "CT pulmonary angiography",
+            "ventilation-perfusion scan"
+          ]
+        },
+        {
+          "name": "Aortic Dissection",
+          "category": "Cardiovascular",
+          "likelihood": "medium",
+          "key_features": [
+            "sudden chest pain",
+            "history of hypertension"
+          ],
+          "supporting_evidence": [
+            "sudden chest pain",
+            "history of hypertension"
+          ],
+          "refuting_evidence": [
+            "absence of tearing or ripping pain description",
+            "no mention of unequal blood pressures"
+          ],
+          "additional_information_needed": [
+            "CT angiography of the chest",
+            "transesophageal echocardiogram"
+          ]
+        },
+        {
+          "name": "Unstable Angina",
+          "category": "Cardiovascular",
+          "likelihood": "medium",
+          "key_features": [
+            "chest pain",
+            "history of ischemic heart disease"
+          ],
+          "supporting_evidence": [
+            "chest pain",
+            "history of ischemic cardiomyopathy"
+          ],
+          "refuting_evidence": [
+            "sudden onset and severity of symptoms may suggest AMI instead"
+          ],
+          "additional_information_needed": [
+            "ECG",
+            "cardiac stress test",
+            "coronary angiography"
+          ]
+        },
+        {
+          "name": "Heart Failure Exacerbation",
+          "category": "Cardiovascular",
+          "likelihood": "low",
+          "key_features": [
+            "shortness of breath",
+            "history of congestive heart failure"
+          ],
+          "supporting_evidence": [
+            "shortness of breath",
+            "history of congestive heart failure"
+          ],
+          "refuting_evidence": [
+            "sudden chest pain and diaphoresis are more suggestive of an acute coronary syndrome"
+          ],
+          "additional_information_needed": [
+            "BNP levels",
+            "chest X-ray",
+            "echocardiogram"
+          ]
+        }
+      ]
+    },
+    "physical": {
+      "required": [
+        {
+          "id": "P1",
+          "content": "What were the findings on physical examination upon admission?",
+          "response": "Temperature was 36.1°C, blood pressure 130/70 mm Hg, pulse 78 beats per minute and irregular, respiratory rate 20 breaths per minute, and oxygen saturation 96%. Skin was cool, with no inflammation or hematoma over the ICD placement site.",
+          "teaching_points": [
+            {
+              "id": "TP3",
+              "content": "Vital signs and physical examination findings provide essential information for assessing the patient's hemodynamic status.",
+              "covered": false
+            }
+          ],
+          "elicited": false
+        }
+      ],
+      "optional": [],
+      "current_ideal_differential_diagnosis": [
+        {
+          "name": "Acute Myocardial Infarction (AMI)",
+          "category": "Cardiovascular",
+          "likelihood": "high",
+          "key_features": [
+            "sudden chest pain",
+            "diaphoresis",
+            "shortness of breath",
+            "history of ischemic heart disease"
+          ],
+          "supporting_evidence": [
+            "sudden chest pain",
+            "diaphoresis",
+            "shortness of breath",
+            "history of myocardial infarctions and ischemic cardiomyopathy"
+          ],
+          "refuting_evidence": [
+            "none at this point"
+          ],
+          "additional_information_needed": [
+            "ECG results",
+            "cardiac enzyme levels",
+            "coronary angiography"
+          ]
+        },
+        {
+          "name": "Pulmonary Embolism",
+          "category": "Respiratory",
+          "likelihood": "medium",
+          "key_features": [
+            "sudden shortness of breath",
+            "chest pain",
+            "diaphoresis"
+          ],
+          "supporting_evidence": [
+            "sudden shortness of breath",
+            "chest pain",
+            "diaphoresis"
+          ],
+          "refuting_evidence": [
+            "oxygen saturation is relatively normal at 96%"
+          ],
+          "additional_information_needed": [
+            "D-dimer test",
+            "CT pulmonary angiography"
+          ]
+        },
+        {
+          "name": "Aortic Dissection",
+          "category": "Cardiovascular",
+          "likelihood": "low",
+          "key_features": [
+            "sudden chest pain",
+            "possible radiation to back",
+            "hypertension history"
+          ],
+          "supporting_evidence": [
+            "sudden chest pain",
+            "history of hypertension"
+          ],
+          "refuting_evidence": [
+            "blood pressure is not extremely high",
+            "no mention of pain radiating to the back"
+          ],
+          "additional_information_needed": [
+            "CT or MRI of the chest",
+            "transesophageal echocardiogram"
+          ]
+        },
+        {
+          "name": "Arrhythmia (e.g., Atrial Fibrillation)",
+          "category": "Cardiovascular",
+          "likelihood": "medium",
+          "key_features": [
+            "irregular pulse",
+            "shortness of breath",
+            "chest discomfort"
+          ],
+          "supporting_evidence": [
+            "irregular pulse noted on examination"
+          ],
+          "refuting_evidence": [
+            "no direct evidence of arrhythmia causing chest pain"
+          ],
+          "additional_information_needed": [
+            "ECG",
+            "Holter monitor"
+          ]
+        }
+      ]
+    },
+    "testing": {
+      "required": [
+        {
+          "id": "T1",
+          "content": "What were the results of the chest radiographs?",
+          "response": "Posteroanterior and lateral chest radiographs showed a new left pleural effusion.",
+          "teaching_points": [
+            {
+              "id": "TP4",
+              "content": "Chest radiographs are useful in identifying pleural effusions and other thoracic abnormalities.",
+              "covered": false
+            }
+          ],
+          "elicited": false
+        },
+        {
+          "id": "T2",
+          "content": "What did the electrocardiogram (ECG) show?",
+          "response": "Sinus rhythm with 1-mm, concave ST-segment elevations in the inferior leads and in leads V3 and V4, along with T-wave inversions and flattening in the lateral leads.",
+          "teaching_points": [
+            {
+              "id": "TP5",
+              "content": "ST-segment changes on an ECG can indicate myocardial ischemia or infarction.",
+              "covered": false
+            }
+          ],
+          "elicited": false
+        }
+      ],
+      "optional": [],
+      "current_ideal_differential_diagnosis": [
+        {
+          "name": "Acute Myocardial Infarction (AMI)",
+          "category": "Cardiovascular",
+          "likelihood": "high",
+          "key_features": [
+            "sudden chest pain",
+            "diaphoresis",
+            "shortness of breath",
+            "ST-segment elevation"
+          ],
+          "supporting_evidence": [
+            "sudden chest pain",
+            "diaphoresis",
+            "shortness of breath",
+            "ST-segment elevations in the inferior leads and V3, V4 on ECG"
+          ],
+          "refuting_evidence": [
+            "none at this point"
+          ],
+          "additional_information_needed": [
+            "cardiac biomarkers (troponin levels)",
+            "coronary angiography"
+          ]
+        },
+        {
+          "name": "Acute Pericarditis",
+          "category": "Cardiovascular",
+          "likelihood": "medium",
+          "key_features": [
+            "chest pain",
+            "ST-segment elevation",
+            "pleural effusion"
+          ],
+          "supporting_evidence": [
+            "ST-segment elevations in multiple leads",
+            "new left pleural effusion"
+          ],
+          "refuting_evidence": [
+            "absence of pericardial friction rub",
+            "lack of typical pericarditis history"
+          ],
+          "additional_information_needed": [
+            "echocardiogram",
+            "pericardial friction rub on auscultation"
+          ]
+        },
+        {
+          "name": "Pulmonary Embolism",
+          "category": "Respiratory",
+          "likelihood": "medium",
+          "key_features": [
+            "sudden shortness of breath",
+            "pleural effusion",
+            "chest pain"
+          ],
+          "supporting_evidence": [
+            "sudden shortness of breath",
+            "new left pleural effusion"
+          ],
+          "refuting_evidence": [
+            "ST-segment elevation not typical for PE",
+            "no evidence of right heart strain on ECG"
+          ],
+          "additional_information_needed": [
+            "D-dimer test",
+            "CT pulmonary angiography"
+          ]
+        },
+        {
+          "name": "Congestive Heart Failure Exacerbation",
+          "category": "Cardiovascular",
+          "likelihood": "medium",
+          "key_features": [
+            "shortness of breath",
+            "pleural effusion",
+            "irregular pulse"
+          ],
+          "supporting_evidence": [
+            "history of congestive heart failure",
+            "new left pleural effusion"
+          ],
+          "refuting_evidence": [
+            "ST-segment elevation not typical for CHF exacerbation"
+          ],
+          "additional_information_needed": [
+            "BNP levels",
+            "echocardiogram"
+          ]
+        }
+      ]
+    },
+    "management": {
+      "required": [
+        {
+          "id": "M1",
+          "content": "What treatments were administered upon admission?",
+          "response": "Aspirin, magnesium sulfate, and insulin were administered. Fentanyl was given for severe pain.",
+          "teaching_points": [
+            {
+              "id": "TP6",
+              "content": "Immediate management of chest pain may include analgesics and medications to address potential cardiac causes.",
+              "covered": false
+            }
+          ],
+          "elicited": false
+        }
+      ],
+      "optional": []
+    },
+    "discussion": {
+      "required": [],
+      "optional": []
+    }
+  },
+  "differential_diagnosis": [],
+  "final_diagnosis": {
+    "name": "Pericarditis",
+    "category": "Cardiovascular",
+    "key_features": [
+      "Chest pain exacerbated by movement and deep inspiration",
+      "ST-segment elevations on ECG",
+      "Trace pericardial effusion on ultrasonography"
+    ],
+    "supporting_evidence": [
+      "New ST-segment elevations in ECG leads",
+      "Trace pericardial effusion on cardiac ultrasonography"
+    ],
+    "refuting_evidence": []
+  }
+}

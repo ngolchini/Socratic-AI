@@ -1,0 +1,513 @@
+{
+  "metadata": {
+    "id": "case_009",
+    "title": "2013 Case 12",
+    "original_presentation": "An 18-year-old woman was admitted to this hospital because of pulmonary infiltrates and respiratory failure.",
+    "difficulty": "intermediate",
+    "specialties": [
+      "Pulmonology",
+      "Infectious Disease",
+      "Critical Care"
+    ],
+    "keywords": [
+      "pulmonary infiltrates",
+      "respiratory failure",
+      "pneumonia",
+      "intubation"
+    ],
+    "source": "Dr. James Sawalla Guseh and Dr. Victorine V. Muse",
+    "version": "1.0"
+  },
+  "clinical_elements": {
+    "history": {
+      "required": [
+        {
+          "id": "H1",
+          "content": "What symptoms did the patient experience before admission?",
+          "response": "The patient experienced fever, cough with white sputum, night sweats, painful pharyngitis, pleuritic chest pain, shortness of breath, nausea, vomiting, and diarrhea.",
+          "teaching_points": [
+            {
+              "id": "TP1",
+              "content": "A combination of respiratory and systemic symptoms can suggest an infectious process, such as pneumonia.",
+              "covered": false
+            }
+          ],
+          "elicited": false
+        },
+        {
+          "id": "H2",
+          "content": "What was the patient's medical history and lifestyle?",
+          "response": "The patient had tonsillitis and hand surgery in the past, smoked cigarettes and marijuana, lived in a damp and moldy environment, and had a family history of respiratory and cardiovascular diseases.",
+          "teaching_points": [
+            {
+              "id": "TP2",
+              "content": "Environmental factors and lifestyle choices, such as smoking and living in a moldy environment, can exacerbate respiratory conditions.",
+              "covered": false
+            }
+          ],
+          "elicited": false
+        }
+      ],
+      "optional": [],
+      "current_ideal_differential_diagnosis": [
+        {
+          "name": "Community-Acquired Pneumonia",
+          "category": "Infectious disease",
+          "likelihood": "high",
+          "key_features": [
+            "fever",
+            "cough with sputum",
+            "pleuritic chest pain",
+            "pulmonary infiltrates"
+          ],
+          "supporting_evidence": [
+            "fever",
+            "cough with white sputum",
+            "pleuritic chest pain",
+            "pulmonary infiltrates"
+          ],
+          "refuting_evidence": [],
+          "additional_information_needed": [
+            "chest X-ray results",
+            "sputum culture",
+            "blood cultures"
+          ]
+        },
+        {
+          "name": "Tuberculosis",
+          "category": "Infectious disease",
+          "likelihood": "medium",
+          "key_features": [
+            "night sweats",
+            "cough",
+            "fever",
+            "pulmonary infiltrates"
+          ],
+          "supporting_evidence": [
+            "night sweats",
+            "cough",
+            "fever",
+            "pulmonary infiltrates"
+          ],
+          "refuting_evidence": [
+            "no known exposure to TB",
+            "no mention of weight loss"
+          ],
+          "additional_information_needed": [
+            "PPD test",
+            "chest X-ray",
+            "sputum acid-fast bacilli test"
+          ]
+        },
+        {
+          "name": "Viral Pneumonitis",
+          "category": "Infectious disease",
+          "likelihood": "medium",
+          "key_features": [
+            "fever",
+            "cough",
+            "shortness of breath",
+            "pulmonary infiltrates"
+          ],
+          "supporting_evidence": [
+            "fever",
+            "cough",
+            "shortness of breath",
+            "pulmonary infiltrates"
+          ],
+          "refuting_evidence": [
+            "presence of white sputum suggests bacterial rather than viral"
+          ],
+          "additional_information_needed": [
+            "viral panel",
+            "chest X-ray"
+          ]
+        },
+        {
+          "name": "Hypersensitivity Pneumonitis",
+          "category": "Respiratory disease",
+          "likelihood": "medium",
+          "key_features": [
+            "exposure to mold",
+            "cough",
+            "shortness of breath",
+            "pulmonary infiltrates"
+          ],
+          "supporting_evidence": [
+            "lived in a damp and moldy environment",
+            "cough",
+            "shortness of breath",
+            "pulmonary infiltrates"
+          ],
+          "refuting_evidence": [
+            "no mention of improvement away from exposure"
+          ],
+          "additional_information_needed": [
+            "CT scan of the chest",
+            "serum precipitins for mold"
+          ]
+        },
+        {
+          "name": "Pulmonary Embolism",
+          "category": "Cardiovascular disease",
+          "likelihood": "low",
+          "key_features": [
+            "pleuritic chest pain",
+            "shortness of breath",
+            "risk factors for thrombosis"
+          ],
+          "supporting_evidence": [
+            "pleuritic chest pain",
+            "shortness of breath"
+          ],
+          "refuting_evidence": [
+            "no mention of leg swelling or risk factors for thrombosis",
+            "presence of fever and cough with sputum"
+          ],
+          "additional_information_needed": [
+            "D-dimer test",
+            "CT pulmonary angiography"
+          ]
+        }
+      ]
+    },
+    "physical": {
+      "required": [
+        {
+          "id": "P1",
+          "content": "What were the findings on physical examination?",
+          "response": "The patient was in mild respiratory distress, with dry lips, coughing, scattered wheezing, mild tenderness at the costovertebral angles, and a crusted lesion on her lip.",
+          "teaching_points": [
+            {
+              "id": "TP3",
+              "content": "Physical examination can reveal signs of respiratory distress and potential infectious processes.",
+              "covered": false
+            }
+          ],
+          "elicited": false
+        }
+      ],
+      "optional": [],
+      "current_ideal_differential_diagnosis": [
+        {
+          "name": "Community-acquired pneumonia",
+          "category": "Infectious disease",
+          "likelihood": "high",
+          "key_features": [
+            "fever",
+            "cough with sputum",
+            "pleuritic chest pain",
+            "pulmonary infiltrates"
+          ],
+          "supporting_evidence": [
+            "fever",
+            "cough with white sputum",
+            "pleuritic chest pain",
+            "pulmonary infiltrates",
+            "respiratory failure"
+          ],
+          "refuting_evidence": [],
+          "additional_information_needed": [
+            "chest X-ray results",
+            "sputum culture",
+            "blood cultures",
+            "complete blood count"
+          ]
+        },
+        {
+          "name": "Tuberculosis",
+          "category": "Infectious disease",
+          "likelihood": "medium",
+          "key_features": [
+            "fever",
+            "night sweats",
+            "cough",
+            "pulmonary infiltrates"
+          ],
+          "supporting_evidence": [
+            "fever",
+            "night sweats",
+            "cough",
+            "pulmonary infiltrates"
+          ],
+          "refuting_evidence": [
+            "no mention of weight loss",
+            "cough with white sputum rather than hemoptysis"
+          ],
+          "additional_information_needed": [
+            "PPD skin test",
+            "interferon-gamma release assay",
+            "sputum acid-fast bacilli stain and culture"
+          ]
+        },
+        {
+          "name": "Viral pneumonia",
+          "category": "Infectious disease",
+          "likelihood": "medium",
+          "key_features": [
+            "fever",
+            "cough",
+            "respiratory distress",
+            "pulmonary infiltrates"
+          ],
+          "supporting_evidence": [
+            "fever",
+            "cough",
+            "respiratory distress",
+            "pulmonary infiltrates"
+          ],
+          "refuting_evidence": [
+            "presence of white sputum suggests bacterial rather than viral"
+          ],
+          "additional_information_needed": [
+            "viral panel testing",
+            "PCR for common respiratory viruses"
+          ]
+        },
+        {
+          "name": "Hypersensitivity pneumonitis",
+          "category": "Respiratory disease",
+          "likelihood": "medium",
+          "key_features": [
+            "cough",
+            "shortness of breath",
+            "exposure to mold",
+            "pulmonary infiltrates"
+          ],
+          "supporting_evidence": [
+            "cough",
+            "shortness of breath",
+            "lived in a damp and moldy environment",
+            "pulmonary infiltrates"
+          ],
+          "refuting_evidence": [
+            "presence of fever and night sweats more suggestive of infection"
+          ],
+          "additional_information_needed": [
+            "high-resolution CT scan of the chest",
+            "serum precipitins for mold"
+          ]
+        },
+        {
+          "name": "Pulmonary embolism",
+          "category": "Cardiovascular disease",
+          "likelihood": "low",
+          "key_features": [
+            "pleuritic chest pain",
+            "shortness of breath",
+            "respiratory distress"
+          ],
+          "supporting_evidence": [
+            "pleuritic chest pain",
+            "shortness of breath",
+            "respiratory distress"
+          ],
+          "refuting_evidence": [
+            "fever and cough with sputum are not typical",
+            "no mention of risk factors like recent surgery or immobility"
+          ],
+          "additional_information_needed": [
+            "D-dimer test",
+            "CT pulmonary angiography"
+          ]
+        }
+      ]
+    },
+    "testing": {
+      "required": [
+        {
+          "id": "T1",
+          "content": "What were the key findings from imaging studies?",
+          "response": "Chest radiographs showed patchy opacities suggestive of pneumonia, and CT scans revealed multifocal segmental and subsegmental consolidations, ground-glass opacities, and small pleural effusions.",
+          "teaching_points": [
+            {
+              "id": "TP4",
+              "content": "Imaging studies are crucial in diagnosing and assessing the extent of pulmonary infections.",
+              "covered": false
+            }
+          ],
+          "elicited": false
+        },
+        {
+          "id": "T2",
+          "content": "What were the results of laboratory tests and cultures?",
+          "response": "Blood levels of lipase and amylase were normal, urinalysis showed trace protein, leukocytes, and bacteria, and cultures of bronchial washing grew normal respiratory flora.",
+          "teaching_points": [
+            {
+              "id": "TP5",
+              "content": "Laboratory tests and cultures help identify the causative agents of infection and guide treatment.",
+              "covered": false
+            }
+          ],
+          "elicited": false
+        }
+      ],
+      "optional": [],
+      "current_ideal_differential_diagnosis": [
+        {
+          "name": "Community-Acquired Pneumonia",
+          "category": "Infectious Disease",
+          "likelihood": "high",
+          "key_features": [
+            "fever",
+            "cough with sputum",
+            "pleuritic chest pain",
+            "pulmonary infiltrates"
+          ],
+          "supporting_evidence": [
+            "fever",
+            "cough with white sputum",
+            "pleuritic chest pain",
+            "patchy opacities on chest radiographs",
+            "multifocal consolidations on CT"
+          ],
+          "refuting_evidence": [
+            "cultures of bronchial washing grew normal respiratory flora"
+          ],
+          "additional_information_needed": [
+            "sputum culture and sensitivity",
+            "blood cultures",
+            "viral panel"
+          ]
+        },
+        {
+          "name": "Viral Pneumonia",
+          "category": "Infectious Disease",
+          "likelihood": "medium",
+          "key_features": [
+            "fever",
+            "cough",
+            "ground-glass opacities on imaging",
+            "normal bacterial cultures"
+          ],
+          "supporting_evidence": [
+            "fever",
+            "cough with white sputum",
+            "ground-glass opacities on CT",
+            "normal respiratory flora in cultures"
+          ],
+          "refuting_evidence": [
+            "no specific viral identification yet"
+          ],
+          "additional_information_needed": [
+            "viral PCR testing",
+            "serology for common respiratory viruses"
+          ]
+        },
+        {
+          "name": "Hypersensitivity Pneumonitis",
+          "category": "Allergic/Environmental",
+          "likelihood": "medium",
+          "key_features": [
+            "exposure to mold",
+            "cough",
+            "dyspnea",
+            "ground-glass opacities"
+          ],
+          "supporting_evidence": [
+            "lived in a damp and moldy environment",
+            "cough",
+            "shortness of breath",
+            "ground-glass opacities on CT"
+          ],
+          "refuting_evidence": [
+            "lack of specific hypersensitivity testing results"
+          ],
+          "additional_information_needed": [
+            "serum precipitins for mold",
+            "detailed environmental history"
+          ]
+        },
+        {
+          "name": "Pulmonary Embolism",
+          "category": "Vascular",
+          "likelihood": "low",
+          "key_features": [
+            "pleuritic chest pain",
+            "shortness of breath",
+            "ground-glass opacities"
+          ],
+          "supporting_evidence": [
+            "pleuritic chest pain",
+            "shortness of breath"
+          ],
+          "refuting_evidence": [
+            "no mention of risk factors like recent surgery or immobility",
+            "no evidence of emboli on CT"
+          ],
+          "additional_information_needed": [
+            "D-dimer test",
+            "CT pulmonary angiography"
+          ]
+        },
+        {
+          "name": "Tuberculosis",
+          "category": "Infectious Disease",
+          "likelihood": "low",
+          "key_features": [
+            "fever",
+            "night sweats",
+            "cough",
+            "pulmonary infiltrates"
+          ],
+          "supporting_evidence": [
+            "fever",
+            "night sweats",
+            "cough",
+            "pulmonary infiltrates"
+          ],
+          "refuting_evidence": [
+            "normal respiratory flora in cultures",
+            "no specific TB risk factors mentioned"
+          ],
+          "additional_information_needed": [
+            "PPD test or IGRA",
+            "sputum AFB smear and culture"
+          ]
+        }
+      ]
+    },
+    "management": {
+      "required": [
+        {
+          "id": "M1",
+          "content": "What treatments were administered during the hospital stay?",
+          "response": "The patient received azithromycin, ceftriaxone, doxycycline, vancomycin, cefepime, trimethoprim–sulfamethoxazole, methylprednisolone, and supportive care including mechanical ventilation.",
+          "teaching_points": [
+            {
+              "id": "TP6",
+              "content": "Antibiotic therapy should be tailored based on suspected pathogens and patient response.",
+              "covered": false
+            }
+          ],
+          "elicited": false
+        }
+      ],
+      "optional": []
+    },
+    "discussion": {
+      "required": [],
+      "optional": []
+    }
+  },
+  "differential_diagnosis": [
+    "Pneumonia",
+    "Viral respiratory infection",
+    "Pulmonary embolism",
+    "Acute respiratory distress syndrome (ARDS)"
+  ],
+  "final_diagnosis": {
+    "name": "Bilateral multifocal pneumonia",
+    "category": "Infectious Disease",
+    "key_features": [
+      "Patchy opacities on chest radiograph",
+      "Ground-glass opacities on CT",
+      "Respiratory distress"
+    ],
+    "supporting_evidence": [
+      "Imaging findings",
+      "Clinical symptoms"
+    ],
+    "refuting_evidence": []
+  }
+}

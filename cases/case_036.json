@@ -1,0 +1,436 @@
+{
+  "metadata": {
+    "id": "case_036",
+    "title": "1978 Case 50",
+    "original_presentation": "A 72-year-old woman was admitted to the hospital because of cough and fever.",
+    "difficulty": "intermediate",
+    "specialties": [
+      "Pulmonology",
+      "Infectious Disease"
+    ],
+    "keywords": [
+      "cough",
+      "fever",
+      "pulmonary consolidation",
+      "antibiotic treatment",
+      "bronchitis"
+    ],
+    "source": "Clinical case study",
+    "version": "1.0"
+  },
+  "clinical_elements": {
+    "history": {
+      "required": [
+        {
+          "id": "H1",
+          "content": "What is the patient's past medical history related to respiratory issues?",
+          "response": "The patient had a history of fever, chills, and pleurisy 7 1/2 years earlier, with segmental consolidation in the right lower lobe. She improved with antibiotics but had recurrent episodes of fever and cough with sputum production.",
+          "teaching_points": [
+            {
+              "id": "TP1",
+              "content": "Recurrent respiratory infections in the same lung segment may suggest underlying structural lung disease or chronic infection.",
+              "covered": false
+            }
+          ],
+          "elicited": false
+        },
+        {
+          "id": "H2",
+          "content": "What are the patient's current symptoms?",
+          "response": "The patient presented with worsening cough, increased production of yellow sputum, fever, myalgia, and malaise.",
+          "teaching_points": [
+            {
+              "id": "TP2",
+              "content": "Increased sputum production and fever in a patient with a history of lung disease may indicate an acute exacerbation or new infection.",
+              "covered": false
+            }
+          ],
+          "elicited": false
+        },
+        {
+          "id": "H3",
+          "content": "What is the patient's medical history unrelated to respiratory issues?",
+          "response": "The patient has a history of hypertension treated with hydrochlorothiazide and had lost 7 kg on a weight-reduction diet.",
+          "teaching_points": [
+            {
+              "id": "TP3",
+              "content": "Hypertension is a common comorbidity that can affect the management of other conditions.",
+              "covered": false
+            }
+          ],
+          "elicited": false
+        }
+      ],
+      "optional": [],
+      "current_ideal_differential_diagnosis": [
+        {
+          "name": "Community-Acquired Pneumonia",
+          "category": "Infectious disease",
+          "likelihood": "high",
+          "key_features": [
+            "fever",
+            "cough",
+            "sputum production",
+            "pleuritic chest pain",
+            "consolidation on imaging"
+          ],
+          "supporting_evidence": [
+            "history of fever and cough with sputum production",
+            "current symptoms of cough, fever, and yellow sputum",
+            "past history of segmental consolidation"
+          ],
+          "refuting_evidence": [],
+          "additional_information_needed": [
+            "chest X-ray or CT scan",
+            "sputum culture",
+            "blood cultures"
+          ]
+        },
+        {
+          "name": "Chronic Obstructive Pulmonary Disease (COPD) Exacerbation",
+          "category": "Chronic respiratory disease",
+          "likelihood": "medium",
+          "key_features": [
+            "chronic cough",
+            "sputum production",
+            "dyspnea",
+            "history of smoking"
+          ],
+          "supporting_evidence": [
+            "recurrent episodes of cough with sputum production"
+          ],
+          "refuting_evidence": [
+            "no mention of dyspnea or smoking history"
+          ],
+          "additional_information_needed": [
+            "pulmonary function tests",
+            "smoking history"
+          ]
+        },
+        {
+          "name": "Bronchiectasis",
+          "category": "Chronic respiratory disease",
+          "likelihood": "medium",
+          "key_features": [
+            "chronic cough",
+            "purulent sputum",
+            "recurrent respiratory infections"
+          ],
+          "supporting_evidence": [
+            "recurrent episodes of fever and cough with sputum production",
+            "current symptoms of increased sputum production"
+          ],
+          "refuting_evidence": [
+            "no mention of clubbing or hemoptysis"
+          ],
+          "additional_information_needed": [
+            "high-resolution CT scan of the chest",
+            "sputum culture for specific pathogens"
+          ]
+        },
+        {
+          "name": "Tuberculosis",
+          "category": "Infectious disease",
+          "likelihood": "low",
+          "key_features": [
+            "chronic cough",
+            "fever",
+            "night sweats",
+            "weight loss",
+            "hemoptysis"
+          ],
+          "supporting_evidence": [
+            "history of recurrent respiratory symptoms"
+          ],
+          "refuting_evidence": [
+            "no mention of night sweats or hemoptysis",
+            "weight loss attributed to diet"
+          ],
+          "additional_information_needed": [
+            "tuberculin skin test or IGRA",
+            "chest X-ray",
+            "sputum acid-fast bacilli smear and culture"
+          ]
+        }
+      ]
+    },
+    "physical": {
+      "required": [
+        {
+          "id": "P1",
+          "content": "What were the findings on physical examination?",
+          "response": "The patient was febrile, appeared pale and weak, with diminished breath sounds and dullness at the base of the right lung, and expiratory wheezes in the right-middle-lung area.",
+          "teaching_points": [
+            {
+              "id": "TP4",
+              "content": "Physical examination can provide clues to the location and nature of pulmonary pathology.",
+              "covered": false
+            }
+          ],
+          "elicited": false
+        }
+      ],
+      "optional": [],
+      "current_ideal_differential_diagnosis": [
+        {
+          "name": "Pneumonia",
+          "category": "Infectious disease",
+          "likelihood": "high",
+          "key_features": [
+            "fever",
+            "cough with sputum production",
+            "dullness on lung exam",
+            "diminished breath sounds"
+          ],
+          "supporting_evidence": [
+            "fever",
+            "cough with yellow sputum",
+            "dullness at the base of the right lung",
+            "diminished breath sounds",
+            "history of similar episodes"
+          ],
+          "refuting_evidence": [],
+          "additional_information_needed": [
+            "chest X-ray",
+            "sputum culture",
+            "complete blood count"
+          ]
+        },
+        {
+          "name": "Chronic Obstructive Pulmonary Disease (COPD) exacerbation",
+          "category": "Chronic respiratory disease",
+          "likelihood": "medium",
+          "key_features": [
+            "chronic cough",
+            "sputum production",
+            "wheezing",
+            "history of respiratory issues"
+          ],
+          "supporting_evidence": [
+            "worsening cough",
+            "increased sputum production",
+            "expiratory wheezes"
+          ],
+          "refuting_evidence": [
+            "no known history of COPD diagnosis"
+          ],
+          "additional_information_needed": [
+            "pulmonary function tests",
+            "history of smoking or exposure to lung irritants"
+          ]
+        },
+        {
+          "name": "Bronchiectasis",
+          "category": "Chronic respiratory disease",
+          "likelihood": "medium",
+          "key_features": [
+            "chronic cough",
+            "sputum production",
+            "recurrent respiratory infections"
+          ],
+          "supporting_evidence": [
+            "recurrent episodes of fever and cough with sputum production",
+            "history of pleurisy and consolidation"
+          ],
+          "refuting_evidence": [
+            "no mention of bronchiectasis diagnosis or imaging"
+          ],
+          "additional_information_needed": [
+            "high-resolution CT scan of the chest",
+            "sputum culture for specific pathogens"
+          ]
+        },
+        {
+          "name": "Lung cancer",
+          "category": "Oncological disease",
+          "likelihood": "low",
+          "key_features": [
+            "persistent cough",
+            "weight loss",
+            "hemoptysis",
+            "dullness on lung exam"
+          ],
+          "supporting_evidence": [
+            "weight loss",
+            "dullness at the base of the right lung"
+          ],
+          "refuting_evidence": [
+            "no hemoptysis",
+            "no known history of smoking"
+          ],
+          "additional_information_needed": [
+            "chest CT scan",
+            "bronchoscopy",
+            "biopsy if a mass is found"
+          ]
+        }
+      ]
+    },
+    "testing": {
+      "required": [
+        {
+          "id": "T1",
+          "content": "What were the results of the laboratory tests and imaging studies?",
+          "response": "The chest x-ray showed a rounded area of increased density in the right lower lobe with cavitation. Blood tests showed leukocytosis with neutrophilia. Pulmonary function tests indicated reduced vital capacity.",
+          "teaching_points": [
+            {
+              "id": "TP5",
+              "content": "Imaging and laboratory tests are crucial for diagnosing and monitoring pulmonary conditions.",
+              "covered": false
+            }
+          ],
+          "elicited": false
+        },
+        {
+          "id": "T2",
+          "content": "What were the results of the microbiological studies?",
+          "response": "Cultures yielded Bacteroides melaninogenicus and Fusobacterium nucleatum. Smears for acid-fast bacilli and fungi were negative.",
+          "teaching_points": [
+            {
+              "id": "TP6",
+              "content": "Identifying specific pathogens can guide targeted antibiotic therapy.",
+              "covered": false
+            }
+          ],
+          "elicited": false
+        }
+      ],
+      "optional": [],
+      "current_ideal_differential_diagnosis": [
+        {
+          "name": "Lung Abscess",
+          "category": "Infectious Disease",
+          "likelihood": "high",
+          "key_features": [
+            "cough with sputum production",
+            "fever",
+            "cavitary lesion on chest x-ray",
+            "leukocytosis",
+            "anaerobic bacteria in cultures"
+          ],
+          "supporting_evidence": [
+            "cavitation in right lower lobe on chest x-ray",
+            "cultures positive for Bacteroides melaninogenicus and Fusobacterium nucleatum",
+            "history of recurrent respiratory infections",
+            "leukocytosis with neutrophilia"
+          ],
+          "refuting_evidence": [],
+          "additional_information_needed": [
+            "CT scan of the chest",
+            "bronchoscopy to rule out obstruction or foreign body"
+          ]
+        },
+        {
+          "name": "Chronic Obstructive Pulmonary Disease (COPD) with Acute Exacerbation",
+          "category": "Pulmonary Disease",
+          "likelihood": "medium",
+          "key_features": [
+            "chronic cough",
+            "sputum production",
+            "wheezing",
+            "history of respiratory infections"
+          ],
+          "supporting_evidence": [
+            "wheezing in the right-middle-lung area",
+            "history of recurrent episodes of cough and sputum production"
+          ],
+          "refuting_evidence": [
+            "cavitary lesion on chest x-ray",
+            "specific anaerobic bacteria cultured"
+          ],
+          "additional_information_needed": [
+            "spirometry to assess airflow limitation",
+            "smoking history"
+          ]
+        },
+        {
+          "name": "Tuberculosis",
+          "category": "Infectious Disease",
+          "likelihood": "low",
+          "key_features": [
+            "chronic cough",
+            "fever",
+            "weight loss",
+            "cavitary lung lesions"
+          ],
+          "supporting_evidence": [
+            "cavitary lesion on chest x-ray",
+            "weight loss"
+          ],
+          "refuting_evidence": [
+            "negative smears for acid-fast bacilli",
+            "specific anaerobic bacteria cultured"
+          ],
+          "additional_information_needed": [
+            "repeat acid-fast bacilli cultures",
+            "interferon-gamma release assay (IGRA)"
+          ]
+        },
+        {
+          "name": "Lung Cancer",
+          "category": "Oncological Disease",
+          "likelihood": "low",
+          "key_features": [
+            "cough",
+            "weight loss",
+            "cavitary lung lesion",
+            "hemoptysis"
+          ],
+          "supporting_evidence": [
+            "cavitary lesion on chest x-ray",
+            "weight loss"
+          ],
+          "refuting_evidence": [
+            "specific anaerobic bacteria cultured",
+            "no mention of hemoptysis"
+          ],
+          "additional_information_needed": [
+            "CT scan of the chest",
+            "biopsy of the lesion"
+          ]
+        }
+      ]
+    },
+    "management": {
+      "required": [
+        {
+          "id": "M1",
+          "content": "What treatments were administered during the hospital stay?",
+          "response": "Penicillin and gentamicin were started, and a thoracotomy was performed on the 19th hospital day.",
+          "teaching_points": [
+            {
+              "id": "TP7",
+              "content": "Surgical intervention may be necessary in cases of persistent infection or structural lung disease.",
+              "covered": false
+            }
+          ],
+          "elicited": false
+        }
+      ],
+      "optional": []
+    },
+    "discussion": {
+      "required": [],
+      "optional": []
+    }
+  },
+  "differential_diagnosis": [
+    "Chronic bronchitis",
+    "Lung abscess",
+    "Bronchiectasis"
+  ],
+  "final_diagnosis": {
+    "name": "Chronic lung infection with abscess formation",
+    "category": "Infectious Disease",
+    "key_features": [
+      "Recurrent pulmonary infections",
+      "Cavitation in the right lower lobe",
+      "Growth of anaerobic bacteria"
+    ],
+    "supporting_evidence": [
+      "Recurrent consolidation in the right lower lobe",
+      "Cultures positive for anaerobic bacteria"
+    ],
+    "refuting_evidence": []
+  }
+}

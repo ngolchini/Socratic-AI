@@ -243,3 +243,187 @@ class CaseManager:
             "completion_metrics": self.get_case_progress(),
             "differential_updates": self.case_state["differential_updates"]
         }
+    def search_cases(self, query: str, top_k: int = 5) -> List[Dict]:
+        """
+        Search for cases matching a natural language query.
+        
+        Args:
+            query: Natural language search query
+            top_k: Number of top results to return
+            
+        Returns:
+            List of matching case metadata, sorted by relevance
+        """
+        self.logger.info(f"Searching for cases matching: {query}")
+        
+        available_cases = [f.stem for f in self.cases_dir.glob("*.json")]
+        case_metadata = []
+        
+        # Load metadata for all available cases
+        for case_id in available_cases:
+            try:
+                case_path = self.cases_dir / f"{case_id}.json"
+                with open(case_path, 'r') as f:
+                    case_data = json.load(f)
+                    case_metadata.append(case_data['metadata'])
+            except Exception as e:
+                self.logger.error(f"Error loading case {case_id}: {str(e)}")
+        
+        # If no cases found, return empty list
+        if not case_metadata:
+            return []
+        
+        # Implement search based on keyword matching
+        results = []
+        query_terms = query.lower().split()
+        
+        for metadata in case_metadata:
+            score = 0
+            # Search in title
+            title = metadata.get('title', '').lower()
+            for term in query_terms:
+                if term in title:
+                    score += 3
+            
+            # Search in presentation
+            presentation = metadata.get('original_presentation', '').lower()
+            for term in query_terms:
+                if term in presentation:
+                    score += 2
+            
+            # Search in keywords
+            for keyword in metadata.get('keywords', []):
+                keyword = keyword.lower().strip()
+                for term in query_terms:
+                    if term in keyword:
+                        score += 5
+                        break
+            
+            # Search in specialties
+            for specialty in metadata.get('specialties', []):
+                specialty = specialty.lower().strip()
+                for term in query_terms:
+                    if term in specialty:
+                        score += 4
+                        break
+            
+            # Add to results if any match
+            if score > 0:
+                results.append((metadata, score))
+        
+        # Sort by score (descending)
+        results.sort(key=lambda x: x[1], reverse=True)
+        
+        # Return top k results
+        return [item[0] for item in results[:top_k]]
+
+    def _rank_cases_with_llm(self, query: str, case_metadatas: List[Dict]) -> List[Dict]:
+        """
+        Use LLM to rank cases by relevance to the query.
+        
+        Args:
+            query: Natural language search query
+            case_metadatas: List of case metadata dictionaries
+            
+        Returns:
+            List of case metadatas, sorted by relevance
+        """
+        system_prompt = """You are a clinical case search assistant. 
+        Given a user's search query and a list of cases, rank the cases by relevance to the query.
+        Consider the case title, presentation, specialties, and keywords in your ranking.
+        Return a JSON array of case ids, ordered from most to least relevant.
+        """
+        
+        # Format the cases in a way that's easy for the LLM to process
+        cases_info = []
+        for i, metadata in enumerate(case_metadatas):
+            cases_info.append({
+                "index": i,
+                "id": metadata["id"],
+                "title": metadata["title"],
+                "presentation": metadata.get("original_presentation", ""),
+                "specialties": metadata.get("specialties", []),
+                "keywords": metadata.get("keywords", [])
+            })
+        
+        user_message = f"Query: {query}\n\nCases:\n{json.dumps(cases_info, indent=2)}"
+        
+        try:
+            # Use the LLM to rank the cases
+            response = None
+            if hasattr(self, 'llm_manager'):
+                response = self.llm_manager.get_json_response(
+                    system_prompt,
+                    user_message
+                )
+            else:
+                # Fallback to simple keyword matching if no LLM manager
+                return self._fallback_case_ranking(query, case_metadatas)
+            
+            # Process the ranked IDs returned from the LLM
+            ranked_ids = response.get("ranked_ids", [])
+            
+            # Map back to the original case metadata objects
+            case_dict = {m["id"]: m for m in case_metadatas}
+            ranked_cases = [case_dict[case_id] for case_id in ranked_ids if case_id in case_dict]
+            
+            # Add any remaining cases that weren't in the ranked list
+            for metadata in case_metadatas:
+                if metadata["id"] not in ranked_ids:
+                    ranked_cases.append(metadata)
+            
+            return ranked_cases
+        
+        except Exception as e:
+            self.logger.error(f"Error ranking cases: {str(e)}")
+            return self._fallback_case_ranking(query, case_metadatas)
+
+    def _fallback_case_ranking(self, query: str, case_metadatas: List[Dict]) -> List[Dict]:
+        """
+        Simple fallback ranking mechanism based on keyword matching.
+        
+        Args:
+            query: Natural language search query
+            case_metadatas: List of case metadata dictionaries
+            
+        Returns:
+            List of case metadatas, sorted by relevance
+        """
+        query_terms = query.lower().split()
+        ranked_cases = []
+        
+        for metadata in case_metadatas:
+            score = 0
+            
+            # Check title
+            title = metadata.get("title", "").lower()
+            for term in query_terms:
+                if term in title:
+                    score += 3
+            
+            # Check presentation
+            presentation = metadata.get("original_presentation", "").lower()
+            for term in query_terms:
+                if term in presentation:
+                    score += 2
+            
+            # Check keywords
+            keywords = [k.lower() for k in metadata.get("keywords", [])]
+            for term in query_terms:
+                if term in keywords:
+                    score += 5
+            
+            # Check specialties
+            specialties = [s.lower() for s in metadata.get("specialties", [])]
+            for term in query_terms:
+                if term in specialties:
+                    score += 4
+            
+            ranked_cases.append((metadata, score))
+        
+        # Sort by score, descending
+        ranked_cases.sort(key=lambda x: x[1], reverse=True)
+        
+        # Return just the metadata
+        return [rc[0] for rc in ranked_cases]
+    

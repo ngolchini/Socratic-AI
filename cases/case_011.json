@@ -1,0 +1,443 @@
+{
+  "metadata": {
+    "id": "case_011",
+    "title": "1967 Case 51",
+    "original_presentation": "A fifty-two-year-old woman entered the hospital because of melena. One year previously, after an episode of vomiting, a gastrointestinal series showed esophageal varices.",
+    "difficulty": "intermediate",
+    "specialties": [
+      "Gastroenterology",
+      "Hepatology",
+      "Internal Medicine"
+    ],
+    "keywords": [
+      "melena",
+      "esophageal varices",
+      "cirrhosis",
+      "diabetes",
+      "alcohol use"
+    ],
+    "source": "Clinical case study",
+    "version": "1.0"
+  },
+  "clinical_elements": {
+    "history": {
+      "required": [
+        {
+          "id": "H1",
+          "content": "What is the patient's history of gastrointestinal bleeding?",
+          "response": "The patient had several episodes of melena over the past year, each lasting a few days.",
+          "teaching_points": [
+            {
+              "id": "TP1",
+              "content": "Recurrent melena can indicate ongoing gastrointestinal bleeding, often associated with varices or ulcers.",
+              "covered": false
+            }
+          ],
+          "elicited": false
+        },
+        {
+          "id": "H2",
+          "content": "What is the patient's history of alcohol consumption?",
+          "response": "Throughout her adult life, she consumed up to a bottle of wine daily.",
+          "teaching_points": [
+            {
+              "id": "TP2",
+              "content": "Chronic alcohol consumption is a risk factor for liver cirrhosis and esophageal varices.",
+              "covered": false
+            }
+          ],
+          "elicited": false
+        },
+        {
+          "id": "H3",
+          "content": "What is the patient's past medical history?",
+          "response": "The patient had a history of jaundice 20 years ago, diabetes diagnosed a year ago, and a bilateral sympathectomy for high blood pressure.",
+          "teaching_points": [
+            {
+              "id": "TP3",
+              "content": "Past medical history can provide clues to current health issues, such as the link between jaundice and liver disease.",
+              "covered": false
+            }
+          ],
+          "elicited": false
+        }
+      ],
+      "optional": [],
+      "current_ideal_differential_diagnosis": [
+        {
+          "name": "Esophageal varices due to portal hypertension",
+          "category": "Gastrointestinal bleeding",
+          "likelihood": "high",
+          "key_features": [
+            "history of esophageal varices",
+            "melena",
+            "history of alcohol use",
+            "jaundice"
+          ],
+          "supporting_evidence": [
+            "Previous diagnosis of esophageal varices",
+            "Several episodes of melena",
+            "History of significant alcohol consumption",
+            "History of jaundice"
+          ],
+          "refuting_evidence": [],
+          "additional_information_needed": [
+            "Liver function tests",
+            "Abdominal ultrasound to assess liver and portal vein",
+            "Endoscopy to evaluate current status of varices"
+          ]
+        },
+        {
+          "name": "Peptic ulcer disease",
+          "category": "Gastrointestinal bleeding",
+          "likelihood": "medium",
+          "key_features": [
+            "melena",
+            "history of alcohol use"
+          ],
+          "supporting_evidence": [
+            "Episodes of melena",
+            "Alcohol consumption which can contribute to ulcer formation"
+          ],
+          "refuting_evidence": [
+            "Previous finding of esophageal varices"
+          ],
+          "additional_information_needed": [
+            "Endoscopy to check for ulcers",
+            "Helicobacter pylori testing"
+          ]
+        },
+        {
+          "name": "Gastric cancer",
+          "category": "Gastrointestinal bleeding",
+          "likelihood": "low",
+          "key_features": [
+            "melena",
+            "age over 50"
+          ],
+          "supporting_evidence": [
+            "Age over 50",
+            "Episodes of melena"
+          ],
+          "refuting_evidence": [
+            "No weight loss or other systemic symptoms reported",
+            "Previous finding of esophageal varices"
+          ],
+          "additional_information_needed": [
+            "Endoscopy with biopsy",
+            "CT scan of the abdomen"
+          ]
+        },
+        {
+          "name": "Liver cirrhosis",
+          "category": "Liver disease",
+          "likelihood": "high",
+          "key_features": [
+            "history of alcohol use",
+            "jaundice",
+            "esophageal varices"
+          ],
+          "supporting_evidence": [
+            "History of significant alcohol consumption",
+            "History of jaundice",
+            "Presence of esophageal varices"
+          ],
+          "refuting_evidence": [],
+          "additional_information_needed": [
+            "Liver function tests",
+            "Abdominal ultrasound or CT scan",
+            "Assessment for signs of liver failure"
+          ]
+        }
+      ]
+    },
+    "physical": {
+      "required": [
+        {
+          "id": "P1",
+          "content": "What were the findings on the physical examination?",
+          "response": "The patient was pale, sallow, and lethargic with erythematous palms, clubbing of the digits, and a firm liver edge palpable 5 fingerbreadths below the right costal margin.",
+          "teaching_points": [
+            {
+              "id": "TP4",
+              "content": "Physical signs such as clubbing and hepatomegaly can indicate chronic liver disease.",
+              "covered": false
+            }
+          ],
+          "elicited": false
+        }
+      ],
+      "optional": [],
+      "current_ideal_differential_diagnosis": [
+        {
+          "name": "Cirrhosis with portal hypertension",
+          "category": "Liver disease",
+          "likelihood": "high",
+          "key_features": [
+            "esophageal varices",
+            "history of alcohol use",
+            "jaundice",
+            "firm liver",
+            "erythematous palms",
+            "clubbing"
+          ],
+          "supporting_evidence": [
+            "Esophageal varices noted a year ago",
+            "History of significant alcohol consumption",
+            "History of jaundice",
+            "Firm liver edge palpable 5 fingerbreadths below the right costal margin",
+            "Erythematous palms and clubbing"
+          ],
+          "refuting_evidence": [],
+          "additional_information_needed": [
+            "Liver function tests",
+            "Abdominal ultrasound",
+            "Endoscopy results"
+          ]
+        },
+        {
+          "name": "Gastrointestinal bleeding secondary to esophageal varices",
+          "category": "Gastrointestinal bleeding",
+          "likelihood": "high",
+          "key_features": [
+            "melena",
+            "esophageal varices",
+            "portal hypertension"
+          ],
+          "supporting_evidence": [
+            "Several episodes of melena over the past year",
+            "Esophageal varices noted a year ago"
+          ],
+          "refuting_evidence": [],
+          "additional_information_needed": [
+            "Endoscopy to confirm source of bleeding",
+            "Hemoglobin and hematocrit levels"
+          ]
+        },
+        {
+          "name": "Alcoholic liver disease",
+          "category": "Liver disease",
+          "likelihood": "high",
+          "key_features": [
+            "history of alcohol use",
+            "liver dysfunction",
+            "jaundice"
+          ],
+          "supporting_evidence": [
+            "History of consuming up to a bottle of wine daily",
+            "History of jaundice 20 years ago",
+            "Firm liver edge"
+          ],
+          "refuting_evidence": [],
+          "additional_information_needed": [
+            "Liver function tests",
+            "Abdominal imaging"
+          ]
+        },
+        {
+          "name": "Non-alcoholic steatohepatitis (NASH)",
+          "category": "Liver disease",
+          "likelihood": "medium",
+          "key_features": [
+            "diabetes",
+            "liver dysfunction"
+          ],
+          "supporting_evidence": [
+            "Diagnosis of diabetes a year ago"
+          ],
+          "refuting_evidence": [
+            "Significant history of alcohol consumption"
+          ],
+          "additional_information_needed": [
+            "Liver biopsy",
+            "Liver function tests"
+          ]
+        },
+        {
+          "name": "Peptic ulcer disease",
+          "category": "Gastrointestinal disease",
+          "likelihood": "low",
+          "key_features": [
+            "melena",
+            "history of gastrointestinal bleeding"
+          ],
+          "supporting_evidence": [
+            "Episodes of melena"
+          ],
+          "refuting_evidence": [
+            "Presence of esophageal varices",
+            "History of alcohol use and liver disease"
+          ],
+          "additional_information_needed": [
+            "Endoscopy to rule out ulcers"
+          ]
+        }
+      ]
+    },
+    "testing": {
+      "required": [
+        {
+          "id": "T1",
+          "content": "What were the key laboratory findings?",
+          "response": "The hematocrit was 30%, white-cell count 4900, platelets decreased, bilirubin 1.4 mg, and ammonia 150 μg.",
+          "teaching_points": [
+            {
+              "id": "TP5",
+              "content": "Laboratory tests can help assess liver function and the severity of liver disease.",
+              "covered": false
+            }
+          ],
+          "elicited": false
+        },
+        {
+          "id": "T2",
+          "content": "What imaging studies were performed and what did they show?",
+          "response": "X-ray films of the chest showed slight prominence of the left ventricle and pulmonary vasculature; a gastrointestinal series revealed esophageal and gastric varices.",
+          "teaching_points": [
+            {
+              "id": "TP6",
+              "content": "Imaging can confirm the presence of varices and assess cardiac and pulmonary status.",
+              "covered": false
+            }
+          ],
+          "elicited": false
+        }
+      ],
+      "optional": [],
+      "current_ideal_differential_diagnosis": [
+        {
+          "name": "Cirrhosis with portal hypertension",
+          "category": "Liver disease",
+          "likelihood": "high",
+          "key_features": [
+            "esophageal varices",
+            "history of alcohol use",
+            "jaundice",
+            "firm liver",
+            "thrombocytopenia",
+            "palmar erythema",
+            "clubbing",
+            "elevated ammonia"
+          ],
+          "supporting_evidence": [
+            "History of alcohol consumption up to a bottle of wine daily",
+            "Esophageal varices noted on gastrointestinal series",
+            "Firm liver edge palpable 5 fingerbreadths below the right costal margin",
+            "Thrombocytopenia",
+            "Palmar erythema and clubbing",
+            "Elevated ammonia level"
+          ],
+          "refuting_evidence": [],
+          "additional_information_needed": [
+            "Liver function tests (AST, ALT, ALP, GGT)",
+            "Ultrasound of the liver",
+            "Liver biopsy"
+          ]
+        },
+        {
+          "name": "Alcoholic liver disease",
+          "category": "Liver disease",
+          "likelihood": "high",
+          "key_features": [
+            "history of alcohol use",
+            "jaundice",
+            "liver enlargement",
+            "esophageal varices"
+          ],
+          "supporting_evidence": [
+            "History of alcohol consumption up to a bottle of wine daily",
+            "History of jaundice 20 years ago",
+            "Firm liver edge palpable 5 fingerbreadths below the right costal margin",
+            "Esophageal varices"
+          ],
+          "refuting_evidence": [],
+          "additional_information_needed": [
+            "Liver function tests (AST, ALT, ALP, GGT)",
+            "Ultrasound of the liver",
+            "Liver biopsy"
+          ]
+        },
+        {
+          "name": "Non-alcoholic steatohepatitis (NASH)",
+          "category": "Liver disease",
+          "likelihood": "medium",
+          "key_features": [
+            "diabetes",
+            "liver enlargement",
+            "elevated liver enzymes"
+          ],
+          "supporting_evidence": [
+            "History of diabetes diagnosed a year ago",
+            "Firm liver edge palpable"
+          ],
+          "refuting_evidence": [
+            "Significant history of alcohol consumption"
+          ],
+          "additional_information_needed": [
+            "Liver function tests (AST, ALT, ALP, GGT)",
+            "Ultrasound of the liver",
+            "Liver biopsy"
+          ]
+        },
+        {
+          "name": "Gastrointestinal bleeding secondary to varices",
+          "category": "Gastrointestinal",
+          "likelihood": "high",
+          "key_features": [
+            "melena",
+            "esophageal varices"
+          ],
+          "supporting_evidence": [
+            "Several episodes of melena over the past year",
+            "Esophageal and gastric varices on gastrointestinal series"
+          ],
+          "refuting_evidence": [],
+          "additional_information_needed": [
+            "Endoscopy to assess the extent of varices and potential bleeding sites"
+          ]
+        }
+      ]
+    },
+    "management": {
+      "required": [
+        {
+          "id": "M1",
+          "content": "What treatments were administered during the hospital stay?",
+          "response": "Magnesium citrate and neomycin were administered, and a side-to-side portacaval shunt was performed.",
+          "teaching_points": [
+            {
+              "id": "TP7",
+              "content": "Management of variceal bleeding may include medications and surgical interventions like shunt procedures.",
+              "covered": false
+            }
+          ],
+          "elicited": false
+        }
+      ],
+      "optional": []
+    },
+    "discussion": {
+      "required": [],
+      "optional": []
+    }
+  },
+  "differential_diagnosis": [
+    "Esophageal varices",
+    "Liver cirrhosis",
+    "Portal hypertension"
+  ],
+  "final_diagnosis": {
+    "name": "Posthepatitic cirrhosis",
+    "category": "Liver disease",
+    "key_features": [
+      "Esophageal varices",
+      "Recurrent melena",
+      "Liver biopsy findings"
+    ],
+    "supporting_evidence": [
+      "Liver biopsy revealed posthepatitic cirrhosis",
+      "History of alcohol use and jaundice"
+    ],
+    "refuting_evidence": []
+  }
+}

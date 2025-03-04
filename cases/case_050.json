@@ -1,0 +1,473 @@
+{
+  "metadata": {
+    "id": "case_050",
+    "title": "1966 Case 13",
+    "original_presentation": "A thirty-six-year-old fish cutter was admitted to the hospital because of ulcers on the right leg and right forearm.",
+    "difficulty": "intermediate",
+    "specialties": [
+      "Infectious Disease",
+      "Dermatology",
+      "Hematology"
+    ],
+    "keywords": [
+      "ulcers",
+      "erythema induratum",
+      "Staphylococcus aureus",
+      "lymphoma"
+    ],
+    "source": "Clinical case study",
+    "version": "1.0"
+  },
+  "clinical_elements": {
+    "history": {
+      "required": [
+        {
+          "id": "H1",
+          "content": "What is the patient's medical history and presenting symptoms?",
+          "response": "He had been well until ten months previously, when he scraped his right leg on fish crates and was admitted to another hospital for treatment of 'fish poisoning,' which responded to penicillin therapy except for the development of 'lumps' on the right leg. Four months later 'lumps' also appeared on the arms and left leg. The lesions began as blisters and subsequently ulcerated. He became hoarse, lost 14 pounds in weight and stopped work because of generalized weakness.",
+          "teaching_points": [
+            {
+              "id": "TP1",
+              "content": "Chronic skin lesions that ulcerate and are associated with systemic symptoms such as weight loss and weakness may suggest an underlying systemic disease or infection.",
+              "covered": false
+            }
+          ],
+          "elicited": false
+        },
+        {
+          "id": "H2",
+          "content": "What treatments were previously administered?",
+          "response": "On readmission to the hospital a diagnosis of erythema induratum was made. Because of a positive tuberculin skin test isoniazid (INH) and para-aminosalicylic acid (PAS) were administered.",
+          "teaching_points": [
+            {
+              "id": "TP2",
+              "content": "Erythema induratum is often associated with tuberculosis, and treatment may include anti-tubercular therapy.",
+              "covered": false
+            }
+          ],
+          "elicited": false
+        },
+        {
+          "id": "H3",
+          "content": "What is the patient's social and family history?",
+          "response": "He habitually smoked 3 packages of cigarettes daily and had always drunk 'his share of beer.' A brother had had clubbing of the fingers from birth. A bleeding disorder was known to exist in the family. He had hunted often and had been bitten by various animals.",
+          "teaching_points": [
+            {
+              "id": "TP3",
+              "content": "Social habits such as smoking and alcohol consumption can impact overall health and may contribute to disease processes.",
+              "covered": false
+            }
+          ],
+          "elicited": false
+        }
+      ],
+      "optional": [],
+      "current_ideal_differential_diagnosis": [
+        {
+          "name": "Erythema Induratum (Nodular Vasculitis)",
+          "category": "Dermatological/Immunological",
+          "likelihood": "medium",
+          "key_features": [
+            "ulcerative nodules on legs",
+            "positive tuberculin skin test"
+          ],
+          "supporting_evidence": [
+            "diagnosis of erythema induratum was made",
+            "positive tuberculin skin test"
+          ],
+          "refuting_evidence": [
+            "lack of improvement with INH and PAS",
+            "spread of lesions to arms and left leg"
+          ],
+          "additional_information_needed": [
+            "biopsy of skin lesions",
+            "chest X-ray to rule out active TB"
+          ]
+        },
+        {
+          "name": "Sporotrichosis",
+          "category": "Infectious Disease",
+          "likelihood": "medium",
+          "key_features": [
+            "ulcerative skin lesions",
+            "history of handling fish and potential exposure to contaminated water"
+          ],
+          "supporting_evidence": [
+            "ulcers on right leg and forearm",
+            "occupation as fish cutter"
+          ],
+          "refuting_evidence": [
+            "initial response to penicillin",
+            "lack of mention of lymphatic spread"
+          ],
+          "additional_information_needed": [
+            "fungal culture of skin lesions",
+            "history of exposure to plant material or soil"
+          ]
+        },
+        {
+          "name": "Cutaneous Anthrax",
+          "category": "Infectious Disease",
+          "likelihood": "low",
+          "key_features": [
+            "ulcerative lesions with eschar",
+            "occupational exposure to animal products"
+          ],
+          "supporting_evidence": [
+            "ulcers on skin",
+            "history of animal bites"
+          ],
+          "refuting_evidence": [
+            "initial response to penicillin",
+            "lack of eschar formation"
+          ],
+          "additional_information_needed": [
+            "bacterial culture of lesions",
+            "history of exposure to livestock or animal hides"
+          ]
+        },
+        {
+          "name": "Pyoderma Gangrenosum",
+          "category": "Dermatological/Immunological",
+          "likelihood": "low",
+          "key_features": [
+            "painful ulcerative skin lesions",
+            "association with systemic disease"
+          ],
+          "supporting_evidence": [
+            "ulcerative lesions on skin"
+          ],
+          "refuting_evidence": [
+            "initial response to penicillin",
+            "lack of systemic disease association"
+          ],
+          "additional_information_needed": [
+            "biopsy of skin lesions",
+            "evaluation for underlying systemic disease"
+          ]
+        },
+        {
+          "name": "Chronic Venous Insufficiency with Ulceration",
+          "category": "Vascular",
+          "likelihood": "low",
+          "key_features": [
+            "ulceration on lower extremities",
+            "history of leg trauma"
+          ],
+          "supporting_evidence": [
+            "ulcers on right leg",
+            "history of leg trauma"
+          ],
+          "refuting_evidence": [
+            "spread to arms and left leg",
+            "weight loss and hoarseness"
+          ],
+          "additional_information_needed": [
+            "venous Doppler ultrasound",
+            "assessment of venous insufficiency"
+          ]
+        }
+      ]
+    },
+    "physical": {
+      "required": [
+        {
+          "id": "P1",
+          "content": "What were the findings on physical examination?",
+          "response": "Physical examination revealed a slightly indurated annular area, 7.5 cm. in diameter, with a 1-cm. crusted border on the right forearm and a 2.3-cm. annular crusted lesion on the left forearm. An annular erythematous macule, 8 cm. in diameter, with a distinct border was observed on the abdomen. Areas of linear and arciform scarring, several centimeters in diameter, were observed on the legs. An arciform, elevated, indurated, bluish-pink lesion was present on the right calf; below it there was a circular, ulcerated, 2.5-cm. lesion with a central firm, black crust from which purulent material exuded. On the soft palate a 1-cm. punched-out ulcer with a necrotic base was seen. The lungs were clear, and the heart was normal. The edge of the liver was palpable 1.5 cm. below the right costal margin. There was marked clubbing of the fingers, but without cyanosis. Neurologic examination was negative.",
+          "teaching_points": [
+            {
+              "id": "TP4",
+              "content": "Clubbing of the fingers can be associated with chronic hypoxia, lung disease, or other systemic conditions.",
+              "covered": false
+            }
+          ],
+          "elicited": false
+        }
+      ],
+      "optional": [],
+      "current_ideal_differential_diagnosis": [
+        {
+          "name": "Erythema Induratum (Nodular Vasculitis)",
+          "category": "Dermatological/Immunological",
+          "likelihood": "medium",
+          "key_features": [
+            "nodular lesions",
+            "ulceration",
+            "positive tuberculin skin test"
+          ],
+          "supporting_evidence": [
+            "diagnosis of erythema induratum was previously made",
+            "positive tuberculin skin test",
+            "nodular and ulcerative lesions on extremities"
+          ],
+          "refuting_evidence": [
+            "lack of improvement with anti-tubercular therapy",
+            "presence of lesions on the abdomen and soft palate"
+          ],
+          "additional_information_needed": [
+            "biopsy of skin lesions",
+            "further tuberculosis testing (e.g., chest X-ray, sputum culture)"
+          ]
+        },
+        {
+          "name": "Sporotrichosis",
+          "category": "Infectious Disease",
+          "likelihood": "medium",
+          "key_features": [
+            "ulcerative skin lesions",
+            "history of handling fish or plants",
+            "nodular lymphangitis"
+          ],
+          "supporting_evidence": [
+            "occupation as a fish cutter",
+            "ulcerative lesions on extremities",
+            "history of blisters that ulcerated"
+          ],
+          "refuting_evidence": [
+            "lack of specific mention of lymphangitic spread",
+            "systemic symptoms like weight loss and hoarseness"
+          ],
+          "additional_information_needed": [
+            "culture of purulent material from lesions",
+            "fungal serology tests"
+          ]
+        },
+        {
+          "name": "Cutaneous Anthrax",
+          "category": "Infectious Disease",
+          "likelihood": "low",
+          "key_features": [
+            "painless ulcer with black eschar",
+            "exposure to animal products"
+          ],
+          "supporting_evidence": [
+            "ulcerated lesion with black crust on right calf",
+            "history of animal bites"
+          ],
+          "refuting_evidence": [
+            "multiple lesions on different body parts",
+            "systemic symptoms not typical for cutaneous anthrax"
+          ],
+          "additional_information_needed": [
+            "bacterial culture from lesion",
+            "PCR for Bacillus anthracis"
+          ]
+        },
+        {
+          "name": "Pyoderma Gangrenosum",
+          "category": "Dermatological/Immunological",
+          "likelihood": "low",
+          "key_features": [
+            "painful ulcerative lesions",
+            "associated with systemic diseases"
+          ],
+          "supporting_evidence": [
+            "ulcerative lesions with purulent discharge",
+            "weight loss and generalized weakness"
+          ],
+          "refuting_evidence": [
+            "lack of associated systemic disease history",
+            "lesions began as blisters"
+          ],
+          "additional_information_needed": [
+            "biopsy of skin lesions",
+            "screening for underlying systemic diseases"
+          ]
+        },
+        {
+          "name": "Secondary Syphilis",
+          "category": "Infectious Disease",
+          "likelihood": "low",
+          "key_features": [
+            "mucocutaneous lesions",
+            "systemic symptoms",
+            "weight loss"
+          ],
+          "supporting_evidence": [
+            "ulcer on soft palate",
+            "systemic symptoms like weight loss and hoarseness"
+          ],
+          "refuting_evidence": [
+            "lack of specific rash pattern typical of syphilis",
+            "no mention of sexual history"
+          ],
+          "additional_information_needed": [
+            "RPR or VDRL test",
+            "FTA-ABS test"
+          ]
+        }
+      ]
+    },
+    "testing": {
+      "required": [
+        {
+          "id": "T1",
+          "content": "What were the laboratory and imaging findings?",
+          "response": "The urine gave a + test for protein; the sediment contained rare red cells and 3 to 6 white cells per high-power field. The hematocrit was 43 per cent; the white-cell count was 6000, with 67 per cent neutrophils, 4 per cent band forms, 18 per cent lymphocytes and 11 per cent monocytes. The urea nitrogen was 11 mg., the glucose 111 mg., the bilirubin 0.5 mg., and the protein 5.1 gm. (the albumin 3.3 gm., and the globulin 1.8 gm.) per 100 ml. The sedimentation rate was 3 mm. in one hour. The alkaline phosphatase and the glutamic oxalacetic transaminase (SGOT) were normal. The sodium was 123 milliequiv., the potassium 4.2 milliequiv., the chloride 98 milliequiv., and the carbon dioxide 20 milliequiv. per liter. An L.E.-cell test was negative. The cephalin flocculation was ++++ at forty-eight hours. The cold-agglutinin titer was 1:1. Culture of the urine yielded no growth; cultures of the throat and of the ulcerated lesion on the right calf yielded abundant Staphylococcus aureus. A tuberculin skin test (second-strength PPD) was positive. An electrocardiogram showed low voltage. X-ray films of the chest were normal except for bilateral basal linear densities; no enlarged lymph nodes were demonstrated. A film of the abdomen was normal.",
+          "teaching_points": [
+            {
+              "id": "TP5",
+              "content": "Positive cultures for Staphylococcus aureus in skin lesions suggest a bacterial infection that may require targeted antibiotic therapy.",
+              "covered": false
+            }
+          ],
+          "elicited": false
+        }
+      ],
+      "optional": [],
+      "current_ideal_differential_diagnosis": [
+        {
+          "name": "Erythema Induratum (Nodular Vasculitis)",
+          "category": "Dermatological/Immunological",
+          "likelihood": "medium",
+          "key_features": [
+            "nodular lesions",
+            "ulceration",
+            "positive tuberculin skin test"
+          ],
+          "supporting_evidence": [
+            "diagnosis of erythema induratum was previously made",
+            "positive tuberculin skin test",
+            "nodular and ulcerative lesions on extremities"
+          ],
+          "refuting_evidence": [
+            "lack of response to anti-tubercular therapy",
+            "presence of systemic symptoms like weight loss and hoarseness"
+          ],
+          "additional_information_needed": [
+            "biopsy of skin lesions",
+            "further evaluation of systemic symptoms"
+          ]
+        },
+        {
+          "name": "Cutaneous Tuberculosis",
+          "category": "Infectious Disease",
+          "likelihood": "medium",
+          "key_features": [
+            "ulcerative skin lesions",
+            "positive tuberculin skin test",
+            "systemic symptoms"
+          ],
+          "supporting_evidence": [
+            "positive tuberculin skin test",
+            "ulcerative lesions"
+          ],
+          "refuting_evidence": [
+            "lack of response to anti-tubercular therapy",
+            "negative chest X-ray for active TB"
+          ],
+          "additional_information_needed": [
+            "biopsy and culture of skin lesions for Mycobacterium tuberculosis",
+            "chest CT scan"
+          ]
+        },
+        {
+          "name": "Pyoderma Gangrenosum",
+          "category": "Dermatological/Autoimmune",
+          "likelihood": "low",
+          "key_features": [
+            "painful ulcerative skin lesions",
+            "systemic symptoms"
+          ],
+          "supporting_evidence": [
+            "ulcerative lesions with purulent exudate",
+            "systemic symptoms like weight loss"
+          ],
+          "refuting_evidence": [
+            "presence of Staphylococcus aureus in cultures",
+            "positive tuberculin skin test"
+          ],
+          "additional_information_needed": [
+            "biopsy of skin lesions",
+            "assessment for underlying systemic disease"
+          ]
+        },
+        {
+          "name": "Chronic Staphylococcal Skin Infection",
+          "category": "Infectious Disease",
+          "likelihood": "medium",
+          "key_features": [
+            "ulcerative skin lesions",
+            "positive culture for Staphylococcus aureus"
+          ],
+          "supporting_evidence": [
+            "cultures of ulcerated lesion yielded abundant Staphylococcus aureus",
+            "ulcerative lesions"
+          ],
+          "refuting_evidence": [
+            "systemic symptoms not typical for localized staphylococcal infection",
+            "lack of response to previous antibiotic therapy"
+          ],
+          "additional_information_needed": [
+            "antibiotic sensitivity testing",
+            "evaluation for potential immunosuppression"
+          ]
+        },
+        {
+          "name": "Wegener's Granulomatosis (Granulomatosis with Polyangiitis)",
+          "category": "Vasculitis",
+          "likelihood": "low",
+          "key_features": [
+            "ulcerative skin lesions",
+            "systemic symptoms",
+            "upper respiratory tract involvement"
+          ],
+          "supporting_evidence": [
+            "hoarseness",
+            "ulcerative lesions"
+          ],
+          "refuting_evidence": [
+            "negative L.E.-cell test",
+            "normal chest X-ray"
+          ],
+          "additional_information_needed": [
+            "ANCA testing",
+            "biopsy of skin lesions and/or nasal mucosa"
+          ]
+        }
+      ]
+    },
+    "management": {
+      "required": [
+        {
+          "id": "M1",
+          "content": "What treatments were administered during the hospital stay?",
+          "response": "Aqueous penicillin, 2,400,000 units daily, was administered, but the fever did not respond, and there was little change in the symptoms. Vincristine, 0.015 mg. per kilogram of body weight, was given, and a course of radiotherapy to the neck, 200 r daily for five days, was begun. Solumedrol, 80 mg. daily, was administered intravenously.",
+          "teaching_points": [
+            {
+              "id": "TP6",
+              "content": "Vincristine is a chemotherapeutic agent used in the treatment of certain types of cancer, including lymphoma.",
+              "covered": false
+            }
+          ],
+          "elicited": false
+        }
+      ],
+      "optional": []
+    },
+    "discussion": {
+      "required": [],
+      "optional": []
+    }
+  },
+  "differential_diagnosis": [
+    "Infectious process (e.g., bacterial infection)",
+    "Malignant lymphoma",
+    "Autoimmune or inflammatory condition"
+  ],
+  "final_diagnosis": {
+    "name": "Malignant lymphoma",
+    "category": "Oncology",
+    "key_features": [
+      "Atypical cells in biopsy",
+      "Persistent fever",
+      "Systemic symptoms"
+    ],
+    "supporting_evidence": [
+      "Biopsy suggestive of lymphoma",
+      "Systemic symptoms not responding to antibiotics"
+    ],
+    "refuting_evidence": []
+  }
+}

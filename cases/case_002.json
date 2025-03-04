@@ -1,0 +1,417 @@
+{
+  "metadata": {
+    "id": "case_002",
+    "title": "2007 Case 32",
+    "original_presentation": "A 62-year-old woman came to this hospital for management of breast cancer.",
+    "difficulty": "intermediate",
+    "specialties": [
+      "Medical Oncology",
+      "Surgical Oncology"
+    ],
+    "keywords": [
+      "breast cancer",
+      "invasive ductal carcinoma",
+      "HER2",
+      "hormonal therapy"
+    ],
+    "source": "Dr. David A. Barbie",
+    "version": "1.0"
+  },
+  "clinical_elements": {
+    "history": {
+      "required": [
+        {
+          "id": "H1",
+          "content": "What is the patient's history of breast cancer?",
+          "response": "Six years earlier, a routine mammogram revealed calcifications in the left breast. A biopsy showed a grade 1 invasive ductal carcinoma, 0.7 cm in diameter, with intermediate-grade ductal carcinoma in situ. The tumor was estrogen and progesterone receptor-positive and HER2-negative. The patient declined adjuvant hormonal therapy with tamoxifen.",
+          "teaching_points": [
+            {
+              "id": "TP1",
+              "content": "Understanding the receptor status of breast cancer is crucial for determining treatment options.",
+              "covered": false
+            }
+          ],
+          "elicited": false
+        },
+        {
+          "id": "H2",
+          "content": "What is the patient's past medical history?",
+          "response": "The patient had a history of vulvar carcinoma in situ, hyperlipidemia, hypothyroidism, and intermittent rectal bleeding from hemorrhoids. A left ovarian cyst was removed 40 years earlier.",
+          "teaching_points": [
+            {
+              "id": "TP2",
+              "content": "Past medical history can provide insights into potential risk factors and comorbidities that may affect cancer management.",
+              "covered": false
+            }
+          ],
+          "elicited": false
+        },
+        {
+          "id": "H3",
+          "content": "What is the patient's family history of cancer?",
+          "response": "The patient's mother died of colon cancer at 54 years, and a paternal aunt had breast cancer at 90 years. There was no other family history of breast or ovarian cancer.",
+          "teaching_points": [
+            {
+              "id": "TP3",
+              "content": "Family history is important for assessing genetic risk factors for cancer.",
+              "covered": false
+            }
+          ],
+          "elicited": false
+        }
+      ],
+      "optional": [],
+      "current_ideal_differential_diagnosis": [
+        {
+          "name": "Breast Cancer Recurrence",
+          "category": "Oncology",
+          "likelihood": "medium",
+          "key_features": [
+            "history of breast cancer",
+            "estrogen and progesterone receptor-positive",
+            "HER2-negative"
+          ],
+          "supporting_evidence": [
+            "history of grade 1 invasive ductal carcinoma",
+            "patient declined adjuvant hormonal therapy"
+          ],
+          "refuting_evidence": [
+            "no specific evidence of recurrence provided"
+          ],
+          "additional_information_needed": [
+            "current imaging studies",
+            "physical examination findings",
+            "tumor markers"
+          ]
+        },
+        {
+          "name": "New Primary Breast Cancer",
+          "category": "Oncology",
+          "likelihood": "low",
+          "key_features": [
+            "new breast mass",
+            "changes in breast imaging"
+          ],
+          "supporting_evidence": [
+            "history of breast cancer increases risk"
+          ],
+          "refuting_evidence": [
+            "no new findings or symptoms reported"
+          ],
+          "additional_information_needed": [
+            "recent mammogram or breast MRI",
+            "biopsy of any suspicious lesions"
+          ]
+        },
+        {
+          "name": "Metastatic Breast Cancer",
+          "category": "Oncology",
+          "likelihood": "low",
+          "key_features": [
+            "distant metastases",
+            "bone pain",
+            "organ dysfunction"
+          ],
+          "supporting_evidence": [
+            "history of breast cancer"
+          ],
+          "refuting_evidence": [
+            "no symptoms or findings suggestive of metastasis"
+          ],
+          "additional_information_needed": [
+            "imaging studies to assess for metastasis",
+            "tumor markers"
+          ]
+        },
+        {
+          "name": "Vulvar Carcinoma In Situ Recurrence",
+          "category": "Oncology",
+          "likelihood": "low",
+          "key_features": [
+            "lesions on vulva",
+            "itching or discomfort"
+          ],
+          "supporting_evidence": [
+            "history of vulvar carcinoma in situ"
+          ],
+          "refuting_evidence": [
+            "no symptoms or findings suggestive of recurrence"
+          ],
+          "additional_information_needed": [
+            "gynecological examination",
+            "biopsy of any suspicious lesions"
+          ]
+        },
+        {
+          "name": "Colon Cancer",
+          "category": "Oncology",
+          "likelihood": "low",
+          "key_features": [
+            "rectal bleeding",
+            "change in bowel habits",
+            "family history"
+          ],
+          "supporting_evidence": [
+            "family history of colon cancer",
+            "intermittent rectal bleeding"
+          ],
+          "refuting_evidence": [
+            "rectal bleeding attributed to hemorrhoids"
+          ],
+          "additional_information_needed": [
+            "colonoscopy",
+            "fecal occult blood test"
+          ]
+        }
+      ]
+    },
+    "physical": {
+      "required": [
+        {
+          "id": "P1",
+          "content": "What were the findings on physical examination?",
+          "response": "The patient appeared well. The incision in the right breast was healing, and no masses or lymphadenopathy were palpable; the left breast was unchanged since previous examinations. The remainder of the examination was normal.",
+          "teaching_points": [
+            {
+              "id": "TP4",
+              "content": "Physical examination is essential for assessing the current status of the disease and any post-surgical changes.",
+              "covered": false
+            }
+          ],
+          "elicited": false
+        }
+      ],
+      "optional": [],
+      "current_ideal_differential_diagnosis": [
+        {
+          "name": "Breast Cancer Recurrence",
+          "category": "Oncology",
+          "likelihood": "medium",
+          "key_features": [
+            "history of breast cancer",
+            "estrogen and progesterone receptor-positive",
+            "HER2-negative"
+          ],
+          "supporting_evidence": [
+            "history of invasive ductal carcinoma",
+            "patient declined adjuvant hormonal therapy"
+          ],
+          "refuting_evidence": [
+            "no palpable masses or lymphadenopathy",
+            "incision healing well"
+          ],
+          "additional_information_needed": [
+            "imaging studies such as mammogram or MRI",
+            "tumor marker levels"
+          ]
+        },
+        {
+          "name": "New Primary Breast Cancer",
+          "category": "Oncology",
+          "likelihood": "low",
+          "key_features": [
+            "new breast mass",
+            "changes in breast tissue"
+          ],
+          "supporting_evidence": [
+            "history of breast cancer"
+          ],
+          "refuting_evidence": [
+            "no new masses or changes in breast examination"
+          ],
+          "additional_information_needed": [
+            "imaging studies",
+            "biopsy if new mass is found"
+          ]
+        },
+        {
+          "name": "Metastatic Disease",
+          "category": "Oncology",
+          "likelihood": "low",
+          "key_features": [
+            "spread of cancer to other organs",
+            "systemic symptoms"
+          ],
+          "supporting_evidence": [
+            "history of breast cancer"
+          ],
+          "refuting_evidence": [
+            "no systemic symptoms reported",
+            "normal physical examination"
+          ],
+          "additional_information_needed": [
+            "imaging studies such as CT or PET scan",
+            "blood tests for organ function"
+          ]
+        },
+        {
+          "name": "Benign Breast Condition",
+          "category": "Benign Breast Disease",
+          "likelihood": "low",
+          "key_features": [
+            "breast pain",
+            "lumps",
+            "nipple discharge"
+          ],
+          "supporting_evidence": [
+            "no specific evidence from case"
+          ],
+          "refuting_evidence": [
+            "no masses or changes in breast examination"
+          ],
+          "additional_information_needed": [
+            "imaging studies",
+            "clinical follow-up"
+          ]
+        }
+      ]
+    },
+    "testing": {
+      "required": [
+        {
+          "id": "T1",
+          "content": "What were the results of the imaging studies?",
+          "response": "MRI showed changes attributed to previous surgery in the left breast and an enhancing mass in the right breast. Mammography confirmed the MRI findings.",
+          "teaching_points": [
+            {
+              "id": "TP5",
+              "content": "Imaging studies are crucial for detecting recurrent or new breast cancer lesions.",
+              "covered": false
+            }
+          ],
+          "elicited": false
+        },
+        {
+          "id": "T2",
+          "content": "What were the biopsy results for the right breast?",
+          "response": "An MRI-guided core biopsy revealed invasive ductal carcinoma, positive for estrogen receptor and weakly positive for progesterone receptor proteins, with strong HER2 overexpression.",
+          "teaching_points": [
+            {
+              "id": "TP6",
+              "content": "Biopsy results, including receptor status, guide the choice of targeted therapies.",
+              "covered": false
+            }
+          ],
+          "elicited": false
+        }
+      ],
+      "optional": [],
+      "current_ideal_differential_diagnosis": [
+        {
+          "name": "Recurrent Breast Cancer",
+          "category": "Oncology",
+          "likelihood": "high",
+          "key_features": [
+            "history of breast cancer",
+            "new mass in the right breast",
+            "positive estrogen receptor",
+            "HER2 overexpression"
+          ],
+          "supporting_evidence": [
+            "MRI and mammography showed an enhancing mass in the right breast",
+            "biopsy confirmed invasive ductal carcinoma with HER2 overexpression"
+          ],
+          "refuting_evidence": [
+            "none at this time"
+          ],
+          "additional_information_needed": [
+            "staging workup to assess for metastasis",
+            "genetic testing for BRCA mutations given family history"
+          ]
+        },
+        {
+          "name": "Metastatic Breast Cancer",
+          "category": "Oncology",
+          "likelihood": "medium",
+          "key_features": [
+            "history of breast cancer",
+            "new mass in the right breast",
+            "HER2 overexpression"
+          ],
+          "supporting_evidence": [
+            "biopsy confirmed invasive ductal carcinoma with HER2 overexpression"
+          ],
+          "refuting_evidence": [
+            "no evidence of lymphadenopathy or other metastatic sites on physical exam"
+          ],
+          "additional_information_needed": [
+            "PET scan or CT scan to evaluate for distant metastasis"
+          ]
+        },
+        {
+          "name": "New Primary Breast Cancer",
+          "category": "Oncology",
+          "likelihood": "medium",
+          "key_features": [
+            "new mass in the right breast",
+            "different receptor status from previous cancer"
+          ],
+          "supporting_evidence": [
+            "biopsy of the right breast shows different receptor status (HER2 positive) compared to previous cancer (HER2 negative)"
+          ],
+          "refuting_evidence": [
+            "none at this time"
+          ],
+          "additional_information_needed": [
+            "further genetic testing to assess for hereditary cancer syndromes"
+          ]
+        },
+        {
+          "name": "Benign Breast Lesion",
+          "category": "Benign Breast Conditions",
+          "likelihood": "low",
+          "key_features": [
+            "enhancing mass on imaging",
+            "biopsy results"
+          ],
+          "supporting_evidence": [
+            "none, as biopsy confirmed malignancy"
+          ],
+          "refuting_evidence": [
+            "biopsy confirmed invasive ductal carcinoma"
+          ],
+          "additional_information_needed": [
+            "none, as malignancy has been confirmed"
+          ]
+        }
+      ]
+    },
+    "management": {
+      "required": [
+        {
+          "id": "M1",
+          "content": "What management options were discussed for the new breast cancer?",
+          "response": "Options for management of the new breast cancer were discussed, but specific treatments were not detailed in the case.",
+          "teaching_points": [
+            {
+              "id": "TP7",
+              "content": "Management of breast cancer may include surgery, radiation, chemotherapy, and targeted therapies based on receptor status.",
+              "covered": false
+            }
+          ],
+          "elicited": false
+        }
+      ],
+      "optional": []
+    },
+    "discussion": {
+      "required": [],
+      "optional": []
+    }
+  },
+  "differential_diagnosis": [],
+  "final_diagnosis": {
+    "name": "Invasive Ductal Carcinoma",
+    "category": "Breast Cancer",
+    "key_features": [
+      "Estrogen receptor-positive",
+      "Progesterone receptor weakly positive",
+      "HER2 overexpression"
+    ],
+    "supporting_evidence": [
+      "MRI and mammography findings",
+      "Biopsy results"
+    ],
+    "refuting_evidence": []
+  }
+}

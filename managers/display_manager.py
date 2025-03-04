@@ -160,7 +160,15 @@ class DisplayManager:
                             st.markdown("---")
                             st.markdown("**🔍 Learner Assessment (Debug)**")
                             st.json(phase_summary.get("learner_assessment", {}))
-
+            for phase_type, summary in phase_summaries.items():
+                tab_label = f"{phase_type.value.capitalize()} Summary"
+                with st.expander(tab_label, expanded=(phase_type == current_phase)):
+                    st.markdown(f"**Summary of Retrieved Information:** {summary.get('retrieved_info', 'N/A')}")
+                    st.markdown(f"**AI Nudges Provided:** {', '.join(summary.get('ai_nudges', []))}")
+                    st.markdown(f"**Missed Information:** {', '.join(summary.get('missed_info', []))}")
+                    st.markdown(f"**Assessment of Final DDx:** {summary.get('final_ddx_assessment', 'N/A')}")
+                    st.markdown(f"**DDx Evolution:** {summary.get('ddx_evolution', 'N/A')}")
+                    
     def update_differential_panel(self, differential_manager):
         """Update the differential diagnosis panel."""
         if not self.differential_container:

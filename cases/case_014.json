@@ -1,0 +1,455 @@
+{
+  "metadata": {
+    "id": "case_014",
+    "title": "1977 Case 25",
+    "original_presentation": "A 44-year-old woman was admitted to the hospital because of a thoracic mass.",
+    "difficulty": "intermediate",
+    "specialties": [
+      "pulmonology",
+      "radiology",
+      "thoracic surgery"
+    ],
+    "keywords": [
+      "thoracic mass",
+      "mediastinal mass",
+      "respiratory symptoms"
+    ],
+    "source": "clinical case study",
+    "version": "1.0"
+  },
+  "clinical_elements": {
+    "history": {
+      "required": [
+        {
+          "id": "H1",
+          "content": "What symptoms did the patient experience prior to admission?",
+          "response": "She experienced symptoms of a respiratory-tract infection, fatigue, a nonproductive cough, and an intermittent 'weighty' sensation in the anterior chest.",
+          "teaching_points": [
+            {
+              "id": "TP1",
+              "content": "Respiratory symptoms such as cough and chest discomfort can be indicative of underlying thoracic pathology.",
+              "covered": false
+            }
+          ],
+          "elicited": false
+        },
+        {
+          "id": "H2",
+          "content": "What is the patient's smoking history?",
+          "response": "She had smoked 1 1/2 packages of cigarettes daily for 30 years.",
+          "teaching_points": [
+            {
+              "id": "TP2",
+              "content": "Long-term smoking is a significant risk factor for thoracic and respiratory diseases.",
+              "covered": false
+            }
+          ],
+          "elicited": false
+        },
+        {
+          "id": "H3",
+          "content": "What other symptoms or changes did the patient experience in the year before admission?",
+          "response": "She experienced anorexia and lost 4 kg in weight.",
+          "teaching_points": [
+            {
+              "id": "TP3",
+              "content": "Unintentional weight loss and anorexia can be signs of systemic illness or malignancy.",
+              "covered": false
+            }
+          ],
+          "elicited": false
+        }
+      ],
+      "optional": [],
+      "current_ideal_differential_diagnosis": [
+        {
+          "name": "Lung Cancer",
+          "category": "Oncological",
+          "likelihood": "high",
+          "key_features": [
+            "thoracic mass",
+            "history of smoking",
+            "weight loss",
+            "anorexia",
+            "cough"
+          ],
+          "supporting_evidence": [
+            "thoracic mass",
+            "history of heavy smoking",
+            "weight loss",
+            "anorexia",
+            "nonproductive cough"
+          ],
+          "refuting_evidence": [],
+          "additional_information_needed": [
+            "biopsy of the thoracic mass",
+            "chest CT scan",
+            "tumor markers"
+          ]
+        },
+        {
+          "name": "Tuberculosis",
+          "category": "Infectious",
+          "likelihood": "medium",
+          "key_features": [
+            "cough",
+            "weight loss",
+            "fatigue",
+            "anorexia"
+          ],
+          "supporting_evidence": [
+            "cough",
+            "weight loss",
+            "fatigue",
+            "anorexia"
+          ],
+          "refuting_evidence": [
+            "no mention of fever or night sweats",
+            "nonproductive cough rather than productive"
+          ],
+          "additional_information_needed": [
+            "PPD test",
+            "sputum culture for acid-fast bacilli",
+            "chest X-ray"
+          ]
+        },
+        {
+          "name": "Lymphoma",
+          "category": "Oncological",
+          "likelihood": "medium",
+          "key_features": [
+            "thoracic mass",
+            "weight loss",
+            "fatigue",
+            "anorexia"
+          ],
+          "supporting_evidence": [
+            "thoracic mass",
+            "weight loss",
+            "fatigue",
+            "anorexia"
+          ],
+          "refuting_evidence": [
+            "no mention of lymphadenopathy or night sweats"
+          ],
+          "additional_information_needed": [
+            "biopsy of the thoracic mass",
+            "CT scan of chest and abdomen",
+            "blood tests for LDH"
+          ]
+        },
+        {
+          "name": "Chronic Obstructive Pulmonary Disease (COPD)",
+          "category": "Pulmonary",
+          "likelihood": "low",
+          "key_features": [
+            "history of smoking",
+            "cough",
+            "respiratory symptoms"
+          ],
+          "supporting_evidence": [
+            "history of heavy smoking",
+            "cough",
+            "respiratory-tract infection symptoms"
+          ],
+          "refuting_evidence": [
+            "presence of thoracic mass",
+            "weight loss and anorexia are not typical"
+          ],
+          "additional_information_needed": [
+            "pulmonary function tests",
+            "chest X-ray"
+          ]
+        }
+      ]
+    },
+    "physical": {
+      "required": [
+        {
+          "id": "P1",
+          "content": "What were the findings on physical examination?",
+          "response": "The patient appeared well, with normal head and neck examination, clear lungs, normal heart and abdomen, and no lymphadenopathy.",
+          "teaching_points": [
+            {
+              "id": "TP4",
+              "content": "A normal physical examination does not rule out significant underlying pathology, especially in the presence of a thoracic mass.",
+              "covered": false
+            }
+          ],
+          "elicited": false
+        }
+      ],
+      "optional": [],
+      "current_ideal_differential_diagnosis": [
+        {
+          "name": "Lung Cancer",
+          "category": "Oncological",
+          "likelihood": "high",
+          "key_features": [
+            "thoracic mass",
+            "history of smoking",
+            "weight loss",
+            "anorexia",
+            "cough"
+          ],
+          "supporting_evidence": [
+            "thoracic mass",
+            "30-year smoking history",
+            "weight loss",
+            "anorexia",
+            "cough"
+          ],
+          "refuting_evidence": [
+            "clear lungs on physical examination"
+          ],
+          "additional_information_needed": [
+            "imaging studies (e.g., CT scan of the chest)",
+            "biopsy of the thoracic mass",
+            "tumor markers"
+          ]
+        },
+        {
+          "name": "Lymphoma",
+          "category": "Hematological",
+          "likelihood": "medium",
+          "key_features": [
+            "thoracic mass",
+            "weight loss",
+            "anorexia",
+            "fatigue"
+          ],
+          "supporting_evidence": [
+            "thoracic mass",
+            "weight loss",
+            "anorexia",
+            "fatigue"
+          ],
+          "refuting_evidence": [
+            "no lymphadenopathy on physical examination"
+          ],
+          "additional_information_needed": [
+            "biopsy of the thoracic mass",
+            "blood tests including LDH levels",
+            "imaging studies for lymphadenopathy"
+          ]
+        },
+        {
+          "name": "Thymoma",
+          "category": "Oncological",
+          "likelihood": "medium",
+          "key_features": [
+            "thoracic mass",
+            "anterior chest sensation",
+            "respiratory symptoms"
+          ],
+          "supporting_evidence": [
+            "thoracic mass",
+            "intermittent 'weighty' sensation in the anterior chest"
+          ],
+          "refuting_evidence": [
+            "clear lungs on physical examination"
+          ],
+          "additional_information_needed": [
+            "CT scan of the chest",
+            "biopsy of the thoracic mass"
+          ]
+        },
+        {
+          "name": "Tuberculosis",
+          "category": "Infectious",
+          "likelihood": "low",
+          "key_features": [
+            "cough",
+            "weight loss",
+            "fatigue"
+          ],
+          "supporting_evidence": [
+            "cough",
+            "weight loss",
+            "fatigue"
+          ],
+          "refuting_evidence": [
+            "clear lungs on physical examination",
+            "no lymphadenopathy"
+          ],
+          "additional_information_needed": [
+            "chest X-ray",
+            "sputum culture for acid-fast bacilli",
+            "PPD test"
+          ]
+        }
+      ]
+    },
+    "testing": {
+      "required": [
+        {
+          "id": "T1",
+          "content": "What were the results of the initial chest x-ray?",
+          "response": "A large hilar mass was reported.",
+          "teaching_points": [
+            {
+              "id": "TP5",
+              "content": "Chest x-rays are a primary tool for identifying thoracic masses, but further imaging is often needed for characterization.",
+              "covered": false
+            }
+          ],
+          "elicited": false
+        },
+        {
+          "id": "T2",
+          "content": "What did the CT scan of the thorax reveal?",
+          "response": "A well-circumscribed mass within the left anterior mediastinum, predominantly fatty with a crescent-shaped area of higher absorption values.",
+          "teaching_points": [
+            {
+              "id": "TP6",
+              "content": "CT scans provide detailed information about the composition and location of thoracic masses.",
+              "covered": false
+            }
+          ],
+          "elicited": false
+        }
+      ],
+      "optional": [],
+      "current_ideal_differential_diagnosis": [
+        {
+          "name": "Thymoma",
+          "category": "Neoplasm",
+          "likelihood": "medium",
+          "key_features": [
+            "anterior mediastinal mass",
+            "respiratory symptoms",
+            "fatigue",
+            "weight loss"
+          ],
+          "supporting_evidence": [
+            "well-circumscribed mass in the anterior mediastinum",
+            "respiratory symptoms",
+            "fatigue",
+            "weight loss"
+          ],
+          "refuting_evidence": [
+            "mass is predominantly fatty, which is atypical for thymoma"
+          ],
+          "additional_information_needed": [
+            "biopsy of the mass",
+            "serum markers for myasthenia gravis"
+          ]
+        },
+        {
+          "name": "Mediastinal Lipoma",
+          "category": "Benign tumor",
+          "likelihood": "high",
+          "key_features": [
+            "anterior mediastinal mass",
+            "predominantly fatty mass on imaging"
+          ],
+          "supporting_evidence": [
+            "mass is predominantly fatty",
+            "well-circumscribed mass"
+          ],
+          "refuting_evidence": [
+            "crescent-shaped area of higher absorption values, which may suggest a more complex lesion"
+          ],
+          "additional_information_needed": [
+            "biopsy or MRI to better characterize the mass"
+          ]
+        },
+        {
+          "name": "Lymphoma",
+          "category": "Hematologic malignancy",
+          "likelihood": "medium",
+          "key_features": [
+            "mediastinal mass",
+            "weight loss",
+            "fatigue"
+          ],
+          "supporting_evidence": [
+            "weight loss",
+            "fatigue",
+            "mediastinal mass"
+          ],
+          "refuting_evidence": [
+            "mass is predominantly fatty, which is atypical for lymphoma",
+            "no lymphadenopathy noted on physical exam"
+          ],
+          "additional_information_needed": [
+            "biopsy of the mass",
+            "blood tests for lymphoma markers"
+          ]
+        },
+        {
+          "name": "Teratoma",
+          "category": "Germ cell tumor",
+          "likelihood": "medium",
+          "key_features": [
+            "anterior mediastinal mass",
+            "heterogeneous mass with fatty components"
+          ],
+          "supporting_evidence": [
+            "well-circumscribed mass with fatty components",
+            "crescent-shaped area of higher absorption values"
+          ],
+          "refuting_evidence": [
+            "patient's age and gender are less typical for teratoma"
+          ],
+          "additional_information_needed": [
+            "biopsy of the mass",
+            "tumor markers like AFP and beta-HCG"
+          ]
+        },
+        {
+          "name": "Lung Cancer with Mediastinal Involvement",
+          "category": "Neoplasm",
+          "likelihood": "medium",
+          "key_features": [
+            "history of heavy smoking",
+            "respiratory symptoms",
+            "mediastinal mass"
+          ],
+          "supporting_evidence": [
+            "history of smoking",
+            "respiratory symptoms",
+            "mediastinal mass"
+          ],
+          "refuting_evidence": [
+            "mass is predominantly fatty, which is atypical for lung cancer"
+          ],
+          "additional_information_needed": [
+            "biopsy of the mass",
+            "PET scan to assess metabolic activity"
+          ]
+        }
+      ]
+    },
+    "management": {
+      "required": [
+        {
+          "id": "M1",
+          "content": "What management decision was made for this patient?",
+          "response": "An operation was performed on the fifth hospital day.",
+          "teaching_points": [
+            {
+              "id": "TP7",
+              "content": "Surgical intervention may be necessary for definitive diagnosis and treatment of mediastinal masses.",
+              "covered": false
+            }
+          ],
+          "elicited": false
+        }
+      ],
+      "optional": []
+    },
+    "discussion": {
+      "required": [],
+      "optional": []
+    }
+  },
+  "differential_diagnosis": [],
+  "final_diagnosis": {
+    "name": "Mediastinal mass",
+    "category": "Thoracic pathology",
+    "key_features": [],
+    "supporting_evidence": [],
+    "refuting_evidence": []
+  }
+}

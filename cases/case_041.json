@@ -1,0 +1,471 @@
+{
+  "metadata": {
+    "id": "case_041",
+    "title": "1971 Case 04",
+    "original_presentation": "A 71-year-old woman was admitted to the hospital because of dyspnea.",
+    "difficulty": "intermediate",
+    "specialties": [
+      "Oncology",
+      "Pulmonology",
+      "Internal Medicine"
+    ],
+    "keywords": [
+      "dyspnea",
+      "malignant lymphoma",
+      "pleural effusion",
+      "radiation therapy"
+    ],
+    "source": "Clinical case study",
+    "version": "1.0"
+  },
+  "clinical_elements": {
+    "history": {
+      "required": [
+        {
+          "id": "H1",
+          "content": "What is the patient's past medical history?",
+          "response": "The patient underwent abdominoperineal resection for rectal carcinoma three years earlier, with a left-sided colostomy, appendectomy, and hysterectomy. She had a history of malignant lymphoma with previous radiation therapy.",
+          "teaching_points": [
+            {
+              "id": "TP1",
+              "content": "Past medical history, especially cancer and surgical history, is crucial in understanding current presentations and potential complications.",
+              "covered": false
+            }
+          ],
+          "elicited": false
+        },
+        {
+          "id": "H2",
+          "content": "What symptoms did the patient experience before admission?",
+          "response": "The patient experienced dyspnea, peripheral edema, redness and swelling of both breasts, anorexia, weakness, cough, and progressive dyspnea.",
+          "teaching_points": [
+            {
+              "id": "TP2",
+              "content": "Symptoms such as dyspnea and edema can indicate underlying systemic issues, including cardiac or pulmonary complications.",
+              "covered": false
+            }
+          ],
+          "elicited": false
+        }
+      ],
+      "optional": [],
+      "current_ideal_differential_diagnosis": [
+        {
+          "name": "Congestive Heart Failure",
+          "category": "Cardiovascular",
+          "likelihood": "high",
+          "key_features": [
+            "dyspnea",
+            "peripheral edema",
+            "weakness",
+            "cough"
+          ],
+          "supporting_evidence": [
+            "dyspnea",
+            "peripheral edema",
+            "weakness",
+            "cough"
+          ],
+          "refuting_evidence": [
+            "redness and swelling of both breasts is atypical"
+          ],
+          "additional_information_needed": [
+            "chest X-ray",
+            "echocardiogram",
+            "BNP levels"
+          ]
+        },
+        {
+          "name": "Pulmonary Embolism",
+          "category": "Respiratory",
+          "likelihood": "medium",
+          "key_features": [
+            "sudden onset dyspnea",
+            "cough",
+            "weakness"
+          ],
+          "supporting_evidence": [
+            "progressive dyspnea",
+            "cough"
+          ],
+          "refuting_evidence": [
+            "peripheral edema and breast symptoms are atypical"
+          ],
+          "additional_information_needed": [
+            "CT pulmonary angiography",
+            "D-dimer test"
+          ]
+        },
+        {
+          "name": "Breast Cancer with Metastasis",
+          "category": "Oncological",
+          "likelihood": "medium",
+          "key_features": [
+            "redness and swelling of breasts",
+            "anorexia",
+            "weakness"
+          ],
+          "supporting_evidence": [
+            "redness and swelling of both breasts",
+            "anorexia",
+            "history of cancer"
+          ],
+          "refuting_evidence": [
+            "dyspnea and peripheral edema are atypical for primary breast cancer"
+          ],
+          "additional_information_needed": [
+            "mammogram",
+            "breast ultrasound",
+            "biopsy of breast tissue"
+          ]
+        },
+        {
+          "name": "Lymphedema secondary to Radiation Therapy",
+          "category": "Oncological/Complication",
+          "likelihood": "medium",
+          "key_features": [
+            "peripheral edema",
+            "history of radiation therapy"
+          ],
+          "supporting_evidence": [
+            "peripheral edema",
+            "history of malignant lymphoma with radiation therapy"
+          ],
+          "refuting_evidence": [
+            "dyspnea and breast symptoms are atypical"
+          ],
+          "additional_information_needed": [
+            "lymphoscintigraphy",
+            "physical examination of lymphatic system"
+          ]
+        },
+        {
+          "name": "Chronic Obstructive Pulmonary Disease (COPD)",
+          "category": "Respiratory",
+          "likelihood": "low",
+          "key_features": [
+            "chronic cough",
+            "dyspnea",
+            "history of smoking"
+          ],
+          "supporting_evidence": [
+            "dyspnea",
+            "cough"
+          ],
+          "refuting_evidence": [
+            "no history of smoking provided",
+            "peripheral edema and breast symptoms are atypical"
+          ],
+          "additional_information_needed": [
+            "spirometry",
+            "history of smoking"
+          ]
+        }
+      ]
+    },
+    "physical": {
+      "required": [
+        {
+          "id": "P1",
+          "content": "What were the findings on physical examination?",
+          "response": "The patient was thin, tachypneic, and appeared severely ill. Cyanosis of lips and nails was noted. A mass was present on the right side of the pharynx. Crackling inspiratory rales were heard at both lung bases. A Grade 2 musical systolic murmur was present at the cardiac apex.",
+          "teaching_points": [
+            {
+              "id": "TP3",
+              "content": "Physical examination can reveal critical signs such as cyanosis and rales, indicating respiratory distress and potential cardiac involvement.",
+              "covered": false
+            }
+          ],
+          "elicited": false
+        }
+      ],
+      "optional": [],
+      "current_ideal_differential_diagnosis": [
+        {
+          "name": "Congestive Heart Failure",
+          "category": "Cardiovascular",
+          "likelihood": "medium",
+          "key_features": [
+            "dyspnea",
+            "peripheral edema",
+            "crackling rales",
+            "systolic murmur"
+          ],
+          "supporting_evidence": [
+            "dyspnea",
+            "peripheral edema",
+            "crackling inspiratory rales",
+            "systolic murmur"
+          ],
+          "refuting_evidence": [
+            "mass on the right side of the pharynx",
+            "history of cancer"
+          ],
+          "additional_information_needed": [
+            "Echocardiogram",
+            "BNP levels",
+            "Chest X-ray"
+          ]
+        },
+        {
+          "name": "Pulmonary Embolism",
+          "category": "Respiratory",
+          "likelihood": "medium",
+          "key_features": [
+            "sudden dyspnea",
+            "tachypnea",
+            "cyanosis"
+          ],
+          "supporting_evidence": [
+            "dyspnea",
+            "tachypnea",
+            "cyanosis of lips and nails"
+          ],
+          "refuting_evidence": [
+            "peripheral edema",
+            "crackling rales"
+          ],
+          "additional_information_needed": [
+            "CT pulmonary angiography",
+            "D-dimer test"
+          ]
+        },
+        {
+          "name": "Lymphoma Recurrence",
+          "category": "Oncological",
+          "likelihood": "medium",
+          "key_features": [
+            "mass formation",
+            "systemic symptoms",
+            "history of lymphoma"
+          ],
+          "supporting_evidence": [
+            "mass on the right side of the pharynx",
+            "history of malignant lymphoma"
+          ],
+          "refuting_evidence": [
+            "crackling rales",
+            "systolic murmur"
+          ],
+          "additional_information_needed": [
+            "Biopsy of the pharyngeal mass",
+            "PET scan"
+          ]
+        },
+        {
+          "name": "Metastatic Cancer",
+          "category": "Oncological",
+          "likelihood": "medium",
+          "key_features": [
+            "history of cancer",
+            "systemic symptoms",
+            "new mass formation"
+          ],
+          "supporting_evidence": [
+            "history of rectal carcinoma",
+            "mass on the right side of the pharynx"
+          ],
+          "refuting_evidence": [
+            "systolic murmur",
+            "crackling rales"
+          ],
+          "additional_information_needed": [
+            "CT scan of the chest and abdomen",
+            "Biopsy of the pharyngeal mass"
+          ]
+        },
+        {
+          "name": "Pneumonia",
+          "category": "Infectious",
+          "likelihood": "low",
+          "key_features": [
+            "cough",
+            "dyspnea",
+            "crackling rales"
+          ],
+          "supporting_evidence": [
+            "cough",
+            "dyspnea",
+            "crackling inspiratory rales"
+          ],
+          "refuting_evidence": [
+            "mass on the right side of the pharynx",
+            "systolic murmur"
+          ],
+          "additional_information_needed": [
+            "Chest X-ray",
+            "Sputum culture"
+          ]
+        }
+      ]
+    },
+    "testing": {
+      "required": [
+        {
+          "id": "T1",
+          "content": "What were the key test results and diagnostic procedures?",
+          "response": "X-ray films showed bilateral pleural effusions and mediastinal lymphadenopathy. Biopsy of a cervical lymph node showed malignant lymphoma. Blood tests showed anemia and leukocytosis. Arterial blood gases indicated hypoxemia and respiratory alkalosis.",
+          "teaching_points": [
+            {
+              "id": "TP4",
+              "content": "Imaging and biopsy are essential for diagnosing and staging malignancies. Blood gas analysis helps assess respiratory function.",
+              "covered": false
+            }
+          ],
+          "elicited": false
+        }
+      ],
+      "optional": [],
+      "current_ideal_differential_diagnosis": [
+        {
+          "name": "Recurrent Malignant Lymphoma",
+          "category": "Oncological",
+          "likelihood": "high",
+          "key_features": [
+            "mediastinal lymphadenopathy",
+            "cervical lymph node biopsy showing malignant lymphoma",
+            "history of malignant lymphoma"
+          ],
+          "supporting_evidence": [
+            "biopsy of a cervical lymph node showed malignant lymphoma",
+            "mediastinal lymphadenopathy on X-ray",
+            "history of malignant lymphoma"
+          ],
+          "refuting_evidence": [],
+          "additional_information_needed": [
+            "PET scan to assess the extent of lymphoma",
+            "further histological analysis to determine lymphoma subtype"
+          ]
+        },
+        {
+          "name": "Pleural Effusion secondary to Malignancy",
+          "category": "Pulmonary",
+          "likelihood": "high",
+          "key_features": [
+            "bilateral pleural effusions",
+            "dyspnea",
+            "history of cancer"
+          ],
+          "supporting_evidence": [
+            "X-ray films showed bilateral pleural effusions",
+            "dyspnea",
+            "history of rectal carcinoma and lymphoma"
+          ],
+          "refuting_evidence": [],
+          "additional_information_needed": [
+            "thoracentesis to analyze pleural fluid",
+            "cytology of pleural fluid to check for malignant cells"
+          ]
+        },
+        {
+          "name": "Congestive Heart Failure",
+          "category": "Cardiovascular",
+          "likelihood": "medium",
+          "key_features": [
+            "peripheral edema",
+            "dyspnea",
+            "systolic murmur"
+          ],
+          "supporting_evidence": [
+            "peripheral edema",
+            "dyspnea",
+            "Grade 2 musical systolic murmur at the cardiac apex"
+          ],
+          "refuting_evidence": [
+            "no clear evidence of heart enlargement or pulmonary venous congestion on X-ray"
+          ],
+          "additional_information_needed": [
+            "echocardiogram to assess cardiac function",
+            "BNP levels"
+          ]
+        },
+        {
+          "name": "Pulmonary Embolism",
+          "category": "Pulmonary",
+          "likelihood": "medium",
+          "key_features": [
+            "dyspnea",
+            "tachypnea",
+            "hypoxemia"
+          ],
+          "supporting_evidence": [
+            "dyspnea",
+            "tachypnea",
+            "hypoxemia on arterial blood gases"
+          ],
+          "refuting_evidence": [
+            "no mention of acute onset or risk factors such as recent surgery or immobilization"
+          ],
+          "additional_information_needed": [
+            "CT pulmonary angiography",
+            "D-dimer test"
+          ]
+        },
+        {
+          "name": "Infectious Pneumonia",
+          "category": "Infectious",
+          "likelihood": "low",
+          "key_features": [
+            "cough",
+            "crackling inspiratory rales",
+            "leukocytosis"
+          ],
+          "supporting_evidence": [
+            "cough",
+            "crackling inspiratory rales at both lung bases",
+            "leukocytosis"
+          ],
+          "refuting_evidence": [
+            "no fever or purulent sputum reported",
+            "mediastinal lymphadenopathy more suggestive of malignancy"
+          ],
+          "additional_information_needed": [
+            "sputum culture",
+            "chest CT scan"
+          ]
+        }
+      ]
+    },
+    "management": {
+      "required": [
+        {
+          "id": "M1",
+          "content": "What treatments were administered during the hospital stay?",
+          "response": "The patient received oxygen therapy, prednisone, heparin, and furosemide. Ventilatory assistance was provided during respiratory arrest.",
+          "teaching_points": [
+            {
+              "id": "TP5",
+              "content": "Management of respiratory distress includes oxygen therapy and addressing underlying causes. Steroids and anticoagulation may be used in specific contexts.",
+              "covered": false
+            }
+          ],
+          "elicited": false
+        }
+      ],
+      "optional": []
+    },
+    "discussion": {
+      "required": [],
+      "optional": []
+    }
+  },
+  "differential_diagnosis": [
+    "Malignant lymphoma",
+    "Pulmonary embolism",
+    "Infectious pneumonia"
+  ],
+  "final_diagnosis": {
+    "name": "Malignant lymphoma with respiratory complications",
+    "category": "Oncological",
+    "key_features": [
+      "History of malignant lymphoma",
+      "Dyspnea and pleural effusions",
+      "Cyanosis and respiratory distress"
+    ],
+    "supporting_evidence": [
+      "Biopsy showing malignant lymphoma",
+      "Imaging showing pleural effusions and lymphadenopathy"
+    ],
+    "refuting_evidence": []
+  }
+}

@@ -1,0 +1,462 @@
+{
+  "metadata": {
+    "id": "case_022",
+    "title": "1976 Case 49",
+    "original_presentation": "A 64-year-old man was admitted to the hospital because of hematemesis.",
+    "difficulty": "intermediate",
+    "specialties": [
+      "Gastroenterology",
+      "Cardiology",
+      "Internal Medicine"
+    ],
+    "keywords": [
+      "hematemesis",
+      "atrial fibrillation",
+      "myocardial infarction",
+      "abdominal pain"
+    ],
+    "source": "Clinical case study",
+    "version": "1.0"
+  },
+  "clinical_elements": {
+    "history": {
+      "required": [
+        {
+          "id": "H1",
+          "content": "What is the patient's medical history?",
+          "response": "There was a 30-year history of hypertension treated with diuretics. Ten years before admission inferior myocardial infarction occurred, followed by anterior myocardial infarction three years later. Three years before admission congestive heart failure developed, with atrial fibrillation. Cardioversion restored a normal rhythm but was followed by embolic occlusion of the left femoral artery, which required an embolectomy. Digoxin and warfarin were begun. Thirteen months before entry the patient remained in normal rhythm; the warfarin was discontinued when he underwent a urethroplasty because of a urethral injury sustained in a motor-vehicle accident. Seven months before admission atrial fibrillation recurred and persisted. Examination disclosed evidence of an organic brain syndrome, and a CT-scan revealed diffuse cortical atrophy consistent with Alzheimer's disease. Three months before entry he returned to the hospital because of aphasia with mild right hemiparesis and hemihypesthesia. An electrocardiogram again disclosed atrial fibrillation. An echocardiogram showed normal mitral-valve function without evidence of a thrombus, and repeated blood cultures yielded no bacterial growth. Warfarin was resumed, and the patient was discharged home to continue anticoagulant treatment under the regulation of his family.",
+          "teaching_points": [
+            {
+              "id": "TP1",
+              "content": "A history of myocardial infarction and atrial fibrillation increases the risk of thromboembolic events.",
+              "covered": false
+            }
+          ],
+          "elicited": false
+        },
+        {
+          "id": "H2",
+          "content": "What symptoms did the patient experience before admission?",
+          "response": "Three days before admission he came to the Urology Clinic for a urethral dilatation, after which he voided spontaneously, with a good stream. That evening periumbilical crampy pain occurred and radiated in belt-like fashion around the abdomen. He obtained some relief after the ingestion of whisky. Two days before entry he came to the Emergency Ward because of persistent pain. Crampy pain continued, increasing in severity. He passed flatus but no stool. On the evening before admission he became nauseated and vomited coffee-grounds material on several occasions.",
+          "teaching_points": [
+            {
+              "id": "TP2",
+              "content": "Coffee-ground emesis suggests upper gastrointestinal bleeding.",
+              "covered": false
+            }
+          ],
+          "elicited": false
+        }
+      ],
+      "optional": [],
+      "current_ideal_differential_diagnosis": [
+        {
+          "name": "Peptic Ulcer Disease with Bleeding",
+          "category": "Gastrointestinal",
+          "likelihood": "high",
+          "key_features": [
+            "hematemesis",
+            "coffee-ground emesis",
+            "abdominal pain"
+          ],
+          "supporting_evidence": [
+            "hematemesis",
+            "coffee-ground emesis",
+            "crampy abdominal pain relieved by whisky"
+          ],
+          "refuting_evidence": [
+            "no direct evidence of ulcer noted yet"
+          ],
+          "additional_information_needed": [
+            "endoscopy to visualize the gastrointestinal tract",
+            "H. pylori testing"
+          ]
+        },
+        {
+          "name": "Gastritis",
+          "category": "Gastrointestinal",
+          "likelihood": "medium",
+          "key_features": [
+            "abdominal pain",
+            "nausea",
+            "vomiting"
+          ],
+          "supporting_evidence": [
+            "crampy abdominal pain",
+            "nausea",
+            "vomiting coffee-grounds material"
+          ],
+          "refuting_evidence": [
+            "no direct evidence of gastritis noted yet"
+          ],
+          "additional_information_needed": [
+            "endoscopy to assess gastric mucosa",
+            "H. pylori testing"
+          ]
+        },
+        {
+          "name": "Mallory-Weiss Tear",
+          "category": "Gastrointestinal",
+          "likelihood": "medium",
+          "key_features": [
+            "hematemesis following vomiting",
+            "history of retching or vomiting"
+          ],
+          "supporting_evidence": [
+            "hematemesis",
+            "vomiting coffee-grounds material"
+          ],
+          "refuting_evidence": [
+            "no history of retching or forceful vomiting prior to hematemesis"
+          ],
+          "additional_information_needed": [
+            "endoscopy to identify tear in the esophagus or stomach"
+          ]
+        },
+        {
+          "name": "Anticoagulation-related Gastrointestinal Bleeding",
+          "category": "Hematologic",
+          "likelihood": "medium",
+          "key_features": [
+            "use of anticoagulants",
+            "bleeding"
+          ],
+          "supporting_evidence": [
+            "history of warfarin use",
+            "hematemesis"
+          ],
+          "refuting_evidence": [
+            "no INR or coagulation profile provided to assess current anticoagulation status"
+          ],
+          "additional_information_needed": [
+            "INR and coagulation profile",
+            "review of current medication use"
+          ]
+        },
+        {
+          "name": "Acute Mesenteric Ischemia",
+          "category": "Vascular",
+          "likelihood": "low",
+          "key_features": [
+            "abdominal pain out of proportion to physical findings",
+            "history of cardiovascular disease"
+          ],
+          "supporting_evidence": [
+            "severe crampy abdominal pain",
+            "history of cardiovascular disease"
+          ],
+          "refuting_evidence": [
+            "presence of hematemesis is not typical",
+            "no evidence of bowel ischemia or infarction"
+          ],
+          "additional_information_needed": [
+            "CT angiography of the abdomen",
+            "lactate levels"
+          ]
+        }
+      ]
+    },
+    "physical": {
+      "required": [
+        {
+          "id": "P1",
+          "content": "What were the findings on physical examination?",
+          "response": "The temperature was 37.2°C, the pulse 100, and the respirations 18. The blood pressure was 130/90 mm Hg. The patient was tremulous, complaining of abdominal pain. The jugular venous pressure was 8 cm of water. The lungs were clear except for a few fine rales at both bases. The heart was enlarged 2 cm beyond the mid-clavicular line, with a +++ left ventricular heave; S2 was normally split; no murmur or S3 sound was heard. The abdomen was slightly distended; the bowel sounds were hypoactive and not high pitched. Tenderness and rebound tenderness were elicited in the mid-portion of the abdomen, without guarding. Rectal examination was negative. The extremities were normal, and neurologic examination was negative except for a right Babinski sign.",
+          "teaching_points": [
+            {
+              "id": "TP3",
+              "content": "Rebound tenderness suggests peritoneal irritation.",
+              "covered": false
+            }
+          ],
+          "elicited": false
+        }
+      ],
+      "optional": [],
+      "current_ideal_differential_diagnosis": [
+        {
+          "name": "Peptic Ulcer Disease with Bleeding",
+          "category": "Gastrointestinal",
+          "likelihood": "high",
+          "key_features": [
+            "hematemesis",
+            "abdominal pain",
+            "history of NSAID or alcohol use"
+          ],
+          "supporting_evidence": [
+            "hematemesis",
+            "abdominal pain relieved by whisky ingestion",
+            "coffee-grounds vomitus"
+          ],
+          "refuting_evidence": [
+            "no specific history of NSAID use or known peptic ulcer disease"
+          ],
+          "additional_information_needed": [
+            "history of NSAID use",
+            "endoscopy to confirm presence of ulcer"
+          ]
+        },
+        {
+          "name": "Gastrointestinal Bleeding due to Anticoagulation",
+          "category": "Hematologic/Gastrointestinal",
+          "likelihood": "medium",
+          "key_features": [
+            "hematemesis",
+            "use of anticoagulants",
+            "coffee-grounds vomitus"
+          ],
+          "supporting_evidence": [
+            "use of warfarin",
+            "hematemesis",
+            "coffee-grounds vomitus"
+          ],
+          "refuting_evidence": [
+            "no overt signs of over-anticoagulation or INR levels provided"
+          ],
+          "additional_information_needed": [
+            "INR levels",
+            "history of recent changes in warfarin dosage"
+          ]
+        },
+        {
+          "name": "Mesenteric Ischemia",
+          "category": "Vascular",
+          "likelihood": "medium",
+          "key_features": [
+            "abdominal pain out of proportion to physical findings",
+            "history of atrial fibrillation",
+            "nausea and vomiting"
+          ],
+          "supporting_evidence": [
+            "history of atrial fibrillation",
+            "abdominal pain",
+            "nausea and vomiting"
+          ],
+          "refuting_evidence": [
+            "absence of severe pain out of proportion to examination",
+            "no evidence of bowel ischemia on examination"
+          ],
+          "additional_information_needed": [
+            "CT angiography of the abdomen",
+            "lactate levels"
+          ]
+        },
+        {
+          "name": "Acute Pancreatitis",
+          "category": "Gastrointestinal",
+          "likelihood": "low",
+          "key_features": [
+            "abdominal pain radiating to the back",
+            "nausea and vomiting",
+            "history of alcohol use"
+          ],
+          "supporting_evidence": [
+            "abdominal pain radiating in belt-like fashion",
+            "nausea and vomiting"
+          ],
+          "refuting_evidence": [
+            "no history of significant alcohol use",
+            "no elevated lipase or amylase levels provided"
+          ],
+          "additional_information_needed": [
+            "serum lipase and amylase levels",
+            "history of alcohol use"
+          ]
+        },
+        {
+          "name": "Bowel Obstruction",
+          "category": "Gastrointestinal",
+          "likelihood": "low",
+          "key_features": [
+            "abdominal distension",
+            "vomiting",
+            "absence of stool passage"
+          ],
+          "supporting_evidence": [
+            "abdominal distension",
+            "vomiting",
+            "no stool passage"
+          ],
+          "refuting_evidence": [
+            "hypoactive bowel sounds rather than high-pitched",
+            "no guarding or rigidity"
+          ],
+          "additional_information_needed": [
+            "abdominal X-ray or CT scan",
+            "history of previous surgeries or bowel obstructions"
+          ]
+        }
+      ]
+    },
+    "testing": {
+      "required": [
+        {
+          "id": "T1",
+          "content": "What were the laboratory test results?",
+          "response": "The urine gave a ++ test for protein; the sediment contained 15 white cells, innumerable red cells and + bacteria per high-power field. The hematocrit was 41.5 per cent; the white-cell count was 12,900, with 91 per cent neutrophils. The prothrombin time was in excess of 30 seconds, with a control of 11 seconds; the partial thromboplastin time was more than 80 seconds. The urea nitrogen was 18 mg, the glucose 175 mg, the bilirubin 0.5 mg, the calcium 10.5 mg, the phosphorus 2 mg, and the protein 10 g (the albumin 5.2 g, and the globulin 4.8 g) per 100 ml. The SGOT was 24 U, the LDH 186 U, the amylase 15 U, and the alkaline phosphatase 4.5 Bodansky U.",
+          "teaching_points": [
+            {
+              "id": "TP4",
+              "content": "Prolonged prothrombin time indicates a risk of bleeding.",
+              "covered": false
+            }
+          ],
+          "elicited": false
+        },
+        {
+          "id": "T2",
+          "content": "What imaging studies were performed and what were the findings?",
+          "response": "An electrocardiogram demonstrated atrial fibrillation at a rate of 130 and changes consistent with old inferior and anterior myocardial infarction. An x-ray film of the chest showed cardiac enlargement with predominance of the left ventricle and a tortuous aorta; the pulmonary vasculature appeared normal, and there was no pleural effusion; the right hemidiaphragm was slightly elevated; the films revealed no change from earlier studies. Films of the abdomen, made with the patient supine and upright, disclosed no evidence of free air; dilated loops of small bowel with air-fluid levels were observed in the left upper quadrant, and there were fluid-filled loops of small bowel, without gas, scattered throughout the remainder of the abdomen. A cystographic study, performed through an indwelling bladder catheter, revealed no evidence of leakage of contrast material.",
+          "teaching_points": [
+            {
+              "id": "TP5",
+              "content": "Dilated loops of bowel with air-fluid levels suggest bowel obstruction.",
+              "covered": false
+            }
+          ],
+          "elicited": false
+        }
+      ],
+      "optional": [],
+      "current_ideal_differential_diagnosis": [
+        {
+          "name": "Upper gastrointestinal bleeding due to peptic ulcer disease",
+          "category": "Gastrointestinal",
+          "likelihood": "medium",
+          "key_features": [
+            "hematemesis",
+            "coffee-ground emesis",
+            "abdominal pain"
+          ],
+          "supporting_evidence": [
+            "hematemesis",
+            "coffee-ground emesis",
+            "abdominal pain relieved by whisky"
+          ],
+          "refuting_evidence": [
+            "no direct evidence of peptic ulcer on imaging"
+          ],
+          "additional_information_needed": [
+            "endoscopy to visualize the upper GI tract for ulcers or bleeding sources"
+          ]
+        },
+        {
+          "name": "Anticoagulation-related gastrointestinal bleeding",
+          "category": "Hematologic",
+          "likelihood": "high",
+          "key_features": [
+            "use of warfarin",
+            "prolonged prothrombin time",
+            "hematemesis"
+          ],
+          "supporting_evidence": [
+            "prolonged prothrombin time",
+            "use of warfarin",
+            "hematemesis"
+          ],
+          "refuting_evidence": [
+            "no direct evidence of bleeding source identified"
+          ],
+          "additional_information_needed": [
+            "review of INR levels, endoscopy to identify bleeding source"
+          ]
+        },
+        {
+          "name": "Small bowel obstruction",
+          "category": "Gastrointestinal",
+          "likelihood": "medium",
+          "key_features": [
+            "abdominal pain",
+            "vomiting",
+            "dilated loops of bowel on imaging"
+          ],
+          "supporting_evidence": [
+            "abdominal pain",
+            "vomiting",
+            "dilated loops of small bowel with air-fluid levels"
+          ],
+          "refuting_evidence": [
+            "patient passed flatus",
+            "no high-pitched bowel sounds"
+          ],
+          "additional_information_needed": [
+            "CT scan of the abdomen to confirm obstruction and identify cause"
+          ]
+        },
+        {
+          "name": "Mesenteric ischemia",
+          "category": "Vascular",
+          "likelihood": "medium",
+          "key_features": [
+            "abdominal pain",
+            "history of embolic events",
+            "atrial fibrillation"
+          ],
+          "supporting_evidence": [
+            "abdominal pain",
+            "history of embolic events",
+            "atrial fibrillation"
+          ],
+          "refuting_evidence": [
+            "no evidence of bowel necrosis or free air on imaging"
+          ],
+          "additional_information_needed": [
+            "CT angiography to assess mesenteric blood flow"
+          ]
+        },
+        {
+          "name": "Acute pancreatitis",
+          "category": "Gastrointestinal",
+          "likelihood": "low",
+          "key_features": [
+            "abdominal pain",
+            "nausea",
+            "vomiting"
+          ],
+          "supporting_evidence": [
+            "abdominal pain",
+            "nausea",
+            "vomiting"
+          ],
+          "refuting_evidence": [
+            "normal amylase and lipase levels",
+            "no evidence of pancreatic inflammation on imaging"
+          ],
+          "additional_information_needed": [
+            "repeat amylase and lipase levels, abdominal ultrasound or CT scan"
+          ]
+        }
+      ]
+    },
+    "management": {
+      "required": [
+        {
+          "id": "M1",
+          "content": "What treatments were administered?",
+          "response": "Digoxin and furosemide were given, together with nasogastric suction and fluids and two transfusions of fresh-frozen plasma administered intravenously. On a repeated determination the prothrombin time was 14.9 seconds, with a control of 11 seconds; the partial thromboplastin time was 38.6 seconds.",
+          "teaching_points": [
+            {
+              "id": "TP6",
+              "content": "Fresh-frozen plasma can be used to correct coagulopathy.",
+              "covered": false
+            }
+          ],
+          "elicited": false
+        }
+      ],
+      "optional": []
+    },
+    "discussion": {
+      "required": [],
+      "optional": []
+    }
+  },
+  "differential_diagnosis": [],
+  "final_diagnosis": {
+    "name": "Bowel obstruction",
+    "category": "Gastroenterology",
+    "key_features": [],
+    "supporting_evidence": [],
+    "refuting_evidence": []
+  }
+}

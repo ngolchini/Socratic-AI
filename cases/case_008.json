@@ -1,0 +1,437 @@
+{
+  "metadata": {
+    "id": "case_008",
+    "title": "1968 Case 02",
+    "original_presentation": "A fifty-eight-year-old man was admitted to the hospital because of weakness, loss of weight and abdominal distention.",
+    "difficulty": "intermediate",
+    "specialties": [
+      "Internal Medicine",
+      "Oncology",
+      "Cardiology"
+    ],
+    "keywords": [
+      "weakness",
+      "weight loss",
+      "abdominal distention",
+      "pleural effusion",
+      "adenocarcinoma",
+      "epigastric pain"
+    ],
+    "source": "Clinical case study",
+    "version": "1.0"
+  },
+  "clinical_elements": {
+    "history": {
+      "required": [
+        {
+          "id": "H1",
+          "content": "What is the patient's medical history and presenting symptoms?",
+          "response": "The patient had been well until two years previously, when he entered another hospital because of fever and right anterior pleuritic pain. He also complained of frequent postprandial epigastric pain, which was relieved by antacids. He was told that he had had a pulmonary embolus, and warfarin therapy was begun. Seven months later the right pleuritic pain recurred, and x-ray films of the chest showed slight indistinctness of the right leaf of the diaphragm; the warfarin was discontinued. During the following year he was well except for mild epigastric pain, a poor appetite and a 5-pound weight loss. Five months before admission he was again admitted to another hospital, where x-ray films of the chest demonstrated an area of increased density over the posterolateral portion of the right hemi-diaphragm and pleural thickening anteriorly and along the lateral chest wall. A thoracotomy was performed, and a biopsy of the pleura was interpreted as showing metastatic adenocarcinoma, with many signet-ring cells. Three months later, because of progressive weakness, his physician prescribed prednisone, 10 mg daily. One month before entry his appetite diminished; abdominal distention and postprandial epigastric pain and fullness developed, with drenching sweats at night but no fever, chills or cough. He vomited twice during the two weeks before entry, but there was no hematemesis. The bowel function was normal; the stools were light tan. An upper gastrointestinal series was normal except for a small hiatus hernia. During the month before admission the patient lost 10 pounds in weight and experienced increasing weakness. There was no history of dyspnea or precordial pain. He had smoked 12 cigars daily for many years and consumed an occasional cocktail. During World War II he had worked in a shipyard installing cables. For twenty years he had managed a furniture store.",
+          "teaching_points": [
+            {
+              "id": "TP1",
+              "content": "A history of smoking and occupational exposure may contribute to respiratory and oncological conditions.",
+              "covered": false
+            },
+            {
+              "id": "TP2",
+              "content": "Weight loss and abdominal distention in the context of cancer history may suggest disease progression or complications.",
+              "covered": false
+            }
+          ],
+          "elicited": false
+        }
+      ],
+      "optional": [],
+      "current_ideal_differential_diagnosis": [
+        {
+          "name": "Metastatic adenocarcinoma",
+          "category": "Oncological",
+          "likelihood": "high",
+          "key_features": [
+            "weight loss",
+            "abdominal distention",
+            "weakness",
+            "metastatic adenocarcinoma with signet-ring cells"
+          ],
+          "supporting_evidence": [
+            "biopsy of pleura showing metastatic adenocarcinoma with signet-ring cells",
+            "progressive weakness",
+            "weight loss",
+            "abdominal distention"
+          ],
+          "refuting_evidence": [],
+          "additional_information_needed": [
+            "CT scan of the abdomen and pelvis",
+            "tumor markers",
+            "further histological analysis"
+          ]
+        },
+        {
+          "name": "Gastric cancer",
+          "category": "Oncological",
+          "likelihood": "medium",
+          "key_features": [
+            "epigastric pain",
+            "weight loss",
+            "poor appetite",
+            "signet-ring cells"
+          ],
+          "supporting_evidence": [
+            "epigastric pain relieved by antacids",
+            "poor appetite",
+            "weight loss",
+            "biopsy showing signet-ring cells"
+          ],
+          "refuting_evidence": [
+            "upper gastrointestinal series was normal except for a small hiatus hernia"
+          ],
+          "additional_information_needed": [
+            "endoscopy with biopsy",
+            "tumor markers specific for gastric cancer"
+          ]
+        },
+        {
+          "name": "Mesothelioma",
+          "category": "Oncological",
+          "likelihood": "medium",
+          "key_features": [
+            "pleural thickening",
+            "history of asbestos exposure",
+            "weight loss"
+          ],
+          "supporting_evidence": [
+            "pleural thickening anteriorly and along the lateral chest wall",
+            "history of working in a shipyard (possible asbestos exposure)"
+          ],
+          "refuting_evidence": [
+            "biopsy interpreted as metastatic adenocarcinoma"
+          ],
+          "additional_information_needed": [
+            "detailed occupational history",
+            "immunohistochemical staining of biopsy"
+          ]
+        },
+        {
+          "name": "Chronic pulmonary embolism",
+          "category": "Cardiovascular",
+          "likelihood": "low",
+          "key_features": [
+            "pleuritic pain",
+            "history of pulmonary embolism"
+          ],
+          "supporting_evidence": [
+            "history of pulmonary embolism",
+            "right anterior pleuritic pain"
+          ],
+          "refuting_evidence": [
+            "biopsy showing metastatic adenocarcinoma",
+            "abdominal distention and weight loss not typical for pulmonary embolism"
+          ],
+          "additional_information_needed": [
+            "D-dimer test",
+            "CT pulmonary angiography"
+          ]
+        }
+      ]
+    },
+    "physical": {
+      "required": [
+        {
+          "id": "P1",
+          "content": "What were the findings on physical examination?",
+          "response": "The patient was a cachectic, chronically ill man. No lymph nodes were palpable. The trachea was in the midline. Examination of the right side of the chest showed poor expansion, with dullness and absence of vocal fremitus below the fourth rib; the left side of the chest was normal; the right hemidiaphragm did not move. A few rales were audible at the right-lung base. The point of maximum cardiac impulse was felt in the mid-clavicular line in the fifth intercostal space; there was no gallop, sound, friction rub or murmur. The abdomen was protuberant and tense, with mild generalized tenderness; there was no shifting dullness or fluid wave, and the bowel sounds were normal. A globular, hard mass, 10 cm in diameter, was felt in the left upper quadrant of the abdomen; the mass moved with change in position. Rectal examination was negative. There was no cyanosis or clubbing of the extremities.",
+          "teaching_points": [
+            {
+              "id": "TP3",
+              "content": "Cachexia and abdominal masses in cancer patients may indicate advanced disease.",
+              "covered": false
+            },
+            {
+              "id": "TP4",
+              "content": "Dullness and absence of vocal fremitus suggest pleural effusion or thickening.",
+              "covered": false
+            }
+          ],
+          "elicited": false
+        }
+      ],
+      "optional": [],
+      "current_ideal_differential_diagnosis": [
+        {
+          "name": "Metastatic adenocarcinoma",
+          "category": "Oncological",
+          "likelihood": "high",
+          "key_features": [
+            "weight loss",
+            "abdominal distention",
+            "pleural thickening",
+            "signet-ring cells on biopsy"
+          ],
+          "supporting_evidence": [
+            "biopsy of pleura showing metastatic adenocarcinoma with signet-ring cells",
+            "weight loss and weakness",
+            "abdominal distention",
+            "history of pleuritic pain and pleural thickening"
+          ],
+          "refuting_evidence": [],
+          "additional_information_needed": [
+            "CT scan of the abdomen and chest",
+            "tumor markers",
+            "further histological analysis"
+          ]
+        },
+        {
+          "name": "Gastric cancer",
+          "category": "Oncological",
+          "likelihood": "medium",
+          "key_features": [
+            "epigastric pain",
+            "weight loss",
+            "abdominal mass",
+            "signet-ring cells"
+          ],
+          "supporting_evidence": [
+            "epigastric pain relieved by antacids",
+            "weight loss",
+            "abdominal mass in the left upper quadrant",
+            "signet-ring cells on pleural biopsy"
+          ],
+          "refuting_evidence": [
+            "normal upper gastrointestinal series except for a small hiatus hernia"
+          ],
+          "additional_information_needed": [
+            "endoscopy with biopsy",
+            "CT scan of the abdomen"
+          ]
+        },
+        {
+          "name": "Mesothelioma",
+          "category": "Oncological",
+          "likelihood": "medium",
+          "key_features": [
+            "pleural thickening",
+            "history of asbestos exposure",
+            "chest pain"
+          ],
+          "supporting_evidence": [
+            "pleural thickening and history of working in a shipyard",
+            "right pleuritic pain"
+          ],
+          "refuting_evidence": [
+            "biopsy showing metastatic adenocarcinoma"
+          ],
+          "additional_information_needed": [
+            "detailed occupational history",
+            "immunohistochemical staining of biopsy"
+          ]
+        },
+        {
+          "name": "Pancreatic cancer",
+          "category": "Oncological",
+          "likelihood": "low",
+          "key_features": [
+            "weight loss",
+            "abdominal mass",
+            "epigastric pain"
+          ],
+          "supporting_evidence": [
+            "weight loss",
+            "abdominal mass",
+            "epigastric pain"
+          ],
+          "refuting_evidence": [
+            "location of abdominal mass in the left upper quadrant"
+          ],
+          "additional_information_needed": [
+            "abdominal CT scan",
+            "CA 19-9 tumor marker"
+          ]
+        }
+      ]
+    },
+    "testing": {
+      "required": [
+        {
+          "id": "T1",
+          "content": "What were the results of laboratory tests and imaging studies?",
+          "response": "The urine had a specific gravity of 1.021 and gave a trace test for protein; the sediment contained 3 to 6 red cells, 2 to 4 white cells and frequent hyaline and fine granular casts per high-power field. The hematocrit was 46 per cent, and the white-cell count 16,300, with 85 per cent neutrophils. The fasting glucose was 88 mg, the urea nitrogen 23 mg, the bilirubin less than 0.2 mg, the calcium 9.2 mg, the phosphorus 3.9 mg, and the protein 6.4 gm (the albumin 3.7 gm, and the globulin 2.7 gm) per 100 ml. The alkaline phosphatase was 5.5 Bodansky units. The glutamic oxalacetic transaminase (SGOT) was 11 units. A stool specimen gave a negative guaiac test. The bromsulfalein retention was 16 per cent after forty-five minutes. X-ray films of the chest revealed a large area of increased density in the right lower hemithorax just above the leaf of the diaphragm, which was elevated; the pleural thickening along the lower lateral and anterior portions of the chest wall was more prominent and appeared nodular. Films of the abdomen were normal.",
+          "teaching_points": [
+            {
+              "id": "TP5",
+              "content": "Elevated white-cell count with neutrophilia may indicate infection or inflammation.",
+              "covered": false
+            },
+            {
+              "id": "TP6",
+              "content": "Chest X-ray findings of pleural thickening and nodularity can suggest malignancy or chronic inflammation.",
+              "covered": false
+            }
+          ],
+          "elicited": false
+        }
+      ],
+      "optional": [],
+      "current_ideal_differential_diagnosis": [
+        {
+          "name": "Metastatic adenocarcinoma",
+          "category": "Oncological",
+          "likelihood": "high",
+          "key_features": [
+            "weight loss",
+            "abdominal distention",
+            "pleural thickening",
+            "signet-ring cells on biopsy"
+          ],
+          "supporting_evidence": [
+            "biopsy of pleura showing metastatic adenocarcinoma with signet-ring cells",
+            "weight loss and cachexia",
+            "abdominal mass",
+            "pleural thickening and nodularity on chest x-ray"
+          ],
+          "refuting_evidence": [],
+          "additional_information_needed": [
+            "CT scan of the abdomen and pelvis",
+            "tumor markers",
+            "further histological analysis"
+          ]
+        },
+        {
+          "name": "Gastric cancer",
+          "category": "Oncological",
+          "likelihood": "medium",
+          "key_features": [
+            "epigastric pain",
+            "weight loss",
+            "abdominal mass",
+            "signet-ring cells"
+          ],
+          "supporting_evidence": [
+            "epigastric pain relieved by antacids",
+            "weight loss",
+            "abdominal mass",
+            "signet-ring cells on pleural biopsy"
+          ],
+          "refuting_evidence": [
+            "normal upper gastrointestinal series"
+          ],
+          "additional_information_needed": [
+            "endoscopy with biopsy",
+            "CT scan of the abdomen"
+          ]
+        },
+        {
+          "name": "Mesothelioma",
+          "category": "Oncological",
+          "likelihood": "medium",
+          "key_features": [
+            "pleural thickening",
+            "history of asbestos exposure",
+            "chest pain"
+          ],
+          "supporting_evidence": [
+            "pleural thickening and nodularity on chest x-ray",
+            "history of working in a shipyard"
+          ],
+          "refuting_evidence": [
+            "biopsy showing metastatic adenocarcinoma"
+          ],
+          "additional_information_needed": [
+            "immunohistochemical staining of biopsy",
+            "detailed occupational history"
+          ]
+        },
+        {
+          "name": "Pancreatic cancer",
+          "category": "Oncological",
+          "likelihood": "low",
+          "key_features": [
+            "weight loss",
+            "abdominal mass",
+            "epigastric pain"
+          ],
+          "supporting_evidence": [
+            "weight loss",
+            "abdominal mass",
+            "epigastric pain"
+          ],
+          "refuting_evidence": [
+            "normal upper gastrointestinal series",
+            "no jaundice or significant liver enzyme abnormalities"
+          ],
+          "additional_information_needed": [
+            "abdominal CT scan",
+            "CA 19-9 tumor marker"
+          ]
+        }
+      ]
+    },
+    "management": {
+      "required": [
+        {
+          "id": "M1",
+          "content": "What management decisions and treatments were made during the hospital stay?",
+          "response": "On the second hospital day the patient vomited 300 ml of white material and began to have severe epigastric and substernal burning, with eructation. A bland diet and antacids were prescribed. On the next day an electrocardiogram demonstrated sinus tachycardia with minor, nonspecific ST-segment abnormalities. On the fourth hospital day there was an episode of severe substernal pain that lasted for five minutes, and vomiting recurred. On the following day diarrhea developed, and a course of 5-fluorouracil was begun.",
+          "teaching_points": [
+            {
+              "id": "TP7",
+              "content": "5-fluorouracil is a chemotherapeutic agent used in the treatment of certain cancers.",
+              "covered": false
+            },
+            {
+              "id": "TP8",
+              "content": "Management of gastrointestinal symptoms in cancer patients may include dietary modifications and antacids.",
+              "covered": false
+            }
+          ],
+          "elicited": false
+        }
+      ],
+      "optional": []
+    },
+    "discussion": {
+      "required": [
+        {
+          "id": "D1",
+          "content": "What were the significant events leading to the patient's deterioration and death?",
+          "response": "On the seventh hospital day there was the sudden onset of sharp epigastric and substernal pain that radiated to the back between the scapulas, and he vomited 100 ml of clear fluid. The pain was not relieved by antacids or nitroglycerin. Diaphoresis was observed. The cervical veins were not distended. Examination of the lungs showed no change. The heart sounds were fainter; a pulsus paradoxus was not detected, the pulmonic sound was not increased, and no murmur was heard. Mild epigastric tenderness was elicited; the bowel sounds were normal. An electrocardiogram revealed a sinus rhythm with a shift in the QRS axis leftward to —45°; small Q waves were present in Leads 1 and aVL; R waves were absent in Leads V1, through V3, with ST-segment elevation in Leads V2 through V4; the QRS duration was prolonged to 0.11 second. The pulse was 120, and the blood pressure 150 systolic, 110 diastolic. On the following morning the blood pressure was 85 systolic, and the patient was dyspneic. An electrocardiogram showed sinus tachycardia at a rate of 115; the T waves were inverted in Leads 2, 3, aVF and V3 through V6; there was poor R-wave progression in the precordial leads, with a Q wave in Lead V4 and slight ST-segment elevation in Leads V3 and V4. One hour later the blood pressure became unobtainable, and the patient died a few hours thereafter.",
+          "teaching_points": [
+            {
+              "id": "TP9",
+              "content": "Acute changes in ECG and hemodynamic instability in cancer patients may indicate cardiac complications or acute coronary syndrome.",
+              "covered": false
+            },
+            {
+              "id": "TP10",
+              "content": "Sudden deterioration in cancer patients can be multifactorial, including cardiac events, infection, or progression of malignancy.",
+              "covered": false
+            }
+          ],
+          "elicited": false
+        }
+      ],
+      "optional": []
+    }
+  },
+  "differential_diagnosis": [
+    "Metastatic adenocarcinoma",
+    "Pulmonary embolism",
+    "Acute coronary syndrome"
+  ],
+  "final_diagnosis": {
+    "name": "Metastatic adenocarcinoma",
+    "category": "Oncology",
+    "key_features": [
+      "Weight loss",
+      "Abdominal distention",
+      "Pleural thickening",
+      "Signet-ring cells on biopsy"
+    ],
+    "supporting_evidence": [
+      "Biopsy showing metastatic adenocarcinoma",
+      "Chest X-ray findings",
+      "History of progressive weakness and weight loss"
+    ],
+    "refuting_evidence": []
+  }
+}

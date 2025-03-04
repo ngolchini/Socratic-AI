@@ -1,0 +1,437 @@
+{
+  "metadata": {
+    "id": "case_010",
+    "title": "1970 Case 48",
+    "original_presentation": "A 45-year-old woman was admitted to the hospital because of a changing cardiac murmur.",
+    "difficulty": "intermediate",
+    "specialties": [
+      "Cardiology",
+      "Internal Medicine"
+    ],
+    "keywords": [
+      "cardiac murmur",
+      "hypertension",
+      "dyspnea",
+      "chest pain"
+    ],
+    "source": "clinical case study",
+    "version": "1.0"
+  },
+  "clinical_elements": {
+    "history": {
+      "required": [
+        {
+          "id": "H1",
+          "content": "What is the patient's past medical history related to cardiac issues?",
+          "response": "At the age of 17 years she had been informed that she had a heart murmur. No restrictions were imposed upon her, and she underwent two eventful pregnancies at 23 and 26 years of age.",
+          "teaching_points": [
+            {
+              "id": "TP1",
+              "content": "A heart murmur detected in adolescence can be benign or indicative of underlying cardiac pathology. Regular follow-up is important.",
+              "covered": false
+            }
+          ],
+          "elicited": false
+        },
+        {
+          "id": "H2",
+          "content": "What symptoms did the patient experience prior to admission?",
+          "response": "Ten years before admission she began to have episodes of pallor and cyanosis of the hands on exposure to cold. Eight months before entry she was informed that she had hypertension. Three months before admission exertional dyspnea and fatigue developed, and she began to experience episodes of 'heaviness' in the anterior portion of the chest.",
+          "teaching_points": [
+            {
+              "id": "TP2",
+              "content": "Symptoms such as exertional dyspnea and chest heaviness can indicate worsening cardiac function.",
+              "covered": false
+            }
+          ],
+          "elicited": false
+        },
+        {
+          "id": "H3",
+          "content": "What is the patient's family history of cardiac conditions?",
+          "response": "Her mother had hypertension and had had several myocardial infarcts. Eleven siblings were living and well, without known heart disease or hypertension.",
+          "teaching_points": [
+            {
+              "id": "TP3",
+              "content": "Family history of hypertension and myocardial infarction can increase the risk of similar conditions in the patient.",
+              "covered": false
+            }
+          ],
+          "elicited": false
+        }
+      ],
+      "optional": [],
+      "current_ideal_differential_diagnosis": [
+        {
+          "name": "Mitral Valve Prolapse",
+          "category": "Valvular Heart Disease",
+          "likelihood": "medium",
+          "key_features": [
+            "heart murmur",
+            "exertional dyspnea",
+            "chest heaviness"
+          ],
+          "supporting_evidence": [
+            "heart murmur noted at age 17",
+            "exertional dyspnea",
+            "chest heaviness"
+          ],
+          "refuting_evidence": [
+            "no specific mention of mitral valve prolapse symptoms like palpitations or syncope"
+          ],
+          "additional_information_needed": [
+            "echocardiogram to assess valve structure and function"
+          ]
+        },
+        {
+          "name": "Aortic Stenosis",
+          "category": "Valvular Heart Disease",
+          "likelihood": "medium",
+          "key_features": [
+            "heart murmur",
+            "exertional dyspnea",
+            "chest pain"
+          ],
+          "supporting_evidence": [
+            "changing cardiac murmur",
+            "exertional dyspnea",
+            "chest heaviness"
+          ],
+          "refuting_evidence": [
+            "no mention of syncope or classic triad of symptoms"
+          ],
+          "additional_information_needed": [
+            "auscultation findings",
+            "echocardiogram to assess aortic valve"
+          ]
+        },
+        {
+          "name": "Pulmonary Hypertension",
+          "category": "Vascular Disease",
+          "likelihood": "medium",
+          "key_features": [
+            "exertional dyspnea",
+            "chest pain",
+            "history of hypertension"
+          ],
+          "supporting_evidence": [
+            "exertional dyspnea",
+            "chest heaviness",
+            "history of hypertension"
+          ],
+          "refuting_evidence": [
+            "no specific mention of right heart failure symptoms"
+          ],
+          "additional_information_needed": [
+            "chest X-ray",
+            "echocardiogram",
+            "right heart catheterization"
+          ]
+        },
+        {
+          "name": "Coronary Artery Disease",
+          "category": "Ischemic Heart Disease",
+          "likelihood": "medium",
+          "key_features": [
+            "chest pain",
+            "family history of myocardial infarction"
+          ],
+          "supporting_evidence": [
+            "chest heaviness",
+            "family history of myocardial infarcts"
+          ],
+          "refuting_evidence": [
+            "no mention of typical angina or risk factors like diabetes or smoking"
+          ],
+          "additional_information_needed": [
+            "stress test",
+            "coronary angiography"
+          ]
+        },
+        {
+          "name": "Raynaud's Phenomenon",
+          "category": "Vascular Disorder",
+          "likelihood": "low",
+          "key_features": [
+            "pallor and cyanosis of hands on cold exposure"
+          ],
+          "supporting_evidence": [
+            "episodes of pallor and cyanosis of the hands on exposure to cold"
+          ],
+          "refuting_evidence": [
+            "does not explain cardiac murmur or chest heaviness"
+          ],
+          "additional_information_needed": [
+            "nailfold capillaroscopy",
+            "autoimmune panel"
+          ]
+        }
+      ]
+    },
+    "physical": {
+      "required": [
+        {
+          "id": "P1",
+          "content": "What were the findings on physical examination?",
+          "response": "The patient was thin but appeared well and was not cyanotic. There was a slight malar flush. Very prominent A waves, with smaller V waves, were observed in the jugular veins. The lungs were normal. There was a slight systolic impulse over the left parasternal region, and a presystolic impulse was felt in the right hypochondrium. Prominent protodiastolic (S3) and presystolic (S4) gallop sounds were heard low along the left sternal border, becoming louder on inspiration. The second heart sound was slightly split on inspiration and narrowed on expiration; the pulmonic component was slightly increased. A systolic ejection murmur was heard along the lower left sternal border and was Grade 3 on inspiration and Grade 1 on expiration; no diastolic murmur was heard. The abdomen was normal. The peripheral pulses were full, equal and without delay; there was no edema, cyanosis or clubbing of the extremities.",
+          "teaching_points": [
+            {
+              "id": "TP4",
+              "content": "Prominent A waves in the jugular venous pulse can indicate right atrial pressure increase, often due to tricuspid stenosis or pulmonary hypertension.",
+              "covered": false
+            }
+          ],
+          "elicited": false
+        }
+      ],
+      "optional": [],
+      "current_ideal_differential_diagnosis": [
+        {
+          "name": "Pulmonary Hypertension",
+          "category": "Cardiovascular",
+          "likelihood": "high",
+          "key_features": [
+            "exertional dyspnea",
+            "fatigue",
+            "prominent A waves in jugular venous pulse",
+            "increased pulmonic component of second heart sound"
+          ],
+          "supporting_evidence": [
+            "exertional dyspnea and fatigue",
+            "prominent A waves in jugular veins",
+            "increased pulmonic component of second heart sound",
+            "systolic ejection murmur along the lower left sternal border"
+          ],
+          "refuting_evidence": [],
+          "additional_information_needed": [
+            "Echocardiogram to assess pulmonary artery pressure",
+            "Right heart catheterization"
+          ]
+        },
+        {
+          "name": "Mitral Valve Stenosis",
+          "category": "Cardiovascular",
+          "likelihood": "medium",
+          "key_features": [
+            "malar flush",
+            "prominent A waves",
+            "S3 and S4 gallop sounds",
+            "history of heart murmur"
+          ],
+          "supporting_evidence": [
+            "malar flush",
+            "prominent A waves in jugular veins",
+            "S3 and S4 gallop sounds",
+            "history of heart murmur since age 17"
+          ],
+          "refuting_evidence": [
+            "absence of diastolic murmur"
+          ],
+          "additional_information_needed": [
+            "Echocardiogram to assess mitral valve function",
+            "Doppler studies"
+          ]
+        },
+        {
+          "name": "Hypertrophic Cardiomyopathy",
+          "category": "Cardiovascular",
+          "likelihood": "medium",
+          "key_features": [
+            "systolic ejection murmur",
+            "exertional dyspnea",
+            "family history of cardiac issues"
+          ],
+          "supporting_evidence": [
+            "systolic ejection murmur",
+            "exertional dyspnea",
+            "family history of cardiac issues (mother with myocardial infarcts)"
+          ],
+          "refuting_evidence": [
+            "no evidence of left ventricular hypertrophy on physical exam"
+          ],
+          "additional_information_needed": [
+            "Echocardiogram to assess for left ventricular hypertrophy",
+            "Genetic testing if indicated"
+          ]
+        },
+        {
+          "name": "Atrial Septal Defect (ASD)",
+          "category": "Cardiovascular",
+          "likelihood": "low",
+          "key_features": [
+            "fixed splitting of second heart sound",
+            "systolic ejection murmur",
+            "prominent A waves"
+          ],
+          "supporting_evidence": [
+            "systolic ejection murmur",
+            "prominent A waves in jugular veins"
+          ],
+          "refuting_evidence": [
+            "second heart sound split is not fixed"
+          ],
+          "additional_information_needed": [
+            "Echocardiogram with bubble study",
+            "Cardiac MRI"
+          ]
+        }
+      ]
+    },
+    "testing": {
+      "required": [
+        {
+          "id": "T1",
+          "content": "What were the results of the laboratory tests?",
+          "response": "The hematocrit was 43.9 per cent; the white-cell count was 10,000, with 80 per cent neutrophils, 1 per cent band forms, 15 per cent lymphocytes and 4 per cent monocytes. The erythrocyte sedimentation rate was 42 mm in one hour, and the prothrombin time was 14.6 seconds, with a control of 12.9 seconds. The creatinine was 1.2 mg, the conjugated bilirubin 0.8 mg, the total bilirubin 1.3 mg, the iron 86 μg, and the protein 6.6 g (the albumin 3.9 g, and the globulin 2.7 g) per 100 ml. The sodium was 141 mEq, the potassium 3.8 mEq, the chloride 97 mEq, and the carbon dioxide 28 mEq per liter. Tests for antinuclear antibody, rheumatoid factor and cryoglobulins and an L.E.-cell test were negative. Serum immunoelectrophoresis and agarose-gel electrophoresis were negative.",
+          "teaching_points": [
+            {
+              "id": "TP5",
+              "content": "Normal creatinine and electrolyte levels suggest preserved renal function, which is important in managing cardiac patients.",
+              "covered": false
+            }
+          ],
+          "elicited": false
+        },
+        {
+          "id": "T2",
+          "content": "What were the findings on the electrocardiogram and imaging studies?",
+          "response": "An electrocardiogram showed a normal rhythm at a rate of 85, with normal PR and QRS intervals; the axis was +30°; the P waves were peaked in Leads 2, 3, aVF, V2 and V3, and there was generalized lowering of the T waves, with a tendency to low voltage of the QRS complexes. A vectorcardiogram was interpreted as consistent with right atrial enlargement and right ventricular hypertrophy. X-ray films of the chest disclosed that the heart was not enlarged in the transverse diameter, although it encroached upon the retrosternal space; the aortic arch was in a normal position on the left side; the lungs and pulmonary vasculature appeared normal.",
+          "teaching_points": [
+            {
+              "id": "TP6",
+              "content": "Right atrial enlargement and right ventricular hypertrophy on ECG can indicate pulmonary hypertension or valvular heart disease.",
+              "covered": false
+            }
+          ],
+          "elicited": false
+        }
+      ],
+      "optional": [],
+      "current_ideal_differential_diagnosis": [
+        {
+          "name": "Pulmonary Hypertension",
+          "category": "Cardiovascular",
+          "likelihood": "high",
+          "key_features": [
+            "exertional dyspnea",
+            "fatigue",
+            "right ventricular hypertrophy",
+            "prominent A waves in jugular venous pulse",
+            "systolic ejection murmur"
+          ],
+          "supporting_evidence": [
+            "exertional dyspnea and fatigue",
+            "right ventricular hypertrophy on vectorcardiogram",
+            "prominent A waves in jugular venous pulse",
+            "systolic ejection murmur along the lower left sternal border"
+          ],
+          "refuting_evidence": [
+            "normal pulmonary vasculature on chest X-ray"
+          ],
+          "additional_information_needed": [
+            "echocardiogram to assess pulmonary artery pressures",
+            "right heart catheterization for definitive diagnosis"
+          ]
+        },
+        {
+          "name": "Tricuspid Valve Disease",
+          "category": "Valvular Heart Disease",
+          "likelihood": "medium",
+          "key_features": [
+            "prominent A waves",
+            "right atrial enlargement",
+            "systolic murmur",
+            "gallop sounds"
+          ],
+          "supporting_evidence": [
+            "prominent A waves in jugular venous pulse",
+            "right atrial enlargement on vectorcardiogram",
+            "systolic ejection murmur",
+            "S3 and S4 gallop sounds"
+          ],
+          "refuting_evidence": [
+            "no diastolic murmur heard"
+          ],
+          "additional_information_needed": [
+            "echocardiogram to evaluate tricuspid valve structure and function"
+          ]
+        },
+        {
+          "name": "Hypertrophic Cardiomyopathy",
+          "category": "Cardiomyopathy",
+          "likelihood": "low",
+          "key_features": [
+            "systolic murmur",
+            "dyspnea",
+            "chest heaviness",
+            "gallop sounds"
+          ],
+          "supporting_evidence": [
+            "systolic ejection murmur",
+            "exertional dyspnea",
+            "chest heaviness",
+            "S3 and S4 gallop sounds"
+          ],
+          "refuting_evidence": [
+            "normal heart size on chest X-ray",
+            "no family history of cardiomyopathy"
+          ],
+          "additional_information_needed": [
+            "echocardiogram to assess for left ventricular outflow tract obstruction"
+          ]
+        },
+        {
+          "name": "Rheumatic Heart Disease",
+          "category": "Infectious/Inflammatory",
+          "likelihood": "low",
+          "key_features": [
+            "history of heart murmur",
+            "valvular abnormalities",
+            "gallop sounds"
+          ],
+          "supporting_evidence": [
+            "history of heart murmur since age 17",
+            "gallop sounds"
+          ],
+          "refuting_evidence": [
+            "negative tests for antinuclear antibody, rheumatoid factor, and cryoglobulins",
+            "no diastolic murmur heard"
+          ],
+          "additional_information_needed": [
+            "echocardiogram to assess for valvular damage"
+          ]
+        }
+      ]
+    },
+    "management": {
+      "required": [
+        {
+          "id": "M1",
+          "content": "What management steps were taken upon hospital admission?",
+          "response": "An operation was performed on the second hospital day.",
+          "teaching_points": [
+            {
+              "id": "TP7",
+              "content": "Surgical intervention may be necessary in cases of significant valvular heart disease or structural cardiac abnormalities.",
+              "covered": false
+            }
+          ],
+          "elicited": false
+        }
+      ],
+      "optional": []
+    },
+    "discussion": {
+      "required": [],
+      "optional": []
+    }
+  },
+  "differential_diagnosis": [],
+  "final_diagnosis": {
+    "name": "Unknown",
+    "category": "Cardiac",
+    "key_features": [],
+    "supporting_evidence": [],
+    "refuting_evidence": []
+  }
+}

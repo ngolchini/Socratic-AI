@@ -1,0 +1,452 @@
+{
+  "metadata": {
+    "id": "case_048",
+    "title": "2007 Case 29",
+    "original_presentation": "A 51-year-old man with a history of gastric cancer was admitted to the hospital because of a new pulmonary lesion.",
+    "difficulty": "intermediate",
+    "specialties": [
+      "Internal Medicine",
+      "Oncology",
+      "Pulmonology"
+    ],
+    "keywords": [
+      "gastric cancer",
+      "pulmonary lesion",
+      "H. pylori",
+      "gastrectomy",
+      "adenocarcinoma"
+    ],
+    "source": "Dr. Allison L. McDonough",
+    "version": "1.0"
+  },
+  "clinical_elements": {
+    "history": {
+      "required": [
+        {
+          "id": "H1",
+          "content": "What is the patient's past medical history?",
+          "response": "The patient has a history of gastric cancer, hiatal hernia, gastroesophageal reflux, and duodenal ulcer. He tested positive for H. pylori and underwent a subtotal gastrectomy for poorly differentiated adenocarcinoma with signet-ring cells.",
+          "teaching_points": [
+            {
+              "id": "TP1",
+              "content": "Gastric cancer can present with non-specific symptoms such as weight loss, abdominal pain, and early satiety. A history of H. pylori infection is a known risk factor.",
+              "covered": false
+            }
+          ],
+          "elicited": false
+        },
+        {
+          "id": "H2",
+          "content": "What are the patient's current symptoms?",
+          "response": "The patient reports early satiety, nausea, fatigue, weight loss, and abdominal wall pain at the site of the surgical scar.",
+          "teaching_points": [
+            {
+              "id": "TP2",
+              "content": "Early satiety and weight loss in a patient with a history of gastric surgery may indicate complications such as recurrence or metastasis.",
+              "covered": false
+            }
+          ],
+          "elicited": false
+        },
+        {
+          "id": "H3",
+          "content": "What is the patient's family history?",
+          "response": "The patient's father died of gastric cancer at 39 years of age, and his mother died of bronchitis at 65 years of age.",
+          "teaching_points": [
+            {
+              "id": "TP3",
+              "content": "A family history of gastric cancer can increase the risk for the disease, suggesting a possible genetic predisposition.",
+              "covered": false
+            }
+          ],
+          "elicited": false
+        },
+        {
+          "id": "H4",
+          "content": "What is the patient's social history?",
+          "response": "The patient was born in Brazil, lived in Japan for a year, and immigrated to the United States over 20 years ago. He smoked cigarettes for 25 years but quit 3 months before admission.",
+          "teaching_points": [
+            {
+              "id": "TP4",
+              "content": "Smoking is a risk factor for many cancers, including gastric cancer. Geographic history can also influence disease risk due to varying prevalence of infections like H. pylori.",
+              "covered": false
+            }
+          ],
+          "elicited": false
+        }
+      ],
+      "optional": [],
+      "current_ideal_differential_diagnosis": [
+        {
+          "name": "Metastatic gastric cancer",
+          "category": "Oncological",
+          "likelihood": "high",
+          "key_features": [
+            "history of gastric cancer",
+            "new pulmonary lesion",
+            "weight loss",
+            "fatigue"
+          ],
+          "supporting_evidence": [
+            "history of gastric cancer with signet-ring cells",
+            "new pulmonary lesion",
+            "weight loss",
+            "fatigue"
+          ],
+          "refuting_evidence": [],
+          "additional_information_needed": [
+            "biopsy of the pulmonary lesion",
+            "imaging studies to assess for metastasis"
+          ]
+        },
+        {
+          "name": "Primary lung cancer",
+          "category": "Oncological",
+          "likelihood": "medium",
+          "key_features": [
+            "history of smoking",
+            "new pulmonary lesion"
+          ],
+          "supporting_evidence": [
+            "history of smoking for 25 years",
+            "new pulmonary lesion"
+          ],
+          "refuting_evidence": [
+            "no specific symptoms of lung cancer such as cough or hemoptysis reported"
+          ],
+          "additional_information_needed": [
+            "biopsy of the pulmonary lesion",
+            "chest CT scan"
+          ]
+        },
+        {
+          "name": "Pulmonary infection",
+          "category": "Infectious",
+          "likelihood": "low",
+          "key_features": [
+            "pulmonary lesion",
+            "history of living in areas with endemic infections"
+          ],
+          "supporting_evidence": [
+            "new pulmonary lesion",
+            "history of living in Brazil and Japan"
+          ],
+          "refuting_evidence": [
+            "lack of fever, cough, or other respiratory symptoms"
+          ],
+          "additional_information_needed": [
+            "sputum culture",
+            "serological tests for endemic infections"
+          ]
+        },
+        {
+          "name": "Benign pulmonary nodule",
+          "category": "Pulmonary",
+          "likelihood": "low",
+          "key_features": [
+            "asymptomatic pulmonary lesion"
+          ],
+          "supporting_evidence": [
+            "new pulmonary lesion"
+          ],
+          "refuting_evidence": [
+            "history of gastric cancer increases likelihood of metastasis"
+          ],
+          "additional_information_needed": [
+            "follow-up imaging",
+            "biopsy of the lesion"
+          ]
+        }
+      ]
+    },
+    "physical": {
+      "required": [
+        {
+          "id": "P1",
+          "content": "What were the findings on physical examination?",
+          "response": "The patient appeared thin and chronically ill, with mild temporal wasting and moderate clubbing of the fingers. A small, tender, firm nodule consistent with a keloid was palpated in the surgical scar.",
+          "teaching_points": [
+            {
+              "id": "TP5",
+              "content": "Clubbing of the fingers can be associated with chronic hypoxia and is often seen in pulmonary and cardiac conditions.",
+              "covered": false
+            }
+          ],
+          "elicited": false
+        }
+      ],
+      "optional": [],
+      "current_ideal_differential_diagnosis": [
+        {
+          "name": "Metastatic gastric cancer",
+          "category": "Oncological",
+          "likelihood": "high",
+          "key_features": [
+            "history of gastric cancer",
+            "new pulmonary lesion",
+            "weight loss",
+            "fatigue"
+          ],
+          "supporting_evidence": [
+            "history of gastric cancer with signet-ring cells",
+            "new pulmonary lesion",
+            "weight loss",
+            "fatigue",
+            "family history of gastric cancer"
+          ],
+          "refuting_evidence": [
+            "no specific refuting evidence at this point"
+          ],
+          "additional_information_needed": [
+            "biopsy of the pulmonary lesion",
+            "imaging studies to assess for metastasis"
+          ]
+        },
+        {
+          "name": "Primary lung cancer",
+          "category": "Oncological",
+          "likelihood": "medium",
+          "key_features": [
+            "new pulmonary lesion",
+            "history of smoking",
+            "clubbing of the fingers"
+          ],
+          "supporting_evidence": [
+            "new pulmonary lesion",
+            "history of smoking",
+            "clubbing of the fingers"
+          ],
+          "refuting_evidence": [
+            "history of gastric cancer makes metastasis more likely"
+          ],
+          "additional_information_needed": [
+            "biopsy of the pulmonary lesion",
+            "chest CT scan"
+          ]
+        },
+        {
+          "name": "Pulmonary infection (e.g., tuberculosis)",
+          "category": "Infectious",
+          "likelihood": "low",
+          "key_features": [
+            "pulmonary lesion",
+            "history of living in endemic areas"
+          ],
+          "supporting_evidence": [
+            "new pulmonary lesion",
+            "history of living in Brazil and Japan"
+          ],
+          "refuting_evidence": [
+            "lack of typical symptoms such as cough, fever, or night sweats"
+          ],
+          "additional_information_needed": [
+            "sputum culture",
+            "tuberculin skin test or IGRA"
+          ]
+        },
+        {
+          "name": "Benign pulmonary nodule",
+          "category": "Pulmonary",
+          "likelihood": "low",
+          "key_features": [
+            "asymptomatic pulmonary lesion"
+          ],
+          "supporting_evidence": [
+            "new pulmonary lesion"
+          ],
+          "refuting_evidence": [
+            "history of gastric cancer increases likelihood of malignancy"
+          ],
+          "additional_information_needed": [
+            "biopsy of the pulmonary lesion",
+            "serial imaging to assess growth"
+          ]
+        }
+      ]
+    },
+    "testing": {
+      "required": [
+        {
+          "id": "T1",
+          "content": "What were the results of the imaging studies?",
+          "response": "CT of the chest revealed multiple, small centrilobular nodules and small cysts, each less than 3 mm in diameter. A new nodule, 4.5 mm in diameter, was found in the lower lobe of the left lung with a rim of ground-glass opacification.",
+          "teaching_points": [
+            {
+              "id": "TP6",
+              "content": "Ground-glass opacities on CT can indicate a range of conditions, including inflammation, infection, or neoplastic processes.",
+              "covered": false
+            }
+          ],
+          "elicited": false
+        },
+        {
+          "id": "T2",
+          "content": "What were the laboratory test results?",
+          "response": "The hematocrit was 40.1%, the white-cell count was 7700 per cubic millimeter with 9% eosinophils. Serum electrolytes, liver function, and renal function tests were normal.",
+          "teaching_points": [
+            {
+              "id": "TP7",
+              "content": "Eosinophilia can be associated with allergic reactions, infections, and some malignancies.",
+              "covered": false
+            }
+          ],
+          "elicited": false
+        }
+      ],
+      "optional": [],
+      "current_ideal_differential_diagnosis": [
+        {
+          "name": "Metastatic gastric cancer",
+          "category": "Oncological",
+          "likelihood": "high",
+          "key_features": [
+            "history of gastric cancer",
+            "new pulmonary lesion",
+            "weight loss",
+            "fatigue"
+          ],
+          "supporting_evidence": [
+            "history of gastric cancer with signet-ring cells",
+            "new pulmonary nodule",
+            "weight loss",
+            "fatigue"
+          ],
+          "refuting_evidence": [
+            "none specific at this point"
+          ],
+          "additional_information_needed": [
+            "biopsy of the pulmonary nodule",
+            "PET scan to assess for metastasis"
+          ]
+        },
+        {
+          "name": "Primary lung cancer",
+          "category": "Oncological",
+          "likelihood": "medium",
+          "key_features": [
+            "history of smoking",
+            "new pulmonary nodule",
+            "clubbing of fingers"
+          ],
+          "supporting_evidence": [
+            "history of smoking",
+            "new pulmonary nodule",
+            "clubbing of fingers"
+          ],
+          "refuting_evidence": [
+            "no significant mass or larger nodules typical of primary lung cancer"
+          ],
+          "additional_information_needed": [
+            "biopsy of the pulmonary nodule",
+            "further imaging studies"
+          ]
+        },
+        {
+          "name": "Pulmonary infection (e.g., fungal or atypical mycobacterial)",
+          "category": "Infectious",
+          "likelihood": "medium",
+          "key_features": [
+            "centrilobular nodules",
+            "ground-glass opacification",
+            "eosinophilia"
+          ],
+          "supporting_evidence": [
+            "centrilobular nodules",
+            "ground-glass opacification",
+            "9% eosinophils"
+          ],
+          "refuting_evidence": [
+            "lack of fever or respiratory symptoms"
+          ],
+          "additional_information_needed": [
+            "sputum culture",
+            "bronchoscopy with lavage"
+          ]
+        },
+        {
+          "name": "Eosinophilic lung disease",
+          "category": "Pulmonary",
+          "likelihood": "low",
+          "key_features": [
+            "eosinophilia",
+            "pulmonary nodules"
+          ],
+          "supporting_evidence": [
+            "9% eosinophils",
+            "pulmonary nodules"
+          ],
+          "refuting_evidence": [
+            "no respiratory symptoms",
+            "no history of asthma or allergies"
+          ],
+          "additional_information_needed": [
+            "serum IgE levels",
+            "allergy testing"
+          ]
+        },
+        {
+          "name": "Sarcoidosis",
+          "category": "Inflammatory",
+          "likelihood": "low",
+          "key_features": [
+            "pulmonary nodules",
+            "clubbing"
+          ],
+          "supporting_evidence": [
+            "pulmonary nodules",
+            "clubbing"
+          ],
+          "refuting_evidence": [
+            "no hilar lymphadenopathy",
+            "no systemic symptoms typical of sarcoidosis"
+          ],
+          "additional_information_needed": [
+            "ACE levels",
+            "biopsy of lung tissue"
+          ]
+        }
+      ]
+    },
+    "management": {
+      "required": [
+        {
+          "id": "M1",
+          "content": "What treatments and management strategies have been used?",
+          "response": "The patient was treated with metoclopramide, omeprazole, and cyclobenzaprine. He was advised to have follow-up CT scans.",
+          "teaching_points": [
+            {
+              "id": "TP8",
+              "content": "Management of gastric cancer may include surgery, chemotherapy, and regular follow-up imaging to monitor for recurrence or metastasis.",
+              "covered": false
+            }
+          ],
+          "elicited": false
+        }
+      ],
+      "optional": []
+    },
+    "discussion": {
+      "required": [],
+      "optional": []
+    }
+  },
+  "differential_diagnosis": [
+    "Metastatic gastric cancer",
+    "Primary lung cancer",
+    "Infectious process (e.g., tuberculosis)"
+  ],
+  "final_diagnosis": {
+    "name": "Metastatic gastric cancer",
+    "category": "Oncology",
+    "key_features": [
+      "History of gastric cancer",
+      "New pulmonary lesion",
+      "Weight loss and early satiety"
+    ],
+    "supporting_evidence": [
+      "CT findings of nodules and cysts in the lungs",
+      "History of poorly differentiated adenocarcinoma"
+    ],
+    "refuting_evidence": []
+  }
+}

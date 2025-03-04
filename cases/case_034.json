@@ -1,0 +1,464 @@
+{
+  "metadata": {
+    "id": "case_034",
+    "title": "2013 Case 29",
+    "original_presentation": "A 32-year-old man with human immunodeficiency virus (HIV) infection was admitted to a hospital in Durban, South Africa, because of dyspnea and cough.",
+    "difficulty": "intermediate",
+    "specialties": [
+      "Infectious Disease",
+      "Pulmonology",
+      "Dermatology"
+    ],
+    "keywords": [
+      "HIV",
+      "Kaposi's sarcoma",
+      "dyspnea",
+      "cough",
+      "skin lesions"
+    ],
+    "source": "Massachusetts General Hospital",
+    "version": "1.0"
+  },
+  "clinical_elements": {
+    "history": {
+      "required": [
+        {
+          "id": "H1",
+          "content": "What is the patient's medical history?",
+          "response": "The patient has HIV infection and was seen for a lesion on his left upper eyelid five months before admission. He has a history of a painless mass in the left inguinal region for the past 5 years.",
+          "teaching_points": [
+            {
+              "id": "TP1",
+              "content": "HIV infection can lead to opportunistic infections and malignancies such as Kaposi's sarcoma.",
+              "covered": false
+            }
+          ],
+          "elicited": false
+        },
+        {
+          "id": "H2",
+          "content": "What symptoms did the patient experience?",
+          "response": "The patient experienced dyspnea, cough, daily fevers, weight loss, night sweats, and increased numbers of skin lesions.",
+          "teaching_points": [
+            {
+              "id": "TP2",
+              "content": "Symptoms like dyspnea and cough in an HIV patient can indicate opportunistic infections or malignancies.",
+              "covered": false
+            }
+          ],
+          "elicited": false
+        }
+      ],
+      "optional": [],
+      "current_ideal_differential_diagnosis": [
+        {
+          "name": "Pneumocystis pneumonia (PCP)",
+          "category": "Infectious disease",
+          "likelihood": "high",
+          "key_features": [
+            "dyspnea",
+            "cough",
+            "fever",
+            "HIV infection"
+          ],
+          "supporting_evidence": [
+            "dyspnea",
+            "cough",
+            "daily fevers",
+            "HIV infection"
+          ],
+          "refuting_evidence": [
+            "none specific at this point"
+          ],
+          "additional_information_needed": [
+            "chest X-ray",
+            "sputum analysis for PCP"
+          ]
+        },
+        {
+          "name": "Tuberculosis (TB)",
+          "category": "Infectious disease",
+          "likelihood": "high",
+          "key_features": [
+            "cough",
+            "fever",
+            "weight loss",
+            "night sweats",
+            "HIV infection"
+          ],
+          "supporting_evidence": [
+            "cough",
+            "daily fevers",
+            "weight loss",
+            "night sweats",
+            "HIV infection"
+          ],
+          "refuting_evidence": [
+            "none specific at this point"
+          ],
+          "additional_information_needed": [
+            "chest X-ray",
+            "sputum culture for Mycobacterium tuberculosis",
+            "TB skin test or IGRA"
+          ]
+        },
+        {
+          "name": "Kaposi's sarcoma",
+          "category": "Oncological disease",
+          "likelihood": "medium",
+          "key_features": [
+            "skin lesions",
+            "HIV infection"
+          ],
+          "supporting_evidence": [
+            "increased numbers of skin lesions",
+            "HIV infection"
+          ],
+          "refuting_evidence": [
+            "none specific at this point"
+          ],
+          "additional_information_needed": [
+            "biopsy of skin lesions",
+            "imaging to assess for pulmonary involvement"
+          ]
+        },
+        {
+          "name": "Non-Hodgkin's lymphoma",
+          "category": "Oncological disease",
+          "likelihood": "medium",
+          "key_features": [
+            "painless lymphadenopathy",
+            "fever",
+            "weight loss",
+            "night sweats"
+          ],
+          "supporting_evidence": [
+            "painless mass in the left inguinal region",
+            "fevers",
+            "weight loss",
+            "night sweats"
+          ],
+          "refuting_evidence": [
+            "none specific at this point"
+          ],
+          "additional_information_needed": [
+            "biopsy of inguinal mass",
+            "CT scan of chest/abdomen"
+          ]
+        },
+        {
+          "name": "Bacterial pneumonia",
+          "category": "Infectious disease",
+          "likelihood": "medium",
+          "key_features": [
+            "cough",
+            "fever",
+            "dyspnea"
+          ],
+          "supporting_evidence": [
+            "cough",
+            "fever",
+            "dyspnea"
+          ],
+          "refuting_evidence": [
+            "HIV infection increases risk for atypical infections"
+          ],
+          "additional_information_needed": [
+            "chest X-ray",
+            "sputum culture"
+          ]
+        }
+      ]
+    },
+    "physical": {
+      "required": [
+        {
+          "id": "P1",
+          "content": "What were the findings on physical examination?",
+          "response": "The patient appeared cachectic with temporal wasting, had violaceous skin lesions on various parts of the body, crepitations over the left lung fields, palpable liver and spleen, and lymphadenopathy.",
+          "teaching_points": [
+            {
+              "id": "TP3",
+              "content": "Cachexia and skin lesions in an HIV patient can be indicative of systemic involvement of Kaposi's sarcoma.",
+              "covered": false
+            }
+          ],
+          "elicited": false
+        }
+      ],
+      "optional": [],
+      "current_ideal_differential_diagnosis": [
+        {
+          "name": "Kaposi's Sarcoma",
+          "category": "Oncological/Infectious disease",
+          "likelihood": "high",
+          "key_features": [
+            "violaceous skin lesions",
+            "HIV infection",
+            "lymphadenopathy",
+            "visceral involvement"
+          ],
+          "supporting_evidence": [
+            "violaceous skin lesions",
+            "HIV infection",
+            "increased numbers of skin lesions",
+            "lymphadenopathy",
+            "palpable liver and spleen"
+          ],
+          "refuting_evidence": [],
+          "additional_information_needed": [
+            "biopsy of skin lesions",
+            "imaging studies to assess visceral involvement"
+          ]
+        },
+        {
+          "name": "Disseminated Tuberculosis",
+          "category": "Infectious disease",
+          "likelihood": "medium",
+          "key_features": [
+            "fever",
+            "weight loss",
+            "night sweats",
+            "lymphadenopathy",
+            "pulmonary involvement"
+          ],
+          "supporting_evidence": [
+            "daily fevers",
+            "weight loss",
+            "night sweats",
+            "lymphadenopathy",
+            "crepitations over the left lung fields"
+          ],
+          "refuting_evidence": [
+            "violaceous skin lesions are not typical for TB"
+          ],
+          "additional_information_needed": [
+            "chest X-ray",
+            "sputum culture for Mycobacterium tuberculosis",
+            "tuberculin skin test or IGRA"
+          ]
+        },
+        {
+          "name": "Non-Hodgkin Lymphoma",
+          "category": "Oncological",
+          "likelihood": "medium",
+          "key_features": [
+            "lymphadenopathy",
+            "fever",
+            "weight loss",
+            "night sweats",
+            "HIV association"
+          ],
+          "supporting_evidence": [
+            "lymphadenopathy",
+            "fever",
+            "weight loss",
+            "night sweats",
+            "HIV infection"
+          ],
+          "refuting_evidence": [
+            "violaceous skin lesions are not typical for lymphoma"
+          ],
+          "additional_information_needed": [
+            "lymph node biopsy",
+            "imaging studies for staging"
+          ]
+        },
+        {
+          "name": "Pneumocystis jirovecii pneumonia (PCP)",
+          "category": "Infectious disease",
+          "likelihood": "low",
+          "key_features": [
+            "dyspnea",
+            "cough",
+            "HIV infection",
+            "pulmonary infiltrates"
+          ],
+          "supporting_evidence": [
+            "dyspnea",
+            "cough",
+            "HIV infection",
+            "crepitations over the left lung fields"
+          ],
+          "refuting_evidence": [
+            "systemic symptoms and skin lesions are not typical for PCP"
+          ],
+          "additional_information_needed": [
+            "chest X-ray",
+            "sputum or BAL for PCP testing"
+          ]
+        }
+      ]
+    },
+    "testing": {
+      "required": [
+        {
+          "id": "T1",
+          "content": "What were the results of the diagnostic tests?",
+          "response": "Immunohistochemical staining confirmed Kaposi's sarcoma. CD4 count was 268 per cubic millimeter. Chest radiographs showed bilateral reticular and micronodular opacities with progression over time.",
+          "teaching_points": [
+            {
+              "id": "TP4",
+              "content": "A low CD4 count in HIV patients increases the risk of opportunistic infections and malignancies.",
+              "covered": false
+            }
+          ],
+          "elicited": false
+        }
+      ],
+      "optional": [],
+      "current_ideal_differential_diagnosis": [
+        {
+          "name": "Kaposi's Sarcoma",
+          "category": "Oncological",
+          "likelihood": "high",
+          "key_features": [
+            "violaceous skin lesions",
+            "HIV infection",
+            "lymphadenopathy",
+            "visceral involvement"
+          ],
+          "supporting_evidence": [
+            "violaceous skin lesions",
+            "immunohistochemical staining confirmed Kaposi's sarcoma",
+            "HIV infection",
+            "lymphadenopathy",
+            "palpable liver and spleen"
+          ],
+          "refuting_evidence": [],
+          "additional_information_needed": [
+            "Biopsy of other lesions to confirm widespread involvement"
+          ]
+        },
+        {
+          "name": "Pneumocystis jirovecii pneumonia (PCP)",
+          "category": "Infectious",
+          "likelihood": "medium",
+          "key_features": [
+            "dyspnea",
+            "cough",
+            "bilateral reticular opacities on chest radiograph",
+            "HIV infection"
+          ],
+          "supporting_evidence": [
+            "dyspnea",
+            "cough",
+            "bilateral reticular and micronodular opacities on chest radiograph",
+            "HIV infection"
+          ],
+          "refuting_evidence": [
+            "CD4 count is 268, which is higher than typical for PCP risk"
+          ],
+          "additional_information_needed": [
+            "Sputum analysis or bronchoalveolar lavage for PCP"
+          ]
+        },
+        {
+          "name": "Tuberculosis",
+          "category": "Infectious",
+          "likelihood": "medium",
+          "key_features": [
+            "cough",
+            "fever",
+            "weight loss",
+            "night sweats",
+            "lymphadenopathy",
+            "lung involvement"
+          ],
+          "supporting_evidence": [
+            "cough",
+            "daily fevers",
+            "weight loss",
+            "night sweats",
+            "lymphadenopathy",
+            "bilateral reticular and micronodular opacities on chest radiograph"
+          ],
+          "refuting_evidence": [],
+          "additional_information_needed": [
+            "Sputum culture for Mycobacterium tuberculosis",
+            "Tuberculin skin test or IGRA"
+          ]
+        },
+        {
+          "name": "Non-Hodgkin Lymphoma",
+          "category": "Oncological",
+          "likelihood": "low",
+          "key_features": [
+            "lymphadenopathy",
+            "B symptoms (fever, weight loss, night sweats)",
+            "HIV infection"
+          ],
+          "supporting_evidence": [
+            "lymphadenopathy",
+            "fever",
+            "weight loss",
+            "night sweats"
+          ],
+          "refuting_evidence": [
+            "immunohistochemical staining confirmed Kaposi's sarcoma"
+          ],
+          "additional_information_needed": [
+            "Lymph node biopsy"
+          ]
+        }
+      ]
+    },
+    "management": {
+      "required": [
+        {
+          "id": "M1",
+          "content": "What treatments were administered?",
+          "response": "The patient was on antiretroviral therapy, antituberculous medications, and additional treatments including doxycycline, trimethoprim–sulfamethoxazole, prednisone, and oxygen.",
+          "teaching_points": [
+            {
+              "id": "TP5",
+              "content": "Management of HIV involves antiretroviral therapy, and opportunistic infections require specific treatments.",
+              "covered": false
+            }
+          ],
+          "elicited": false
+        }
+      ],
+      "optional": []
+    },
+    "discussion": {
+      "required": [
+        {
+          "id": "D1",
+          "content": "What is the differential diagnosis for this patient?",
+          "response": "The differential diagnosis includes lymphoma, Kaposi's sarcoma, Kaposi's sarcoma–associated IRIS, atypical tuberculosis, and Pneumocystis jirovecii infections.",
+          "teaching_points": [
+            {
+              "id": "TP6",
+              "content": "In immunocompromised patients, a broad differential diagnosis is necessary to cover various opportunistic infections and malignancies.",
+              "covered": false
+            }
+          ],
+          "elicited": false
+        }
+      ],
+      "optional": []
+    }
+  },
+  "differential_diagnosis": [
+    "Lymphoma",
+    "Kaposi's sarcoma",
+    "Kaposi's sarcoma–associated IRIS",
+    "Atypical tuberculosis",
+    "Pneumocystis jirovecii infection"
+  ],
+  "final_diagnosis": {
+    "name": "Kaposi's sarcoma",
+    "category": "Malignancy",
+    "key_features": [
+      "Violaceous skin lesions",
+      "HIV infection",
+      "Low CD4 count"
+    ],
+    "supporting_evidence": [
+      "Immunohistochemical staining for HHV-8",
+      "Pathological examination showing spindle-cell infiltrate"
+    ],
+    "refuting_evidence": []
+  }
+}

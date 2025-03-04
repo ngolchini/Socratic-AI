@@ -1,0 +1,466 @@
+{
+  "metadata": {
+    "id": "case_045",
+    "title": "1977 Case 50",
+    "original_presentation": "A 76-year-old man was admitted to the hospital because of renal failure. He was well until four months earlier, when he experienced transient bilateral paresthesia with questionable dysarthria.",
+    "difficulty": "intermediate",
+    "specialties": [
+      "Nephrology",
+      "Neurology",
+      "Internal Medicine"
+    ],
+    "keywords": [
+      "renal failure",
+      "paresthesia",
+      "hypertension",
+      "seizures",
+      "dialysis"
+    ],
+    "source": "Clinical case study",
+    "version": "1.0"
+  },
+  "clinical_elements": {
+    "history": {
+      "required": [
+        {
+          "id": "H1",
+          "content": "What is the patient's medical history and recent symptoms?",
+          "response": "The patient experienced transient bilateral paresthesia with questionable dysarthria four months ago. Two months before admission, he lost consciousness while parking his car and was prescribed warfarin. Eighteen days before entry, his left arm began to shake, and he became weak on the left side. He has a history of hypertension, cholelithiasis, and a duodenal ulcer with bleeding.",
+          "teaching_points": [
+            {
+              "id": "TP1",
+              "content": "Transient neurological symptoms can be indicative of transient ischemic attacks or other cerebrovascular events.",
+              "covered": false
+            },
+            {
+              "id": "TP2",
+              "content": "Warfarin is an anticoagulant used to prevent thromboembolic events, but it requires careful monitoring to avoid complications.",
+              "covered": false
+            }
+          ],
+          "elicited": false
+        }
+      ],
+      "optional": [],
+      "current_ideal_differential_diagnosis": [
+        {
+          "name": "Stroke",
+          "category": "Neurological",
+          "likelihood": "high",
+          "key_features": [
+            "sudden onset of neurological deficits",
+            "unilateral weakness",
+            "dysarthria"
+          ],
+          "supporting_evidence": [
+            "transient bilateral paresthesia",
+            "questionable dysarthria",
+            "loss of consciousness",
+            "left-sided weakness",
+            "left arm shaking"
+          ],
+          "refuting_evidence": [
+            "none directly refuting stroke"
+          ],
+          "additional_information_needed": [
+            "brain imaging (CT/MRI)",
+            "neurological examination"
+          ]
+        },
+        {
+          "name": "Transient Ischemic Attack (TIA)",
+          "category": "Neurological",
+          "likelihood": "medium",
+          "key_features": [
+            "transient neurological symptoms",
+            "no permanent damage"
+          ],
+          "supporting_evidence": [
+            "transient bilateral paresthesia",
+            "questionable dysarthria"
+          ],
+          "refuting_evidence": [
+            "persistent left-sided weakness",
+            "left arm shaking"
+          ],
+          "additional_information_needed": [
+            "brain imaging",
+            "carotid ultrasound",
+            "echocardiogram"
+          ]
+        },
+        {
+          "name": "Warfarin-induced bleeding",
+          "category": "Hematological",
+          "likelihood": "medium",
+          "key_features": [
+            "bleeding tendency",
+            "use of anticoagulants"
+          ],
+          "supporting_evidence": [
+            "prescribed warfarin",
+            "history of duodenal ulcer with bleeding"
+          ],
+          "refuting_evidence": [
+            "no direct evidence of bleeding complications presented"
+          ],
+          "additional_information_needed": [
+            "INR levels",
+            "complete blood count",
+            "assessment for signs of bleeding"
+          ]
+        },
+        {
+          "name": "Parkinson's Disease",
+          "category": "Neurological",
+          "likelihood": "low",
+          "key_features": [
+            "tremor",
+            "bradykinesia",
+            "rigidity"
+          ],
+          "supporting_evidence": [
+            "left arm shaking"
+          ],
+          "refuting_evidence": [
+            "acute onset of symptoms",
+            "no mention of bradykinesia or rigidity"
+          ],
+          "additional_information_needed": [
+            "neurological examination",
+            "assessment for other Parkinsonian features"
+          ]
+        },
+        {
+          "name": "Hypertensive Encephalopathy",
+          "category": "Neurological",
+          "likelihood": "low",
+          "key_features": [
+            "severe hypertension",
+            "neurological symptoms"
+          ],
+          "supporting_evidence": [
+            "history of hypertension"
+          ],
+          "refuting_evidence": [
+            "no mention of severe hypertension at presentation",
+            "symptoms not typical of encephalopathy"
+          ],
+          "additional_information_needed": [
+            "blood pressure readings",
+            "neurological examination"
+          ]
+        }
+      ]
+    },
+    "physical": {
+      "required": [
+        {
+          "id": "P1",
+          "content": "What were the findings on physical examination upon admission?",
+          "response": "The patient was somnolent and confused. Funduscopic examination revealed slight to moderate arterial narrowing. No rash, petechiae, or ecchymoses were seen. The jugular venous pressure was 4 cm. The lungs were clear, and the heart was normal with a Grade 1 systolic ejection murmur along the left sternal border. The femoral pulses were ++, and the posterior tibial pulses were absent; the right dorsalis pedis pulse was absent, and the left ++. Abdominal examination was negative; no flank tenderness was found, and no bony tenderness was observed. Rectal examination disclosed that the prostate gland was three times the normal size and smooth. Neurologic examination was negative except for asterixis.",
+          "teaching_points": [
+            {
+              "id": "TP3",
+              "content": "Asterixis is a sign of metabolic encephalopathy, often associated with liver or renal failure.",
+              "covered": false
+            },
+            {
+              "id": "TP4",
+              "content": "Absent peripheral pulses can indicate peripheral vascular disease or embolic events.",
+              "covered": false
+            }
+          ],
+          "elicited": false
+        }
+      ],
+      "optional": [],
+      "current_ideal_differential_diagnosis": [
+        {
+          "name": "Chronic Kidney Disease (CKD) secondary to Hypertension",
+          "category": "Renal disease",
+          "likelihood": "high",
+          "key_features": [
+            "renal failure",
+            "history of hypertension",
+            "arterial narrowing on funduscopic exam"
+          ],
+          "supporting_evidence": [
+            "renal failure",
+            "history of hypertension",
+            "arterial narrowing"
+          ],
+          "refuting_evidence": [],
+          "additional_information_needed": [
+            "serum creatinine and BUN levels",
+            "urinalysis",
+            "renal ultrasound"
+          ]
+        },
+        {
+          "name": "Warfarin-induced bleeding",
+          "category": "Hematologic/Coagulation disorder",
+          "likelihood": "medium",
+          "key_features": [
+            "use of warfarin",
+            "history of duodenal ulcer with bleeding",
+            "somnolence and confusion"
+          ],
+          "supporting_evidence": [
+            "use of warfarin",
+            "history of bleeding"
+          ],
+          "refuting_evidence": [
+            "no petechiae or ecchymoses observed"
+          ],
+          "additional_information_needed": [
+            "INR level",
+            "complete blood count",
+            "CT scan of the head to rule out intracranial hemorrhage"
+          ]
+        },
+        {
+          "name": "Transient Ischemic Attack (TIA)",
+          "category": "Neurological disorder",
+          "likelihood": "medium",
+          "key_features": [
+            "transient bilateral paresthesia",
+            "questionable dysarthria",
+            "loss of consciousness"
+          ],
+          "supporting_evidence": [
+            "transient bilateral paresthesia",
+            "questionable dysarthria",
+            "loss of consciousness"
+          ],
+          "refuting_evidence": [
+            "no current focal neurological deficits"
+          ],
+          "additional_information_needed": [
+            "MRI of the brain",
+            "carotid ultrasound",
+            "echocardiogram"
+          ]
+        },
+        {
+          "name": "Atherosclerotic Peripheral Vascular Disease",
+          "category": "Vascular disease",
+          "likelihood": "medium",
+          "key_features": [
+            "absent pulses in lower extremities",
+            "history of hypertension"
+          ],
+          "supporting_evidence": [
+            "absent posterior tibial and dorsalis pedis pulses"
+          ],
+          "refuting_evidence": [
+            "no claudication reported"
+          ],
+          "additional_information_needed": [
+            "ankle-brachial index",
+            "Doppler ultrasound of lower extremities"
+          ]
+        },
+        {
+          "name": "Prostatic Hypertrophy",
+          "category": "Urological disorder",
+          "likelihood": "low",
+          "key_features": [
+            "enlarged prostate on rectal exam"
+          ],
+          "supporting_evidence": [
+            "prostate gland three times the normal size"
+          ],
+          "refuting_evidence": [
+            "no urinary symptoms reported"
+          ],
+          "additional_information_needed": [
+            "PSA level",
+            "urinary flow study",
+            "post-void residual volume measurement"
+          ]
+        }
+      ]
+    },
+    "testing": {
+      "required": [
+        {
+          "id": "T1",
+          "content": "What were the key laboratory and imaging findings?",
+          "response": "The hematocrit was 29.7%, white-cell count 6600, with 64% neutrophils. The urea nitrogen was 147 mg, creatinine 9.5 mg, uric acid 17.5 mg. Electrocardiogram showed left ventricular hypertrophy. Chest X-ray revealed a slightly unfolded aorta with calcification. CT scan of the brain showed enlarged lateral ventricles. Lumbar puncture yielded clear cerebrospinal fluid with 8 red cells, no white cells, glucose 65 mg, protein 40 mg.",
+          "teaching_points": [
+            {
+              "id": "TP5",
+              "content": "Elevated creatinine and urea nitrogen levels are indicative of renal impairment.",
+              "covered": false
+            },
+            {
+              "id": "TP6",
+              "content": "Left ventricular hypertrophy on ECG can be a result of long-standing hypertension.",
+              "covered": false
+            }
+          ],
+          "elicited": false
+        }
+      ],
+      "optional": [],
+      "current_ideal_differential_diagnosis": [
+        {
+          "name": "Chronic Kidney Disease (CKD) secondary to Hypertension",
+          "category": "Renal disease",
+          "likelihood": "high",
+          "key_features": [
+            "elevated creatinine",
+            "elevated urea nitrogen",
+            "history of hypertension"
+          ],
+          "supporting_evidence": [
+            "renal failure",
+            "history of hypertension",
+            "elevated creatinine and urea nitrogen"
+          ],
+          "refuting_evidence": [
+            "none noted"
+          ],
+          "additional_information_needed": [
+            "renal ultrasound",
+            "urinalysis for proteinuria"
+          ]
+        },
+        {
+          "name": "Cerebrovascular Accident (CVA) or Transient Ischemic Attack (TIA)",
+          "category": "Neurological disease",
+          "likelihood": "medium",
+          "key_features": [
+            "transient bilateral paresthesia",
+            "dysarthria",
+            "loss of consciousness",
+            "left-sided weakness"
+          ],
+          "supporting_evidence": [
+            "transient bilateral paresthesia",
+            "questionable dysarthria",
+            "loss of consciousness",
+            "left-sided weakness"
+          ],
+          "refuting_evidence": [
+            "negative neurologic examination except for asterixis"
+          ],
+          "additional_information_needed": [
+            "MRI of the brain",
+            "carotid Doppler ultrasound"
+          ]
+        },
+        {
+          "name": "Warfarin-induced bleeding",
+          "category": "Hematological disorder",
+          "likelihood": "medium",
+          "key_features": [
+            "use of warfarin",
+            "history of duodenal ulcer with bleeding"
+          ],
+          "supporting_evidence": [
+            "prescribed warfarin",
+            "history of duodenal ulcer with bleeding"
+          ],
+          "refuting_evidence": [
+            "no petechiae or ecchymoses",
+            "normal white-cell count"
+          ],
+          "additional_information_needed": [
+            "INR/PT levels",
+            "stool guaiac test"
+          ]
+        },
+        {
+          "name": "Aortic Atherosclerosis with Peripheral Vascular Disease",
+          "category": "Cardiovascular disease",
+          "likelihood": "medium",
+          "key_features": [
+            "absent peripheral pulses",
+            "calcified aorta"
+          ],
+          "supporting_evidence": [
+            "absent posterior tibial and right dorsalis pedis pulses",
+            "calcification of aorta on chest X-ray"
+          ],
+          "refuting_evidence": [
+            "no bony tenderness",
+            "clear lungs"
+          ],
+          "additional_information_needed": [
+            "ankle-brachial index",
+            "vascular ultrasound"
+          ]
+        },
+        {
+          "name": "Prostatic Hypertrophy",
+          "category": "Urological condition",
+          "likelihood": "low",
+          "key_features": [
+            "enlarged prostate",
+            "urinary symptoms"
+          ],
+          "supporting_evidence": [
+            "prostate gland three times normal size"
+          ],
+          "refuting_evidence": [
+            "no urinary symptoms reported"
+          ],
+          "additional_information_needed": [
+            "urinary flow study",
+            "PSA level"
+          ]
+        }
+      ]
+    },
+    "management": {
+      "required": [
+        {
+          "id": "M1",
+          "content": "What treatments were administered during the hospital stay?",
+          "response": "The patient was given chlorthalidone, sodium bicarbonate, aluminum hydroxide, humidified oxygen, glucose in water, and a low-protein diet. Peritoneal dialysis was initiated. Diazepam, methyldopa, and hydralazine were administered to control blood pressure.",
+          "teaching_points": [
+            {
+              "id": "TP7",
+              "content": "Peritoneal dialysis is used to manage severe renal failure and remove waste products from the blood.",
+              "covered": false
+            },
+            {
+              "id": "TP8",
+              "content": "Blood pressure control is crucial in patients with renal failure to prevent further kidney damage.",
+              "covered": false
+            }
+          ],
+          "elicited": false
+        }
+      ],
+      "optional": []
+    },
+    "discussion": {
+      "required": [],
+      "optional": []
+    }
+  },
+  "differential_diagnosis": [
+    "Chronic kidney disease",
+    "Hypertensive encephalopathy",
+    "Transient ischemic attack",
+    "Peripheral vascular disease"
+  ],
+  "final_diagnosis": {
+    "name": "Chronic kidney disease with hypertensive crisis",
+    "category": "Renal and cardiovascular",
+    "key_features": [
+      "Elevated creatinine and urea nitrogen",
+      "Hypertension",
+      "Neurological symptoms"
+    ],
+    "supporting_evidence": [
+      "High blood pressure readings",
+      "Renal function test results",
+      "Neurological examination findings"
+    ],
+    "refuting_evidence": []
+  }
+}

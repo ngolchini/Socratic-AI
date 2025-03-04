@@ -1,0 +1,481 @@
+{
+  "metadata": {
+    "id": "case_013",
+    "title": "1974 Case 23",
+    "original_presentation": "A 72-year-old man was admitted to the hospital because of ulcerations of the leg.",
+    "difficulty": "intermediate",
+    "specialties": [
+      "Internal Medicine",
+      "Nephrology",
+      "Dermatology"
+    ],
+    "keywords": [
+      "ulcerations",
+      "renal failure",
+      "tremor",
+      "rash",
+      "IgA deposition"
+    ],
+    "source": "Clinical case study",
+    "version": "1.0"
+  },
+  "clinical_elements": {
+    "history": {
+      "required": [
+        {
+          "id": "H1",
+          "content": "What is the patient's past medical history?",
+          "response": "Twenty-five years previously he underwent an appendectomy, which was complicated by postoperative thrombophlebitis in the left leg. Ten years before admission ulcerations developed on the left leg, accompanied by pain; he recovered after local treatment. There was a long history of arthritis in both hips. He had ingested alcohol in excess for many years. For several years he had taken an aspirin-phenacetin-caffeine preparation, six tablets daily, for arthritic pains.",
+          "teaching_points": [
+            {
+              "id": "TP1",
+              "content": "Chronic use of aspirin-phenacetin-caffeine preparations can lead to analgesic nephropathy.",
+              "covered": false
+            },
+            {
+              "id": "TP2",
+              "content": "Excessive alcohol consumption can contribute to liver disease and other systemic complications.",
+              "covered": false
+            }
+          ],
+          "elicited": false
+        },
+        {
+          "id": "H2",
+          "content": "What were the recent events leading to the current admission?",
+          "response": "Twelve weeks before entry, trauma to the left leg was followed by recurrent ulcerations, which were treated with wet and dry dressings in the surgical clinic. The ulcers enlarged, and he entered the hospital.",
+          "teaching_points": [
+            {
+              "id": "TP3",
+              "content": "Recurrent leg ulcerations can be associated with venous insufficiency or other vascular disorders.",
+              "covered": false
+            }
+          ],
+          "elicited": false
+        }
+      ],
+      "optional": [],
+      "current_ideal_differential_diagnosis": [
+        {
+          "name": "Chronic Venous Insufficiency",
+          "category": "Vascular disease",
+          "likelihood": "high",
+          "key_features": [
+            "leg ulcerations",
+            "history of thrombophlebitis",
+            "venous stasis changes"
+          ],
+          "supporting_evidence": [
+            "history of postoperative thrombophlebitis in the left leg",
+            "recurrent ulcerations on the left leg",
+            "enlargement of ulcers"
+          ],
+          "refuting_evidence": [],
+          "additional_information_needed": [
+            "venous Doppler ultrasound of the left leg",
+            "examination for varicose veins or venous stasis changes"
+          ]
+        },
+        {
+          "name": "Peripheral Arterial Disease",
+          "category": "Vascular disease",
+          "likelihood": "medium",
+          "key_features": [
+            "leg pain",
+            "ulcerations",
+            "history of atherosclerosis risk factors"
+          ],
+          "supporting_evidence": [
+            "ulcerations on the leg",
+            "history of alcohol use which can be associated with atherosclerosis"
+          ],
+          "refuting_evidence": [
+            "no mention of claudication or diminished pulses"
+          ],
+          "additional_information_needed": [
+            "ankle-brachial index",
+            "assessment of peripheral pulses"
+          ]
+        },
+        {
+          "name": "Diabetic Ulcer",
+          "category": "Endocrine/metabolic disease",
+          "likelihood": "low",
+          "key_features": [
+            "ulcerations on the lower extremities",
+            "history of diabetes"
+          ],
+          "supporting_evidence": [
+            "ulcerations on the leg"
+          ],
+          "refuting_evidence": [
+            "no history of diabetes mentioned"
+          ],
+          "additional_information_needed": [
+            "blood glucose levels",
+            "HbA1c test"
+          ]
+        },
+        {
+          "name": "Pyoderma Gangrenosum",
+          "category": "Dermatological condition",
+          "likelihood": "low",
+          "key_features": [
+            "painful ulcerations",
+            "history of trauma preceding ulceration",
+            "association with systemic diseases"
+          ],
+          "supporting_evidence": [
+            "ulcerations following trauma",
+            "pain associated with ulcerations"
+          ],
+          "refuting_evidence": [
+            "no mention of systemic diseases like inflammatory bowel disease or rheumatoid arthritis"
+          ],
+          "additional_information_needed": [
+            "biopsy of the ulcer edge",
+            "investigation for associated systemic diseases"
+          ]
+        },
+        {
+          "name": "Venous Ulcer",
+          "category": "Vascular disease",
+          "likelihood": "high",
+          "key_features": [
+            "ulcerations on the lower leg",
+            "history of venous insufficiency",
+            "edema"
+          ],
+          "supporting_evidence": [
+            "history of thrombophlebitis",
+            "recurrent ulcerations on the left leg"
+          ],
+          "refuting_evidence": [],
+          "additional_information_needed": [
+            "examination for signs of venous insufficiency",
+            "venous Doppler ultrasound"
+          ]
+        }
+      ]
+    },
+    "physical": {
+      "required": [
+        {
+          "id": "P1",
+          "content": "What were the findings on physical examination?",
+          "response": "The temperature was 37.7°C, the pulse 92, and the respirations 16. The blood pressure was 165/80 mm Hg. On examination the lungs and heart were normal. There were two ulcerations on the left lower leg, with an impending ulcer on the lateral aspect of the left foot. The skin was dry and flaking, with purplish discoloration. Neurologic examination revealed an intention tremor that affected both hands, the trunk and the head and was markedly reduced after the ingestion of ethanol.",
+          "teaching_points": [
+            {
+              "id": "TP4",
+              "content": "Intention tremor can be associated with cerebellar dysfunction and may be alleviated by alcohol in cases of essential tremor.",
+              "covered": false
+            }
+          ],
+          "elicited": false
+        }
+      ],
+      "optional": [],
+      "current_ideal_differential_diagnosis": [
+        {
+          "name": "Chronic Venous Insufficiency",
+          "category": "Vascular disorder",
+          "likelihood": "high",
+          "key_features": [
+            "leg ulcerations",
+            "history of thrombophlebitis",
+            "skin changes"
+          ],
+          "supporting_evidence": [
+            "history of thrombophlebitis in the left leg",
+            "recurrent ulcerations on the left leg",
+            "skin was dry and flaking, with purplish discoloration"
+          ],
+          "refuting_evidence": [],
+          "additional_information_needed": [
+            "Doppler ultrasound of the leg veins",
+            "venous duplex scan"
+          ]
+        },
+        {
+          "name": "Peripheral Arterial Disease",
+          "category": "Vascular disorder",
+          "likelihood": "medium",
+          "key_features": [
+            "leg ulcerations",
+            "pain",
+            "skin changes"
+          ],
+          "supporting_evidence": [
+            "ulcerations on the left lower leg",
+            "skin was dry and flaking, with purplish discoloration"
+          ],
+          "refuting_evidence": [
+            "no mention of claudication or diminished pulses"
+          ],
+          "additional_information_needed": [
+            "Ankle-brachial index",
+            "arterial Doppler studies"
+          ]
+        },
+        {
+          "name": "Alcoholic Neuropathy",
+          "category": "Neurological disorder",
+          "likelihood": "medium",
+          "key_features": [
+            "intention tremor",
+            "history of alcohol excess"
+          ],
+          "supporting_evidence": [
+            "intention tremor affecting both hands, trunk, and head",
+            "tremor markedly reduced after ingestion of ethanol",
+            "history of excessive alcohol intake"
+          ],
+          "refuting_evidence": [
+            "no mention of sensory deficits or motor weakness"
+          ],
+          "additional_information_needed": [
+            "Nerve conduction studies",
+            "detailed neurological examination"
+          ]
+        },
+        {
+          "name": "Drug-induced Nephropathy",
+          "category": "Renal disorder",
+          "likelihood": "low",
+          "key_features": [
+            "chronic analgesic use",
+            "renal impairment"
+          ],
+          "supporting_evidence": [
+            "long-term use of aspirin-phenacetin-caffeine preparation"
+          ],
+          "refuting_evidence": [
+            "no mention of renal function tests or symptoms of renal impairment"
+          ],
+          "additional_information_needed": [
+            "Renal function tests",
+            "urinalysis"
+          ]
+        },
+        {
+          "name": "Psoriasis",
+          "category": "Dermatological disorder",
+          "likelihood": "low",
+          "key_features": [
+            "skin changes",
+            "arthritis"
+          ],
+          "supporting_evidence": [
+            "skin was dry and flaking"
+          ],
+          "refuting_evidence": [
+            "no mention of typical psoriatic plaques",
+            "no mention of nail changes"
+          ],
+          "additional_information_needed": [
+            "Dermatological examination",
+            "skin biopsy"
+          ]
+        }
+      ]
+    },
+    "testing": {
+      "required": [
+        {
+          "id": "T1",
+          "content": "What were the initial laboratory test results?",
+          "response": "The urine gave a + + + test for protein, and the specific gravity was 1.022; the sediment contained 4 white cells and 25 red cells per high-power field, with occasional hyaline and coarsely granular casts. The hematocrit was 46 per cent; the white-cell count was 5600, with a normal differential count. A stool specimen gave a + test for occult blood. The urea nitrogen was 18 mg, the creatinine 1.2 mg, the glucose 77 mg, the bilirubin 0.3 mg, and the protein 7.3 g (the albumin 4.1 g, and the globulin 3.2 g) per 100 ml.",
+          "teaching_points": [
+            {
+              "id": "TP5",
+              "content": "Proteinuria and hematuria can indicate renal pathology, such as glomerulonephritis.",
+              "covered": false
+            }
+          ],
+          "elicited": false
+        },
+        {
+          "id": "T2",
+          "content": "What imaging studies were performed and what were the findings?",
+          "response": "An electrocardiogram showed changes consistent with an old anteroseptal myocardial infarct. An x-ray film of the chest disclosed minimal enlargement of the heart; the lungs were clear; the diaphragm was scalloped, especially on the left side. A film of the abdomen disclosed marked degenerative changes in both hips. An intravenous pyelographic examination showed prompt bilateral excretion of contrast material; the kidneys appeared normal in size and contour, and the collecting systems and ureters were normal except that a calyx in the left lateral upper pole was ballooned and had a narrowed infundibulum suggestive of localized papillary necrosis; the bladder was trabeculated and emptied incompletely.",
+          "teaching_points": [
+            {
+              "id": "TP6",
+              "content": "Localized papillary necrosis can be associated with analgesic nephropathy.",
+              "covered": false
+            }
+          ],
+          "elicited": false
+        }
+      ],
+      "optional": [],
+      "current_ideal_differential_diagnosis": [
+        {
+          "name": "Chronic Venous Insufficiency",
+          "category": "Vascular disease",
+          "likelihood": "high",
+          "key_features": [
+            "leg ulcerations",
+            "history of thrombophlebitis",
+            "skin changes"
+          ],
+          "supporting_evidence": [
+            "History of thrombophlebitis in the left leg",
+            "Recurrent ulcerations on the left leg",
+            "Skin was dry and flaking, with purplish discoloration"
+          ],
+          "refuting_evidence": [],
+          "additional_information_needed": [
+            "Venous Doppler ultrasound of the lower extremities"
+          ]
+        },
+        {
+          "name": "Peripheral Arterial Disease",
+          "category": "Vascular disease",
+          "likelihood": "medium",
+          "key_features": [
+            "leg ulcerations",
+            "pain",
+            "skin changes"
+          ],
+          "supporting_evidence": [
+            "Ulcerations on the left lower leg",
+            "Skin was dry and flaking, with purplish discoloration"
+          ],
+          "refuting_evidence": [
+            "No mention of diminished pulses or claudication"
+          ],
+          "additional_information_needed": [
+            "Ankle-brachial index",
+            "Doppler ultrasound of arterial flow"
+          ]
+        },
+        {
+          "name": "Alcoholic Neuropathy",
+          "category": "Neurological disorder",
+          "likelihood": "medium",
+          "key_features": [
+            "intention tremor",
+            "alcohol use"
+          ],
+          "supporting_evidence": [
+            "Intention tremor affecting both hands, trunk, and head",
+            "Tremor reduced after ingestion of ethanol",
+            "History of excessive alcohol consumption"
+          ],
+          "refuting_evidence": [],
+          "additional_information_needed": [
+            "Neurological examination focusing on peripheral neuropathy"
+          ]
+        },
+        {
+          "name": "Renal Papillary Necrosis",
+          "category": "Renal disease",
+          "likelihood": "medium",
+          "key_features": [
+            "hematuria",
+            "proteinuria",
+            "analgesic use"
+          ],
+          "supporting_evidence": [
+            "Urine test showed +++ protein, 25 red cells per high-power field",
+            "Intravenous pyelogram showed localized papillary necrosis",
+            "History of aspirin-phenacetin-caffeine use"
+          ],
+          "refuting_evidence": [],
+          "additional_information_needed": [
+            "Renal function tests",
+            "Renal ultrasound or CT scan"
+          ]
+        },
+        {
+          "name": "Peptic Ulcer Disease",
+          "category": "Gastrointestinal disorder",
+          "likelihood": "low",
+          "key_features": [
+            "occult blood in stool",
+            "analgesic use"
+          ],
+          "supporting_evidence": [
+            "Stool specimen gave a + test for occult blood",
+            "History of aspirin-phenacetin-caffeine use"
+          ],
+          "refuting_evidence": [
+            "No gastrointestinal symptoms reported"
+          ],
+          "additional_information_needed": [
+            "Upper gastrointestinal endoscopy"
+          ]
+        }
+      ]
+    },
+    "management": {
+      "required": [
+        {
+          "id": "M1",
+          "content": "What treatments were administered during the first admission?",
+          "response": "Dry and wet dressings to the ulcerated areas were continued, and iron, a multiple-vitamin preparation, acetaminophen, cloxacillin and diphenhydramine hydrochloride were administered. A neurologic consultant made a diagnosis of idiopathic tremor and prescribed propranolol. A Unna boot was applied.",
+          "teaching_points": [
+            {
+              "id": "TP7",
+              "content": "Unna boots are used to manage venous stasis ulcers by providing compression and promoting healing.",
+              "covered": false
+            }
+          ],
+          "elicited": false
+        },
+        {
+          "id": "M2",
+          "content": "What was the management approach during the second admission?",
+          "response": "All medications were withdrawn. Peritoneal dialysis was initiated due to worsening renal function.",
+          "teaching_points": [
+            {
+              "id": "TP8",
+              "content": "Peritoneal dialysis is used to manage acute renal failure and remove toxins from the body.",
+              "covered": false
+            }
+          ],
+          "elicited": false
+        }
+      ],
+      "optional": []
+    },
+    "discussion": {
+      "required": [
+        {
+          "id": "D1",
+          "content": "What was the outcome of the renal biopsy?",
+          "response": "Microscopical examination of the specimen with immunofluorescent technic disclosed marked deposition of IgA in the basement membrane and mesangium.",
+          "teaching_points": [
+            {
+              "id": "TP9",
+              "content": "IgA deposition in the kidneys is characteristic of IgA nephropathy, which can lead to renal impairment.",
+              "covered": false
+            }
+          ],
+          "elicited": false
+        }
+      ],
+      "optional": []
+    }
+  },
+  "differential_diagnosis": [
+    "IgA nephropathy",
+    "Analgesic nephropathy",
+    "Venous stasis ulcers"
+  ],
+  "final_diagnosis": {
+    "name": "IgA nephropathy",
+    "category": "Renal",
+    "key_features": [
+      "IgA deposition in the renal biopsy",
+      "Proteinuria",
+      "Hematuria"
+    ],
+    "supporting_evidence": [
+      "Marked deposition of IgA in the basement membrane and mesangium",
+      "Proteinuria and hematuria in urinalysis"
+    ],
+    "refuting_evidence": []
+  }
+}

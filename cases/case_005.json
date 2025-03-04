@@ -1,0 +1,485 @@
+{
+  "metadata": {
+    "id": "case_005",
+    "title": "2012 Case 11",
+    "original_presentation": "A 60-year-old man with a history of schizophrenia was admitted to this hospital in late spring because of weakness, rash, and renal failure.",
+    "difficulty": "intermediate",
+    "specialties": [
+      "Internal Medicine",
+      "Infectious Disease",
+      "Nephrology"
+    ],
+    "keywords": [
+      "schizophrenia",
+      "renal failure",
+      "rash",
+      "weakness"
+    ],
+    "source": "Dr. Pritha Sen (Medicine)",
+    "version": "1.0"
+  },
+  "clinical_elements": {
+    "history": {
+      "required": [
+        {
+          "id": "H1",
+          "content": "What is the patient's medical history?",
+          "response": "The patient has a history of schizophrenia, osteoarthritis, hyperlipidemia, alcohol and drug abuse, and past Lyme disease.",
+          "teaching_points": [
+            {
+              "id": "TP1",
+              "content": "A comprehensive medical history is crucial for understanding potential complications and comorbidities.",
+              "covered": false
+            }
+          ],
+          "elicited": false
+        },
+        {
+          "id": "H2",
+          "content": "What symptoms did the patient experience before admission?",
+          "response": "The patient experienced fatigue, myalgias, decreased activity, incomprehensible speech, and urinary incontinence.",
+          "teaching_points": [
+            {
+              "id": "TP2",
+              "content": "Symptoms such as fatigue and myalgias can indicate systemic illness or metabolic disturbances.",
+              "covered": false
+            }
+          ],
+          "elicited": false
+        },
+        {
+          "id": "H3",
+          "content": "What is the patient's social history?",
+          "response": "The patient drinks alcohol daily, smokes tobacco and marijuana, and occasionally uses cocaine.",
+          "teaching_points": [
+            {
+              "id": "TP3",
+              "content": "Social history, including substance use, can significantly impact a patient's health and treatment plan.",
+              "covered": false
+            }
+          ],
+          "elicited": false
+        }
+      ],
+      "optional": [],
+      "current_ideal_differential_diagnosis": [
+        {
+          "name": "Systemic Lupus Erythematosus (SLE)",
+          "category": "Autoimmune disease",
+          "likelihood": "medium",
+          "key_features": [
+            "rash",
+            "renal failure",
+            "fatigue",
+            "myalgias"
+          ],
+          "supporting_evidence": [
+            "rash",
+            "renal failure",
+            "fatigue",
+            "myalgias"
+          ],
+          "refuting_evidence": [
+            "no specific mention of photosensitivity or joint involvement typical of SLE"
+          ],
+          "additional_information_needed": [
+            "ANA and anti-dsDNA antibody tests",
+            "complement levels",
+            "detailed description of rash"
+          ]
+        },
+        {
+          "name": "Alcoholic Hepatitis",
+          "category": "Liver disease",
+          "likelihood": "medium",
+          "key_features": [
+            "weakness",
+            "fatigue",
+            "history of alcohol abuse"
+          ],
+          "supporting_evidence": [
+            "history of daily alcohol use",
+            "fatigue",
+            "weakness"
+          ],
+          "refuting_evidence": [
+            "no specific mention of jaundice or liver function test abnormalities"
+          ],
+          "additional_information_needed": [
+            "liver function tests",
+            "abdominal ultrasound"
+          ]
+        },
+        {
+          "name": "Cocaine-induced Rhabdomyolysis",
+          "category": "Substance-induced condition",
+          "likelihood": "medium",
+          "key_features": [
+            "myalgias",
+            "weakness",
+            "renal failure"
+          ],
+          "supporting_evidence": [
+            "myalgias",
+            "renal failure",
+            "occasional cocaine use"
+          ],
+          "refuting_evidence": [
+            "no specific mention of elevated creatine kinase levels"
+          ],
+          "additional_information_needed": [
+            "creatine kinase levels",
+            "urine myoglobin test"
+          ]
+        },
+        {
+          "name": "Vasculitis",
+          "category": "Vascular disease",
+          "likelihood": "medium",
+          "key_features": [
+            "rash",
+            "renal failure",
+            "systemic symptoms"
+          ],
+          "supporting_evidence": [
+            "rash",
+            "renal failure",
+            "fatigue"
+          ],
+          "refuting_evidence": [
+            "no specific mention of purpura or other vasculitic skin changes"
+          ],
+          "additional_information_needed": [
+            "ANCA panel",
+            "skin biopsy",
+            "renal biopsy"
+          ]
+        },
+        {
+          "name": "Chronic Kidney Disease secondary to Hypertension or Diabetes",
+          "category": "Renal disease",
+          "likelihood": "low",
+          "key_features": [
+            "renal failure",
+            "history of chronic conditions"
+          ],
+          "supporting_evidence": [
+            "renal failure"
+          ],
+          "refuting_evidence": [
+            "no specific mention of hypertension or diabetes history"
+          ],
+          "additional_information_needed": [
+            "blood pressure history",
+            "HbA1c levels"
+          ]
+        }
+      ]
+    },
+    "physical": {
+      "required": [
+        {
+          "id": "P1",
+          "content": "What were the findings on physical examination upon admission?",
+          "response": "The patient was somnolent but alert when roused, disheveled, with poorly groomed fingernails, and breathing with the abdominal muscles. There was a pale pink rash distributed diffusely over the body, abrasions on the lower lumbar area and left knee, and ecchymosis on the left knee and shin.",
+          "teaching_points": [
+            {
+              "id": "TP4",
+              "content": "Physical examination can reveal signs of systemic illness, such as rashes and ecchymosis, which may indicate underlying conditions.",
+              "covered": false
+            }
+          ],
+          "elicited": false
+        }
+      ],
+      "optional": [],
+      "current_ideal_differential_diagnosis": [
+        {
+          "name": "Acute Kidney Injury (AKI) secondary to rhabdomyolysis",
+          "category": "Renal",
+          "likelihood": "high",
+          "key_features": [
+            "weakness",
+            "myalgias",
+            "renal failure",
+            "history of substance abuse"
+          ],
+          "supporting_evidence": [
+            "weakness",
+            "myalgias",
+            "renal failure",
+            "history of alcohol and drug abuse"
+          ],
+          "refuting_evidence": [],
+          "additional_information_needed": [
+            "serum creatine kinase levels",
+            "urinalysis for myoglobinuria"
+          ]
+        },
+        {
+          "name": "Systemic Lupus Erythematosus (SLE)",
+          "category": "Autoimmune",
+          "likelihood": "medium",
+          "key_features": [
+            "rash",
+            "renal involvement",
+            "fatigue",
+            "myalgias"
+          ],
+          "supporting_evidence": [
+            "diffuse pale pink rash",
+            "renal failure",
+            "fatigue",
+            "myalgias"
+          ],
+          "refuting_evidence": [
+            "no known history of autoimmune disease"
+          ],
+          "additional_information_needed": [
+            "ANA and anti-dsDNA antibody tests",
+            "complement levels"
+          ]
+        },
+        {
+          "name": "Alcoholic liver disease with secondary renal involvement",
+          "category": "Hepatic/Renal",
+          "likelihood": "medium",
+          "key_features": [
+            "history of alcohol abuse",
+            "fatigue",
+            "renal failure"
+          ],
+          "supporting_evidence": [
+            "daily alcohol consumption",
+            "fatigue",
+            "renal failure"
+          ],
+          "refuting_evidence": [
+            "no specific liver-related symptoms noted"
+          ],
+          "additional_information_needed": [
+            "liver function tests",
+            "abdominal ultrasound"
+          ]
+        },
+        {
+          "name": "Vasculitis",
+          "category": "Vascular/Autoimmune",
+          "likelihood": "medium",
+          "key_features": [
+            "rash",
+            "renal involvement",
+            "myalgias",
+            "fatigue"
+          ],
+          "supporting_evidence": [
+            "diffuse rash",
+            "renal failure",
+            "myalgias",
+            "fatigue"
+          ],
+          "refuting_evidence": [
+            "no specific history of vasculitis"
+          ],
+          "additional_information_needed": [
+            "ANCA panel",
+            "biopsy of affected skin or kidney"
+          ]
+        },
+        {
+          "name": "Drug-induced nephrotoxicity",
+          "category": "Renal/Toxicology",
+          "likelihood": "low",
+          "key_features": [
+            "renal failure",
+            "history of drug abuse"
+          ],
+          "supporting_evidence": [
+            "renal failure",
+            "history of cocaine and drug use"
+          ],
+          "refuting_evidence": [
+            "no specific nephrotoxic drug identified"
+          ],
+          "additional_information_needed": [
+            "toxicology screen",
+            "medication review"
+          ]
+        }
+      ]
+    },
+    "testing": {
+      "required": [
+        {
+          "id": "T1",
+          "content": "What were the key laboratory test results?",
+          "response": "Urinalysis showed 1+ ketones, 3+ blood, trace protein, and 5 to 10 white cells per high-power field. Blood cultures were sterile, and CSF analysis showed normal cell count and protein and glucose levels.",
+          "teaching_points": [
+            {
+              "id": "TP5",
+              "content": "Laboratory tests can help identify metabolic imbalances and infections.",
+              "covered": false
+            }
+          ],
+          "elicited": false
+        },
+        {
+          "id": "T2",
+          "content": "What imaging studies were performed and what were the findings?",
+          "response": "CT of the head showed a small infarct and mild microangiopathic changes. CT of the chest showed mild pulmonary edema and small pleural effusions. Echocardiography showed an ejection fraction of 35%.",
+          "teaching_points": [
+            {
+              "id": "TP6",
+              "content": "Imaging studies can provide critical information about organ function and structural abnormalities.",
+              "covered": false
+            }
+          ],
+          "elicited": false
+        }
+      ],
+      "optional": [],
+      "current_ideal_differential_diagnosis": [
+        {
+          "name": "Acute Kidney Injury (AKI)",
+          "category": "Renal",
+          "likelihood": "high",
+          "key_features": [
+            "renal failure",
+            "urinalysis abnormalities",
+            "fatigue",
+            "myalgias"
+          ],
+          "supporting_evidence": [
+            "renal failure",
+            "urinalysis showed 3+ blood, trace protein, 5 to 10 white cells per high-power field"
+          ],
+          "refuting_evidence": [
+            "none noted"
+          ],
+          "additional_information_needed": [
+            "serum creatinine and BUN levels",
+            "renal ultrasound",
+            "history of nephrotoxic drug use"
+          ]
+        },
+        {
+          "name": "Rhabdomyolysis",
+          "category": "Musculoskeletal",
+          "likelihood": "medium",
+          "key_features": [
+            "myalgias",
+            "weakness",
+            "urinalysis with blood but no red cells"
+          ],
+          "supporting_evidence": [
+            "myalgias",
+            "urinalysis showed 3+ blood with no red cells"
+          ],
+          "refuting_evidence": [
+            "no mention of elevated creatine kinase (CK) levels"
+          ],
+          "additional_information_needed": [
+            "serum creatine kinase (CK) levels",
+            "electrolyte panel"
+          ]
+        },
+        {
+          "name": "Systemic Lupus Erythematosus (SLE)",
+          "category": "Autoimmune",
+          "likelihood": "medium",
+          "key_features": [
+            "rash",
+            "renal involvement",
+            "fatigue"
+          ],
+          "supporting_evidence": [
+            "diffuse pale pink rash",
+            "renal failure"
+          ],
+          "refuting_evidence": [
+            "no specific autoantibody tests mentioned",
+            "no joint involvement noted"
+          ],
+          "additional_information_needed": [
+            "ANA and anti-dsDNA antibody tests",
+            "complement levels"
+          ]
+        },
+        {
+          "name": "Alcoholic Liver Disease",
+          "category": "Hepatic",
+          "likelihood": "medium",
+          "key_features": [
+            "history of alcohol abuse",
+            "fatigue",
+            "abdominal muscle breathing"
+          ],
+          "supporting_evidence": [
+            "history of daily alcohol use",
+            "fatigue"
+          ],
+          "refuting_evidence": [
+            "no liver function tests provided",
+            "no jaundice or ascites noted"
+          ],
+          "additional_information_needed": [
+            "liver function tests (AST, ALT, bilirubin)",
+            "abdominal ultrasound"
+          ]
+        },
+        {
+          "name": "Infective Endocarditis",
+          "category": "Cardiovascular",
+          "likelihood": "low",
+          "key_features": [
+            "renal involvement",
+            "rash",
+            "history of drug abuse"
+          ],
+          "supporting_evidence": [
+            "renal failure",
+            "history of drug abuse"
+          ],
+          "refuting_evidence": [
+            "blood cultures were sterile",
+            "no vegetations noted on echocardiography"
+          ],
+          "additional_information_needed": [
+            "repeat blood cultures",
+            "transesophageal echocardiogram"
+          ]
+        }
+      ]
+    },
+    "management": {
+      "required": [
+        {
+          "id": "M1",
+          "content": "What treatments were administered to the patient?",
+          "response": "The patient received intravenous fluids, multivitamins, folate, thiamine, glucose, bicarbonate, antibiotics (ceftriaxone, vancomycin, metronidazole, cefepime, levofloxacin), and medications for agitation and sedation (lorazepam, midazolam, fentanyl).",
+          "teaching_points": [
+            {
+              "id": "TP7",
+              "content": "Management of complex cases often involves supportive care, addressing metabolic imbalances, and treating potential infections.",
+              "covered": false
+            }
+          ],
+          "elicited": false
+        }
+      ],
+      "optional": []
+    },
+    "discussion": {
+      "required": [],
+      "optional": []
+    }
+  },
+  "differential_diagnosis": [],
+  "final_diagnosis": {
+    "name": "Acute renal failure with systemic illness",
+    "category": "Renal and systemic",
+    "key_features": [],
+    "supporting_evidence": [],
+    "refuting_evidence": []
+  }
+}

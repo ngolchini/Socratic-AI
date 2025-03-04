@@ -1,0 +1,468 @@
+{
+  "metadata": {
+    "id": "case_023",
+    "title": "1968 Case 24",
+    "original_presentation": "A sixty-nine-year-old man was admitted to the hospital because of jaundice and substernal pain.",
+    "difficulty": "intermediate",
+    "specialties": [
+      "Gastroenterology",
+      "Hepatology",
+      "Oncology"
+    ],
+    "keywords": [
+      "jaundice",
+      "substernal pain",
+      "pancreatic cancer",
+      "alcohol use"
+    ],
+    "source": "Unstructured clinical case text",
+    "version": "1.0"
+  },
+  "clinical_elements": {
+    "history": {
+      "required": [
+        {
+          "id": "H1",
+          "content": "What is the patient's history of present illness?",
+          "response": "The patient had been well until six months previously, when he began to experience substernal burning pain. He noticed light-colored, frothy stools and darker urine two weeks before entry, followed by jaundice.",
+          "teaching_points": [
+            {
+              "id": "TP1",
+              "content": "Jaundice and changes in stool and urine color can indicate liver or biliary tract disease.",
+              "covered": false
+            }
+          ],
+          "elicited": false
+        },
+        {
+          "id": "H2",
+          "content": "What is the patient's past medical history?",
+          "response": "The patient has a history of pulmonary emphysema and has been drinking 2 to 4 glasses of whiskey every evening for forty years.",
+          "teaching_points": [
+            {
+              "id": "TP2",
+              "content": "Chronic alcohol use is a risk factor for liver disease and pancreatitis.",
+              "covered": false
+            }
+          ],
+          "elicited": false
+        }
+      ],
+      "optional": [],
+      "current_ideal_differential_diagnosis": [
+        {
+          "name": "Pancreatic cancer",
+          "category": "Oncological",
+          "likelihood": "high",
+          "key_features": [
+            "jaundice",
+            "light-colored stools",
+            "dark urine",
+            "substernal pain"
+          ],
+          "supporting_evidence": [
+            "jaundice",
+            "light-colored stools",
+            "dark urine",
+            "substernal pain",
+            "age of patient"
+          ],
+          "refuting_evidence": [],
+          "additional_information_needed": [
+            "abdominal imaging (CT or MRI)",
+            "CA 19-9 tumor marker levels"
+          ]
+        },
+        {
+          "name": "Cholangiocarcinoma",
+          "category": "Oncological",
+          "likelihood": "medium",
+          "key_features": [
+            "jaundice",
+            "light-colored stools",
+            "dark urine"
+          ],
+          "supporting_evidence": [
+            "jaundice",
+            "light-colored stools",
+            "dark urine"
+          ],
+          "refuting_evidence": [
+            "substernal pain is less typical"
+          ],
+          "additional_information_needed": [
+            "abdominal imaging (MRCP or ERCP)",
+            "liver function tests"
+          ]
+        },
+        {
+          "name": "Alcoholic liver disease with cholestasis",
+          "category": "Hepatological",
+          "likelihood": "medium",
+          "key_features": [
+            "jaundice",
+            "history of alcohol use",
+            "dark urine"
+          ],
+          "supporting_evidence": [
+            "jaundice",
+            "history of significant alcohol use",
+            "dark urine"
+          ],
+          "refuting_evidence": [
+            "light-colored stools are less typical",
+            "substernal pain is less typical"
+          ],
+          "additional_information_needed": [
+            "liver function tests",
+            "ultrasound of the liver"
+          ]
+        },
+        {
+          "name": "Gallstones with choledocholithiasis",
+          "category": "Gastroenterological",
+          "likelihood": "medium",
+          "key_features": [
+            "jaundice",
+            "light-colored stools",
+            "dark urine",
+            "abdominal pain"
+          ],
+          "supporting_evidence": [
+            "jaundice",
+            "light-colored stools",
+            "dark urine"
+          ],
+          "refuting_evidence": [
+            "substernal pain is less typical",
+            "age and gender make this less likely"
+          ],
+          "additional_information_needed": [
+            "abdominal ultrasound",
+            "ERCP"
+          ]
+        },
+        {
+          "name": "Peptic ulcer disease",
+          "category": "Gastroenterological",
+          "likelihood": "low",
+          "key_features": [
+            "substernal burning pain",
+            "history of alcohol use"
+          ],
+          "supporting_evidence": [
+            "substernal burning pain",
+            "history of alcohol use"
+          ],
+          "refuting_evidence": [
+            "jaundice",
+            "light-colored stools",
+            "dark urine"
+          ],
+          "additional_information_needed": [
+            "upper endoscopy",
+            "H. pylori testing"
+          ]
+        }
+      ]
+    },
+    "physical": {
+      "required": [
+        {
+          "id": "P1",
+          "content": "What were the findings on physical examination?",
+          "response": "The patient was icteric with increased anteroposterior chest diameter, coarse rhonchi, and expiratory wheezes. The liver edge was palpable 3 fingerbreadths below the right costal margin, and a smooth mass was palpable below the liver.",
+          "teaching_points": [
+            {
+              "id": "TP3",
+              "content": "Icterus and palpable liver edge suggest liver dysfunction or biliary obstruction.",
+              "covered": false
+            }
+          ],
+          "elicited": false
+        }
+      ],
+      "optional": [],
+      "current_ideal_differential_diagnosis": [
+        {
+          "name": "Pancreatic cancer",
+          "category": "Oncological",
+          "likelihood": "high",
+          "key_features": [
+            "jaundice",
+            "painless palpable mass",
+            "light-colored stools",
+            "dark urine"
+          ],
+          "supporting_evidence": [
+            "jaundice",
+            "palpable mass below the liver",
+            "light-colored stools",
+            "dark urine"
+          ],
+          "refuting_evidence": [
+            "substernal pain is not typical"
+          ],
+          "additional_information_needed": [
+            "abdominal imaging (CT or MRI)",
+            "CA 19-9 tumor marker levels"
+          ]
+        },
+        {
+          "name": "Cholangiocarcinoma",
+          "category": "Oncological",
+          "likelihood": "medium",
+          "key_features": [
+            "jaundice",
+            "palpable mass",
+            "light-colored stools",
+            "dark urine"
+          ],
+          "supporting_evidence": [
+            "jaundice",
+            "palpable mass below the liver",
+            "light-colored stools",
+            "dark urine"
+          ],
+          "refuting_evidence": [
+            "substernal pain is not typical"
+          ],
+          "additional_information_needed": [
+            "abdominal imaging (CT or MRI)",
+            "liver function tests",
+            "ERCP or MRCP"
+          ]
+        },
+        {
+          "name": "Alcoholic liver disease with cirrhosis",
+          "category": "Hepatological",
+          "likelihood": "medium",
+          "key_features": [
+            "jaundice",
+            "hepatomegaly",
+            "history of alcohol use"
+          ],
+          "supporting_evidence": [
+            "jaundice",
+            "palpable liver edge",
+            "history of heavy alcohol use"
+          ],
+          "refuting_evidence": [
+            "palpable mass below the liver not typical",
+            "light-colored stools and dark urine suggest obstructive jaundice"
+          ],
+          "additional_information_needed": [
+            "liver function tests",
+            "abdominal ultrasound",
+            "liver biopsy"
+          ]
+        },
+        {
+          "name": "Gallstones with choledocholithiasis",
+          "category": "Gastroenterological",
+          "likelihood": "low",
+          "key_features": [
+            "jaundice",
+            "abdominal pain",
+            "light-colored stools",
+            "dark urine"
+          ],
+          "supporting_evidence": [
+            "jaundice",
+            "light-colored stools",
+            "dark urine"
+          ],
+          "refuting_evidence": [
+            "palpable mass below the liver not typical",
+            "substernal pain rather than right upper quadrant pain"
+          ],
+          "additional_information_needed": [
+            "abdominal ultrasound",
+            "ERCP"
+          ]
+        }
+      ]
+    },
+    "testing": {
+      "required": [
+        {
+          "id": "T1",
+          "content": "What were the results of the laboratory tests?",
+          "response": "The bilirubin was 25 mg per 100 ml, SGOT 100 units, alkaline phosphatase 28.6 Bodansky units. Urine had a ++++ test for bile.",
+          "teaching_points": [
+            {
+              "id": "TP4",
+              "content": "Elevated bilirubin and liver enzymes indicate liver dysfunction or biliary obstruction.",
+              "covered": false
+            }
+          ],
+          "elicited": false
+        },
+        {
+          "id": "T2",
+          "content": "What were the imaging findings?",
+          "response": "X-ray films of the chest showed bilateral apical scarring and hyperaerated lungs.",
+          "teaching_points": [
+            {
+              "id": "TP5",
+              "content": "Chest X-ray findings can provide clues to underlying pulmonary conditions.",
+              "covered": false
+            }
+          ],
+          "elicited": false
+        }
+      ],
+      "optional": [],
+      "current_ideal_differential_diagnosis": [
+        {
+          "name": "Pancreatic cancer",
+          "category": "Oncological",
+          "likelihood": "high",
+          "key_features": [
+            "jaundice",
+            "painless palpable mass",
+            "light-colored stools",
+            "dark urine"
+          ],
+          "supporting_evidence": [
+            "jaundice",
+            "palpable mass below the liver",
+            "light-colored stools",
+            "dark urine",
+            "elevated bilirubin and alkaline phosphatase"
+          ],
+          "refuting_evidence": [],
+          "additional_information_needed": [
+            "CT scan or MRI of the abdomen",
+            "CA 19-9 tumor marker levels"
+          ]
+        },
+        {
+          "name": "Cholangiocarcinoma",
+          "category": "Oncological",
+          "likelihood": "medium",
+          "key_features": [
+            "jaundice",
+            "palpable mass",
+            "light-colored stools",
+            "dark urine"
+          ],
+          "supporting_evidence": [
+            "jaundice",
+            "palpable mass below the liver",
+            "light-colored stools",
+            "dark urine",
+            "elevated bilirubin and alkaline phosphatase"
+          ],
+          "refuting_evidence": [],
+          "additional_information_needed": [
+            "MRCP or ERCP",
+            "biopsy of the mass"
+          ]
+        },
+        {
+          "name": "Alcoholic liver disease with secondary biliary obstruction",
+          "category": "Hepatobiliary",
+          "likelihood": "medium",
+          "key_features": [
+            "jaundice",
+            "history of alcohol use",
+            "hepatomegaly"
+          ],
+          "supporting_evidence": [
+            "jaundice",
+            "history of heavy alcohol use",
+            "palpable liver edge"
+          ],
+          "refuting_evidence": [
+            "palpable mass below the liver suggests extrahepatic obstruction"
+          ],
+          "additional_information_needed": [
+            "Liver function tests",
+            "ultrasound of the liver and biliary tree"
+          ]
+        },
+        {
+          "name": "Gallstone disease with choledocholithiasis",
+          "category": "Gastroenterological",
+          "likelihood": "low",
+          "key_features": [
+            "jaundice",
+            "abdominal pain",
+            "light-colored stools",
+            "dark urine"
+          ],
+          "supporting_evidence": [
+            "jaundice",
+            "light-colored stools",
+            "dark urine"
+          ],
+          "refuting_evidence": [
+            "absence of colicky abdominal pain",
+            "palpable mass is atypical"
+          ],
+          "additional_information_needed": [
+            "Abdominal ultrasound",
+            "ERCP"
+          ]
+        }
+      ]
+    },
+    "management": {
+      "required": [
+        {
+          "id": "M1",
+          "content": "What surgical procedures were performed?",
+          "response": "The head of the pancreas was resected with the duodenum and distal stomach, and a cholecystectomy was performed. Gastrointestinal continuity was restored with gastrojejunostomy, choledochojejunostomy, and pancreatojejunostomy.",
+          "teaching_points": [
+            {
+              "id": "TP6",
+              "content": "Surgical resection is a common treatment for pancreatic tumors.",
+              "covered": false
+            }
+          ],
+          "elicited": false
+        }
+      ],
+      "optional": []
+    },
+    "discussion": {
+      "required": [
+        {
+          "id": "D1",
+          "content": "What was the final diagnosis and outcome?",
+          "response": "Pathological examination revealed a Grade 2 adenoacanthoma of the pancreas. The patient died on the eleventh hospital day after the final admission.",
+          "teaching_points": [
+            {
+              "id": "TP7",
+              "content": "Pancreatic cancer can present with jaundice and abdominal pain, and has a poor prognosis.",
+              "covered": false
+            }
+          ],
+          "elicited": false
+        }
+      ],
+      "optional": []
+    }
+  },
+  "differential_diagnosis": [
+    "Pancreatic cancer",
+    "Chronic pancreatitis",
+    "Alcoholic liver disease"
+  ],
+  "final_diagnosis": {
+    "name": "Pancreatic adenoacanthoma",
+    "category": "Oncology",
+    "key_features": [
+      "Jaundice",
+      "Substernal pain",
+      "Alcohol use",
+      "Palpable liver mass"
+    ],
+    "supporting_evidence": [
+      "Elevated bilirubin and liver enzymes",
+      "Pathological examination showing adenoacanthoma"
+    ],
+    "refuting_evidence": []
+  }
+}

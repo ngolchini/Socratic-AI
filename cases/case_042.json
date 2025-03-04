@@ -1,0 +1,451 @@
+{
+  "metadata": {
+    "id": "case_042",
+    "title": "2010 Case 06",
+    "original_presentation": "A 37-year-old man was seen in the oral and maxillofacial surgery clinic of this hospital because of a lesion on the tongue.",
+    "difficulty": "intermediate",
+    "specialties": [
+      "Oral and Maxillofacial Surgery",
+      "Infectious Disease"
+    ],
+    "keywords": [
+      "tongue lesion",
+      "lymphadenopathy",
+      "biopsy",
+      "Staphylococcus aureus"
+    ],
+    "source": "Dr. Salim Afshar",
+    "version": "1.0"
+  },
+  "clinical_elements": {
+    "history": {
+      "required": [
+        {
+          "id": "H1",
+          "content": "What symptoms did the patient initially present with?",
+          "response": "Three weeks earlier, a painful lesion had developed on the tongue, associated with a tender nodule in the left neck.",
+          "teaching_points": [
+            {
+              "id": "TP1",
+              "content": "Initial presentation of oral lesions can be indicative of various conditions, including infections and neoplasms.",
+              "covered": false
+            }
+          ],
+          "elicited": false
+        },
+        {
+          "id": "H2",
+          "content": "What is the patient's past medical history?",
+          "response": "History of borderline hypertension and asthma; tonsillectomy and adenoidectomy in the past.",
+          "teaching_points": [
+            {
+              "id": "TP2",
+              "content": "Past medical history can provide context for current symptoms and potential complications.",
+              "covered": false
+            }
+          ],
+          "elicited": false
+        },
+        {
+          "id": "H3",
+          "content": "What are the patient's social habits and lifestyle?",
+          "response": "Sexually active with men, drinks alcohol socially, does not smoke or use illicit drugs, works in an office.",
+          "teaching_points": [
+            {
+              "id": "TP3",
+              "content": "Social history, including sexual activity and substance use, can influence disease risk and management.",
+              "covered": false
+            }
+          ],
+          "elicited": false
+        }
+      ],
+      "optional": [],
+      "current_ideal_differential_diagnosis": [
+        {
+          "name": "Squamous Cell Carcinoma of the Tongue",
+          "category": "Oncological",
+          "likelihood": "medium",
+          "key_features": [
+            "painful lesion on the tongue",
+            "tender nodule in the neck",
+            "risk factors include alcohol use and sexual activity"
+          ],
+          "supporting_evidence": [
+            "painful lesion on the tongue",
+            "tender nodule in the neck",
+            "social alcohol use"
+          ],
+          "refuting_evidence": [
+            "no smoking history",
+            "relatively young age"
+          ],
+          "additional_information_needed": [
+            "biopsy of the tongue lesion",
+            "imaging of the neck",
+            "HPV status"
+          ]
+        },
+        {
+          "name": "Oral Candidiasis",
+          "category": "Infectious",
+          "likelihood": "low",
+          "key_features": [
+            "painful oral lesions",
+            "immunocompromised status"
+          ],
+          "supporting_evidence": [
+            "painful lesion on the tongue"
+          ],
+          "refuting_evidence": [
+            "tender nodule in the neck is unusual",
+            "no history of immunocompromise"
+          ],
+          "additional_information_needed": [
+            "oral examination for white patches",
+            "HIV testing"
+          ]
+        },
+        {
+          "name": "Syphilitic Chancre",
+          "category": "Infectious",
+          "likelihood": "medium",
+          "key_features": [
+            "painless ulcer",
+            "regional lymphadenopathy",
+            "sexual activity with men"
+          ],
+          "supporting_evidence": [
+            "tender nodule in the neck",
+            "sexually active with men"
+          ],
+          "refuting_evidence": [
+            "painful lesion (chancres are typically painless)"
+          ],
+          "additional_information_needed": [
+            "serologic testing for syphilis",
+            "detailed sexual history"
+          ]
+        },
+        {
+          "name": "Traumatic Ulcer",
+          "category": "Trauma",
+          "likelihood": "low",
+          "key_features": [
+            "painful oral lesion",
+            "history of trauma or irritation"
+          ],
+          "supporting_evidence": [
+            "painful lesion on the tongue"
+          ],
+          "refuting_evidence": [
+            "tender nodule in the neck is unusual",
+            "no history of trauma reported"
+          ],
+          "additional_information_needed": [
+            "detailed history of recent oral trauma or habits",
+            "oral examination for signs of irritation"
+          ]
+        },
+        {
+          "name": "Oral Herpes Simplex Virus Infection",
+          "category": "Infectious",
+          "likelihood": "low",
+          "key_features": [
+            "painful oral lesions",
+            "regional lymphadenopathy"
+          ],
+          "supporting_evidence": [
+            "painful lesion on the tongue",
+            "tender nodule in the neck"
+          ],
+          "refuting_evidence": [
+            "no history of recurrent oral herpes",
+            "no vesicular lesions reported"
+          ],
+          "additional_information_needed": [
+            "viral culture or PCR from the lesion",
+            "history of similar episodes"
+          ]
+        }
+      ]
+    },
+    "physical": {
+      "required": [
+        {
+          "id": "P1",
+          "content": "What were the findings on physical examination?",
+          "response": "Tender, irregular, shallow ulcerated lesion on the left ventral surface of the tongue; mobile, smooth, tender lymph node in the left anterior cervical chain; scattered areas of erythema and blisters on the lower legs.",
+          "teaching_points": [
+            {
+              "id": "TP4",
+              "content": "Physical examination findings can help localize the disease process and guide further testing.",
+              "covered": false
+            }
+          ],
+          "elicited": false
+        }
+      ],
+      "optional": [],
+      "current_ideal_differential_diagnosis": [
+        {
+          "name": "Squamous Cell Carcinoma of the Tongue",
+          "category": "Oncological",
+          "likelihood": "medium",
+          "key_features": [
+            "painful ulcerated lesion on the tongue",
+            "tender cervical lymphadenopathy"
+          ],
+          "supporting_evidence": [
+            "painful lesion on the tongue",
+            "tender nodule in the left neck"
+          ],
+          "refuting_evidence": [
+            "patient is relatively young",
+            "no history of smoking"
+          ],
+          "additional_information_needed": [
+            "biopsy of the tongue lesion",
+            "imaging studies of the neck"
+          ]
+        },
+        {
+          "name": "Oral Syphilis",
+          "category": "Infectious Disease",
+          "likelihood": "medium",
+          "key_features": [
+            "painless ulcer (chancre) on the tongue",
+            "regional lymphadenopathy"
+          ],
+          "supporting_evidence": [
+            "sexually active with men",
+            "tender lymph node"
+          ],
+          "refuting_evidence": [
+            "lesion is painful rather than painless"
+          ],
+          "additional_information_needed": [
+            "serologic tests for syphilis",
+            "sexual history details"
+          ]
+        },
+        {
+          "name": "Herpes Simplex Virus Infection",
+          "category": "Infectious Disease",
+          "likelihood": "medium",
+          "key_features": [
+            "painful oral lesions",
+            "regional lymphadenopathy"
+          ],
+          "supporting_evidence": [
+            "painful lesion on the tongue",
+            "tender lymph node",
+            "scattered blisters on the lower legs"
+          ],
+          "refuting_evidence": [
+            "no mention of vesicular lesions on the tongue"
+          ],
+          "additional_information_needed": [
+            "HSV PCR or culture from the lesion",
+            "history of similar episodes"
+          ]
+        },
+        {
+          "name": "Oral Candidiasis",
+          "category": "Infectious Disease",
+          "likelihood": "low",
+          "key_features": [
+            "white patches on the tongue",
+            "painful oral lesions"
+          ],
+          "supporting_evidence": [
+            "painful lesion on the tongue"
+          ],
+          "refuting_evidence": [
+            "lesion is ulcerated rather than white patches",
+            "no immunocompromised state mentioned"
+          ],
+          "additional_information_needed": [
+            "oral swab for fungal culture",
+            "examination for white patches"
+          ]
+        },
+        {
+          "name": "Behçet's Disease",
+          "category": "Autoimmune",
+          "likelihood": "low",
+          "key_features": [
+            "recurrent oral ulcers",
+            "skin lesions",
+            "genital ulcers"
+          ],
+          "supporting_evidence": [
+            "ulcerated lesion on the tongue",
+            "scattered blisters on the lower legs"
+          ],
+          "refuting_evidence": [
+            "no history of recurrent oral or genital ulcers"
+          ],
+          "additional_information_needed": [
+            "detailed history of recurrent ulcers",
+            "pathergy test"
+          ]
+        }
+      ]
+    },
+    "testing": {
+      "required": [
+        {
+          "id": "T1",
+          "content": "What diagnostic tests were performed?",
+          "response": "Culture of the tongue lesion was negative for HSV; culture of the cloudy blister on the foot grew methicillin-sensitive Staphylococcus aureus; punch biopsy of the tongue lesion; CT scans of the head and neck.",
+          "teaching_points": [
+            {
+              "id": "TP5",
+              "content": "Cultures and imaging are essential in identifying infectious agents and assessing the extent of lesions.",
+              "covered": false
+            }
+          ],
+          "elicited": false
+        }
+      ],
+      "optional": [],
+      "current_ideal_differential_diagnosis": [
+        {
+          "name": "Squamous Cell Carcinoma",
+          "category": "Oncological",
+          "likelihood": "medium",
+          "key_features": [
+            "ulcerated lesion on the tongue",
+            "tender cervical lymphadenopathy"
+          ],
+          "supporting_evidence": [
+            "irregular, shallow ulcerated lesion on the tongue",
+            "tender lymph node in the left anterior cervical chain"
+          ],
+          "refuting_evidence": [
+            "patient is relatively young",
+            "no smoking history"
+          ],
+          "additional_information_needed": [
+            "biopsy results of the tongue lesion",
+            "CT scan results"
+          ]
+        },
+        {
+          "name": "Oral Syphilis",
+          "category": "Infectious Disease",
+          "likelihood": "medium",
+          "key_features": [
+            "painless ulcer (chancre) on the tongue",
+            "regional lymphadenopathy"
+          ],
+          "supporting_evidence": [
+            "ulcerated lesion on the tongue",
+            "tender lymph node in the neck"
+          ],
+          "refuting_evidence": [
+            "lesion is described as painful",
+            "no mention of systemic symptoms like rash or fever"
+          ],
+          "additional_information_needed": [
+            "serologic tests for syphilis",
+            "sexual history details"
+          ]
+        },
+        {
+          "name": "Oral Herpes Simplex Virus (HSV) Infection",
+          "category": "Infectious Disease",
+          "likelihood": "low",
+          "key_features": [
+            "painful oral lesions",
+            "cervical lymphadenopathy"
+          ],
+          "supporting_evidence": [
+            "painful lesion on the tongue",
+            "tender lymph node"
+          ],
+          "refuting_evidence": [
+            "culture of the tongue lesion was negative for HSV"
+          ],
+          "additional_information_needed": [
+            "repeat HSV PCR test",
+            "history of previous oral herpes outbreaks"
+          ]
+        },
+        {
+          "name": "Behçet's Disease",
+          "category": "Autoimmune",
+          "likelihood": "low",
+          "key_features": [
+            "oral ulcers",
+            "skin lesions",
+            "possible genital ulcers"
+          ],
+          "supporting_evidence": [
+            "painful lesion on the tongue",
+            "scattered areas of erythema and blisters on the lower legs"
+          ],
+          "refuting_evidence": [
+            "no mention of genital ulcers",
+            "no systemic symptoms"
+          ],
+          "additional_information_needed": [
+            "detailed history of recurrent oral/genital ulcers",
+            "pathergy test"
+          ]
+        },
+        {
+          "name": "Traumatic Ulcer",
+          "category": "Trauma",
+          "likelihood": "low",
+          "key_features": [
+            "painful ulcer at site of trauma",
+            "no systemic symptoms"
+          ],
+          "supporting_evidence": [
+            "painful lesion on the tongue"
+          ],
+          "refuting_evidence": [
+            "presence of cervical lymphadenopathy",
+            "no history of trauma"
+          ],
+          "additional_information_needed": [
+            "history of recent trauma to the tongue",
+            "observation of any sharp teeth or dental appliances"
+          ]
+        }
+      ]
+    },
+    "management": {
+      "required": [
+        {
+          "id": "M1",
+          "content": "What treatments were administered?",
+          "response": "Acyclovir for 5 days, sulfamethoxazole–trimethoprim for 10 days, chlorhexidine gluconate rinses, narcotic analgesia, and clindamycin for 5 days.",
+          "teaching_points": [
+            {
+              "id": "TP6",
+              "content": "Empirical treatment is often initiated based on clinical suspicion while awaiting diagnostic confirmation.",
+              "covered": false
+            }
+          ],
+          "elicited": false
+        }
+      ],
+      "optional": []
+    },
+    "discussion": {
+      "required": [],
+      "optional": []
+    }
+  },
+  "differential_diagnosis": [],
+  "final_diagnosis": {
+    "name": "Unknown",
+    "category": "Pending further diagnostic results",
+    "key_features": [],
+    "supporting_evidence": [],
+    "refuting_evidence": []
+  }
+}

@@ -1,0 +1,482 @@
+{
+  "metadata": {
+    "id": "case_001",
+    "title": "1973 Case 12",
+    "original_presentation": "A 50-year-old man was admitted to the hospital because of abdominal pain.",
+    "difficulty": "intermediate",
+    "specialties": [
+      "Gastroenterology",
+      "Cardiology",
+      "Endocrinology"
+    ],
+    "keywords": [
+      "abdominal pain",
+      "xanthomas",
+      "intermittent claudication",
+      "blindness",
+      "hiatus hernia",
+      "cholesterol",
+      "triglycerides",
+      "gallstones"
+    ],
+    "source": "Clinical case study",
+    "version": "1.0"
+  },
+  "clinical_elements": {
+    "history": {
+      "required": [
+        {
+          "id": "H1",
+          "content": "What is the patient's past medical history?",
+          "response": "The patient had multiple small xanthomas on the elbows 21 years ago, intermittent claudication, episodes of blindness, high blood fat levels, recurrent abdominal pain, hiatus hernia, high cholesterol and triglycerides, and a history of chest pain. He underwent bilateral femoral endarterectomy and carotid artery exploration. He was treated with nicotinic acid, tolbutamide, warfarin, and clofibrate.",
+          "teaching_points": [
+            {
+              "id": "TP1",
+              "content": "Xanthomas can be associated with hyperlipidemia and may indicate underlying metabolic disorders.",
+              "covered": false
+            },
+            {
+              "id": "TP2",
+              "content": "Intermittent claudication and episodes of transient blindness can be symptoms of peripheral vascular disease and carotid artery disease.",
+              "covered": false
+            },
+            {
+              "id": "TP3",
+              "content": "A history of high cholesterol and triglycerides is a risk factor for cardiovascular diseases.",
+              "covered": false
+            }
+          ],
+          "elicited": false
+        },
+        {
+          "id": "H2",
+          "content": "What is the patient's family history?",
+          "response": "The patient's mother died of arteriosclerosis and diabetes mellitus, maternal grandmother died of diabetes with xanthomas, several maternal cousins had diabetes, a brother died of arteriosclerosis, and a sister died of diabetes, arteriosclerosis, and liver disease.",
+          "teaching_points": [
+            {
+              "id": "TP4",
+              "content": "Family history of diabetes and arteriosclerosis suggests a genetic predisposition to metabolic and cardiovascular diseases.",
+              "covered": false
+            }
+          ],
+          "elicited": false
+        },
+        {
+          "id": "H3",
+          "content": "What are the patient's lifestyle factors?",
+          "response": "The patient smoked three packages of cigarettes daily and consumed alcohol in excessive amounts in earlier years.",
+          "teaching_points": [
+            {
+              "id": "TP5",
+              "content": "Smoking and excessive alcohol consumption are significant risk factors for cardiovascular and liver diseases.",
+              "covered": false
+            }
+          ],
+          "elicited": false
+        }
+      ],
+      "optional": [],
+      "current_ideal_differential_diagnosis": [
+        {
+          "name": "Familial Hypercholesterolemia",
+          "category": "Genetic lipid disorder",
+          "likelihood": "high",
+          "key_features": [
+            "high cholesterol levels",
+            "xanthomas",
+            "family history of cardiovascular disease"
+          ],
+          "supporting_evidence": [
+            "multiple small xanthomas on the elbows",
+            "high cholesterol and triglycerides",
+            "family history of arteriosclerosis and xanthomas"
+          ],
+          "refuting_evidence": [],
+          "additional_information_needed": [
+            "genetic testing for LDL receptor mutations",
+            "detailed lipid profile"
+          ]
+        },
+        {
+          "name": "Type 2 Diabetes Mellitus",
+          "category": "Metabolic disorder",
+          "likelihood": "medium",
+          "key_features": [
+            "high blood sugar levels",
+            "family history of diabetes",
+            "intermittent claudication"
+          ],
+          "supporting_evidence": [
+            "family history of diabetes",
+            "episodes of blindness (possible diabetic retinopathy)"
+          ],
+          "refuting_evidence": [],
+          "additional_information_needed": [
+            "fasting blood glucose levels",
+            "HbA1c test"
+          ]
+        },
+        {
+          "name": "Atherosclerosis",
+          "category": "Cardiovascular disease",
+          "likelihood": "high",
+          "key_features": [
+            "intermittent claudication",
+            "history of chest pain",
+            "family history of arteriosclerosis"
+          ],
+          "supporting_evidence": [
+            "intermittent claudication",
+            "history of chest pain",
+            "family history of arteriosclerosis",
+            "bilateral femoral endarterectomy and carotid artery exploration"
+          ],
+          "refuting_evidence": [],
+          "additional_information_needed": [
+            "angiography",
+            "Doppler ultrasound of peripheral arteries"
+          ]
+        },
+        {
+          "name": "Alcoholic Liver Disease",
+          "category": "Liver disease",
+          "likelihood": "medium",
+          "key_features": [
+            "history of excessive alcohol consumption",
+            "liver disease in family"
+          ],
+          "supporting_evidence": [
+            "excessive alcohol consumption in earlier years",
+            "sister died of liver disease"
+          ],
+          "refuting_evidence": [],
+          "additional_information_needed": [
+            "liver function tests",
+            "abdominal ultrasound"
+          ]
+        },
+        {
+          "name": "Hiatus Hernia",
+          "category": "Gastrointestinal disorder",
+          "likelihood": "medium",
+          "key_features": [
+            "recurrent abdominal pain",
+            "history of hiatus hernia"
+          ],
+          "supporting_evidence": [
+            "recurrent abdominal pain",
+            "history of hiatus hernia"
+          ],
+          "refuting_evidence": [],
+          "additional_information_needed": [
+            "upper GI endoscopy",
+            "barium swallow study"
+          ]
+        }
+      ]
+    },
+    "physical": {
+      "required": [
+        {
+          "id": "P1",
+          "content": "What were the findings on physical examination?",
+          "response": "The patient appeared well except for evident abdominal pain. There was no icterus, a corneal arcus was seen bilaterally, normal jugular venous pressure, graded carotid pulsations, clear lungs, an S4 gallop sound, normal bowel sounds, tenderness in the epigastrium, and diminished distal pulses.",
+          "teaching_points": [
+            {
+              "id": "TP6",
+              "content": "Corneal arcus can be associated with hyperlipidemia, especially in younger patients.",
+              "covered": false
+            },
+            {
+              "id": "TP7",
+              "content": "An S4 gallop sound may indicate left ventricular hypertrophy or decreased compliance.",
+              "covered": false
+            }
+          ],
+          "elicited": false
+        }
+      ],
+      "optional": [],
+      "current_ideal_differential_diagnosis": [
+        {
+          "name": "Familial Hypercholesterolemia",
+          "category": "Genetic lipid disorder",
+          "likelihood": "high",
+          "key_features": [
+            "high cholesterol levels",
+            "xanthomas",
+            "family history of arteriosclerosis"
+          ],
+          "supporting_evidence": [
+            "multiple small xanthomas on the elbows",
+            "high cholesterol and triglycerides",
+            "family history of arteriosclerosis and xanthomas"
+          ],
+          "refuting_evidence": [],
+          "additional_information_needed": [
+            "Genetic testing for LDL receptor mutations",
+            "Lipid panel"
+          ]
+        },
+        {
+          "name": "Pancreatitis",
+          "category": "Gastrointestinal disorder",
+          "likelihood": "medium",
+          "key_features": [
+            "abdominal pain",
+            "history of alcohol use",
+            "elevated triglycerides"
+          ],
+          "supporting_evidence": [
+            "recurrent abdominal pain",
+            "excessive alcohol consumption in earlier years",
+            "high triglycerides"
+          ],
+          "refuting_evidence": [
+            "No mention of elevated amylase or lipase levels"
+          ],
+          "additional_information_needed": [
+            "Serum amylase and lipase levels",
+            "Abdominal imaging"
+          ]
+        },
+        {
+          "name": "Coronary Artery Disease",
+          "category": "Cardiovascular disorder",
+          "likelihood": "medium",
+          "key_features": [
+            "chest pain",
+            "history of smoking",
+            "family history of arteriosclerosis"
+          ],
+          "supporting_evidence": [
+            "history of chest pain",
+            "smoking three packages of cigarettes daily",
+            "family history of arteriosclerosis"
+          ],
+          "refuting_evidence": [
+            "No current chest pain reported"
+          ],
+          "additional_information_needed": [
+            "Electrocardiogram",
+            "Cardiac stress test"
+          ]
+        },
+        {
+          "name": "Peripheral Artery Disease",
+          "category": "Vascular disorder",
+          "likelihood": "medium",
+          "key_features": [
+            "intermittent claudication",
+            "diminished distal pulses",
+            "history of smoking"
+          ],
+          "supporting_evidence": [
+            "intermittent claudication",
+            "diminished distal pulses",
+            "history of smoking"
+          ],
+          "refuting_evidence": [],
+          "additional_information_needed": [
+            "Ankle-brachial index",
+            "Doppler ultrasound of lower extremities"
+          ]
+        },
+        {
+          "name": "Diabetes Mellitus",
+          "category": "Endocrine disorder",
+          "likelihood": "medium",
+          "key_features": [
+            "family history of diabetes",
+            "corneal arcus",
+            "history of high blood fat levels"
+          ],
+          "supporting_evidence": [
+            "family history of diabetes",
+            "corneal arcus seen bilaterally",
+            "high blood fat levels"
+          ],
+          "refuting_evidence": [
+            "No mention of hyperglycemia or diabetes diagnosis"
+          ],
+          "additional_information_needed": [
+            "Fasting blood glucose",
+            "HbA1c"
+          ]
+        }
+      ]
+    },
+    "testing": {
+      "required": [
+        {
+          "id": "T1",
+          "content": "What were the results of the laboratory tests?",
+          "response": "The hematocrit was 45%, white-cell count 8400, urea nitrogen 16 mg, creatinine 1.4 mg, uric acid 6.4 mg, glucose 134 mg, conjugated bilirubin 0.3 mg, total bilirubin 0.8 mg, calcium 10.1 mg, phosphorus 3.3 mg, thyroxine 8.0 μg, protein 7.5 g, sodium 131 mEq, potassium 3.9 mEq, chloride 100 mEq, carbon dioxide 28 mEq, SGOT 185 U, LDH 170 U, CPK 30 U, lipase 1.0 U, amylase 8.0 U, alkaline phosphatase 3.3 Bodansky U.",
+          "teaching_points": [
+            {
+              "id": "TP8",
+              "content": "Elevated SGOT and LDH can indicate liver damage or myocardial injury.",
+              "covered": false
+            }
+          ],
+          "elicited": false
+        },
+        {
+          "id": "T2",
+          "content": "What imaging studies were performed and what were the findings?",
+          "response": "An x-ray film of the chest was normal. An abdominal film showed vascular calcifications and phleboliths. An upper gastrointestinal series showed a large hiatus hernia and two calcified gallstones.",
+          "teaching_points": [
+            {
+              "id": "TP9",
+              "content": "Vascular calcifications can be indicative of advanced atherosclerosis.",
+              "covered": false
+            }
+          ],
+          "elicited": false
+        }
+      ],
+      "optional": [],
+      "current_ideal_differential_diagnosis": [
+        {
+          "name": "Familial Hypercholesterolemia",
+          "category": "Genetic lipid disorder",
+          "likelihood": "high",
+          "key_features": [
+            "high cholesterol levels",
+            "xanthomas",
+            "family history of arteriosclerosis"
+          ],
+          "supporting_evidence": [
+            "history of high cholesterol and triglycerides",
+            "multiple xanthomas on elbows",
+            "family history of arteriosclerosis and xanthomas"
+          ],
+          "refuting_evidence": [],
+          "additional_information_needed": [
+            "Genetic testing for LDL receptor mutations"
+          ]
+        },
+        {
+          "name": "Chronic Pancreatitis",
+          "category": "Gastrointestinal disorder",
+          "likelihood": "medium",
+          "key_features": [
+            "recurrent abdominal pain",
+            "history of alcohol use",
+            "calcifications"
+          ],
+          "supporting_evidence": [
+            "recurrent abdominal pain",
+            "history of excessive alcohol consumption",
+            "calcified gallstones"
+          ],
+          "refuting_evidence": [
+            "normal lipase and amylase levels"
+          ],
+          "additional_information_needed": [
+            "CT scan of the abdomen",
+            "detailed history of alcohol use"
+          ]
+        },
+        {
+          "name": "Coronary Artery Disease",
+          "category": "Cardiovascular disorder",
+          "likelihood": "medium",
+          "key_features": [
+            "chest pain",
+            "history of arteriosclerosis",
+            "S4 gallop"
+          ],
+          "supporting_evidence": [
+            "history of chest pain",
+            "S4 gallop sound",
+            "family history of arteriosclerosis"
+          ],
+          "refuting_evidence": [
+            "normal chest x-ray"
+          ],
+          "additional_information_needed": [
+            "Cardiac stress test",
+            "Coronary angiography"
+          ]
+        },
+        {
+          "name": "Gallstone Disease",
+          "category": "Gastrointestinal disorder",
+          "likelihood": "medium",
+          "key_features": [
+            "abdominal pain",
+            "calcified gallstones"
+          ],
+          "supporting_evidence": [
+            "abdominal pain",
+            "calcified gallstones on imaging"
+          ],
+          "refuting_evidence": [],
+          "additional_information_needed": [
+            "Ultrasound of the gallbladder",
+            "Liver function tests"
+          ]
+        },
+        {
+          "name": "Hiatus Hernia",
+          "category": "Gastrointestinal disorder",
+          "likelihood": "low",
+          "key_features": [
+            "epigastric tenderness",
+            "large hiatus hernia on imaging"
+          ],
+          "supporting_evidence": [
+            "epigastric tenderness",
+            "large hiatus hernia on upper gastrointestinal series"
+          ],
+          "refuting_evidence": [],
+          "additional_information_needed": [
+            "Esophageal manometry",
+            "24-hour pH monitoring"
+          ]
+        }
+      ]
+    },
+    "management": {
+      "required": [
+        {
+          "id": "M1",
+          "content": "What treatments were administered during the hospital stay?",
+          "response": "Clofibrate was omitted, and antacid, tincture of belladonna, and meperidine were administered. Clofibrate was resumed later, and pulmonary physical therapy was begun.",
+          "teaching_points": [
+            {
+              "id": "TP10",
+              "content": "Clofibrate is used to lower cholesterol and triglyceride levels but may have side effects that require monitoring.",
+              "covered": false
+            }
+          ],
+          "elicited": false
+        }
+      ],
+      "optional": []
+    },
+    "discussion": {
+      "required": [],
+      "optional": []
+    }
+  },
+  "differential_diagnosis": [],
+  "final_diagnosis": {
+    "name": "Complex metabolic and cardiovascular disorder",
+    "category": "Metabolic/Cardiovascular",
+    "key_features": [
+      "Abdominal pain",
+      "Xanthomas",
+      "Intermittent claudication",
+      "High cholesterol and triglycerides",
+      "Gallstones"
+    ],
+    "supporting_evidence": [
+      "History of high cholesterol and triglycerides",
+      "Family history of diabetes and arteriosclerosis",
+      "Presence of corneal arcus and vascular calcifications"
+    ],
+    "refuting_evidence": []
+  }
+}
