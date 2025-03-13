@@ -432,7 +432,7 @@ class PhaseManager:
         Returns:
             Dictionary containing:
             - chat_summary: General summary of the phase discussion.
-            - learner_assessment: Feedback on the learner’s reasoning.
+            - learner_assessment: Feedback on the learner's reasoning.
             - clinical_summary: Structured medical summary.
             - phase_summary: The full summary to be stored in `st.session_state.phase_summaries`.
         """

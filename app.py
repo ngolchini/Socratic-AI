@@ -396,9 +396,29 @@ class ClinicalCaseTutor:
             st.session_state.phase_summaries = {}
         st.session_state.phase_summaries[current_phase] = summaries["phase_summary"]
         
-        # Display the chat summary
+        # Create a more comprehensive summary for chat display
+        enhanced_summary = f"""
+    ## Phase Summary: {current_phase.value.capitalize()}
+
+    ### Information Retrieved:
+    {summaries["phase_summary"].get("retrieved_info", "No summary available.")}
+
+    ### AI Nudges Provided:
+    {"- " + "- ".join(summaries["phase_summary"].get("ai_nudges", ["None"])) if summaries["phase_summary"].get("ai_nudges") else "None"}
+
+    ### Information Missed:
+    {"- " + "- ".join(summaries["phase_summary"].get("missed_info", ["None"])) if summaries["phase_summary"].get("missed_info") else "None"}
+
+    ### Assessment of Your Differential Diagnosis:
+    {summaries["phase_summary"].get("final_ddx_assessment", "No assessment available.")}
+
+    ### Evolution of Your Differential Diagnosis:
+    {summaries["phase_summary"].get("ddx_evolution", "No evolution recorded.")}
+    """
+        
+        # Display the enhanced summary
         self.display_manager.update_chat_display(
-            summaries["chat_summary"],
+            enhanced_summary,
             role="assistant"
         )
         
@@ -428,129 +448,6 @@ class ClinicalCaseTutor:
             st.session_state.pending_next_phase = next_phase
             # Mark that summary has been generated
             st.session_state.summary_generated = True
-
-    
-    def _handle_user_input(self, user_input: str):
-        """Process and respond to user input using conversational context."""
-        self.logger.info(f"Handling user input: {user_input}")
-        
-        if not st.session_state.case_loaded or not self.phase_manager:
-            st.error("Please select a case before continuing.")
-            return
-        
-        # Debug shortcut for phase transition
-        if user_input.lower() in ["move forward", "next phase", "skip"]:
-            self.logger.info("Debug command detected - forcing phase transition")
-            self.display_manager.update_chat_display(
-                "⚡ Debug command detected - moving to phase transition...",
-                role="assistant"
-            )
-            self._handle_phase_transition()
-            return
-                
-        try:
-            # First assess if the topic is appropriate
-            topic_assessment = self.phase_manager.assess_topic(user_input)
-            self.logger.info(f"Topic assessment result: {topic_assessment}")
-            
-            if topic_assessment.relevance != TopicRelevance.ON_TOPIC:
-                if topic_assessment.redirect_message:
-                    self.display_manager.update_chat_display(
-                        topic_assessment.redirect_message,
-                        role="assistant"
-                    )
-                return
-            
-            # Add user message to chat history first
-            self.display_manager.update_chat_display(
-                message=user_input,
-                role="user"
-            )
-            
-            # Get current differential diagnoses
-            current_differential = []
-            if self.differential_manager:
-                current_differential = self.differential_manager.get_ranked_differential()
-            
-            # Get phase context for the message
-            context = {
-                "chat_history": [
-                    {
-                        "role": msg["role"],
-                        "content": msg["content"],
-                        "timestamp": msg["timestamp"].isoformat() if "timestamp" in msg else None
-                    }
-                    for msg in st.session_state.chat_messages
-                ],
-                "differential_diagnoses": [
-                    {
-                        "name": dx.name,
-                        "order": idx + 1,
-                        "notes": self.differential_manager.hypotheses[dx.name].notes if dx.name in self.differential_manager.hypotheses else ""
-                    }
-                    for idx, dx in enumerate(current_differential)
-                ],
-                "required_elements": {
-                    "covered": [e.content for e in self.phase_manager.current_phase.required_elements if e.elicited],
-                    "uncovered": [e.content for e in self.phase_manager.current_phase.required_elements if not e.elicited]
-                },
-                "completion_block_rationale": self.phase_manager.last_completion_block_rationale
-            }
-            
-            # Log current required elements status
-            self.logger.info("Required elements status:")
-            for element in self.phase_manager.current_phase.required_elements:
-                self.logger.info(f"- {element.content}: {'covered' if element.elicited else 'not covered'}")
-            
-            # Use the system prompt from session state
-            system_prompt = st.session_state.get('current_phase_prompt')
-            if not system_prompt:
-                # If somehow missing, reconstruct it
-                phase_context = self.phase_manager.get_phase_context()
-                system_prompt = self.phase_manager.prompt_manager.construct_system_prompt(phase_context)
-                st.session_state.current_phase_prompt = system_prompt
-            
-            # Get conversational response with full context
-            self.logger.info("Getting LLM response...")
-            response = self.llm_manager.get_conversational_response(
-                system_prompt=system_prompt,
-                user_message=json.dumps(context) + "\n\nUser message: " + user_input,
-                message_history=st.session_state.chat_messages,
-                temperature=0.7
-            )
-            
-            self.logger.info(f"LLM response received: {response is not None}")
-            
-            if response:
-                # Add bot response to chat history
-                self.display_manager.update_chat_display(
-                    message=response,
-                    role="assistant"
-                )
-                
-                # Assess coverage and check completion
-                coverage_assessment = self.phase_manager.assess_coverage(user_input, response)
-                
-                # Update phase completion status if needed
-                phase_status = getattr(st.session_state, 'phase_completion_status', {})
-                current_phase = self.phase_manager.current_phase_type.value
-                
-                if not phase_status.get(current_phase, False):
-                    is_complete = self.phase_manager.check_phase_completion(st.session_state.chat_messages)
-                    if is_complete:
-                        self.logger.info("Phase complete! Displaying completion message...")
-                        self._display_phase_completion_message()
-                        return
-            else:
-                self.logger.error("No response received from LLM")
-                st.error("I apologize, but I wasn't able to generate a response. Please try again.")
-                return
-                
-            self._update_displays()
-        
-        except Exception as e:
-            self.logger.error(f"Error handling user input: {str(e)}", exc_info=True)
-            st.error("An error occurred while processing your input. Please try again.")
     def _update_displays(self):
         """Update all display components with current case state."""
         if not st.session_state.case_loaded or not self.phase_manager:
@@ -635,7 +532,7 @@ class ClinicalCaseTutor:
             st.session_state.phase_summaries = {}
         st.session_state.phase_summaries[current_phase] = summaries["phase_summary"]
         
-       # Check differential diagnosis if we're transitioning from certain phases
+        # Check differential diagnosis if we're transitioning from certain phases
         if current_phase in [PhaseType.HISTORY, PhaseType.PHYSICAL, PhaseType.TESTING]:
             try:
                 # Get the current phase object
@@ -678,9 +575,29 @@ class ClinicalCaseTutor:
             self.logger.error(f"Invalid phase transition from {current_phase}")
             next_phase = None
         
-        # Display the chat summary
+        # Create a more comprehensive summary for chat display
+        enhanced_summary = f"""
+    ## Phase Summary: {current_phase.value.capitalize()}
+
+    ### Information Retrieved:
+    {summaries["phase_summary"].get("retrieved_info", "No summary available.")}
+
+    ### AI Nudges Provided:
+    {"- " + "- ".join(summaries["phase_summary"].get("ai_nudges", ["None"])) if summaries["phase_summary"].get("ai_nudges") else "None"}
+
+    ### Information Missed:
+    {"- " + "- ".join(summaries["phase_summary"].get("missed_info", ["None"])) if summaries["phase_summary"].get("missed_info") else "None"}
+
+    ### Assessment of Your Differential Diagnosis:
+    {summaries["phase_summary"].get("final_ddx_assessment", "No assessment available.")}
+
+    ### Evolution of Your Differential Diagnosis:
+    {summaries["phase_summary"].get("ddx_evolution", "No evolution recorded.")}
+    """
+        
+        # Display the enhanced summary
         self.display_manager.update_chat_display(
-            summaries["chat_summary"],
+            enhanced_summary,
             role="assistant"
         )
         
@@ -830,7 +747,24 @@ class ClinicalCaseTutor:
                 for msg in st.session_state.chat_messages:
                     with st.chat_message(msg["role"]):
                         st.markdown(msg["content"])
-                
+                if hasattr(st.session_state, 'pending_next_phase'):
+                        next_phase = st.session_state.pending_next_phase
+                        # Use a unique key that includes the session ID
+                        unique_key = f"proceed_to_{next_phase.value}_{st.session_state.get('_session_id', 0)}"
+                        if st.button(
+                            f"Proceed to {next_phase.value.capitalize()} Phase",
+                            key=unique_key,
+                            type="primary"
+                        ):
+                            self._initialize_new_phase(next_phase)
+                            # Clear phase transition states
+                            del st.session_state.pending_next_phase
+                            if hasattr(st.session_state, 'summary_generated'):
+                                del st.session_state.summary_generated
+                            if hasattr(st.session_state, 'phase_completion_status'):
+                                del st.session_state.phase_completion_status
+                            st.rerun()
+
                 # Add appropriate button based on state
                 phase_status = getattr(st.session_state, 'phase_completion_status', {})
                 current_phase = self.phase_manager.current_phase_type.value
@@ -869,86 +803,84 @@ class ClinicalCaseTutor:
         st.title("Clinical Case Tutor")
         st.subheader("Search Medical Cases")
         
-        # Large search input at the top
+        # Large search input at the top - using full width now that filter column is removed
         search_query = st.text_input(
             "Enter search terms (symptoms, conditions, specialties, etc.)",
             key="main_search",
             value=st.session_state.get("last_search", ""),
             placeholder="Example: 'dyspnea chest pain fever' or 'cardiology'",
         )
-        
+
         available_cases = self._get_available_cases()
-        
+
+        # Set default filters
+        filters = {
+            "age_min": 0,
+            "age_max": 100,
+            "sex": "All",
+            "difficulty": "All"
+        }
+
+        # Apply filters to get filtered cases
+        filtered_cases = self._get_filtered_cases(available_cases, filters)
+
         if search_query:
             # Store last search query
             st.session_state.last_search = search_query
             
-            # Perform search
+            # Perform search on filtered cases
             search_results = self.case_manager.search_cases(search_query, top_k=15)
             
-            if search_results:
-                st.subheader(f"Found {len(search_results)} matching cases:")
+            # Apply filters to search results
+            filtered_results = []
+            for case in search_results:
+                # Check if case is in filtered cases
+                if case["id"] in [c["id"] for c in filtered_cases]:
+                    filtered_results.append(case)
+            
+            if filtered_results:
+                st.subheader(f"Found {len(filtered_results)} matching cases:")
                 
-                # Create columns for better display
-                col1, col2 = st.columns([7, 3])
+                # Create columns for better display - no longer needs col2 for filters
+                col1 = st.container()
                 
                 with col1:
                     # Display cases as selectable cards
-                    for i, case in enumerate(search_results):
+                    for i, case in enumerate(filtered_results):
                         case_id = case["id"]
-                        title = case["title"]
+                        presentation = case.get("original_presentation", case.get("title", ""))
                         specialty_text = ", ".join(case.get("specialties", []))
                         difficulty = case.get("difficulty", "Intermediate")
                         
+                        # Try to extract age and sex information from the presentation
+                        age_info = ""
+                        sex_info = ""
+                        
+                        # Many case presentations start with "A XX-year-old male/female..."
+                        if "year-old" in presentation.lower():
+                            # Simple extraction, can be improved with regex
+                            age_sex_part = presentation.split("year-old")[0].strip() + "year-old"
+                            if "male" in presentation.lower():
+                                sex_info = "Male"
+                            elif "female" in presentation.lower():
+                                sex_info = "Female"
+                            age_info = age_sex_part
+                        
                         # Create a card-like display for each case
                         with st.container(border=True):
-                            st.markdown(f"**{title}**")
-                            st.markdown(f"Specialties: {specialty_text}")
-                            st.markdown(f"Difficulty: {difficulty}")
+                            st.markdown(f"**{presentation[:200]}...**" if len(presentation) > 200 else f"**{presentation}**")
+                            col_a, col_b = st.columns(2)
+                            with col_a:
+                                st.markdown(f"**Specialties:** {specialty_text}")
+                                if age_info or sex_info:
+                                    st.markdown(f"**Patient:** {age_info} {sex_info}".strip())
+                            with col_b:
+                                st.markdown(f"**Difficulty:** {difficulty}")
                             
                             # Button to select this case
-                            if st.button(f"Start Case", key=f"select_{case_id}"):
+                            if st.button(f"Start Case", key=f"select_{case_id}_{i}"):
                                 self._load_new_case(case_id)
                                 st.rerun()
-                
-                with col2:
-                    st.subheader("Quick Filters")
-                    
-                    # Extract all specialties from search results
-                    all_specialties = []
-                    for case in search_results:
-                        all_specialties.extend(case.get("specialties", []))
-                    
-                    unique_specialties = sorted(list(set(all_specialties)))
-                    
-                    # Filter by specialty
-                    selected_specialty = st.selectbox(
-                        "Filter by Specialty",
-                        options=["All Specialties"] + unique_specialties,
-                        key="specialty_filter"
-                    )
-                    
-                    # Filter by difficulty
-                    difficulty_options = ["All Difficulties", "Basic", "Intermediate", "Advanced"]
-                    selected_difficulty = st.selectbox(
-                        "Filter by Difficulty",
-                        options=difficulty_options,
-                        key="difficulty_filter"
-                    )
-                    
-                    # Apply filters button
-                    if st.button("Apply Filters"):
-                        # Implementation would filter the displayed results
-                        st.session_state.applied_filters = {
-                            "specialty": selected_specialty if selected_specialty != "All Specialties" else None,
-                            "difficulty": selected_difficulty if selected_difficulty != "All Difficulties" else None
-                        }
-                        st.rerun()
-                    
-                    # Reset filters
-                    if st.button("Reset Filters"):
-                        st.session_state.applied_filters = {}
-                        st.rerun()
             else:
                 st.info("No matching cases found. Try different search terms.")
                 
@@ -958,19 +890,20 @@ class ClinicalCaseTutor:
                 sample_size = min(5, len(available_cases))
                 random_cases = random.sample(available_cases, sample_size)
                 
-                for case_id in random_cases:
+                for random_idx, case_id in enumerate(random_cases):
                     try:
                         case_path = Path("cases") / f"{case_id}.json"
                         with open(case_path, 'r') as f:
                             case_data = json.load(f)
                         metadata = case_data.get('metadata', {})
+                        presentation = metadata.get('original_presentation', metadata.get('title', case_id))
                         
                         with st.container(border=True):
-                            st.markdown(f"**{metadata.get('title', case_id)}**")
+                            st.markdown(f"**{presentation[:200]}...**" if len(presentation) > 200 else f"**{presentation}**")
                             if 'specialties' in metadata:
                                 st.markdown(f"Specialties: {', '.join(metadata['specialties'])}")
                             
-                            if st.button(f"Start Case", key=f"random_{case_id}"):
+                            if st.button(f"Start Case", key=f"random_{case_id}_{random_idx}"):
                                 self._load_new_case(case_id)
                                 st.rerun()
                     except Exception as e:
@@ -991,19 +924,20 @@ class ClinicalCaseTutor:
                     reverse=True
                 )[:10]
                 
-                for case_id in recent_cases[:5]:
+                for recent_idx, case_id in enumerate(recent_cases[:5]):
                     try:
                         case_path = Path("cases") / f"{case_id}.json"
                         with open(case_path, 'r') as f:
                             case_data = json.load(f)
                         metadata = case_data.get('metadata', {})
+                        presentation = metadata.get('original_presentation', metadata.get('title', case_id))
                         
                         with st.container(border=True):
-                            st.markdown(f"**{metadata.get('title', case_id)}**")
+                            st.markdown(f"**{presentation[:200]}...**" if len(presentation) > 200 else f"**{presentation}**")
                             if 'specialties' in metadata:
                                 st.markdown(f"Specialties: {', '.join(metadata['specialties'])}")
                             
-                            if st.button(f"Start Case", key=f"recent_{case_id}"):
+                            if st.button(f"Start Case", key=f"recent_{case_id}_{recent_idx}"):
                                 self._load_new_case(case_id)
                                 st.rerun()
                     except Exception as e:
@@ -1016,20 +950,21 @@ class ClinicalCaseTutor:
                 import random
                 sample_cases = random.sample(available_cases, min(5, len(available_cases)))
                 
-                for case_id in sample_cases:
+                for popular_idx, case_id in enumerate(sample_cases):
                     # Similar display logic as above
                     try:
                         case_path = Path("cases") / f"{case_id}.json"
                         with open(case_path, 'r') as f:
                             case_data = json.load(f)
                         metadata = case_data.get('metadata', {})
+                        presentation = metadata.get('original_presentation', metadata.get('title', case_id))
                         
                         with st.container(border=True):
-                            st.markdown(f"**{metadata.get('title', case_id)}**")
+                            st.markdown(f"**{presentation[:200]}...**" if len(presentation) > 200 else f"**{presentation}**")
                             if 'specialties' in metadata:
                                 st.markdown(f"Specialties: {', '.join(metadata['specialties'])}")
                             
-                            if st.button(f"Start Case", key=f"popular_{case_id}"):
+                            if st.button(f"Start Case", key=f"popular_{case_id}_{popular_idx}"):
                                 self._load_new_case(case_id)
                                 st.rerun()
                     except Exception as e:
@@ -1041,34 +976,213 @@ class ClinicalCaseTutor:
                 # Group cases by specialty for better organization
                 cases_by_specialty = {}
                 
-                for case_id in available_cases:
+                for case_id in filtered_cases:
                     try:
-                        case_path = Path("cases") / f"{case_id}.json"
+                        case_path = Path("cases") / f"{case_id['id']}.json"  # Now using case objects from filtered_cases
                         with open(case_path, 'r') as f:
                             case_data = json.load(f)
                         metadata = case_data.get('metadata', {})
                         specialties = metadata.get('specialties', ['Uncategorized'])
+                        presentation = metadata.get('original_presentation', metadata.get('title', case_id['id']))
                         
                         for specialty in specialties:
                             if specialty not in cases_by_specialty:
                                 cases_by_specialty[specialty] = []
-                            cases_by_specialty[specialty].append((case_id, metadata.get('title', case_id)))
+                            # Store presentation instead of title
+                            cases_by_specialty[specialty].append((case_id['id'], presentation))
                     except Exception as e:
                         self.logger.error(f"Error loading case {case_id}: {str(e)}")
                 
                 # Display cases by specialty
-                # Add a unique key to avoid duplicates
                 for specialty_idx, (specialty, cases) in enumerate(sorted(cases_by_specialty.items())):
                     with st.expander(f"{specialty} ({len(cases)} cases)"):
-                        for case_idx, (case_id, title) in enumerate(cases):
+                        for case_idx, (case_id, presentation) in enumerate(cases):
                             cols = st.columns([4, 1])
                             with cols[0]:
-                                st.write(title)
+                                # Display a shortened version of the presentation
+                                display_text = presentation[:150] + "..." if len(presentation) > 150 else presentation
+                                st.write(display_text)
                             with cols[1]:
-                                # Use a more unique key that includes the specialty index
                                 if st.button("Select", key=f"all_{specialty_idx}_{case_id}_{case_idx}"):
                                     self._load_new_case(case_id)
                                     st.rerun()
+
+    def _get_filtered_cases(self, case_ids, filters):
+        """Filter cases based on selected criteria"""
+        filtered_cases = []
+        
+        for case_id in case_ids:
+            try:
+                case_path = Path("cases") / f"{case_id}.json"
+                with open(case_path, 'r') as f:
+                    case_data = json.load(f)
+                metadata = case_data.get('metadata', {})
+                
+                # Extract age and sex information from presentation
+                presentation = metadata.get("original_presentation", "")
+                extracted_age = None
+                extracted_sex = None
+                
+                # Simple extraction logic (can be improved with regex)
+                if "year-old" in presentation.lower():
+                    try:
+                        age_part = presentation.split("year-old")[0].strip().split()[-1]
+                        if age_part.isdigit():
+                            extracted_age = int(age_part)
+                    except:
+                        extracted_age = None
+                    
+                    if "male" in presentation.lower() and filters["sex"] != "All":
+                        extracted_sex = "Male"
+                    elif "female" in presentation.lower() and filters["sex"] != "All":
+                        extracted_sex = "Female"
+                    else:
+                        extracted_sex = "Unknown"
+                
+                # Apply filters
+                passes_filters = True
+                
+                # Age filter
+                if extracted_age is not None:
+                    if extracted_age < filters["age_min"] or extracted_age > filters["age_max"]:
+                        passes_filters = False
+                
+                # Sex filter
+                if filters["sex"] != "All" and extracted_sex != filters["sex"]:
+                    passes_filters = False
+                
+                # Difficulty filter
+                if filters["difficulty"] != "All" and metadata.get("difficulty", "") != filters["difficulty"]:
+                    passes_filters = False
+                
+                if passes_filters:
+                    filtered_cases.append(metadata)
+                    
+            except Exception as e:
+                self.logger.error(f"Error filtering case {case_id}: {str(e)}")
+        
+        return filtered_cases
+    def _handle_user_input(self, user_input: str):
+        """Process and respond to user input using conversational context."""
+        self.logger.info(f"Handling user input: {user_input}")
+        
+        if not st.session_state.case_loaded or not self.phase_manager:
+            st.error("Please select a case before continuing.")
+            return
+        
+        # Debug shortcut for phase transition
+        if user_input.lower() in ["move forward", "next phase", "skip"]:
+            self.logger.info("Debug command detected - forcing phase transition")
+            self.display_manager.update_chat_display(
+                "⚡ Debug command detected - moving to phase transition...",
+                role="assistant"
+            )
+            self._handle_phase_transition()
+            return
+                
+        try:
+            # First assess if the topic is appropriate
+            topic_assessment = self.phase_manager.assess_topic(user_input)
+            self.logger.info(f"Topic assessment result: {topic_assessment}")
+            
+            if topic_assessment.relevance != TopicRelevance.ON_TOPIC:
+                if topic_assessment.redirect_message:
+                    self.display_manager.update_chat_display(
+                        topic_assessment.redirect_message,
+                        role="assistant"
+                    )
+                return
+            
+            # Add user message to chat history first
+            self.display_manager.update_chat_display(
+                message=user_input,
+                role="user"
+            )
+            
+            # Get current differential diagnoses
+            current_differential = []
+            if self.differential_manager:
+                current_differential = self.differential_manager.get_ranked_differential()
+            
+            # Get phase context for the message
+            context = {
+                "chat_history": [
+                    {
+                        "role": msg["role"],
+                        "content": msg["content"],
+                        "timestamp": msg["timestamp"].isoformat() if "timestamp" in msg else None
+                    }
+                    for msg in st.session_state.chat_messages
+                ],
+                "differential_diagnoses": [
+                    {
+                        "name": dx.name,
+                        "order": idx + 1,
+                        "notes": self.differential_manager.hypotheses[dx.name].notes if dx.name in self.differential_manager.hypotheses else ""
+                    }
+                    for idx, dx in enumerate(current_differential)
+                ],
+                "required_elements": {
+                    "covered": [e.content for e in self.phase_manager.current_phase.required_elements if e.elicited],
+                    "uncovered": [e.content for e in self.phase_manager.current_phase.required_elements if not e.elicited]
+                },
+                "completion_block_rationale": self.phase_manager.last_completion_block_rationale
+            }
+            
+            # Log current required elements status
+            self.logger.info("Required elements status:")
+            for element in self.phase_manager.current_phase.required_elements:
+                self.logger.info(f"- {element.content}: {'covered' if element.elicited else 'not covered'}")
+            
+            # Use the system prompt from session state
+            system_prompt = st.session_state.get('current_phase_prompt')
+            if not system_prompt:
+                # If somehow missing, reconstruct it
+                phase_context = self.phase_manager.get_phase_context()
+                system_prompt = self.phase_manager.prompt_manager.construct_system_prompt(phase_context)
+                st.session_state.current_phase_prompt = system_prompt
+            
+            # Get conversational response with full context
+            self.logger.info("Getting LLM response...")
+            response = self.llm_manager.get_conversational_response(
+                system_prompt=system_prompt,
+                user_message=json.dumps(context) + "\n\nUser message: " + user_input,
+                message_history=st.session_state.chat_messages,
+                temperature=0.7
+            )
+            
+            self.logger.info(f"LLM response received: {response is not None}")
+            
+            if response:
+                # Add bot response to chat history
+                self.display_manager.update_chat_display(
+                    message=response,
+                    role="assistant"
+                )
+                
+                # Assess coverage and check completion
+                coverage_assessment = self.phase_manager.assess_coverage(user_input, response)
+                
+                # Update phase completion status if needed
+                phase_status = getattr(st.session_state, 'phase_completion_status', {})
+                current_phase = self.phase_manager.current_phase_type.value
+                
+                if not phase_status.get(current_phase, False):
+                    is_complete = self.phase_manager.check_phase_completion(st.session_state.chat_messages)
+                    if is_complete:
+                        self.logger.info("Phase complete! Displaying completion message...")
+                        self._display_phase_completion_message()
+                        return
+            else:
+                self.logger.error("No response received from LLM")
+                st.error("I apologize, but I wasn't able to generate a response. Please try again.")
+                return
+                
+            self._update_displays()
+        
+        except Exception as e:
+            self.logger.error(f"Error handling user input: {str(e)}", exc_info=True)
+            st.error("An error occurred while processing your input. Please try again.")
 
 if __name__ == "__main__":
     tutor = ClinicalCaseTutor()
