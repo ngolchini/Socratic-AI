@@ -1,8 +1,10 @@
 from typing import Optional, List, Dict, Tuple, Any
 import json
-import logging  # Add this import
+import logging
+import random
 import streamlit as st
 from datetime import datetime
+from enum import Enum
 
 from models.phase import Phase, PhaseType, TeachingPoint, ClinicalElement
 from models.case import CaseData
@@ -12,27 +14,68 @@ from models.assessment import (
     TopicRelevance,
     RedirectType
 )
-from managers.llm_manager import LLMManager  # Add this import
+from managers.llm_manager import LLMManager
 from managers.prompt_manager import PromptManager 
 
-class PhaseManager:
-    """Manages the progression through clinical case phases."""
+class GuidanceLevel(Enum):
+    HIGH = "high"      # For basic learners - provides explicit guidance
+    MEDIUM = "medium"  # For intermediate learners - offers subtle hints
+    LOW = "low"        # For advanced learners - minimal guidance
 
 class PhaseManager:
-    def __init__(self, case_data: CaseData, llm_manager: LLMManager, prompt_manager: PromptManager):
-        """Initialize the phase manager."""
+    """Manages the progression through clinical case phases with adjustable guidance levels."""
+
+    def __init__(self, case_data: CaseData, llm_manager: LLMManager, prompt_manager: PromptManager, 
+                guidance_level: GuidanceLevel = GuidanceLevel.MEDIUM):
+        """Initialize the phase manager with customizable guidance level."""
         self.case_data = case_data
         self.current_phase_type = st.session_state.current_phase
         self.llm_manager = llm_manager
-        self.prompt_manager = prompt_manager  # Add this line
+        self.prompt_manager = prompt_manager
         self.coverage_cache: Dict[str, bool] = {}
         self.logger = logging.getLogger(__name__)
         self.phase_summaries = {}
+        
+        # Initialize guidance level
+        self.guidance_level = guidance_level
+        st.session_state.guidance_level = guidance_level.value
+        
+        # Teaching strategy parameters - adjust based on guidance level
+        self._set_teaching_parameters(guidance_level)
+        
         self._initialize_phase()
         
         # Add new attributes for phase management
         self.current_phase_prompt = None
         self.last_completion_block_rationale = None
+        
+    def _set_teaching_parameters(self, guidance_level: GuidanceLevel):
+        """Set teaching parameters based on guidance level."""
+        if guidance_level == GuidanceLevel.LOW:
+            self.teaching_point_threshold = 0.3  # Less likely to offer teaching points
+            self.probe_aggressiveness = 0.2      # Less likely to probe for missed elements
+        elif guidance_level == GuidanceLevel.MEDIUM:
+            self.teaching_point_threshold = 0.7
+            self.probe_aggressiveness = 0.5
+        else:  # HIGH
+            self.teaching_point_threshold = 0.9  # More likely to offer teaching points
+            self.probe_aggressiveness = 0.8      # More likely to probe for missed elements
+            
+        self.logger.info(f"Set teaching parameters for guidance level {guidance_level.value}")
+    
+    def set_guidance_level(self, guidance_level: GuidanceLevel):
+        """Update the guidance level."""
+        self.guidance_level = guidance_level
+        st.session_state.guidance_level = guidance_level.value
+        self._set_teaching_parameters(guidance_level)
+        
+        # Update the system prompt to reflect new guidance level
+        phase_context = self.get_phase_context()
+        system_prompt = self.prompt_manager.construct_system_prompt(phase_context, guidance_level)
+        st.session_state.current_phase_prompt = system_prompt
+        self.current_phase_prompt = system_prompt
+        
+        self.logger.info(f"Guidance level updated to: {guidance_level.value}")
 
     def _initialize_phase(self):
         """Initialize the current phase and its tracking mechanisms."""
@@ -55,7 +98,7 @@ class PhaseManager:
 
         # Construct the system prompt and store in session state
         phase_context = self.get_phase_context()
-        system_prompt = self.prompt_manager.construct_system_prompt(phase_context)
+        system_prompt = self.prompt_manager.construct_system_prompt(phase_context, self.guidance_level)
         st.session_state.current_phase_prompt = system_prompt
         self.current_phase_prompt = system_prompt
         
@@ -77,14 +120,21 @@ class PhaseManager:
         """
         Evaluate if the user's message is appropriate for clinical case discussion.
         Runs before getting LLM response to ensure appropriate interaction.
-        Previously included the line "3. Does it avoid prohibited topics like: {prohibited_topics}"
         """
-        system_prompt = """You are a clinical case discussion moderator.
+        # Adjust topic assessment strictness based on guidance level
+        guidance_specific = ""
+        if self.guidance_level == GuidanceLevel.LOW:
+            guidance_specific = "Be very permissive in topic assessment, allowing exploration."
+        elif self.guidance_level == GuidanceLevel.HIGH:
+            guidance_specific = "Be more structured in topic assessment, keeping focus on current phase."
+            
+        system_prompt = f"""You are a clinical case discussion moderator.
         Assess if this message is appropriate for a clinical educational discussion.
         Consider:
         1. Is it related to clinical medicine or medical education?
         2. Is it respectful and professional?
-
+        
+        {guidance_specific}
         
         Return a JSON object with:
         - appropriate (boolean): whether the message is suitable
@@ -93,9 +143,6 @@ class PhaseManager:
         """
 
         assessment = self.llm_manager.get_json_response(
-            #system_prompt.format(
-            #    prohibited_topics=self.current_phase.config.prohibited_topics
-            #),
             system_prompt,
             message
         )
@@ -108,7 +155,6 @@ class PhaseManager:
                 relevance = TopicRelevance.OFF_TOPIC
                 redirect_type = RedirectType(assessment.get("redirect_type", "direct"))
             
-            #prohibited_topics = assessment.get("prohibited_topics", [])
             redirect_message = assessment.get("redirect_message")
             
             self.logger.info(f"Topic assessment: relevance={relevance}, redirect_type={redirect_type}")
@@ -116,7 +162,6 @@ class PhaseManager:
             return TopicAssessment(
                 relevance=relevance,
                 redirect_type=redirect_type,
-                #prohibited_topics=prohibited_topics,
                 redirect_message=redirect_message
             )
         except Exception as e:
@@ -124,7 +169,6 @@ class PhaseManager:
             return TopicAssessment(
                 relevance=TopicRelevance.OFF_TOPIC,
                 redirect_type=RedirectType.DIRECT,
-                #prohibited_topics=[],
                 redirect_message="I'm sorry, I couldn't properly assess that message. Could you rephrase it?"
             )
 
@@ -150,8 +194,18 @@ class PhaseManager:
         exchange_text = f"""USER: {user_message}
     ASSISTANT: {assistant_response}"""
         
-        system_prompt = """Assess which clinical elements have been adequately covered in this latest exchange.
-        Consider both the question/response pair when determining if an element has been properly addressed. 
+        # Adjust coverage assessment based on guidance level
+        threshold_instruction = ""
+        if self.guidance_level == GuidanceLevel.LOW:
+            threshold_instruction = "Use a strict threshold for determining coverage - only mark elements as covered when they are explicitly and thoroughly addressed."
+        elif self.guidance_level == GuidanceLevel.MEDIUM:
+            threshold_instruction = "Use a moderate threshold for determining coverage - elements should be reasonably addressed."
+        else:  # HIGH
+            threshold_instruction = "Use a lenient threshold for determining coverage - mark elements as covered when they are at least touched upon."
+            
+        system_prompt = f"""Assess which clinical elements have been adequately covered in this latest exchange.
+        Consider both the question/response pair when determining if an element has been properly addressed.
+        {threshold_instruction}
         
         Return a JSON object where:
         - Keys are the clinical elements being checked
@@ -194,18 +248,27 @@ class PhaseManager:
         )
 
     def _update_teaching_points(self, covered_elements: List[ClinicalElement]) -> List[TeachingPoint]:
-        """Update teaching points based on newly covered elements."""
+        """
+        Update teaching points based on newly covered elements.
+        Uses the teaching point threshold to determine which points to reveal.
+        """
         newly_covered_points = []
         for element in covered_elements:
             for point in element.teaching_points:
                 if not point.covered:
-                    point.covered = True
-                    newly_covered_points.append(point)
+                    # Apply threshold based on guidance level
+                    if random.random() < self.teaching_point_threshold:
+                        point.covered = True
+                        newly_covered_points.append(point)
+                        self.logger.info(f"Teaching point covered: {point.content[:50]}...")
+                    else:
+                        self.logger.info(f"Teaching point skipped due to guidance threshold: {point.content[:50]}...")
         return newly_covered_points
 
     def check_phase_completion(self, chat_history: Optional[List[Dict[str, str]]] = None) -> bool:
         """
         Check if phase completion criteria are met, with caching.
+        Adjusts completion criteria based on guidance level.
         """
         # Check if we already know the phase is complete
         if hasattr(st.session_state, 'phase_completion_status'):
@@ -246,12 +309,21 @@ class PhaseManager:
             st.session_state.phase_completion_status = {}
 
         if self.current_phase_type.value not in st.session_state.phase_completion_status:
+            # Adjust completion criteria based on guidance level
+            guidance_specific = ""
+            if self.guidance_level == GuidanceLevel.LOW:
+                guidance_specific = "Apply strict standards - ensure all criteria are thoroughly met."
+            elif self.guidance_level == GuidanceLevel.MEDIUM:
+                guidance_specific = "Apply moderate standards - ensure criteria are reasonably met."
+            else:  # HIGH
+                guidance_specific = "Apply lenient standards - allow advancement if basic criteria are met."
+                
             system_prompt = f"""You are assessing if a clinical case discussion in the {self.current_phase_type.value} phase is ready to advance.
             
             Phase advancement criteria: {self.current_phase.config.advancement_criteria}
             
+            {guidance_specific}
             Evaluate the discussion for whether these criteria have been reasonably met based on the chat history.
-            You do not need to insist upon a comprehensive discussion or mastery of every element, but they should be at least touched upon. 
             
             Return a JSON object with:
             - can_advance (boolean): whether the phase can be completed
@@ -304,12 +376,12 @@ class PhaseManager:
             return None
 
         chat_history = st.session_state.chat_messages
-        phase_summary = self.generate_phase_summary(chat_history)  # ✅ Generate Summary
+        phase_summary = self.generate_phase_summary(chat_history)  # Generate Summary
 
         # Store phase summary in session state
         if 'phase_summaries' not in st.session_state:
             st.session_state.phase_summaries = {}
-        st.session_state.phase_summaries[current_phase] = phase_summary.get("phase_summary", {}) 
+        st.session_state.phase_summaries[self.current_phase_type] = phase_summary.get("phase_summary", {}) 
 
         # Transition to the next phase
         current_index = list(PhaseType).index(self.current_phase_type)
@@ -321,7 +393,6 @@ class PhaseManager:
 
         return self.current_phase.config.completion_message
 
-        
     def generate_phase_summary(
             self,
             chat_history: List[Dict[str, str]]
@@ -337,6 +408,7 @@ class PhaseManager:
             - chat_summary: Detailed summary for chat display
             - learner_assessment: Private assessment of learner performance
             - clinical_summary: Structured summary of clinical findings
+            - phase_summary: Complete phase summary for storage
         """
         self.logger.info(f"Generating phase summary for {self.current_phase_type.value}")
         
@@ -347,6 +419,11 @@ class PhaseManager:
             if msg['role'] in ['user', 'assistant']
         ])
         
+        # Adjust assessment depth based on guidance level
+        assessment_depth = "brief and supportive" if self.guidance_level == GuidanceLevel.HIGH else \
+                          "moderate" if self.guidance_level == GuidanceLevel.MEDIUM else \
+                          "thorough and critical"
+        
         system_prompt = f"""You are analyzing a clinical case discussion in the {self.current_phase_type.value} phase.
         Generate three distinct summaries of the conversation:
 
@@ -356,7 +433,7 @@ class PhaseManager:
         - Identifies key teaching points covered
         - Provides a natural transition to the next phase
         
-        2. A learner assessment that evaluates:
+        2. A learner assessment that evaluates ({assessment_depth}):
         - Thoroughness of history/examination approach
         - Clinical reasoning quality
         - Knowledge gaps identified
@@ -416,16 +493,58 @@ class PhaseManager:
     def get_phase_context(self) -> Dict[str, any]:
         """
         Get the current phase context for prompt construction.
-        TODO: Add the most recent rationale for phase completion failure.
+        Includes guidance level and relevant elements.
         """
-        return {
+        context = {
             "phase_type": self.current_phase_type.value,
             "required_elements": [e.content for e in self.current_phase.required_elements],
             "covered_elements": [e.content for e in self.current_phase.required_elements if e.elicited],
             "teaching_points": [p.content for p in self.current_phase.teaching_points if not p.covered],
-            "prohibited_topics": self.current_phase.config.prohibited_topics
+            "prohibited_topics": self.current_phase.config.prohibited_topics,
+            "guidance_level": self.guidance_level.value
         }
+        
+        # Add completion rationale if available
+        if self.last_completion_block_rationale:
+            context["completion_block_rationale"] = self.last_completion_block_rationale
+            
+        return context
     
+    def generate_teaching_response(self, coverage_assessment: CoverageAssessment) -> Optional[str]:
+        """
+        Generate an appropriate teaching response based on coverage assessment
+        and current guidance level.
+        """
+        phase_context = self.get_phase_context()
+        
+        # Determine if we should provide a teaching prompt based on guidance level
+        should_teach = random.random() < self.teaching_point_threshold
+        should_probe = random.random() < self.probe_aggressiveness
+        
+        # First priority: present teaching points if we have them and decide to teach
+        if coverage_assessment.newly_covered_points and should_teach:
+            point = coverage_assessment.newly_covered_points[0]
+            return self.prompt_manager.generate_teaching_prompt(
+                point.content,
+                self.current_phase_type,
+                self.guidance_level
+            )
+        
+        # Second priority: probe for missing critical elements if we decide to probe
+        if coverage_assessment.missing_critical_elements and should_probe:
+            return self.prompt_manager.construct_probe_question(
+                coverage_assessment.missing_critical_elements[0],
+                phase_context,
+                self.guidance_level
+            )
+        
+        # Otherwise, generate a general follow-up question
+        return self.prompt_manager.construct_follow_up_question(
+            phase_context,
+            self.guidance_level
+        )
+        
+    # Keep the second implementation of generate_phase_summary for compatibility
     def generate_phase_summary(self, chat_history: List[Dict[str, str]]) -> Dict[str, Any]:
         """
         Generate comprehensive summaries of the phase using chat history.
@@ -443,8 +562,18 @@ class PhaseManager:
             for msg in chat_history if msg['role'] in ['user', 'assistant']
         ])
 
+        # Adjust feedback detail based on guidance level
+        guidance_specific = ""
+        if self.guidance_level == GuidanceLevel.HIGH:
+            guidance_specific = "Provide detailed and supportive feedback, highlighting strengths."
+        elif self.guidance_level == GuidanceLevel.MEDIUM:
+            guidance_specific = "Provide balanced feedback, noting both strengths and areas for improvement."
+        else:  # LOW
+            guidance_specific = "Provide detailed and challenging feedback, focusing on critical analysis."
+
         system_prompt = f"""
         You are analyzing a clinical case discussion in the {self.current_phase_type.value} phase.
+        {guidance_specific}
         
         Generate the following:
         1. **A summary of retrieved information**.

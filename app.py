@@ -951,7 +951,94 @@ class ClinicalCaseTutor:
             f"{'  →  '.join(progress_bar)}</div>",
             unsafe_allow_html=True,
         )
+    def _add_guidance_level_controls_sidebar(self):
+        """Add guidance level controls directly to sidebar with robust error handling."""
+        try:
+            st.sidebar.subheader("Learning Settings")
+            
+            # Get current guidance level from session state or default to medium
+            current_level = st.session_state.get("guidance_level", "medium")
+            
+            # Create radio buttons for guidance level selection
+            guidance_level = st.sidebar.radio(
+                "Tutor Guidance Level",
+                options=["low", "medium", "high"],
+                index=["low", "medium", "high"].index(current_level),
+                help="""
+                Controls how directly the AI assists you:
+                - **Low**: Minimal guidance, no leading questions (advanced learners)
+                - **Medium**: Subtle hints, balanced guidance (intermediate learners)
+                - **High**: Clear guidance, explicit suggestions (novice learners)
+                """
+            )
+            
+            # Only update if the level has changed
+            if guidance_level != current_level:
+                # Store the new guidance level in session state
+                st.session_state.guidance_level = guidance_level
+                
+                # Show a temporary message
+                status_container = st.sidebar.empty()
+                status_container.info(f"Updating guidance level to {guidance_level}...")
+                
+                try:
+                    # Import GuidanceLevel enum - use try/except to handle import errors
+                    try:
+                        from managers.prompt_manager import GuidanceLevel
+                        guidance_enum = GuidanceLevel(guidance_level)
+                    except (ImportError, ValueError) as e:
+                        self.logger.error(f"Error importing GuidanceLevel: {str(e)}")
+                        # Fallback - use string value directly
+                        guidance_enum = guidance_level
+                    
+                    # Update the prompt manager if available
+                    if hasattr(self, 'prompt_manager') and self.prompt_manager is not None:
+                        try:
+                            self.prompt_manager.set_guidance_level(guidance_enum)
+                            self.logger.info(f"Updated prompt_manager guidance to {guidance_level}")
+                        except Exception as e:
+                            self.logger.error(f"Error updating prompt_manager: {str(e)}")
+                    
+                    # Update the LLM manager if available
+                    if hasattr(self, 'llm_manager') and self.llm_manager is not None:
+                        try:
+                            self.llm_manager.set_guidance_level(guidance_level)
+                            self.logger.info(f"Updated llm_manager guidance to {guidance_level}")
+                        except Exception as e:
+                            self.logger.error(f"Error updating llm_manager: {str(e)}")
+                    
+                    # Update the phase manager if available
+                    if hasattr(self, 'phase_manager') and self.phase_manager is not None:
+                        try:
+                            self.phase_manager.set_guidance_level(guidance_enum)
+                            self.logger.info(f"Updated phase_manager guidance to {guidance_level}")
+                            
+                            # Re-initialize the phase if possible
+                            try:
+                                self.phase_manager._initialize_phase()
+                                self.logger.info("Re-initialized phase with new guidance level")
+                            except Exception as e:
+                                self.logger.error(f"Error re-initializing phase: {str(e)}")
+                        except Exception as e:
+                            self.logger.error(f"Error updating phase_manager: {str(e)}")
+                    
+                    # Update status message
+                    status_container.success(f"Guidance level updated to: {guidance_level.capitalize()}")
+                    
+                    # Don't force rerun - this might be causing the crash
+                    # Instead, let the user continue with the new guidance level
+                    # The next interaction will use the updated level
+                    
+                except Exception as e:
+                    # Log detailed error and show user-friendly message
+                    self.logger.error(f"Error updating guidance level: {str(e)}", exc_info=True)
+                    status_container.error(f"Error updating guidance level. Please try again.")
         
+        except Exception as e:
+            # Catch-all for any other errors
+            self.logger.error(f"Error in guidance controls: {str(e)}", exc_info=True)
+            st.sidebar.error("Error displaying guidance controls")
+
     def run(self):
         if hasattr(st.session_state, '_differential_updated'):
             del st.session_state._differential_updated
@@ -963,8 +1050,8 @@ class ClinicalCaseTutor:
             
             self._show_search_page()
             return
-        # Add Home button to sidebar
 
+        # Add sidebar content only when a case is loaded
         with st.sidebar:
             # Clear out the previous sidebar content
             st.empty()
@@ -975,6 +1062,10 @@ class ClinicalCaseTutor:
                 st.session_state.show_search_page = True
                 # Don't clear the case data yet - just show the search page
                 st.rerun()
+            
+            # Add guidance level controls after home button
+            # This is where the guidance controls should go, after the sidebar is initialized
+            self._add_guidance_level_controls_sidebar()
                 
             # You can add other sidebar content here that's specific to the case view
             # For example, you might want to show case metadata
@@ -986,6 +1077,7 @@ class ClinicalCaseTutor:
                     st.write(f"**Difficulty:** {metadata.difficulty}")
                 if hasattr(metadata, 'specialties') and metadata.specialties:
                     st.write(f"**Specialty:** {', '.join(metadata.specialties)}")
+    
     
         # If a case is loaded, continue with the normal flow
         self._case_progress_bar(st.session_state.current_phase.value.capitalize())
@@ -1061,7 +1153,7 @@ class ClinicalCaseTutor:
             if user_input:
                 self._handle_user_input(user_input)
                 st.rerun()
-
+    
     def _show_search_page(self):
         """Show the case search page as the initial screen."""
         st.title("Clinical Case Tutor")
