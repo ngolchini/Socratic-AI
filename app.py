@@ -7,6 +7,11 @@ from dataclasses import dataclass
 from openai import OpenAI
 from dotenv import load_dotenv
 import json
+import pandas as pd
+import numpy as np
+import faiss
+import time
+import pickle
 
 from managers.case_manager import CaseManager
 from managers.differential_manager import DifferentialManager
@@ -19,6 +24,265 @@ from utils.case_importer import import_cases_from_csv
 from models.phase import PhaseType
 from models.assessment import TopicAssessment, CoverageAssessment, TopicRelevance
 from models.phase import PhaseType
+
+class RAGSearchBar:
+    """
+    A Retrieval Augmented Generation search bar for clinical case application.
+    Uses FAISS indexes for fast similarity search and OpenAI for embedding generation.
+    """
+    
+    def __init__(self, client, embedding_model: str = 'text-embedding-3-large'):
+        """
+        Initialize the RAG search bar with OpenAI client and embedding model.
+        
+        Args:
+            client: OpenAI client for generating embeddings
+            embedding_model: The embedding model to use
+        """
+        self.client = client
+        self.embedding_model = embedding_model
+        self.search_indexes = {
+            "PoC": {"name": "Patient Presentation", "weight": 1.0},
+            "DDx": {"name": "Differential Diagnosis", "weight": 0.8},
+            "PD": {"name": "Physical Exam", "weight": 0.7},
+            "TD": {"name": "Test Results", "weight": 0.6},
+            "FD": {"name": "Final Diagnosis", "weight": 0.5}
+        }
+        
+        # Load case data
+        self.load_case_data()
+    
+    def load_case_data(self):
+        """Load case data from CSV if available."""
+        try:
+            self.cases_df = pd.read_csv("data_files/all_cases.csv")
+            print(f"Loaded {len(self.cases_df)} cases from all_cases.csv")
+        except:
+            print("Warning: all_cases.csv not found. Some functions may be limited.")
+            self.cases_df = None
+    
+    def generate_embeddings(self, texts):
+        """Generate embeddings for a list of texts using OpenAI's API."""
+        try:
+            response = self.client.embeddings.create(
+                input=texts,
+                model=self.embedding_model
+            )
+            return [item.embedding for item in response.data]
+        except Exception as e:
+            st.error(f"Error generating embeddings: {str(e)}")
+            return []
+    
+    def multi_index_search(self, query: str, top_k: int = 10):
+        """
+        Search across multiple indexes and combine results with weighted scoring.
+        
+        Args:
+            query: The search query text
+            top_k: Number of top results to return
+            
+        Returns:
+            DataFrame of combined search results with relevance scores
+        """
+        if not query.strip():
+            return pd.DataFrame()
+            
+        # Generate embedding for the query
+        query_embedding = self.generate_embeddings([query])[0]
+        query_vector = np.array(query_embedding).reshape(1, -1).astype('float32')
+        
+        # Store results from each index
+        all_results = []
+        
+        # Search in each index
+        for index_name, index_info in self.search_indexes.items():
+            try:
+                # Check if FAISS index and dataframe files exist
+                index_path = f"data_files/{index_name}_faiss.index"
+                df_path = f"data_files/{index_name.lower()}_df_ada3.pkl"
+                
+                if not os.path.exists(index_path) or not os.path.exists(df_path):
+                    continue
+                
+                # Load FAISS index and dataframe
+                index = faiss.read_index(index_path)
+                with open(df_path, 'rb') as f:
+                    df = pickle.load(f)
+                
+                # Search for similar vectors
+                distances, indices = index.search(query_vector, top_k)
+                
+                # Convert to dataframe and add search context
+                if len(indices[0]) > 0:  # Check if we got any results
+                    results = pd.DataFrame({
+                        'case': [df['label'].iloc[i] for i in indices[0]],
+                        'distance': distances[0],
+                        'score': 1 / (1 + distances[0]) * index_info["weight"],  # Convert distance to score
+                        'source': index_info["name"],
+                        'source_text': [df['text'].iloc[i] for i in indices[0]]
+                    })
+                    
+                    all_results.append(results)
+            except Exception as e:
+                st.warning(f"Error searching in {index_name} index: {str(e)}")
+        
+        if not all_results:
+            return pd.DataFrame()
+            
+        # Combine all results
+        combined_results = pd.concat(all_results, ignore_index=True)
+        
+        # Get the case metadata and join with results
+        if self.cases_df is not None:
+            try:
+                combined_results = pd.merge(
+                    combined_results, 
+                    self.cases_df[['case', 'title', 'one_line', 'specialties', 'keywords']], 
+                    on='case', 
+                    how='left'
+                )
+            except Exception as e:
+                st.warning(f"Error merging case metadata: {str(e)}")
+        
+        # Sort by score (descending) and remove duplicates
+        combined_results = combined_results.sort_values('score', ascending=False)
+        combined_results = combined_results.drop_duplicates(subset=['case'])
+        
+        return combined_results.head(top_k)
+    
+    def search_and_recommend(self, query: str, top_k: int = 5):
+        """
+        Search for relevant cases and generate a recommendation summary.
+        
+        Args:
+            query: The search query text
+            top_k: Number of top results to return
+            
+        Returns:
+            Tuple of (search results DataFrame, recommendation text)
+        """
+        # Search for relevant cases
+        results = self.multi_index_search(query, top_k=top_k)
+        
+        if results.empty:
+            return results, "No matching cases found. Try a different search query."
+        
+        # Create a summary of the search results using GPT
+        try:
+            summary_prompt = f"""
+            A healthcare professional searched for: "{query}"
+            
+            Top {len(results)} matching cases:
+            {results[['title', 'one_line', 'source', 'score']].to_string(index=False)}
+            
+            Provide a brief (3-5 sentences) summary of the search results, explaining why these cases might be relevant 
+            to the query and what patterns or insights emerge from these results. Focus on clinical relevance.
+            """
+            
+            response = self.client.chat.completions.create(
+                model=st.session_state.get("openai_model", "gpt-4o-mini"),
+                messages=[{"role": "user", "content": summary_prompt}],
+                temperature=0.2,
+                max_tokens=250
+            )
+            
+            summary = response.choices[0].message.content
+        except Exception as e:
+            summary = f"Search complete. Found {len(results)} potentially relevant cases."
+        
+        return results, summary
+    
+    def render_search_bar(self):
+        """Render the search bar UI component in Streamlit."""
+        st.markdown("### Clinical Case Search")
+        
+        # Create search bar with a button
+        col1, col2 = st.columns([5, 1])
+        with col1:
+            query = st.text_input(
+                "Search cases by symptoms, demographics, diagnoses, or findings",
+                key="rag_search_query"
+            )
+        with col2:
+            search_button = st.button("Search", key="rag_search_button", type="primary")
+        
+        # Advanced search options in an expander
+        with st.expander("Advanced Search Options"):
+            top_k = st.slider("Number of results", 3, 20, 7)
+            
+            # Index weights
+            st.markdown("#### Search Index Weights")
+            weights_col1, weights_col2 = st.columns(2)
+            
+            with weights_col1:
+                self.search_indexes["PoC"]["weight"] = st.slider(
+                    "Patient Presentation", 0.1, 1.0, 1.0, 0.1)
+                self.search_indexes["DDx"]["weight"] = st.slider(
+                    "Differential Diagnosis", 0.1, 1.0, 0.8, 0.1)
+                self.search_indexes["PD"]["weight"] = st.slider(
+                    "Physical Exam", 0.1, 1.0, 0.7, 0.1)
+            
+            with weights_col2:
+                self.search_indexes["TD"]["weight"] = st.slider(
+                    "Test Results", 0.1, 1.0, 0.6, 0.1)
+                self.search_indexes["FD"]["weight"] = st.slider(
+                    "Final Diagnosis", 0.1, 1.0, 0.5, 0.1)
+        
+        # Perform search if button is clicked or Enter is pressed
+        if search_button and query:
+            with st.spinner("Searching for relevant cases..."):
+                # Store the search start time
+                start_time = time.time()
+                
+                # Perform the search
+                results, summary = self.search_and_recommend(query, top_k)
+                
+                # Calculate search time
+                search_time = time.time() - start_time
+                
+                # Display results
+                if not results.empty:
+                    st.markdown(f"#### Search Results ({len(results)} cases, {search_time:.2f}s)")
+                    st.info(summary)
+                    
+                    # Display results in a table with clickable links
+                    display_cols = ['title', 'one_line', 'source', 'score']
+                    if 'specialties' in results.columns:
+                        display_cols.append('specialties')
+                    
+                    results_display = results[display_cols].copy()
+                    results_display['score'] = results_display['score'].round(3)
+                    st.dataframe(results_display)
+                    
+                    # Store the results in session state
+                    st.session_state.last_search_results = results
+                    
+                    # Show detailed case view for the top result
+                    if len(results) > 0:
+                        top_case = results.iloc[0]
+                        with st.expander(f"View Details: {top_case['title']}", expanded=True):
+                            st.markdown(f"**Case:** {top_case['case']}")
+                            st.markdown(f"**Title:** {top_case['title']}")
+                            st.markdown(f"**Summary:** {top_case['one_line']}")
+                            
+                            # Show source text that matched
+                            st.markdown(f"**Matched Content:**")
+                            st.markdown(top_case['source_text'])
+                            
+                            # Show specialties and keywords if available
+                            if 'specialties' in top_case and top_case['specialties']:
+                                st.markdown(f"**Specialties:** {top_case['specialties']}")
+                            if 'keywords' in top_case and top_case['keywords']:
+                                st.markdown(f"**Keywords:** {top_case['keywords']}")
+                            
+                            # Add "Explore in Chat" button
+                            if st.button("Explore This Case in Chat", key=f"explore_{top_case['case']}"):
+                                prompt = f"Tell me more about the case titled '{top_case['title']}' (case ID: {top_case['case']})"
+                                if "messages" in st.session_state:
+                                    st.session_state.messages.append({"role": "user", "content": prompt})
+                                st.rerun()
+                else:
+                    st.warning("No matching cases found. Try a different search query.")
 
 
 st.set_page_config(
@@ -801,28 +1065,51 @@ class ClinicalCaseTutor:
     def _show_search_page(self):
         """Show the case search page as the initial screen."""
         st.title("Clinical Case Tutor")
-        st.subheader("Search Medical Cases")
         
-        # Large search input at the top - using full width now that filter column is removed
-        search_query = st.text_input(
-            "Enter search terms (symptoms, conditions, specialties, etc.)",
-            key="main_search",
-            value=st.session_state.get("last_search", ""),
-            placeholder="Example: 'dyspnea chest pain fever' or 'cardiology'",
-        )
-
-        available_cases = self._get_available_cases()
-
-        # Set default filters
-        filters = {
-            "age_min": 0,
-            "age_max": 100,
-            "sex": "All",
-            "difficulty": "All"
-        }
-
-        # Apply filters to get filtered cases
-        filtered_cases = self._get_filtered_cases(available_cases, filters)
+        # Create tabs for vector search and regular search
+        search_tab, regular_tab = st.tabs(["Vector Search", "Keyword Search"])
+        
+        with search_tab:
+            # Initialize RAG search bar if not already done
+            if "rag_search_bar" not in st.session_state:
+                st.session_state.rag_search_bar = RAGSearchBar(self.client)
+            
+            # Render the RAG search bar
+            st.session_state.rag_search_bar.render_search_bar()
+            
+            # Add "Load Selected Case" button if search results exist
+            if "last_search_results" in st.session_state and not st.session_state.last_search_results.empty:
+                st.subheader("Load Case")
+                selected_case_idx = st.selectbox(
+                    "Select a case to load:",
+                    options=range(len(st.session_state.last_search_results)),
+                    format_func=lambda i: f"{st.session_state.last_search_results.iloc[i]['case']}: {st.session_state.last_search_results.iloc[i]['title']}"
+                )
+                
+                if st.button("Load Selected Case", type="primary"):
+                    case_id = st.session_state.last_search_results.iloc[selected_case_idx]['case']
+                    self._load_new_case(case_id)
+                    st.rerun()
+        
+        with regular_tab:
+            # Original keyword search functionality
+            st.subheader("Search Medical Cases")
+            search_query = st.text_input(
+                "Enter search terms (symptoms, conditions, specialties, etc.)",
+                key="main_search",
+                value=st.session_state.get("last_search", ""),
+                placeholder="Example: 'dyspnea chest pain fever' or 'cardiology'",
+            )
+            
+            # Rest of your existing _show_search_page code...
+            available_cases = self._get_available_cases()
+            filters = {
+                "age_min": 0,
+                "age_max": 100,
+                "sex": "All",
+                "difficulty": "All"
+            }
+            filtered_cases = self._get_filtered_cases(available_cases, filters)
 
         if search_query:
             # Store last search query
