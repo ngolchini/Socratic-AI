@@ -52,13 +52,16 @@ class CaseManager:
             with open(case_path, 'r') as f:
                 case_json = json.load(f)
             
+            # Store raw data for accessing ideal differential later
+            raw_data = case_json
+            
             # Load metadata
             metadata = CaseMetadata(
                 id=case_json['metadata']['id'],
-                title=case_json['metadata']['original_presentation'],
-                difficulty=case_json['metadata']['difficulty'],
-                specialties=case_json['metadata']['specialties'],
-                keywords=case_json['metadata']['keywords']
+                title=case_json['metadata'].get('original_presentation', case_json['metadata'].get('title', '')),
+                difficulty=case_json['metadata'].get('difficulty', 'intermediate'),
+                specialties=case_json['metadata'].get('specialties', []),
+                keywords=case_json['metadata'].get('keywords', [])
             )
             
             # Load phases with config injection
@@ -66,19 +69,54 @@ class CaseManager:
             for phase_type in PhaseType:
                 phase_data = case_json['clinical_elements'].get(phase_type.value, {})
                 config = self.get_phase_config(phase_type)
-                phases[phase_type] = Phase.from_json(phase_data, config)
+                
+                # Create Phase object
+                phase = Phase.from_json(phase_data, config)
+                
+                # Store ideal differential if available
+                current_ideal_ddx = phase_data.get('current_ideal_differential_diagnosis', [])
+                if current_ideal_ddx:
+                    phase.current_ideal_differential_diagnosis = current_ideal_ddx
+                    
+                phases[phase_type] = phase
             
-            # Rest of the case loading logic...
-            return CaseData(
+            # Load differential diagnoses
+            differential_diagnosis = []
+            for dx_data in case_json.get('differential_diagnosis', []):
+                if dx_data:  # Check if valid data exists
+                    diagnosis = self._construct_diagnosis(dx_data)
+                    differential_diagnosis.append(diagnosis)
+            
+            # Load final diagnosis
+            final_diagnosis = None
+            if 'final_diagnosis' in case_json and case_json['final_diagnosis']:
+                final_diagnosis = self._construct_diagnosis(case_json['final_diagnosis'])
+            else:
+                # Create a placeholder diagnosis if none exists
+                final_diagnosis = Diagnosis(
+                    name="Diagnosis Pending",
+                    category=DiagnosisCategory.POSSIBLE,
+                    key_features=[]
+                )
+            
+            # Create the CaseData object
+            case_data = CaseData(
                 metadata=metadata,
                 phases=phases,
-                differential_diagnosis=[...],
-                final_diagnosis=[...]
+                differential_diagnosis=differential_diagnosis,
+                final_diagnosis=final_diagnosis
             )
+            
+            # Store raw data for future reference
+            case_data._raw_data = raw_data
+            
+            self.logger.info(f"Successfully loaded case {case_id}")
+            return case_data
+            
         except Exception as e:
             self.logger.error(f"Error loading case {case_id}: {str(e)}")
             raise
-
+        
     def _construct_case_data(self, case_json: Dict) -> CaseData:
         """Convert raw JSON data into structured CaseData object."""
         self.logger.debug("Beginning case data construction")
