@@ -1,48 +1,39 @@
-import streamlit as st
-from pathlib import Path
-from typing import Optional
 import os
-import logging
-from dataclasses import dataclass
-from openai import OpenAI
-from dotenv import load_dotenv
-from google.oauth2.service_account import Credentials
+import re
+import time
 import json
+import random
+import pickle
+import logging
+import datetime
+from pathlib import Path
+from dataclasses import dataclass
+from typing import Optional
+from email.message import EmailMessage
+import smtplib
+
+import streamlit as st
 import pandas as pd
 import numpy as np
 import faiss
-import time
-import pickle
+import bcrypt
+import yaml
+import gspread
+from dotenv import load_dotenv
+from openai import OpenAI
+from google.oauth2.service_account import Credentials
 
 from managers.case_manager import CaseManager
 from managers.differential_manager import DifferentialManager
 from managers.display_manager import DisplayManager
 from managers.phase_manager import PhaseManager
 from managers.prompt_manager import PromptManager
-from managers.llm_manager import LLMManager 
+from managers.llm_manager import LLMManager
 from utils.case_importer import import_cases_from_csv
-
 from models.phase import PhaseType
 from models.assessment import TopicAssessment, CoverageAssessment, TopicRelevance
-from models.phase import PhaseType
-
-from pathlib import Path
-import yaml, bcrypt, datetime, random, smtplib, gspread
-from email.message import EmailMessage
-import re
 
 st.set_page_config(layout="wide")
-import streamlit as st
-import yaml
-import bcrypt
-import datetime
-import random
-import smtplib
-import re
-import json
-import gspread
-from email.message import EmailMessage
-from pathlib import Path
 
 # Constants
 GOOGLE_SHEET_URL = st.secrets["gcp"]["SHEET_URL"]
@@ -59,12 +50,11 @@ if "pending_registration" not in st.session_state:
     st.session_state.pending_registration = {}
 
 # Connect to Google Sheet
-with open(st.secrets["gcp"]["SERVICE_ACCOUNT_FILE"], "r") as f:
-    creds_dict = json.load(f)
 SCOPES = ["https://www.googleapis.com/auth/spreadsheets"]
-credentials = Credentials.from_service_account_file(
-    st.secrets["gcp"]["SERVICE_ACCOUNT_FILE"], scopes=SCOPES
+credentials = Credentials.from_service_account_info(
+    st.secrets["gcp_service_account"], scopes=SCOPES
 )
+
 gc = gspread.authorize(credentials)
 sh = gc.open_by_url(GOOGLE_SHEET_URL)
 credentials_ws = sh.worksheet("Credentials")
