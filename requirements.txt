@@ -6,7 +6,7 @@ pytest>=7.0.0
 pandas
 numpy
 faiss-cpu
-openai
-streamlit
+gspread
 PyYAML
 bcrypt
+

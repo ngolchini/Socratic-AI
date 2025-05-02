@@ -6,6 +6,7 @@ import logging
 from dataclasses import dataclass
 from openai import OpenAI
 from dotenv import load_dotenv
+from google.oauth2.service_account import Credentials
 import json
 import pandas as pd
 import numpy as np
@@ -26,15 +27,25 @@ from models.assessment import TopicAssessment, CoverageAssessment, TopicRelevanc
 from models.phase import PhaseType
 
 from pathlib import Path
-import yaml, bcrypt, datetime, random, smtplib
+import yaml, bcrypt, datetime, random, smtplib, gspread
 from email.message import EmailMessage
 import re
 
 st.set_page_config(layout="wide")
+import streamlit as st
+import yaml
+import bcrypt
+import datetime
+import random
+import smtplib
+import re
+import json
+import gspread
+from email.message import EmailMessage
+from pathlib import Path
 
 # Constants
-CREDENTIALS_PATH = Path("credentials.yaml")
-USAGE_LOG_PATH = Path("usage_log.json")
+GOOGLE_SHEET_URL = st.secrets["gcp"]["SHEET_URL"]
 MAX_CASES_PER_DAY = 3
 EMAIL_ADDRESS = st.secrets["email"]["EMAIL_ADDRESS"]
 EMAIL_PASSWORD = st.secrets["email"]["EMAIL_PASSWORD"]
@@ -47,6 +58,18 @@ if "email_verified" not in st.session_state:
 if "pending_registration" not in st.session_state:
     st.session_state.pending_registration = {}
 
+# Connect to Google Sheet
+with open(st.secrets["gcp"]["SERVICE_ACCOUNT_FILE"], "r") as f:
+    creds_dict = json.load(f)
+SCOPES = ["https://www.googleapis.com/auth/spreadsheets"]
+credentials = Credentials.from_service_account_file(
+    st.secrets["gcp"]["SERVICE_ACCOUNT_FILE"], scopes=SCOPES
+)
+gc = gspread.authorize(credentials)
+sh = gc.open_by_url(GOOGLE_SHEET_URL)
+credentials_ws = sh.worksheet("Credentials")
+usage_ws = sh.worksheet("UsageLog")
+
 # Utility Functions
 def send_verification_email(to_email, code):
     msg = EmailMessage()
@@ -54,20 +77,9 @@ def send_verification_email(to_email, code):
     msg["From"] = EMAIL_ADDRESS
     msg["To"] = to_email
     msg.set_content(f"Your verification code is: {code}")
-
     with smtplib.SMTP_SSL("smtp.gmail.com", 465) as smtp:
         smtp.login(EMAIL_ADDRESS, EMAIL_PASSWORD)
         smtp.send_message(msg)
-
-def load_credentials():
-    if CREDENTIALS_PATH.exists():
-        with open(CREDENTIALS_PATH, "r") as f:
-            return yaml.safe_load(f)
-    return {"users": {}}
-
-def save_credentials(creds):
-    with open(CREDENTIALS_PATH, "w") as f:
-        yaml.dump(creds, f)
 
 def hash_password(password):
     return bcrypt.hashpw(password.encode(), bcrypt.gensalt()).decode()
@@ -78,14 +90,50 @@ def check_password(password, hashed):
 def is_valid_email(email):
     return re.match(r"[^@]+@[^@]+\.[^@]+", email)
 
+@st.cache_data(ttl=30)
+def load_credentials():
+    records = credentials_ws.get_all_records()
+    creds = {"users": {}}
+    for r in records:
+        creds["users"][r["username"]] = {
+            "email": r["email"],
+            "name": r["name"],
+            "password": r["password_hash"],
+        }
+    return creds
+
+def save_new_credential(username, email, name, password_hash):
+    credentials_ws.append_row([username, email, name, password_hash])
+
+@st.cache_data(ttl=30)
+def load_usage_log():
+    records = usage_ws.get_all_records()
+    usage_data = {}
+    for r in records:
+        username = r["username"]
+        date = r["date"]
+        count = int(r["count"])
+        usage_data.setdefault(username, {})[date] = count
+    return usage_data
+
+def save_usage(username, date, count):
+    usage_ws.append_row([username, date, count])
+
+def update_usage(username, date, count):
+    cells = usage_ws.findall(username)
+    for cell in cells:
+        row = cell.row
+        row_data = usage_ws.row_values(row)
+        if len(row_data) >= 2 and row_data[1] == date:
+            usage_ws.update_cell(row, 3, count)
+            return
+    save_usage(username, date, count)
+
 # Account Management UI
 if not st.session_state.logged_in:
     st.sidebar.title("Account Management")
-
-    # Load existing credentials
     creds = load_credentials()
 
-    # Account registration
     with st.sidebar.expander("Create New Account"):
         new_username = st.text_input("Username", key="reg_user")
         new_email = st.text_input("Email", key="reg_email")
@@ -112,11 +160,10 @@ if not st.session_state.logged_in:
                 }
                 send_verification_email(new_email, code)
                 st.session_state.email_verified = False
-                st.success("Verification code sent to your email.")
+                st.success("Verification code sent to your email. Please check your spam")
 
-        # Email verification
         if st.session_state.get("pending_registration"):
-            input_code = st.text_input("Enter the verification code sent to your email")
+            input_code = st.text_input("Enter the verification code sent to your email. Please check your spam")
             if st.button("Verify and Register"):
                 reg = st.session_state.pending_registration
                 if input_code == reg.get("code"):
@@ -124,19 +171,18 @@ if not st.session_state.logged_in:
                     if reg["username"] in creds["users"] or any(user.get("email") == reg["email"] for user in creds["users"].values()):
                         st.warning("Username or email already associated with an account.")
                     else:
-                        creds["users"][reg["username"]] = {
-                            "email": reg["email"],
-                            "name": reg["name"],
-                            "password": hash_password(reg["password"])
-                        }
-                        save_credentials(creds)
+                        save_new_credential(
+                            reg["username"],
+                            reg["email"],
+                            reg["name"],
+                            hash_password(reg["password"])
+                        )
                         st.success("Account created. Please log in.")
                         st.session_state.pending_registration = {}
                         st.session_state.email_verified = True
                 else:
                     st.error("Incorrect verification code.")
 
-    # Login existing user
     st.title("Clinical Case Tutor")
     st.header("Login")
     username = st.text_input("Username")
@@ -151,11 +197,12 @@ if not st.session_state.logged_in:
             st.session_state.username = username
             st.session_state.name = user["name"]
             st.success(f"Welcome {user['name']}!")
+            time.sleep(0.5)
             st.rerun()
         else:
             st.error("Incorrect password.")
 
-# Logged-In User Sidebar (Logout Option)
+# Logged-In Sidebar
 if st.session_state.logged_in:
     with st.sidebar:
         st.success(f"Account: {st.session_state.name}")
@@ -170,20 +217,14 @@ if st.session_state.logged_in:
     today = str(datetime.date.today())
     username = st.session_state.username
 
-    if USAGE_LOG_PATH.exists():
-        with open(USAGE_LOG_PATH, "r") as f:
-            usage_data = json.load(f)
-    else:
-        usage_data = {}
-
+    usage_data = load_usage_log()
     current_usage = usage_data.get(username, {}).get(today, 0)
-    st.info(f"Cases started today: {current_usage} / {MAX_CASES_PER_DAY}")
 
     def increment_usage():
         usage_data.setdefault(username, {}).setdefault(today, 0)
         usage_data[username][today] += 1
-        with open(USAGE_LOG_PATH, "w") as f:
-            json.dump(usage_data, f)
+        st.session_state.current_usage = usage_data[username][today] 
+        update_usage(username, today, usage_data[username][today])
 
     class RAGSearchBar:
         """
@@ -396,7 +437,7 @@ if st.session_state.logged_in:
 
             query = st.text_input(
                 "Search cases by symptoms, demographics, diagnoses, or findings",
-                placeholder="Type your search here and press Enter...",
+                placeholder="Type your search here",
                 key="rag_search_query"
             )
 
@@ -574,9 +615,9 @@ if st.session_state.logged_in:
                 st.session_state.case_data = case_data
                 st.session_state.current_case_id = case_id
                 st.session_state.current_phase = PhaseType.HISTORY
-                st.session_state.case_loaded = True  # Make sure this is set to True
+                st.session_state.case_loaded = True
                 st.session_state.case_presented = False
-                st.session_state.show_search_page = False  # Explicitly set this to False
+                st.session_state.show_search_page = False
                 
                 # Clear any existing phase-related flags
                 if 'phase_completion_status' in st.session_state:
@@ -598,6 +639,7 @@ if st.session_state.logged_in:
                 # Use this for debugging
                 st.session_state.debug_message = f"Loaded case: {case_id}"
                 
+                time.sleep(3)
                 st.rerun()
                     
             except Exception as e:
@@ -1219,6 +1261,7 @@ if st.session_state.logged_in:
                     # Reset case state
                     st.session_state.show_search_page = True
                     # Don't clear the case data yet - just show the search page
+                    time.sleep(1)
                     st.rerun()
                 
                 # Add guidance level controls after home button
@@ -1315,111 +1358,121 @@ if st.session_state.logged_in:
         def _show_search_page(self):
             st.title("Clinical Case Tutor")
 
-            # Vector search bar
+            # Initialize RAG search bar once
             if "rag_search_bar" not in st.session_state:
                 st.session_state.rag_search_bar = RAGSearchBar(self.client)
 
-            # Automatically triggers search on Enter
             st.session_state.rag_search_bar.render_search_bar()
 
-            #'Explore This Case in Chat' Button
+            if "current_usage" not in st.session_state:
+                usage_data = load_usage_log()
+                today = str(datetime.date.today())
+                st.session_state.current_usage = usage_data.get(st.session_state.username, {}).get(today, 0)
+            
+            st.info(f"Cases started today: {st.session_state.current_usage} / {MAX_CASES_PER_DAY}")
+
+            # Handle direct search result selection
             selected_case_id = getattr(st.session_state.rag_search_bar, "selected_case_id", None)
             if selected_case_id:
                 st.session_state.rag_search_bar.selected_case_id = None
-                if current_usage >= MAX_CASES_PER_DAY:
+                if st.session_state.current_usage >= MAX_CASES_PER_DAY:
                     st.error("You’ve reached your daily case limit of 3. Come back tomorrow!")
                 else:
                     increment_usage()
                     self._load_new_case(selected_case_id)
                     st.rerun()
 
-            # Dropdown of cases from search
-            if "case_to_load" in st.session_state:
-                case_id = st.session_state.pop("case_to_load")
-                if current_usage >= MAX_CASES_PER_DAY:
-                    st.session_state.case_load_error = "You’ve reached your daily case limit of 3. Come back tomorrow!"
-                else:
-                    increment_usage()
-                    self._load_new_case(case_id)
-                    st.rerun()
-
-            # Load cases from results
+            # Load from dropdown result
             if "last_search_results" in st.session_state and not st.session_state.last_search_results.empty:
                 st.subheader("Load Case")
-                selected_case_idx = st.selectbox(
-                    "Select a case to load:",
-                    options=range(len(st.session_state.last_search_results)),
-                    format_func=lambda i: f"{st.session_state.last_search_results.iloc[i]['case']}: {st.session_state.last_search_results.iloc[i]['title']}"
-                )
+                case_options = st.session_state.last_search_results.drop_duplicates(subset="case")
+                case_labels = [f"{row['case']}: {row['title']}" for _, row in case_options.iterrows()]
+                selected_idx = st.selectbox("Select a case to load:", options=range(len(case_options)), format_func=lambda i: case_labels[i])
 
-                if st.button("Load Selected Case", type="primary"):
-                    case_id = st.session_state.last_search_results.iloc[selected_case_idx]['case']
-                    if current_usage >= MAX_CASES_PER_DAY:
+                if st.button("Load Selected Case", type="primary", key="load_case_btn"):
+                    case_id = case_options.iloc[selected_idx]['case']
+                    if st.session_state.current_usage >= MAX_CASES_PER_DAY:
                         st.error("You’ve reached your daily case limit of 3. Come back tomorrow!")
                     else:
                         increment_usage()
                         self._load_new_case(case_id)
+                        time.sleep(0.5)
                         st.rerun()
 
-            # Featured cases
+            # Featured cases tabs
             st.subheader("Featured Cases")
             available_cases = self._get_available_cases()
             filters = {"age_min": 0, "age_max": 100, "sex": "All", "difficulty": "All"}
             filtered_cases = self._get_filtered_cases(available_cases, filters)
+            if not filtered_cases:
+                # fallback to all available metadata
+                filtered_cases = []
+                for case_id in available_cases:
+                    try:
+                        with open(Path("cases") / f"{case_id}.json", 'r') as f:
+                            case_data = json.load(f)
+                        metadata = case_data.get("metadata", {})
+                        filtered_cases.append({"id": case_id, "metadata": metadata})
+                    except Exception as e:
+                        self.logger.error(f"Failed fallback load of {case_id}: {e}")
 
             tabs = st.tabs(["Recent", "Popular", "Cases By Specialty"])
 
-            # Recent cases
+            # Recent Cases 
             with tabs[0]:
                 st.write("Recently added cases:")
                 recent_cases = sorted(
                     available_cases,
                     key=lambda x: os.path.getctime(Path("cases") / f"{x}.json"),
                     reverse=True
-                )[:10]
+                )
+                for idx, case_id in enumerate(recent_cases):
+                    self._render_case_card(case_id, f"recent_{case_id}_{idx}")
 
-                for recent_idx, case_id in enumerate(recent_cases):
-                    self._render_case_card(case_id, f"recent_{case_id}_{recent_idx}")
-
-            # Popular Cases
+            # Popular Cases 
             with tabs[1]:
                 st.write("Popular cases:")
-                popular_cases = self._get_popular_cases(available_cases)[:5]  # New deterministic method
-
+                popular_cases = self._get_popular_cases(available_cases)[:5]
                 for popular_idx, case_id in enumerate(popular_cases):
                     self._render_case_card(case_id, f"popular_{case_id}_{popular_idx}")
 
-            # All Cases (by specialty)
+            # All Cases By Specialty 
             with tabs[2]:
-                st.write("All available cases:")
-                cases_by_specialty = {}
 
-                for case_id in filtered_cases:
+                specialty_cases = {}
+
+                for case in filtered_cases:
                     try:
-                        with open(Path("cases") / f"{case_id['id']}.json", 'r') as f:
-                            case_data = json.load(f)
-                        metadata = case_data.get('metadata', {})
-                        specialties = metadata.get('specialties', ['Uncategorized'])
-                        presentation = metadata.get('original_presentation', metadata.get('title', case_id['id']))
-                        for specialty in specialties:
-                            cases_by_specialty.setdefault(specialty.strip().title(), []).append((case_id['id'], presentation))
-                    except Exception as e:
-                        self.logger.error(f"Error loading case {case_id}: {str(e)}")
+                        case_id = case['id']
+                        metadata = case['metadata']
+                        specialties = metadata.get('specialties', [])
+                        presentation = metadata.get('original_presentation') or metadata.get('title') or case_id
 
-                for specialty_idx, (specialty, cases) in enumerate(sorted(cases_by_specialty.items())):
+                        if not specialties:
+                            specialties = ['Uncategorized']
+
+                        for spec in specialties:
+                            specialty_cases.setdefault(spec.strip().title(), []).append((case_id, presentation))
+
+                    except Exception as e:
+                        self.logger.error(f"Error processing case {case}: {str(e)}")
+
+                for spec_idx, (specialty, cases) in enumerate(sorted(specialty_cases.items())):
                     with st.expander(f"{specialty} ({len(cases)} cases)"):
                         for case_idx, (case_id, presentation) in enumerate(cases):
                             cols = st.columns([4, 1])
                             with cols[0]:
                                 st.write(presentation[:150] + "..." if len(presentation) > 150 else presentation)
                             with cols[1]:
-                                if st.button("Select", key=f"all_{specialty_idx}_{case_id}_{case_idx}"):
-                                    if current_usage >= MAX_CASES_PER_DAY:
+                                if st.button("Select", key=f"all_{spec_idx}_{case_id}_{case_idx}"):
+                                    if st.session_state.current_usage >= MAX_CASES_PER_DAY:
                                         st.error("You’ve reached your daily case limit of 3. Come back tomorrow!")
                                     else:
                                         increment_usage()
                                         self._load_new_case(case_id)
+                                        time.sleep(0.5)
                                         st.rerun()
+
         # Helper functions
         def _render_case_card(self, case_id, key):
             try:
@@ -1432,12 +1485,19 @@ if st.session_state.logged_in:
                     st.markdown(f"**{presentation[:200]}...**" if len(presentation) > 200 else f"**{presentation}**")
                     if 'specialties' in metadata:
                         st.markdown(f"Specialties: {', '.join(metadata['specialties'])}")
+
                     if st.button(f"Start Case", key=key):
-                        if current_usage >= MAX_CASES_PER_DAY:
+                        if "current_usage" not in st.session_state:
+                            usage_data = load_usage_log()
+                            today = str(datetime.date.today())
+                            st.session_state.current_usage = usage_data.get(st.session_state.username, {}).get(today, 0)
+
+                        if st.session_state.current_usage >= MAX_CASES_PER_DAY:
                             st.error("You’ve reached your daily case limit of 3. Come back tomorrow!")
                         else:
                             increment_usage()
                             self._load_new_case(case_id)
+                            time.sleep(8)
                             st.rerun()
             except Exception as e:
                 self.logger.error(f"Error loading case {case_id}: {str(e)}")
@@ -1499,7 +1559,7 @@ if st.session_state.logged_in:
                         passes_filters = False
                     
                     if passes_filters:
-                        filtered_cases.append(metadata)
+                        filtered_cases.append({"id": case_id, "metadata": metadata})
                         
                 except Exception as e:
                     self.logger.error(f"Error filtering case {case_id}: {str(e)}")
