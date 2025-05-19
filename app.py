@@ -243,7 +243,7 @@ if st.session_state.logged_in:
             # Load case data
             self.load_case_data()
         
-        def load_case_data(self):
+        def load_case_data(self): # Debugging
             """Load case data from CSV if available."""
             try:
                 self.cases_df = pd.read_csv("data_files/all_cases.csv")
@@ -991,7 +991,7 @@ if st.session_state.logged_in:
                 try:
                     # Get the current phase object
                     phase = self.phase_manager.current_phase
-                    ideal_differential = phase.current_ideal_differential_diagnosis
+                    ideal_differential = getattr(phase, "current_ideal_differential_diagnosis", None)
                     
                     if ideal_differential and self.differential_manager:
                         matches_sufficiently, feedback = self.differential_manager.compare_differentials(ideal_differential)
@@ -1568,7 +1568,7 @@ if st.session_state.logged_in:
             if user_input.lower() in ["move forward", "next phase", "skip"]:
                 self.logger.info("Debug command detected - forcing phase transition")
                 self.display_manager.update_chat_display(
-                    "⚡ Debug command detected - moving to phase transition...",
+                    "Debug command detected - moving to phase transition...",
                     role="assistant"
                 )
                 self._handle_phase_transition()

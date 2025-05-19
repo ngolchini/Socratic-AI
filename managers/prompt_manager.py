@@ -76,10 +76,19 @@ class PromptManager:
         
         # Base instructions with guidance level adjustment
         guidance_instructions = self._get_guidance_specific_instructions(active_guidance_level)
+
+        # Simulation framing
+        simulation_intro = (
+            "You are an AI clinical tutor helping a learner work through a simulated patient case. "
+            "All patient data is fictional and pre-provided. Test results and clinical data are available to you, "
+            "and you may share them freely when the learner asks. Do not suggest consulting real clinicians, "
+            "as this is an educational scenario. Reveal relevant findings as appropriate."
+        )
         
         prompt_parts = [
             self.base_instructions,
             guidance_instructions,
+            simulation_intro,
             f"\nCurrent Phase: {phase_type.value.capitalize()}\n",
             phase_json["core_instruction"],
             "\nRequired Information to Elicit:",
@@ -93,13 +102,25 @@ class PromptManager:
             self._format_prohibited_topics(phase_config.prohibited_topics),
             phase_json.get("phase_specific_guidance", "")
         ]
+
+        # Inject test results for the testing phase if they have been elicited
+        if phase_type == PhaseType.TESTING and "elicited_test_results" in phase_context:
+            test_data_section = "\nPreviously Ordered Diagnostic Test Results:"
+            for result in phase_context["elicited_test_results"]:
+                test_data_section += f"\n- {result}"
+            prompt_parts.append(test_data_section)
         
         # Add completion block rationale if available
         if "completion_block_rationale" in phase_context:
             completion_block = f"\nNote: Previous attempt to complete this phase was blocked because: {phase_context['completion_block_rationale']}"
             prompt_parts.append(completion_block)
             
-        return "\n".join(filter(None, prompt_parts))
+        final_prompt = "\n".join(filter(None, prompt_parts))
+        self.logger.info("==== SYSTEM PROMPT START ====") # Debugging
+        self.logger.info(final_prompt)
+        self.logger.info("==== SYSTEM PROMPT END ====") # Debugging
+        return final_prompt
+
     
     def _get_guidance_specific_instructions(self, guidance_level: GuidanceLevel) -> str:
         """Return guidance-level specific instructions."""

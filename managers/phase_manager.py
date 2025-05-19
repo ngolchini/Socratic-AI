@@ -128,11 +128,14 @@ class PhaseManager:
         elif self.guidance_level == GuidanceLevel.HIGH:
             guidance_specific = "Be more structured in topic assessment, keeping focus on current phase."
             
-        system_prompt = f"""You are a clinical case discussion moderator.
-        Assess if this message is appropriate for a clinical educational discussion.
-        Consider:
-        1. Is it related to clinical medicine or medical education?
-        2. Is it respectful and professional?
+        system_prompt = f"""You are evaluating learner input in a simulated patient case discussion.
+        All patient data is fictional and provided for educational purposes.
+
+        Your goal is to assess whether the learner’s message is:
+        1. Relevant to the current clinical reasoning phase
+        2. Respectful and medically appropriate
+
+        You are allowed to accept discussion of test results, diagnoses, and fictional patient data.
         
         {guidance_specific}
         
@@ -192,8 +195,8 @@ class PhaseManager:
         
         # Just analyze the latest exchange
         exchange_text = f"""USER: {user_message}
+
     ASSISTANT: {assistant_response}"""
-        
         # Adjust coverage assessment based on guidance level
         threshold_instruction = ""
         if self.guidance_level == GuidanceLevel.LOW:
@@ -495,21 +498,31 @@ class PhaseManager:
         Get the current phase context for prompt construction.
         Includes guidance level and relevant elements.
         """
+        phase_type = self.current_phase_type
+        case_data = self.case_data  # assume already loaded in PhaseManager
+
         context = {
-            "phase_type": self.current_phase_type.value,
+            "phase_type": phase_type.value,
             "required_elements": [e.content for e in self.current_phase.required_elements],
             "covered_elements": [e.content for e in self.current_phase.required_elements if e.elicited],
             "teaching_points": [p.content for p in self.current_phase.teaching_points if not p.covered],
             "prohibited_topics": self.current_phase.config.prohibited_topics,
             "guidance_level": self.guidance_level.value
         }
-        
+
+        # Inject test results if in TESTING phase
+        if phase_type == PhaseType.TESTING:
+            context["elicited_test_results"] = [
+                "What were the results of the laboratory tests? The hematocrit was 45%, white-cell count 8400..."
+            ]
+
+
         # Add completion rationale if available
         if self.last_completion_block_rationale:
             context["completion_block_rationale"] = self.last_completion_block_rationale
-            
+
         return context
-    
+
     def generate_teaching_response(self, coverage_assessment: CoverageAssessment) -> Optional[str]:
         """
         Generate an appropriate teaching response based on coverage assessment
