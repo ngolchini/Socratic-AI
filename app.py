@@ -296,7 +296,6 @@ if st.session_state.logged_in:
             except Exception as e:
                 st.warning(f"Query normalization failed: {str(e)}")
                 return query
-
         
         def multi_index_search(self, query: str, top_k: int = 10):
             """
@@ -346,7 +345,7 @@ if st.session_state.logged_in:
                         results = pd.DataFrame({
                             'case': [df['label'].iloc[i] for i in indices[0]],
                             'distance': distances[0],
-                            'score': 1 / (1 + distances[0]) * index_info["weight"],  # Convert distance to score
+                            'relevance': 1 / (1 + distances[0]) * index_info["weight"],  # Convert distance to score
                             'source': index_info["name"],
                             'source_text': [df['text'].iloc[i] for i in indices[0]]
                         })
@@ -374,7 +373,7 @@ if st.session_state.logged_in:
                     st.warning(f"Error merging case metadata: {str(e)}")
             
             # Sort by score (descending) and remove duplicates
-            combined_results = combined_results.sort_values('score', ascending=False)
+            combined_results = combined_results.sort_values('relevance', ascending=False)
             combined_results = combined_results.drop_duplicates(subset=['case'])
             
             return combined_results.head(top_k)
@@ -402,7 +401,7 @@ if st.session_state.logged_in:
                 A healthcare professional searched for: "{query}"
                 
                 Top {len(results)} matching cases:
-                {results[['title', 'one_line', 'source', 'score']].to_string(index=False)}
+                {results[['title', 'one_line', 'source', 'relevance']].to_string(index=False)}
                 
                 Provide a brief (3-5 sentences) summary of the search results, explaining why these cases might be relevant 
                 to the query and what patterns or insights emerge from these results. Focus on clinical relevance.
@@ -466,12 +465,12 @@ if st.session_state.logged_in:
                         st.info(summary)
 
                         # Display results table
-                        display_cols = ['title', 'one_line', 'source', 'score']
+                        display_cols = ['title', 'one_line', 'source', 'relevance']
                         if 'specialties' in results.columns:
                             display_cols.append('specialties')
 
                         results_display = results[display_cols].copy()
-                        results_display['score'] = results_display['score'].round(3)
+                        results_display['relevance'] = results_display['relevance'].round(3)
                         st.dataframe(results_display, use_container_width=True)
 
                         # Store results in session state
@@ -722,46 +721,46 @@ if st.session_state.logged_in:
             if selected_case != st.session_state.current_case_id:
                 self._load_new_case(selected_case)
 
-        def _show_import_dialog(self):
-            """Show dialog to import cases from CSV."""
-            st.sidebar.subheader("Import Cases")
+        # def _show_import_dialog(self):
+        #     """Show dialog to import cases from CSV."""
+        #     st.sidebar.subheader("Import Cases")
             
-            csv_file = st.sidebar.file_uploader("Upload CSV file", type=["csv"])
+        #     csv_file = st.sidebar.file_uploader("Upload CSV file", type=["csv"])
             
-            case_limit = st.sidebar.number_input("Number of cases to import", min_value=1, max_value=100, value=50)
+        #     case_limit = st.sidebar.number_input("Number of cases to import", min_value=1, max_value=100, value=50)
             
-            if st.sidebar.button("Start Import"):
-                if csv_file:
-                    # Save the uploaded file temporarily
-                    temp_csv_path = Path("temp_cases.csv")
-                    with open(temp_csv_path, "wb") as f:
-                        f.write(csv_file.getbuffer())
+        #     if st.sidebar.button("Start Import"):
+        #         if csv_file:
+        #             # Save the uploaded file temporarily
+        #             temp_csv_path = Path("temp_cases.csv")
+        #             with open(temp_csv_path, "wb") as f:
+        #                 f.write(csv_file.getbuffer())
                     
-                    try:
-                        # Import the cases
-                        imported_cases = import_cases_from_csv(str(temp_csv_path), "cases", limit=case_limit)
-                        st.sidebar.success(f"Successfully imported {len(imported_cases)} cases!")
+        #             try:
+        #                 # Import the cases
+        #                 imported_cases = import_cases_from_csv(str(temp_csv_path), "cases", limit=case_limit)
+        #                 st.sidebar.success(f"Successfully imported {len(imported_cases)} cases!")
                         
-                        # Clean up the temp file
-                        temp_csv_path.unlink()
+        #                 # Clean up the temp file
+        #                 temp_csv_path.unlink()
                         
-                        # Reset session to show new cases
-                        st.session_state._session_id = st.session_state.get('_session_id', 0) + 1
+        #                 # Reset session to show new cases
+        #                 st.session_state._session_id = st.session_state.get('_session_id', 0) + 1
                         
-                        # Close the dialog
-                        st.session_state.show_import_dialog = False
+        #                 # Close the dialog
+        #                 st.session_state.show_import_dialog = False
                         
-                        # Force a rerun to refresh the UI
-                        st.rerun()
+        #                 # Force a rerun to refresh the UI
+        #                 st.rerun()
                         
-                    except Exception as e:
-                        st.sidebar.error(f"Error importing cases: {str(e)}")
-                else:
-                    st.sidebar.error("Please upload a CSV file.")
+        #             except Exception as e:
+        #                 st.sidebar.error(f"Error importing cases: {str(e)}")
+        #         else:
+        #             st.sidebar.error("Please upload a CSV file.")
             
-            if st.sidebar.button("Cancel"):
-                st.session_state.show_import_dialog = False
-                st.rerun()
+        #     if st.sidebar.button("Cancel"):
+        #         st.session_state.show_import_dialog = False
+        #         st.rerun()
                 
         def _display_initial_prompt(self):
             """Display the opening prompt for the current phase."""
@@ -1232,6 +1231,8 @@ if st.session_state.logged_in:
         def run(self):
             if hasattr(st.session_state, '_differential_updated'):
                 del st.session_state._differential_updated
+
+            proceed_button_already_rendered = False
             
             # Show search page if no case is selected yet or if explicitly requested
             if (not st.session_state.get('case_loaded', False) or 
@@ -1268,7 +1269,26 @@ if st.session_state.logged_in:
                         st.write(f"**Difficulty:** {metadata.difficulty}")
                     if hasattr(metadata, 'specialties') and metadata.specialties:
                         st.write(f"**Specialty:** {', '.join(metadata.specialties)}")
-        
+
+                    # Phase Summaries in side panel
+                    if 'phase_summaries' in st.session_state and st.session_state.phase_summaries:
+                        st.subheader("Case Summary")
+                        for phase in PhaseType:
+                            summary = st.session_state.phase_summaries.get(phase)
+                            if summary:
+                                with st.expander(f"{phase.value.capitalize()} Summary", expanded=False):
+                                    st.markdown(f"**Summary of Retrieved Information:** {summary.get('retrieved_info', 'No summary available.')}")
+
+                                    nudges = summary.get("ai_nudges", [])
+                                    missed = summary.get("missed_info", [])
+                                    ddx_assess = summary.get("final_ddx_assessment", "No assessment available.")
+                                    ddx_evolution = summary.get("ddx_evolution", "No evolution recorded.")
+
+                                    st.markdown(f"**AI Nudges Provided:** {' '.join(nudges) if nudges else 'None'}")
+                                    st.markdown(f"**Missed Information:** {', '.join(missed) if missed else 'None'}")
+                                    st.markdown(f"**Assessment of Final DDx:** {ddx_assess}")
+                                    st.markdown(f"**DDx Evolution:** {ddx_evolution}")
+
         
             # If a case is loaded, continue with the normal flow
             self._case_progress_bar(st.session_state.current_phase.value.capitalize())
@@ -1294,23 +1314,18 @@ if st.session_state.logged_in:
                     for msg in st.session_state.chat_messages:
                         with st.chat_message(msg["role"]):
                             st.markdown(msg["content"])
-                    if hasattr(st.session_state, 'pending_next_phase'):
-                            next_phase = st.session_state.pending_next_phase
-                            # Use a unique key that includes the session ID
-                            unique_key = f"proceed_to_{next_phase.value}_{st.session_state.get('_session_id', 0)}"
-                            if st.button(
-                                f"Proceed to {next_phase.value.capitalize()} Phase",
-                                key=unique_key,
-                                type="primary"
-                            ):
-                                self._initialize_new_phase(next_phase)
-                                # Clear phase transition states
-                                del st.session_state.pending_next_phase
-                                if hasattr(st.session_state, 'summary_generated'):
-                                    del st.session_state.summary_generated
-                                if hasattr(st.session_state, 'phase_completion_status'):
-                                    del st.session_state.phase_completion_status
-                                st.rerun()
+                    if hasattr(st.session_state, 'pending_next_phase') and not proceed_button_already_rendered:
+                        next_phase = st.session_state.pending_next_phase
+                        unique_key = f"proceed_to_{next_phase.value}_{st.session_state.get('_session_id', 0)}"
+                        if st.button(f"Proceed to {next_phase.value.capitalize()} Phase", key=unique_key, type="primary"):
+                            self._initialize_new_phase(next_phase)
+                            del st.session_state.pending_next_phase
+                            if hasattr(st.session_state, 'summary_generated'):
+                                del st.session_state.summary_generated
+                            if hasattr(st.session_state, 'phase_completion_status'):
+                                del st.session_state.phase_completion_status
+                            st.rerun()
+                        proceed_button_already_rendered = True
 
                     # Add appropriate button based on state
                     phase_status = getattr(st.session_state, 'phase_completion_status', {})
@@ -1325,20 +1340,16 @@ if st.session_state.logged_in:
                             ):
                                 self._generate_phase_summary()
                                 st.rerun()
-                        elif hasattr(st.session_state, 'pending_next_phase'):
+                        elif hasattr(st.session_state, 'pending_next_phase') and not proceed_button_already_rendered:
                             next_phase = st.session_state.pending_next_phase
-                            if st.button(
-                                f"Proceed to {next_phase.value.capitalize()} Phase",
-                                key=f"proceed_to_{next_phase.value}",
-                                type="primary"
-                            ):
+                            if st.button(f"Proceed to {next_phase.value.capitalize()} Phase", key=f"proceed_to_{next_phase.value}", type="primary"):
                                 self._initialize_new_phase(next_phase)
-                                # Clear phase transition states
                                 del st.session_state.pending_next_phase
                                 del st.session_state.summary_generated
                                 del st.session_state.phase_completion_status
                                 st.rerun()
-                
+                            proceed_button_already_rendered = True
+        
                 # Handle user input at bottom of chat
                 user_input = st.chat_input("Enter your response...")
                 if user_input:
@@ -1487,7 +1498,7 @@ if st.session_state.logged_in:
                         else:
                             increment_usage()
                             self._load_new_case(case_id)
-                            time.sleep(8)
+                            time.sleep(4)
                             st.rerun()
             except Exception as e:
                 self.logger.error(f"Error loading case {case_id}: {str(e)}")

@@ -131,43 +131,47 @@ class DisplayManager:
 
     def update_case_information(self, phase_summaries: Dict, current_phase: PhaseType):
         """Update the case information panel with clinical summaries."""
-        with self.case_container:
-            st.markdown("#### Case Summary")
+        if self.case_container is None:
+            # Avoid crashing if layout hasn't been initialized
+            return
+        
+        # with self.case_container:
+        #     st.markdown("#### Case Summary")
             
-            for phase_type in PhaseType:
-                phase_summary = phase_summaries.get(phase_type)
-                if phase_summary and phase_summary.get("findings_summary"):
-                    tab_label = f"{phase_type.value.capitalize()} Findings"
-                    with st.expander(tab_label, expanded=(phase_type == current_phase)):
-                        clinical_summary = phase_summary["findings_summary"]
+        #     for phase_type in PhaseType:
+        #         phase_summary = phase_summaries.get(phase_type)
+        #         if phase_summary and phase_summary.get("findings_summary"):
+        #             tab_label = f"{phase_type.value.capitalize()} Findings"
+        #             with st.expander(tab_label, expanded=(phase_type == current_phase)):
+        #                 clinical_summary = phase_summary["findings_summary"]
                         
-                        # Display findings by category
-                        for category, findings in clinical_summary.items():
-                            if findings:  # Only show categories with content
-                                st.markdown(f"**{category.title()}:**")
-                                if isinstance(findings, list):
-                                    for finding in findings:
-                                        st.markdown(f"- {finding}")
-                                elif isinstance(findings, dict):
-                                    for key, value in findings.items():
-                                        st.markdown(f"- **{key}:** {value}")
-                                else:
-                                    st.markdown(f"- {findings}")
+        #                 # Display findings by category
+        #                 for category, findings in clinical_summary.items():
+        #                     if findings:  # Only show categories with content
+        #                         st.markdown(f"**{category.title()}:**")
+        #                         if isinstance(findings, list):
+        #                             for finding in findings:
+        #                                 st.markdown(f"- {finding}")
+        #                         elif isinstance(findings, dict):
+        #                             for key, value in findings.items():
+        #                                 st.markdown(f"- **{key}:** {value}")
+        #                         else:
+        #                             st.markdown(f"- {findings}")
                         
-                        # If it's the current phase and debug mode is on, show learner assessment
-                        # in a separate section below the findings
-                        if phase_type == current_phase and st.session_state.get("debug_mode", False):
-                            st.markdown("---")
-                            st.markdown("**🔍 Learner Assessment (Debug)**")
-                            st.json(phase_summary.get("learner_assessment", {}))
-            for phase_type, summary in phase_summaries.items():
-                tab_label = f"{phase_type.value.capitalize()} Summary"
-                with st.expander(tab_label, expanded=(phase_type == current_phase)):
-                    st.markdown(f"**Summary of Retrieved Information:** {summary.get('retrieved_info', 'N/A')}")
-                    st.markdown(f"**AI Nudges Provided:** {', '.join(summary.get('ai_nudges', []))}")
-                    st.markdown(f"**Missed Information:** {', '.join(summary.get('missed_info', []))}")
-                    st.markdown(f"**Assessment of Final DDx:** {summary.get('final_ddx_assessment', 'N/A')}")
-                    st.markdown(f"**DDx Evolution:** {summary.get('ddx_evolution', 'N/A')}")
+        #                 # If it's the current phase and debug mode is on, show learner assessment
+        #                 # in a separate section below the findings
+        #                 if phase_type == current_phase and st.session_state.get("debug_mode", False):
+        #                     st.markdown("---")
+        #                     st.markdown("**🔍 Learner Assessment (Debug)**")
+        #                     st.json(phase_summary.get("learner_assessment", {}))
+        #     for phase_type, summary in phase_summaries.items():
+        #         tab_label = f"{phase_type.value.capitalize()} Summary"
+        #         with st.expander(tab_label, expanded=(phase_type == current_phase)):
+        #             st.markdown(f"**Summary of Retrieved Information:** {summary.get('retrieved_info', 'N/A')}")
+        #             st.markdown(f"**AI Nudges Provided:** {', '.join(summary.get('ai_nudges', []))}")
+        #             st.markdown(f"**Missed Information:** {', '.join(summary.get('missed_info', []))}")
+        #             st.markdown(f"**Assessment of Final DDx:** {summary.get('final_ddx_assessment', 'N/A')}")
+        #             st.markdown(f"**DDx Evolution:** {summary.get('ddx_evolution', 'N/A')}")
                     
     def update_differential_panel(self, differential_manager):
         """Update the differential diagnosis panel."""
