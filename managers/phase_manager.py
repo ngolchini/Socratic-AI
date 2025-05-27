@@ -128,14 +128,11 @@ class PhaseManager:
         elif self.guidance_level == GuidanceLevel.HIGH:
             guidance_specific = "Be more structured in topic assessment, keeping focus on current phase."
             
-        system_prompt = f"""You are evaluating learner input in a simulated patient case discussion.
-        All patient data is fictional and provided for educational purposes.
-
-        Your goal is to assess whether the learner’s message is:
-        1. Relevant to the current clinical reasoning phase
-        2. Respectful and medically appropriate
-
-        You are allowed to accept discussion of test results, diagnoses, and fictional patient data.
+        system_prompt = f"""You are a clinical case discussion moderator.
+        Assess if this message is appropriate for a clinical educational discussion.
+        Consider:
+        1. Is it related to clinical medicine or medical education?
+        2. Is it respectful and professional?
         
         {guidance_specific}
         
@@ -509,13 +506,6 @@ class PhaseManager:
             "prohibited_topics": self.current_phase.config.prohibited_topics,
             "guidance_level": self.guidance_level.value
         }
-
-        # Inject test results if in TESTING phase
-        if phase_type == PhaseType.TESTING:
-            context["elicited_test_results"] = [
-                "What were the results of the laboratory tests? The hematocrit was 45%, white-cell count 8400..."
-            ]
-
 
         # Add completion rationale if available
         if self.last_completion_block_rationale:

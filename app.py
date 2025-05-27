@@ -1270,6 +1270,11 @@ if st.session_state.logged_in:
                     if hasattr(metadata, 'specialties') and metadata.specialties:
                         st.write(f"**Specialty:** {', '.join(metadata.specialties)}")
 
+                    # Skip Phase button
+                    if st.button("Proceed to Next Phase", key="sidebar_skip_button"):
+                        self._handle_phase_transition()
+                        st.rerun()
+
                     # Phase Summaries in side panel
                     if 'phase_summaries' in st.session_state and st.session_state.phase_summaries:
                         st.subheader("Case Summary")
