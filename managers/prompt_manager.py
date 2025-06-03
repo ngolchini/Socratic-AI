@@ -76,19 +76,10 @@ class PromptManager:
         
         # Base instructions with guidance level adjustment
         guidance_instructions = self._get_guidance_specific_instructions(active_guidance_level)
-
-        # Simulation framing
-        simulation_intro = (
-            "You are an AI clinical tutor helping a learner work through a simulated patient case. "
-            "All patient data is fictional and pre-provided. Test results and clinical data are available to you, "
-            "and you may share them freely when the learner asks. Do not suggest consulting real clinicians, "
-            "as this is an educational scenario. Reveal relevant findings as appropriate."
-        )
         
         prompt_parts = [
             self.base_instructions,
             guidance_instructions,
-            simulation_intro,
             f"\nCurrent Phase: {phase_type.value.capitalize()}\n",
             phase_json["core_instruction"],
             "\nRequired Information to Elicit:",
@@ -103,22 +94,40 @@ class PromptManager:
             phase_json.get("phase_specific_guidance", "")
         ]
 
-        # Inject test results for the testing phase if they have been elicited
-        if phase_type == PhaseType.TESTING and "elicited_test_results" in phase_context:
-            test_data_section = "\nPreviously Ordered Diagnostic Test Results:"
-            for result in phase_context["elicited_test_results"]:
-                test_data_section += f"\n- {result}"
-            prompt_parts.append(test_data_section)
-        
+        # Format patient record section
+        if "patient_record" in phase_context:
+            record = phase_context["patient_record"]
+            record_text = ["# PATIENT RECORD"]
+
+            record_text.append(f"Title: {record['metadata']['title']}")
+            record_text.append(f"Specialties: {', '.join(record['metadata'].get('specialties', []))}")
+            record_text.append(f"Keywords: {', '.join(record['metadata'].get('keywords', []))}")
+
+            record_text.append("\n## History:")
+            record_text.extend(f"- {item}" for item in record.get("history", []))
+
+            record_text.append("\n## Physical Exam:")
+            record_text.extend(f"- {item}" for item in record.get("physical_exam", []))
+
+            record_text.append("\n## Test Results:")
+            record_text.extend(f"- {item}" for item in record.get("test_results", []))
+
+            record_text.append("\n## Treatments Given:")
+            record_text.extend(f"- {item}" for item in record.get("treatments", []))
+
+            prompt_parts.append("IMPORTANT: Only use the information in the # PATIENT RECORD section. Do not invent or infer any findings not listed there.")
+
+            prompt_parts.insert(0, "\n".join(record_text))  # Insert at beginning of prompt
+
         # Add completion block rationale if available
         if "completion_block_rationale" in phase_context:
             completion_block = f"\nNote: Previous attempt to complete this phase was blocked because: {phase_context['completion_block_rationale']}"
             prompt_parts.append(completion_block)
             
         final_prompt = "\n".join(filter(None, prompt_parts))
-        self.logger.info("==== SYSTEM PROMPT START ====") # Debugging
-        self.logger.info(final_prompt)
-        self.logger.info("==== SYSTEM PROMPT END ====") # Debugging
+        # DEBUGGING - REMOVE
+        self.logger.info("Constructed system prompt:")#
+        self.logger.info(final_prompt)#
         return final_prompt
 
     

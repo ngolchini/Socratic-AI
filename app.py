@@ -20,7 +20,7 @@ import bcrypt
 import yaml
 import gspread
 from dotenv import load_dotenv
-from openai import OpenAI
+from openai import AzureOpenAI
 from google.oauth2.service_account import Credentials
 
 from managers.case_manager import CaseManager
@@ -222,7 +222,8 @@ if st.session_state.logged_in:
         Uses FAISS indexes for fast similarity search and OpenAI for embedding generation.
         """
         
-        def __init__(self, client, embedding_model: str = 'text-embedding-3-large'):
+        def __init__(self, client, embedding_model: str = 'text-embedding-3-large', chat_model: str = 'gpt-4'):
+
             """
             Initialize the RAG search bar with OpenAI client and embedding model.
             
@@ -232,6 +233,7 @@ if st.session_state.logged_in:
             """
             self.client = client
             self.embedding_model = embedding_model
+            self.chat_model = chat_model
             self.search_indexes = {
                 "PoC": {"name": "Patient Presentation", "weight": 1.0},
                 "DDx": {"name": "Differential Diagnosis", "weight": 0.8},
@@ -286,7 +288,7 @@ if st.session_state.logged_in:
                 """
                 
                 response = self.client.chat.completions.create(
-                    model=st.session_state.get("openai_model", "gpt-4o-mini"),
+                    model=self.chat_model,
                     messages=[{"role": "user", "content": prompt}],
                     temperature=0,
                     max_tokens=50
@@ -408,7 +410,7 @@ if st.session_state.logged_in:
                 """
                 
                 response = self.client.chat.completions.create(
-                    model=st.session_state.get("openai_model", "gpt-4o-mini"),
+                    model=self.chat_model,
                     messages=[{"role": "user", "content": summary_prompt}],
                     temperature=0.2,
                     max_tokens=250
@@ -510,11 +512,14 @@ if st.session_state.logged_in:
             setup_logging(LogConfig())
             self.logger = logging.getLogger(__name__)
 
-            # Retrieve the OpenAI API key from Streamlit secrets
-            api_key = st.secrets["api"]["OPENAI_API_KEY"]
-            if not api_key:
-                st.error("OpenAI API key not found in secrets. Please set it in the Streamlit secrets configuration.")
-            self.client = OpenAI(api_key=api_key)
+            azure_config = st.secrets["azure_openai"]
+            self.client = AzureOpenAI(
+                api_key=azure_config["AZURE_API_KEY"],
+                api_version=azure_config["API_VERSION"],
+                azure_endpoint=azure_config["AZURE_ENDPOINT"]
+            )
+            self.chat_deployment = azure_config["AZURE_CHAT_DEPLOYMENT"]
+            self.embedding_deployment = azure_config["AZURE_EMBEDDING_DEPLOYMENT"] 
             self.llm_manager = LLMManager(self.client)
 
             # Initialize managers in correct order
@@ -1271,7 +1276,7 @@ if st.session_state.logged_in:
                         st.write(f"**Specialty:** {', '.join(metadata.specialties)}")
 
                     # Skip Phase button
-                    if st.button("Proceed to Next Phase", key="sidebar_skip_button"):
+                    if st.button("End Phase & Generate Summary", key="sidebar_skip_button"):
                         self._handle_phase_transition()
                         st.rerun()
 
@@ -1366,7 +1371,11 @@ if st.session_state.logged_in:
 
             # Initialize RAG search bar once
             if "rag_search_bar" not in st.session_state:
-                st.session_state.rag_search_bar = RAGSearchBar(self.client)
+                st.session_state.rag_search_bar = RAGSearchBar(
+                    client=self.client,
+                    embedding_model=self.embedding_deployment,
+                    chat_model=self.chat_deployment
+                )
 
             st.session_state.rag_search_bar.render_search_bar()
 
@@ -1653,10 +1662,16 @@ if st.session_state.logged_in:
                     st.session_state.current_phase_prompt = system_prompt
                 
                 # Get conversational response with full context
-                self.logger.info("Getting LLM response...")
+                context["user_text"] = user_input  # Add user input separately
+
+                # DEBUGGING - REMOVE
+                self.logger.info("Final user message payload passed to LLMManager:")#
+                self.logger.info(json.dumps(context, indent=2))#
+
+
                 response = self.llm_manager.get_conversational_response(
                     system_prompt=system_prompt,
-                    user_message=json.dumps(context) + "\n\nUser message: " + user_input,
+                    user_message=json.dumps(context),
                     message_history=st.session_state.chat_messages,
                     temperature=0.7
                 )
