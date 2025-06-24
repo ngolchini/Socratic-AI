@@ -4,7 +4,7 @@
     "opening_prompt": "Let's begin by understanding what brought this patient to medical attention. What would you like to know about their presentation?",
     
     "prohibited_topics": [],
-    
+
     "advancement_criteria": {
         "key_symptoms_explored": true,
         "relevant_history_obtained": true,

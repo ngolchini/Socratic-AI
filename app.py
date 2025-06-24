@@ -1084,17 +1084,19 @@ if st.session_state.logged_in:
             # Update phase in session state FIRST
             st.session_state.current_phase = new_phase
             
-            # Only clear assessment cache if we're actually changing phases
             if not hasattr(st.session_state, 'last_phase') or st.session_state.last_phase != new_phase:
                 st.session_state.assessment_cache = {}
                 st.session_state.last_phase = new_phase
             
-            # Reinitialize phase manager with new phase
+            # Reinitialize phase manager
             if hasattr(self, 'phase_manager'):
                 self.phase_manager.current_phase_type = new_phase
                 self.phase_manager._initialize_phase()
             
-            # Clear chat messages except for case presentation
+            # Force refresh of prompt stored in session
+            st.session_state.current_phase_prompt = self.phase_manager.current_phase.config.opening_prompt
+
+            # Reset chat except presentation
             if 'chat_messages' in st.session_state:
                 initial_presentation = next(
                     (msg for msg in st.session_state.chat_messages 
@@ -1102,18 +1104,17 @@ if st.session_state.logged_in:
                     None
                 )
                 st.session_state.chat_messages = [initial_presentation] if initial_presentation else []
-            
-            # Reset assessment cache for new phase
+
             st.session_state.assessment_cache = {}
-            
-            # Get the opening prompt from the newly initialized phase
-            if hasattr(self.phase_manager.current_phase, 'config'):
-                opening_prompt = self.phase_manager.current_phase.config.opening_prompt
-                self.logger.info(f"Showing opening prompt for {new_phase.value}: {opening_prompt}")
-                self.display_manager.update_chat_display(
-                    message=opening_prompt,
-                    role="assistant"
-                )
+
+            # Show updated opening prompt
+            opening_prompt = self.phase_manager.current_phase.config.opening_prompt
+            self.logger.info(f"Showing opening prompt for {new_phase.value}: {opening_prompt}")
+            self.display_manager.update_chat_display(
+                message=opening_prompt,
+                role="assistant"
+            )
+
         def _generate_next_prompt(self, coverage_assessment):
             """Generate the next appropriate prompt based on current context."""
             if coverage_assessment.newly_covered_points:

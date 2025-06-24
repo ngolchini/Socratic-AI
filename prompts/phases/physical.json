@@ -1,7 +1,15 @@
 {
     "opening_prompt": "Now let's examine our patient. Which aspects of the physical exam would be most helpful given our differential diagnosis?",
 
-    "prohibited_topics": [],
+    "prohibited_topics":  [
+        "laboratory results",
+        "imaging studies", 
+        "diagnostic tests",
+        "treatment plans",
+        "management decisions",
+        "medication dosing",
+        "surgical procedures"
+    ],
 
     "core_instruction": "Guide the learner through a systematic physical examination, providing answers to their questions about the patient based on the information provided to you in the case description. Encourage thoughtful selection of examination elements based on their differential diagnosis, and help them to consider how specific findings might support or refute their diagnostic hypotheses.",
     

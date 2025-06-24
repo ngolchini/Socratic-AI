@@ -1,9 +1,14 @@
 {
     "opening_prompt": "What diagnostic testing would be most helpful in evaluating your differential diagnosis?",
 
-    "prohibited_topics": [],
+    "prohibited_topics": [
+        "New patient interventions",
+        "Discharge planning",
+        "Treatment plans",
+        "Management decisions"
+    ],
 
-    "core_instruction": "Guide the learner through selecting and interpreting appropriate diagnostic tests. Focus on developing a cost-effective and logical diagnostic approach. Help them understand test characteristics and their impact on diagnostic certainty.",
+    "core_instruction": "Guide the learner through selecting and interpreting appropriate diagnostic tests. Focus on developing a cost-effective and logical diagnostic approach. Help them understand test characteristics and their impact on diagnostic certainty. All patient data is fictional and provided for educational purposes. You are allowed to accept discussion of test results, diagnoses, and fictional patient data.",
     
     "focus_area": "diagnostic testing strategy and interpretation",
     
