@@ -35,6 +35,7 @@ class PhaseManager:
         self.coverage_cache: Dict[str, bool] = {}
         self.logger = logging.getLogger(__name__)
         self.phase_summaries = {}
+        self.differential_manager = None
         
         # Initialize guidance level
         self.guidance_level = guidance_level
@@ -42,9 +43,7 @@ class PhaseManager:
         
         # Teaching strategy parameters - adjust based on guidance level
         self._set_teaching_parameters(guidance_level)
-        
-        self._initialize_phase()
-        
+                
         # Add new attributes for phase management
         self.current_phase_prompt = None
         self.last_completion_block_rationale = None
@@ -62,6 +61,10 @@ class PhaseManager:
             self.probe_aggressiveness = 0.8      # More likely to probe for missed elements
             
         self.logger.info(f"Set teaching parameters for guidance level {guidance_level.value}")
+    
+    def set_differential_manager(self, differential_manager):
+        """Attach the differential manager after initialization."""
+        self.differential_manager = differential_manager
     
     def set_guidance_level(self, guidance_level: GuidanceLevel):
         """Update the guidance level."""
@@ -507,9 +510,40 @@ class PhaseManager:
             "guidance_level": self.guidance_level.value
         }
 
+        if self.case_data:
+            record = {
+                "metadata": {
+                    "title": self.case_data.metadata.title,
+                    "specialties": self.case_data.metadata.specialties,
+                    "keywords": self.case_data.metadata.keywords
+                },
+                "history": [
+                    e.response for e in self.case_data.phases[PhaseType.HISTORY].required_elements + self.case_data.phases[PhaseType.HISTORY].optional_elements
+                    if hasattr(e, "response")
+                ],
+                "physical_exam": [
+                    e.response for e in self.case_data.phases[PhaseType.PHYSICAL].required_elements + self.case_data.phases[PhaseType.PHYSICAL].optional_elements
+                    if hasattr(e, "response")
+                ],
+                "test_results": [
+                    e.response for e in self.case_data.phases[PhaseType.TESTING].required_elements + self.case_data.phases[PhaseType.TESTING].optional_elements
+                    if hasattr(e, "response")
+                ],
+                "treatments": [
+                    e.response for e in self.case_data.phases[PhaseType.MANAGEMENT].required_elements + self.case_data.phases[PhaseType.MANAGEMENT].optional_elements
+                    if hasattr(e, "response")
+                ]
+            }
+            context["patient_record"] = record
+
         # Add completion rationale if available
         if self.last_completion_block_rationale:
             context["completion_block_rationale"] = self.last_completion_block_rationale
+
+        if self.differential_manager:
+            context["differential_diagnoses"] = [
+                {"name": dx.name} for dx in self.differential_manager.get_ranked_differential()
+            ]
 
         return context
 

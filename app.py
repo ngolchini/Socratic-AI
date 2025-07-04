@@ -569,19 +569,26 @@ if st.session_state.logged_in:
             """Initialize all managers with current session state."""
             if not hasattr(st.session_state, 'case_data') or not st.session_state.case_data:
                 return
-                
+
+            # Create or reuse DifferentialManager first
+            if not hasattr(st.session_state, "differential_manager") or st.session_state.differential_manager is None:
+                self.differential_manager = DifferentialManager(self.llm_manager)
+                st.session_state.differential_manager = self.differential_manager
+            else:
+                self.differential_manager = st.session_state.differential_manager
+
+            # Now create PhaseManager without calling _initialize_phase in its __init__
             self.phase_manager = PhaseManager(
                 case_data=st.session_state.case_data,
                 llm_manager=self.llm_manager,
                 prompt_manager=self.prompt_manager
             )
-            
-            # Only create a new DifferentialManager if one doesn't exist
-            if st.session_state.differential_manager is None:
-                self.differential_manager = DifferentialManager(self.llm_manager)
-                st.session_state.differential_manager = self.differential_manager
-            else:
-                self.differential_manager = st.session_state.differential_manager
+
+            # Attach the differential manager to the phase manager
+            self.phase_manager.set_differential_manager(self.differential_manager)
+
+            # Safe to initialize phase now
+            self.phase_manager._initialize_phase()
 
         def _get_available_cases(self) -> list:
             """Get list of available clinical cases."""

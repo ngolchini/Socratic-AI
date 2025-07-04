@@ -118,6 +118,14 @@ class PromptManager:
             prompt_parts.append("IMPORTANT: Only use the information in the # PATIENT RECORD section. Do not invent or infer any findings not listed there.")
 
             prompt_parts.insert(0, "\n".join(record_text))  # Insert at beginning of prompt
+        
+        if "differential_diagnoses" in phase_context:
+            prompt_parts.append("\n# CURRENT DIFFERENTIAL DIAGNOSES (Ranked):")
+            for i, dx in enumerate(phase_context["differential_diagnoses"], 1):
+                prompt_parts.append(f"{i}. {dx['name']}")
+            prompt_parts.append(
+                "You must use this differential diagnosis list to guide which elements to explore further."
+            )
 
         # Add completion block rationale if available
         if "completion_block_rationale" in phase_context:
@@ -125,9 +133,6 @@ class PromptManager:
             prompt_parts.append(completion_block)
             
         final_prompt = "\n".join(filter(None, prompt_parts))
-        # DEBUGGING - REMOVE
-        self.logger.info("Constructed system prompt:")#
-        self.logger.info(final_prompt)#
         return final_prompt
 
     
