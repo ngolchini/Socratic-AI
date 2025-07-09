@@ -369,7 +369,8 @@ class DisplayManager:
             message_dict = {
                 "role": role,
                 "content": message,
-                "timestamp": datetime.now()
+                "timestamp": datetime.now(),
+                "phase": st.session_state.get("current_phase", PhaseType.HISTORY).value
             }
             
             # Check for duplicates

@@ -6,6 +6,7 @@ import random
 import pickle
 import logging
 import datetime
+import io ###
 from pathlib import Path
 from dataclasses import dataclass
 from typing import Optional
@@ -1088,22 +1089,28 @@ if st.session_state.logged_in:
             """Initialize everything needed for a new phase."""
             self.logger.info(f"Initializing new phase: {new_phase.value}")
             
-            # Update phase in session state FIRST
+            # Save current chat messages under all_phase_chats BEFORE switching phase
+            prev_phase = st.session_state.get("current_phase", PhaseType.HISTORY).value
+            if "all_phase_chats" not in st.session_state:
+                st.session_state.all_phase_chats = {}
+            st.session_state.all_phase_chats[prev_phase] = st.session_state.get("chat_messages", [])
+
+            # Update to new phase
             st.session_state.current_phase = new_phase
-            
+
             if not hasattr(st.session_state, 'last_phase') or st.session_state.last_phase != new_phase:
                 st.session_state.assessment_cache = {}
                 st.session_state.last_phase = new_phase
-            
+
             # Reinitialize phase manager
             if hasattr(self, 'phase_manager'):
                 self.phase_manager.current_phase_type = new_phase
                 self.phase_manager._initialize_phase()
-            
-            # Force refresh of prompt stored in session
+
+            # Refresh the prompt
             st.session_state.current_phase_prompt = self.phase_manager.current_phase.config.opening_prompt
 
-            # Reset chat except presentation
+            # Reset chat but preserve initial presentation (if present)
             if 'chat_messages' in st.session_state:
                 initial_presentation = next(
                     (msg for msg in st.session_state.chat_messages 
@@ -1241,6 +1248,65 @@ if st.session_state.logged_in:
                 self.logger.error(f"Error in guidance controls: {str(e)}", exc_info=True)
                 st.sidebar.error("Error displaying guidance controls")
 
+        
+        def _render_chat_download_button(self):
+            """Render a centered, full-width download button in the sidebar."""
+            all_chats = st.session_state.get("all_phase_chats", {}).copy()
+            current_phase = st.session_state.get("current_phase", PhaseType.HISTORY).value
+            current_msgs = st.session_state.get("chat_messages", [])
+
+            # Include current phase messages
+            all_chats[current_phase] = current_msgs
+
+            # Combine into a flat list with phase annotations
+            combined = []
+            for phase, messages in all_chats.items():
+                for msg in messages:
+                    msg_phase = msg.get("phase", phase)
+                    combined.append({
+                        "phase": msg_phase,
+                        "role": msg["role"],
+                        "content": msg["content"],
+                        "timestamp": msg.get("timestamp", "")
+                    })
+
+            # Sort by timestamp (optional, to keep flow correct)
+            combined.sort(key=lambda x: x["timestamp"])
+
+            # Write to buffer
+            output = io.StringIO()
+            last_phase = None
+            for msg in combined:
+                if msg["phase"] != last_phase:
+                    output.write(f"\n\n==== PHASE: {msg['phase'].upper()} ====\n")
+                    last_phase = msg["phase"]
+                role = "User" if msg["role"] == "user" else "Tutor"
+                output.write(f"{msg['timestamp']} - {role}:\n{msg['content'].strip()}\n\n")
+
+            # Styling + button
+            st.markdown(
+                """
+                <style>
+                .download-chat button {
+                    width: 100% !important;
+                    margin: 0 auto;
+                    display: block;
+                }
+                </style>
+                """,
+                unsafe_allow_html=True
+            )
+            with st.container():
+                st.markdown('<div class="download-chat">', unsafe_allow_html=True)
+                st.download_button(
+                    label="Download Chat Transcript",
+                    data=output.getvalue(),
+                    file_name="chat_transcript.txt",
+                    mime="text/plain"
+                )
+                st.markdown('</div>', unsafe_allow_html=True)
+
+
         def run(self):
             if hasattr(st.session_state, '_differential_updated'):
                 del st.session_state._differential_updated
@@ -1287,6 +1353,8 @@ if st.session_state.logged_in:
                     if st.button("End Phase & Generate Summary", key="sidebar_skip_button"):
                         self._handle_phase_transition()
                         st.rerun()
+
+                    self._render_chat_download_button()
 
                     # Phase Summaries in side panel
                     if 'phase_summaries' in st.session_state and st.session_state.phase_summaries:
